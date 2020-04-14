@@ -9,3 +9,5 @@ let dashboradControllers = {
     //GET DASHBOARD/EDIT/:ID
     //POST DASHBOARD/EDIT/:ID
 }
+
+module.exports = dashboradControllers;
