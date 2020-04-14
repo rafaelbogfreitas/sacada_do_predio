@@ -45,4 +45,36 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.main_nav {
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center; }
+  .main_nav form {
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    border: 1px solid #e28a8a;
+    position: absolute;
+    right: 10px;
+    top: 40px; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,19 @@
 
+.main_nav {
+    @include flexbox(display, flex);
+    @include flexbox(justify-content, space-between);
+    @include flexbox(align-items, center);
 
+    
+    form {
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        border: 1px solid rgb(226, 138, 138);
+
+
+        position: absolute;
+        right: 10px;
+        top: 40px;
+    }
+}
 
