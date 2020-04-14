@@ -149,5 +149,8 @@ app.use('/', auth);
 const dashboard = require('./routes/dashboard');
 app.use('/', dashboard);
 
+const register = require('./routes/register');
+app.use('/', register);
+
 
 module.exports = app;
