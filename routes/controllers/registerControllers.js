@@ -1,0 +1,3 @@
+let registerControllers = {
+    //POST /register
+}
