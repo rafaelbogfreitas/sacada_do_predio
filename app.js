@@ -73,9 +73,12 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 //TODO - passport setup
 
 //Routes
+
 const index = require('./routes/index');
 app.use('/', index);
 
+const auth = require('./routes/auth');
+app.use('/', auth);
 //TODO - auth routes
 
 module.exports = app;
