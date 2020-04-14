@@ -1,0 +1,11 @@
+@mixin flexbox ($property, $value){
+    #{$property}: $value;
+    -moz-#{$property}:$value;
+    -o-#{$property}:$value;
+    -ms-#{$property}:$value;
+    -webkit-#{$property}:$value;
+}
+
+@mixin mediaQuery($breakpoint){
+    @media (max-width: $breakpoint) { @content; }
+}
