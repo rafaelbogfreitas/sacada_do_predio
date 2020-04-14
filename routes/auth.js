@@ -10,4 +10,6 @@ const uploadCloud = require('../config/cloudinary.js');
 
 router.post('/signup', uploadCloud.single('file'), controllers.signupPost);
 
+router.post('/login', )
+
 module.exports = router;

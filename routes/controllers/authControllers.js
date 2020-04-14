@@ -8,16 +8,14 @@ const User = require("../../models/User");
 let authControllers = {
     signupPost: (req, res, next) => {
         
-        console.log(req.file);
-
         const {
-            name,
+            username,
             password,
             email,
             state,
             address
         } = req.body;
-    
+
         const {
             originalname,
             url
@@ -26,12 +24,11 @@ let authControllers = {
         let salt = bcrypt.genSaltSync(bcryptSalt);
         let hash = bcrypt.hashSync(password, salt);
     
-        User.find({username: name})
+        User.find({username: username})
             .then( response => {
-                console.log(response)
                 if(response.length == 0){
                     User.create({
-                        username: name,
+                        username: username,
                         email,
                         password: hash,
                         state,
@@ -45,7 +42,7 @@ let authControllers = {
             })
             .catch( error => console.log(error))
     
-        res.send(req.body);
+        res.redirect('/');
     }
 }
 

@@ -8,6 +8,14 @@ const mongoose = require('mongoose');
 const path = require('path');
 const logger = require('morgan');
 
+// // BASIC AUTH
+// const session = require('express-session');
+// const MongoStore = require('connect-mongo')(session);
+
+// // PASSPORT
+// const passport = require('passport');
+// const localStrategy = require('passport-local').Strategy;
+
 //MONGODB connection
 mongoose.connect(process.env.MONGODB, {
     useNewUrlParser: true,

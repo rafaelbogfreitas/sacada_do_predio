@@ -12,6 +12,14 @@
         <input type="submit"/>
     </form>
 
-    <button class="signup_btn">SIGNUP</button>
+    {{!-- <button class="signup_btn">SIGNUP</button> --}}
+
+    <form  class="signup_form" action="/login" method="POST">
+        <input type="text" placeholder="Name" name="username" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <input type="submit"/>
+    </form>
+
+    {{!-- <button class="signup_btn">LOGIN</button> --}}
 </nav>
  <script src="javascripts/script.js"></script>
