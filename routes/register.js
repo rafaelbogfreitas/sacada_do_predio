@@ -6,5 +6,6 @@ const controllers = require('./controllers/registerControllers');
 const uploadCloud = require('../config/cloudinary.js');
 
 router.post('/register', uploadCloud.single('file'), controllers.registerPost);
+router.post('resgister/new', controllers.getRegister);
 
 module.exports = router;

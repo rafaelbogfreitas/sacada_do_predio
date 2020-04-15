@@ -138,6 +138,15 @@ hbs.registerHelper('ifUndefined', (value, options) => {
     }
 });
 
+//HBS helper
+hbs.registerHelper('if_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
+
 //Routes
 
 const index = require('./routes/index');

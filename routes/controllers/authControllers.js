@@ -11,16 +11,12 @@ let authControllers = {
         const {
             username,
             password,
-            email,
-            state,
-            address
+            email
         } = req.body;
-        const {
-            originalname,
-            url
-        } = req.file;
+      
         let salt = bcrypt.genSaltSync(bcryptSalt);
         let hash = bcrypt.hashSync(password, salt);
+        
         User.find({
                 username: username
             })
@@ -30,10 +26,6 @@ let authControllers = {
                             username: username,
                             email,
                             password: hash,
-                            state,
-                            address,
-                            imageName: originalname,
-                            imageUrl: url
                         })
                         .then(response => console.log('New user created'))
                         .catch(error => console.log(error));

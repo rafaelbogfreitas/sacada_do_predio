@@ -3,31 +3,33 @@ const User = require('../../models/User');
 let registerControllers = {
     //POST /register
     registerPost: (req, res, next) => {
+        let { user } = req.session.passport;
+
         const {
-            id,
             state,
             address
         } = req.body;
         
-        // const {
-        //     originalname,
-        //     url
-        // } = req.file;
+        const {
+            originalname,
+            url
+        } = req.file;
         
-        User.findByIdAndUpdate(id, {
+        User.findByIdAndUpdate(user, {
             status: 'registered',
             state,
             address,
-            // imageName: originalname,
-            // imageUrl: url
+            imageName: originalname,
+            imageUrl: url
         })
         .then(response => {
-            res.send('/register');
+            res.redirect('/dashboard');
         })
         .catch(error => console.log(error));
-                
-           
-        
+    },
+
+    getRegister: (req, res, next) => {
+        res.render('dashboard/new-case');
     }
 }
 
