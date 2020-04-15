@@ -134,8 +134,22 @@ button {
   top: 0;
   left: 0;
   transition: transform 0.5s ease-in-out; }
+  .dashboard .cases_title_container {
+    width: 100%;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center; }
   .dashboard .user_cases_container {
     width: 100%;
+    height: 0px;
+    overflow: hidden;
     display: flex;
     -moz-display: flex;
     -o-display: flex;

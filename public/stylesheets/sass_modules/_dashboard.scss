@@ -18,9 +18,16 @@
     left: 0;
     transition: transform 0.5s ease-in-out;
 
+    .cases_title_container {
+        width: 100%;
+        @include flexbox(display, flex);
+        @include flexbox(align-items,center);
+    }
+
     .user_cases_container {
         width: 100%;
-
+        height: 0px;
+        overflow: hidden;
         @include flexbox(display, flex);
         @include flexbox(flex-direction, column);
         // @include flexbox(justify-content, center);
