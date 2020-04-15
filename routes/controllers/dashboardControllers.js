@@ -7,8 +7,15 @@ let dashboradControllers = {
         let { user } = req.session.passport;
         User.findById(user)
         .then( user => {
-            console.log(user);
-            res.render('dashboard/dashboard', { user: user });
+            Case
+                .find()
+                .then( cases => {
+                    // console.log(cases);
+                    console.log({ user: user, cases: cases });
+                    // res.send({ user: user, cases: cases });
+                    res.render('dashboard/dashboard', { user: user, cases: cases });
+                })
+                .catch(error => console.log(error));
         })
         .catch(error => console.log(error));
     },
