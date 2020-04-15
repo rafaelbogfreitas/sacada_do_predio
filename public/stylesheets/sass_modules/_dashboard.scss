@@ -9,7 +9,7 @@
 
     width: 400px;
     height: 100vh;
-    background-color: $light_gray;
+    background-color: $x_light_gray;
     box-shadow: 2px 0 5px 0 $light_gray;
 
     //remove it from screen
@@ -20,12 +20,13 @@
 
     .cases_title_container {
         width: 100%;
-        margin-top: 80px;
+        margin-top: 50px;
+        padding-left: 20px;
         @include flexbox(display, flex);
         @include flexbox(align-items,center);
 
         h1 {
-            color: $red;
+            color: $dark_red;
             font-size: 25px;
             font-weight: bold;
         }
@@ -44,6 +45,7 @@
     .user_cases_container {
         width: 100%;
         height: 0px;
+        padding: 10px 20px;
         overflow: hidden;
         @include flexbox(display, flex);
         @include flexbox(flex-direction, column);

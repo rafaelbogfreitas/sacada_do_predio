@@ -14,13 +14,13 @@
                         <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
                     </div>
 
-            {{!-- profile box --}}
+                    {{!-- profile box --}}
 
-            <aside class="profile_options_box">
-                <a href="/logout">LOGOUT</a>
-            </aside>
-        </div>
-    </nav>
+                    <aside class="profile_options_box">
+                        <a href="/logout">LOGOUT</a>
+                    </aside>
+                </div>
+            </nav>
 
             <aside class="dashboard leave_screen">
                 <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
@@ -37,14 +37,22 @@
 
                 <div class="user_cases_container">
                     {{#casesCreated}}
-                    <div class="case_container">
-                        <h2 class="case_title">{{title}}</h2>
-                        <p class="case_description">{{description}}</p>
-                    </div>
+                        <div class="case_container">
+                            <a href="/case/:{{_id}}">
+                                <h2 class="case_title">{{title}}</h2>
+                            </a>
+                            <p class="case_description">{{description}}</p>
+                        </div>
                     {{/casesCreated}}
                 </div>
             </aside>
         {{/user}}
+    {{/if}}
+
+    {{#if cases}}
+        {{#cases}}
+            <h1>{{title}}</h1>
+        {{/cases}}
     {{/if}}
 
     {{#with user}}

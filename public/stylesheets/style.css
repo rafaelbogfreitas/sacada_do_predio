@@ -128,7 +128,7 @@ button {
   -webkit-align-items: center;
   width: 400px;
   height: 100vh;
-  background-color: #b3bbbe;
+  background-color: #f8f8f9;
   box-shadow: 2px 0 5px 0 #b3bbbe;
   position: fixed;
   top: 0;
@@ -136,7 +136,8 @@ button {
   transition: transform 0.5s ease-in-out; }
   .dashboard .cases_title_container {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 50px;
+    padding-left: 20px;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -148,7 +149,7 @@ button {
     -ms-align-items: center;
     -webkit-align-items: center; }
     .dashboard .cases_title_container h1 {
-      color: #a1363f;
+      color: #5d1711;
       font-size: 25px;
       font-weight: bold; }
     .dashboard .cases_title_container .arrow {
@@ -160,7 +161,7 @@ button {
   .dashboard .user_cases_container {
     width: 100%;
     height: 0px;
-    transition: height 0.3s linear;
+    padding: 10px 20px;
     overflow: hidden;
     display: flex;
     -moz-display: flex;
