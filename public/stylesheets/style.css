@@ -266,4 +266,13 @@ img {
   .dashboard_icon:hover {
     cursor: pointer; }
 
+.cards_container {
+  width: 100%;
+  height: 100%; }
+  @supports (display: grid) {
+    .cards_container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px; } }
+
 /*# sourceMappingURL=style.css.map */

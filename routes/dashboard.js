@@ -14,5 +14,6 @@ router.post('/dashboard/new-case', uploadCloud.single('file'), controllers.postN
 
 router.get('/dashboard/new-case', ensureLogin.ensureLoggedIn('/'), controllers.getNewCase);
 
+router.get('/case/:id', controllers.getCaseById);
 
 module.exports = router;

@@ -75,6 +75,22 @@ let dashboradControllers = {
             })
             .catch(error => console.log(error));
         }
+    },
+    getCaseById: (req, res, next) => {
+        const caseId = req.params.id;
+        let { user } = req.session.passport;
+        let owner = false;
+
+        Case
+            .findById(caseId)
+            .then(cases => {
+                if (user == cases.user) {
+                    owner = true;
+                }
+                console.log({ owner: owner, case: cases })
+                res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
+            })
+            .catch(error => console.log(error));
     }
     //DELETE DASHBOARD/DELETE/:ID
     //GET DASHBOARD/EDIT/:ID

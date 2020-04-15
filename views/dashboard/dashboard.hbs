@@ -50,9 +50,11 @@
     {{/if}}
 
     {{#if cases}}
-        {{#cases}}
-            {{> case }}
-        {{/cases}}
+        <div class="cards_container">
+            {{#cases}}
+                {{> case }}
+            {{/cases}}
+        </div>
     {{/if}}
 
     {{#with user}}

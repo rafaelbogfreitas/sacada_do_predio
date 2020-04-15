@@ -1,0 +1,10 @@
+<div class="case_card">
+    {{#if owner}}
+        <a href="/case/delete/{{case._id}}">DELETE</a>
+        <a href="/case/edit/{{case._id}}">EDIT</a>
+    {{/if}}
+    <img style="width: 100px; height: auto" src="{{case.imageUrl}}" alt="{{case.imageName}}">
+    <h1>{{case.title}}</h1>
+    <p>{{case.description}}</p>
+    <p>{{case.address}}</p>
+</div>
