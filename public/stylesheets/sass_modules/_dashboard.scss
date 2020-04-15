@@ -2,6 +2,11 @@
 .dashboard {
     position: relative;
 
+    @include flexbox(display, flex);
+    @include flexbox(flex-direction, column);
+    // @include flexbox(justify-content, center);
+    @include flexbox(align-items, center);
+
     width: 400px;
     height: 100vh;
     background-color: $light_gray;
@@ -12,6 +17,15 @@
     top: 0;
     left: 0;
     transition: transform 0.5s ease-in-out;
+
+    .user_cases_container {
+        width: 100%;
+
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        // @include flexbox(justify-content, center);
+        @include flexbox(align-items, center);
+    }
 
     .close_icon {
         position: absolute;
@@ -25,6 +39,16 @@
             cursor: pointer;
         }
     }
+
+    //Individual case container inside dashboard
+    .case_container {
+        margin-top: 20px;
+        width: 95%;
+        height: auto;
+        padding:10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 3px 0 black;
+    }
 }
 
 
@@ -33,6 +57,7 @@
     height: 70px;
     padding: 0 20px;
     background-color: white;
+    box-shadow: 0 1px 3px 0 #00000091;
 
     @include flexbox(display, flex);
     @include flexbox(justify-content, space-between);

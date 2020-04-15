@@ -111,6 +111,21 @@ button {
 
 .dashboard {
   position: relative;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   width: 400px;
   height: 100vh;
   background-color: #b3bbbe;
@@ -119,6 +134,23 @@ button {
   top: 0;
   left: 0;
   transition: transform 0.5s ease-in-out; }
+  .dashboard .user_cases_container {
+    width: 100%;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center; }
   .dashboard .close_icon {
     position: absolute;
     top: 20px;
@@ -127,12 +159,20 @@ button {
     height: auto; }
     .dashboard .close_icon:hover {
       cursor: pointer; }
+  .dashboard .case_container {
+    margin-top: 20px;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 0 black; }
 
 .dashboard_nav {
   width: 100vw;
   height: 70px;
   padding: 0 20px;
   background-color: white;
+  box-shadow: 0 1px 3px 0 #00000091;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -180,7 +220,8 @@ button {
     border-radius: 100%;
     border: 2px solid #ecec7b; }
   .profile_info .profile_options_box {
-    outline: 1px solid red;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 0 #00000091;
     position: absolute;
     top: 120%;
     right: 0;

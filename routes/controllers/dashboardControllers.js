@@ -41,7 +41,7 @@ let dashboradControllers = {
         })
         .then( response => {
             console.log(response);
-            User.findByIdAndUpdate(user, {casesCreated: [response]})
+            User.findByIdAndUpdate(user, { $push: {casesCreated: response}})
             .then( response => {
                 console.log(response)
                 res.redirect('/dashboard');

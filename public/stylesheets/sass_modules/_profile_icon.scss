@@ -35,7 +35,9 @@
     //popup profile options box
     .profile_options_box {
         //for visualization
-        outline: 1px solid red;
+        // outline: 1px solid red;
+        background-color: #fff;
+        box-shadow: 1px 1px 3px 0 #00000091;
 
         position: absolute;
         top:120%;
