@@ -1,0 +1,64 @@
+.profile_info {
+    position: relative;
+
+    width: auto;
+    height: 80%;
+    
+    border: 1px solid transparent;
+    transition: border 0.2s ease-in-out;
+    
+    @include flexbox(display, flex);
+    @include flexbox(align-items, center);
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid $lemon_yellow;
+        transition: border 0.2s ease-in-out;
+    }
+
+    .user_name {
+        margin-right: 20px;
+        p {
+            text-transform: uppercase;
+        }
+    }
+
+    .user_img_container {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        
+        border-radius: 100%;
+        border: 2px solid $lemon_yellow;
+    }
+
+    //popup profile options box
+    .profile_options_box {
+        //for visualization
+        outline: 1px solid red;
+
+        position: absolute;
+        top:120%;
+        right: 0;
+        width: 140%;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+}
+
+//profile image
+img {
+    height: 80%;
+}
+
+//Borguer icon
+.dashboard_icon {
+    width: 50px;
+    height: 50%;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

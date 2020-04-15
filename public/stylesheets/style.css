@@ -123,7 +123,8 @@ button {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 40px; }
+    width: 40px;
+    height: auto; }
     .dashboard .close_icon:hover {
       cursor: pointer; }
 
@@ -147,51 +148,54 @@ button {
   -o-align-items: center;
   -ms-align-items: center;
   -webkit-align-items: center; }
-  .dashboard_nav .profile_info {
-    position: relative;
-    width: auto;
-    height: 80%;
-    border: 1px solid transparent;
-    transition: border 0.2s ease-in-out;
-    display: flex;
-    -moz-display: flex;
-    -o-display: flex;
-    -ms-display: flex;
-    -webkit-display: flex;
-    align-items: center;
-    -moz-align-items: center;
-    -o-align-items: center;
-    -ms-align-items: center;
-    -webkit-align-items: center; }
-    .dashboard_nav .profile_info:hover {
-      cursor: pointer;
-      border: 1px solid #ecec7b;
-      transition: border 0.2s ease-in-out; }
-    .dashboard_nav .profile_info .user_name {
-      margin-right: 20px; }
-      .dashboard_nav .profile_info .user_name p {
-        text-transform: uppercase; }
-    .dashboard_nav .profile_info .user_img_container {
-      width: 50px;
-      height: 50px;
-      overflow: hidden;
-      border-radius: 100%;
-      border: 2px solid #ecec7b; }
-    .dashboard_nav .profile_info .profile_options_box {
-      outline: 1px solid red;
-      position: absolute;
-      top: 120%;
-      right: 0;
-      width: 140%;
-      height: 0px;
-      overflow: hidden;
-      transition: height 0.3s ease-in-out; }
-  .dashboard_nav img {
-    height: 80%; }
-  .dashboard_nav .dashboard_icon {
+
+.profile_info {
+  position: relative;
+  width: auto;
+  height: 80%;
+  border: 1px solid transparent;
+  transition: border 0.2s ease-in-out;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center; }
+  .profile_info:hover {
+    cursor: pointer;
+    border: 1px solid #ecec7b;
+    transition: border 0.2s ease-in-out; }
+  .profile_info .user_name {
+    margin-right: 20px; }
+    .profile_info .user_name p {
+      text-transform: uppercase; }
+  .profile_info .user_img_container {
     width: 50px;
-    height: 50%; }
-    .dashboard_nav .dashboard_icon:hover {
-      cursor: pointer; }
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 2px solid #ecec7b; }
+  .profile_info .profile_options_box {
+    outline: 1px solid red;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 140%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out; }
+
+img {
+  height: 80%; }
+
+.dashboard_icon {
+  width: 50px;
+  height: 50%; }
+  .dashboard_icon:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
