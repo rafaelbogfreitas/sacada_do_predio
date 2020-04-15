@@ -1,6 +1,7 @@
 <main>
     {{#if user}}
         {{#user}}
+            {{!-- Nav that appears only if logged in --}}
             <nav class="dashboard_nav">
                 <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
                 <div class="profile_info">
@@ -10,6 +11,12 @@
                     <div class="user_img_container">
                         <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
                     </div>
+
+                    {{!-- profile box --}}
+
+                    <aside class="profile_options_box">
+                        <a href="/logout">LOGOUT</a>
+                    </aside>
                 </div>   
             </nav>
 
@@ -33,7 +40,6 @@
 
 
     <a href="/dashboard/new-case">CREATE NEW CASE</a>
-    <a href="/logout">LOGOUT</a>
 
 </main>
 <script src="javascripts/dashboard.js"></script>

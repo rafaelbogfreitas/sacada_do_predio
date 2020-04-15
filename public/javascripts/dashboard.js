@@ -28,16 +28,27 @@ let burguer = document.querySelector('.dashboard_icon');
 let dashboardPanel = document.querySelector('.dashboard');
 let closeIcon = document.querySelector('.close_icon');
 
+//event to open user panel
 burguer.addEventListener('click', function(e){
     console.log(e);
     dashboardPanel.classList.remove("leave_screen");  
-    
-    // dashboardPanel.classList.add('enter_screen');
 });
 
-//event to close panel
+//event to close user panel
 closeIcon.addEventListener('click', function(){
     dashboardPanel.classList.add("leave_screen");  
+});
+
+//user box
+let userBox = document.querySelector('.profile_info');
+let userInfoBox = document.querySelector('.profile_options_box');
+
+userBox.addEventListener('mouseover', function(){
+    userInfoBox.classList.add('open_down');
+})
+
+userBox.addEventListener('mouseout', function(){
+    userInfoBox.classList.remove('open_down');
 })
 
 

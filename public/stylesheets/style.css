@@ -52,6 +52,10 @@ table {
   transform: translateX(-400px);
   transition: transform 0.5s ease-in-out; }
 
+.open_down {
+  height: 100px !important;
+  transition: height 0.3s ease-in-out; }
+
 * {
   font-family: Nevermind, Helvetica, sans-serif; }
 
@@ -110,6 +114,7 @@ button {
   width: 400px;
   height: 100vh;
   background-color: #b3bbbe;
+  box-shadow: 2px 0 5px 0 #b3bbbe;
   position: fixed;
   top: 0;
   left: 0;
@@ -143,8 +148,11 @@ button {
   -ms-align-items: center;
   -webkit-align-items: center; }
   .dashboard_nav .profile_info {
+    position: relative;
     width: auto;
-    height: 100%;
+    height: 80%;
+    border: 1px solid transparent;
+    transition: border 0.2s ease-in-out;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -155,6 +163,10 @@ button {
     -o-align-items: center;
     -ms-align-items: center;
     -webkit-align-items: center; }
+    .dashboard_nav .profile_info:hover {
+      cursor: pointer;
+      border: 1px solid #ecec7b;
+      transition: border 0.2s ease-in-out; }
     .dashboard_nav .profile_info .user_name {
       margin-right: 20px; }
       .dashboard_nav .profile_info .user_name p {
@@ -165,6 +177,15 @@ button {
       overflow: hidden;
       border-radius: 100%;
       border: 2px solid #ecec7b; }
+    .dashboard_nav .profile_info .profile_options_box {
+      outline: 1px solid red;
+      position: absolute;
+      top: 120%;
+      right: 0;
+      width: 140%;
+      height: 0px;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out; }
   .dashboard_nav img {
     height: 80%; }
   .dashboard_nav .dashboard_icon {

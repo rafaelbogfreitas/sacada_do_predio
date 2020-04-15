@@ -2,3 +2,8 @@
     transform: translateX(-400px);
     transition: transform 0.5s ease-in-out;
 }
+
+.open_down {
+    height: 100px !important;
+    transition: height 0.3s ease-in-out;
+}
