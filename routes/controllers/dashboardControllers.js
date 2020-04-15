@@ -24,7 +24,7 @@ let dashboradControllers = {
         res.render('dashboard/new-case');
     },
     //POST DASHBOARD/CREATE
-    postNewCase:  (req, res, next) => {
+    postNewCase: (req, res, next) => {
         let { user } = req.session.passport;
         
         const {
@@ -91,10 +91,31 @@ let dashboradControllers = {
                 res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
             })
             .catch(error => console.log(error));
+    },
+    getDeleteCase: (req, res, next) => {
+        const caseId = req.params.id;
+        let { user } = req.session.passport;
+
+        Case
+            .findByIdAndRemove(caseId)
+            .then(response => {
+                res.redirect('/dashboard');
+            })
+            .catch(error => console.log(error));
+
+        User
+            .findById(user)
+            .then(response => {
+                let newArr = response.casesCreated.filter(elem => elem._id != caseId)
+                User
+                    .findByIdAndUpdate(user, {casesCreated: newArr})
+                    .then(response => {
+                        res.redirect('/dashboard')
+                    })
+                    .catch(error => console.log(error));
+            })
+            .catch(error => console.log(error));
     }
-    //DELETE DASHBOARD/DELETE/:ID
-    //GET DASHBOARD/EDIT/:ID
-    //POST DASHBOARD/EDIT/:ID
 }
 
 module.exports = dashboradControllers;

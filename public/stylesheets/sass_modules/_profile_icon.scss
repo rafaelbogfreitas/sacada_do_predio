@@ -4,16 +4,16 @@
     width: auto;
     height: 80%;
     
-    border: 1px solid transparent;
-    transition: border 0.2s ease-in-out;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.283);
+    transition: box-shadow 0.5s ease-in-out;
     
     @include flexbox(display, flex);
     @include flexbox(align-items, center);
-
+    
     &:hover {
         cursor: pointer;
-        border: 1px solid $lemon_yellow;
-        transition: border 0.2s ease-in-out;
+        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.159);
+        transition: box-shadow 0.5s ease-in-out;
     }
 
     .user_name {

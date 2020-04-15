@@ -53,7 +53,15 @@ table {
   transition: transform 0.5s ease-in-out; }
 
 .open_down {
-  height: 100px !important;
+  transform: scaleY(1);
+  transition: transform 0.3s ease-in-out; }
+
+.no_shadow {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.193) !important;
+  transition: box-shadow 0.3s ease-in-out; }
+
+.increase_height {
+  height: 100px;
   transition: height 0.3s ease-in-out; }
 
 * {
@@ -61,8 +69,24 @@ table {
 
 main {
   width: 100vw;
-  height: 100vh;
-  background-color: #f8f8f9; }
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center; }
+
+a {
+  text-decoration: none; }
 
 button {
   cursor: pointer;
@@ -160,7 +184,9 @@ button {
       margin: 0 10px; }
   .dashboard .user_cases_container {
     width: 100%;
-    height: 0px;
+    height: auto;
+    transform: scaleY(0);
+    transition: transform 0.3s linear;
     padding: 10px 20px;
     overflow: hidden;
     display: flex;
@@ -195,11 +221,15 @@ button {
     box-shadow: 1px 1px 3px 0 black; }
 
 .dashboard_nav {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 70px;
   padding: 0 20px;
   background-color: white;
   box-shadow: 0 1px 3px 0 #00000091;
+  transition: box-shadow 0.3s ease-in-out;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -220,8 +250,8 @@ button {
   position: relative;
   width: auto;
   height: 80%;
-  border: 1px solid transparent;
-  transition: border 0.2s ease-in-out;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.283);
+  transition: box-shadow 0.5s ease-in-out;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -234,8 +264,8 @@ button {
   -webkit-align-items: center; }
   .profile_info:hover {
     cursor: pointer;
-    border: 1px solid #ecec7b;
-    transition: border 0.2s ease-in-out; }
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.159);
+    transition: box-shadow 0.5s ease-in-out; }
   .profile_info .user_name {
     margin-right: 20px; }
     .profile_info .user_name p {
@@ -267,12 +297,29 @@ img {
     cursor: pointer; }
 
 .cards_container {
-  width: 100%;
-  height: 100%; }
+  width: 90%;
+  height: 90%;
+  margin: 100px 0; }
   @supports (display: grid) {
     .cards_container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 20px; } }
+      grid-gap: 20px; } }
+
+.case_card {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
+  transition: box-shadow 0.3s ease-in-out; }
+  .case_card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.193);
+    transition: box-shadow 0.3s ease-in-out; }
+  .case_card h1 {
+    color: #5d1711;
+    font-weight: bold; }
+  .case_card p {
+    color: #b3bbbe; }
 
 /*# sourceMappingURL=style.css.map */
