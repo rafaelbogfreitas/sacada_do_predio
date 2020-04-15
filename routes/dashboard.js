@@ -8,7 +8,7 @@ const ensureLogin = require("connect-ensure-login");
 const uploadCloud = require('../config/cloudinary.js');
 
 
-router.get('/dashboard', ensureLogin.ensureLoggedIn('/'), controllers.getDashboard);
+router.get('/dashboard', controllers.getDashboard);
 
 router.post('/dashboard/new-case', uploadCloud.single('file'), controllers.postNewCase);
 
