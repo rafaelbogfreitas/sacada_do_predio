@@ -136,6 +136,7 @@ button {
   transition: transform 0.5s ease-in-out; }
   .dashboard .cases_title_container {
     width: 100%;
+    margin-top: 80px;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -146,9 +147,20 @@ button {
     -o-align-items: center;
     -ms-align-items: center;
     -webkit-align-items: center; }
+    .dashboard .cases_title_container h1 {
+      color: #a1363f;
+      font-size: 25px;
+      font-weight: bold; }
+    .dashboard .cases_title_container .arrow {
+      width: 20px;
+      transform: rotate(-90deg);
+      transition: transform 0.3s linear; }
+    .dashboard .cases_title_container > * {
+      margin: 0 10px; }
   .dashboard .user_cases_container {
     width: 100%;
     height: 0px;
+    transition: height 0.3s linear;
     overflow: hidden;
     display: flex;
     -moz-display: flex;
@@ -167,9 +179,9 @@ button {
     -webkit-align-items: center; }
   .dashboard .close_icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
+    top: 10px;
+    right: 10px;
+    width: 30px;
     height: auto; }
     .dashboard .close_icon:hover {
       cursor: pointer; }

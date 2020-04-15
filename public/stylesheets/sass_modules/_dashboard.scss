@@ -20,8 +20,25 @@
 
     .cases_title_container {
         width: 100%;
+        margin-top: 80px;
         @include flexbox(display, flex);
         @include flexbox(align-items,center);
+
+        h1 {
+            color: $red;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            width: 20px;
+            transform: rotate(-90deg);
+            transition: transform 0.3s linear;
+        }
+
+        & > * {
+            margin: 0 10px;
+        }
     }
 
     .user_cases_container {
@@ -36,10 +53,10 @@
 
     .close_icon {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
 
-        width: 40px;
+        width: 30px;
         height: auto;
 
         &:hover {

@@ -45,10 +45,26 @@ let userInfoBox = document.querySelector('.profile_options_box');
 
 userBox.addEventListener('mouseover', function(){
     userInfoBox.classList.add('open_down');
-})
+});
 
 userBox.addEventListener('mouseout', function(){
     userInfoBox.classList.remove('open_down');
+});
+
+//Click event to show/hide cases created by the user
+let casesCreated = document.querySelector('.cases_title_container');
+let arrow = document.querySelector('.arrow');
+let casesContainer = document.querySelector('.user_cases_container');
+
+casesCreated.addEventListener('click', function(){
+    if(arrow.style.transform == "rotate(0deg)"){
+        arrow.style.transform = "rotate(-90deg)";
+        casesContainer.style.height = "0px";
+        
+    } else {
+        arrow.style.transform = "rotate(0deg)"
+        casesContainer.style.height = "auto";
+    }
 })
 
 
