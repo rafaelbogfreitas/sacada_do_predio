@@ -1,57 +1,56 @@
 <main>
     {{#if user}}
-        {{#user}}
-            {{!-- Nav that appears only if logged in --}}
-            <nav class="dashboard_nav">
-                <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
-                <div class="profile_info">
-                    <div class="user_name">
-                        <p>{{username}}</p>
-                    </div>
-                    <div class="user_img_container">
-                        <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
-                    </div>
+    {{#user}}
+    {{!-- Nav that appears only if logged in --}}
+    <nav class="dashboard_nav">
+        <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
+        <div class="profile_info">
+            <div class="user_name">
+                <p>{{username}}</p>
+            </div>
+            <div class="user_img_container">
+                <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
+            </div>
 
-                    {{!-- profile box --}}
+            {{!-- profile box --}}
 
-                    <aside class="profile_options_box">
-                        <a href="/logout">LOGOUT</a>
-                    </aside>
-                </div>   
-            </nav>
-
-            <aside class="dashboard leave_screen">
-                <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
-               
-                <div class="user_cases_container">
-
-                    <h1>CASOS CRIADOS</h1>
-                    {{#if_eq status 'registered'}}
-                        <a href="/dashboard/new-case">CREATE NEW CASE</a>
-                    {{/if_eq}}
-
-                    {{#casesCreated}}
-                    <div class="case_container">
-                        <h2 class="case_title">{{title}}</h2>
-                        <p class="case_description">{{description}}</p>
-                    </div>
-                    {{/casesCreated}}
-                </div>
+            <aside class="profile_options_box">
+                <a href="/logout">LOGOUT</a>
             </aside>
-        {{/user}}
+        </div>
+    </nav>
+
+    <aside class="dashboard leave_screen">
+        <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
+
+        <div class="user_cases_container">
+
+            <h1>CASOS CRIADOS</h1>
+            {{#if_eq status 'registered'}}
+            <a href="/dashboard/new-case">CREATE NEW CASE</a>
+            {{/if_eq}}
+
+            {{#casesCreated}}
+            <div class="case_container">
+                <h2 class="case_title">{{title}}</h2>
+                <p class="case_description">{{description}}</p>
+            </div>
+            {{/casesCreated}}
+        </div>
+    </aside>
+    {{/user}}
     {{/if}}
 
     {{#with user}}
-        {{#if_eq status "waiting"}}
-        <p>Complete your registration:</p>
-        <form  class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
-            <input type="text" placeholder="address" name="address">
-            <input type="text" placeholder="state" name="state">
-            <input type="file" placeholder="File" name="file"/>
-            <input type="submit"/>
-        </form>
-        {{/if_eq}}
+    {{#if_eq status "waiting"}}
+    <p>Complete your registration:</p>
+    <form class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
+        <input type="text" placeholder="address" name="address">
+        <input type="text" placeholder="state" name="state">
+        <input type="file" placeholder="File" name="file" />
+        <input type="submit" />
+    </form>
+    {{/if_eq}}
     {{/with}}
 </main>
 <script src="javascripts/dashboard.js"></script>
-
