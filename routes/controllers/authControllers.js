@@ -13,7 +13,7 @@ let authControllers = {
             password,
             email
         } = req.body;
-      
+        
         let salt = bcrypt.genSaltSync(bcryptSalt);
         let hash = bcrypt.hashSync(password, salt);
         

@@ -1,4 +1,6 @@
-
+img {
+    width: 100px;
+}
 .main_nav {
     @include flexbox(display, flex);
     @include flexbox(justify-content, space-between);
@@ -11,10 +13,10 @@
         border: 1px solid rgb(226, 138, 138);
         
         
-        position: absolute;
-        right: 10px;
-        top: 50px;
-        display: none;
+        // position: absolute;
+        // right: 10px;
+        // top: 50px;
+        // // display: none;
     }
     
     

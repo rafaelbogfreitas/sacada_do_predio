@@ -1,6 +1,7 @@
-<form class="new_case_form" action="" enctype="multipart/form-data">
-    <input type="text" name="title">
-    <textarea type="text" name="description">
-    <input type="text" name="address">
-    <input type="file" name="image">
+<form class="new_case_form" action="/dashboard/new-case" method="POST" enctype="multipart/form-data">
+    <input placeholder="title" type="text" name="title">
+    <textarea placeholder="description" type="text" name="description"></textarea>
+    <input placeholder="address" type="text" name="address">
+    <input type="file" name="file">
+    <input type="submit" value="save">
 </form>
