@@ -1,3 +1,14 @@
+* {
+    font-family: $main_font;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $x_light_gray;
+}
+
 button {
     cursor: pointer;
     background:linear-gradient(20deg, #ffc40089 50%, white 50%);

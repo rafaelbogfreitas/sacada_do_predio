@@ -1,6 +1,4 @@
-img {
-    width: 100px;
-}
+
 .main_nav {
     @include flexbox(display, flex);
     @include flexbox(justify-content, space-between);

@@ -21,13 +21,24 @@
 //     }
 // });
 
-//Click event to display the SIGNUP form
 
-let form = document.querySelector('.signup_form');
-let signupBtn = document.querySelector('.signup_btn');
 
-signupBtn.addEventListener('click', function(e){
-    console.log(e.target);
-    form.style.display = 'flex';
+//burguer button click
+let burguer = document.querySelector('.dashboard_icon');
+let dashboardPanel = document.querySelector('.dashboard');
+let closeIcon = document.querySelector('.close_icon');
+
+burguer.addEventListener('click', function(e){
+    console.log(e);
+    dashboardPanel.classList.remove("leave_screen");  
+    
+    // dashboardPanel.classList.add('enter_screen');
+});
+
+//event to close panel
+closeIcon.addEventListener('click', function(){
+    dashboardPanel.classList.add("leave_screen");  
 })
+
+
 

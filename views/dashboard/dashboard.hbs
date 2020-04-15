@@ -1,25 +1,40 @@
-<h1>HELLO YOU ARE IN THE DASHBOARD</h1>
-{{#if user}}
-    {{#user}}
-        <p>{{username}}</p>
-        <img class="profile_img" src="{{imageUrl}}" alt="{{imageName}}">
-    {{/user}}
-{{/if}}
+<main>
+    {{#if user}}
+        {{#user}}
+            <nav class="dashboard_nav">
+                <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
+                <div class="profile_info">
+                    <div class="user_name">
+                        <p>{{username}}</p>
+                    </div>
+                    <div class="user_img_container">
+                        <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
+                    </div>
+                </div>   
+            </nav>
 
-{{#with user}}
-    {{#if_eq status "waiting"}}
-    <p>Complete your registration:</p>
-    <form  class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
-        <input type="text" placeholder="address" name="address">
-        <input type="text" placeholder="state" name="state">
-        <input type="file" placeholder="File" name="file"/>
-        <input type="submit"/>
-    </form>
-    {{/if_eq}}
-{{/with}}
+            <aside class="dashboard leave_screen">
+                <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
+            </aside>
+        {{/user}}
+    {{/if}}
+
+    {{#with user}}
+        {{#if_eq status "waiting"}}
+        <p>Complete your registration:</p>
+        <form  class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
+            <input type="text" placeholder="address" name="address">
+            <input type="text" placeholder="state" name="state">
+            <input type="file" placeholder="File" name="file"/>
+            <input type="submit"/>
+        </form>
+        {{/if_eq}}
+    {{/with}}
 
 
-<a href="/dashboard/new-case">CREATE NEW CASE</a>
-<a href="/logout">LOGOUT</a>
+    <a href="/dashboard/new-case">CREATE NEW CASE</a>
+    <a href="/logout">LOGOUT</a>
 
+</main>
+<script src="javascripts/dashboard.js"></script>
 

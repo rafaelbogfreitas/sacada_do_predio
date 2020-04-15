@@ -45,6 +45,21 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
+.leave_screen {
+  transform: translateX(-400px);
+  transition: transform 0.5s ease-in-out; }
+
+* {
+  font-family: Nevermind, Helvetica, sans-serif; }
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f9; }
+
 button {
   cursor: pointer;
   background: linear-gradient(20deg, #ffc40089 50%, white 50%); }
@@ -55,9 +70,6 @@ button {
 .profile_img {
   width: 200px;
   height: 200px; }
-
-img {
-  width: 100px; }
 
 .main_nav {
   display: flex;
@@ -92,5 +104,73 @@ img {
     padding: 10px 20px;
     color: #ff4242;
     border: 1px solid #ff4242; }
+
+.dashboard {
+  position: relative;
+  width: 400px;
+  height: 100vh;
+  background-color: #b3bbbe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out; }
+  .dashboard .close_icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px; }
+    .dashboard .close_icon:hover {
+      cursor: pointer; }
+
+.dashboard_nav {
+  width: 100vw;
+  height: 70px;
+  padding: 0 20px;
+  background-color: white;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center; }
+  .dashboard_nav .profile_info {
+    width: auto;
+    height: 100%;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center; }
+    .dashboard_nav .profile_info .user_name {
+      margin-right: 20px; }
+      .dashboard_nav .profile_info .user_name p {
+        text-transform: uppercase; }
+    .dashboard_nav .profile_info .user_img_container {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      border-radius: 100%;
+      border: 2px solid #ecec7b; }
+  .dashboard_nav img {
+    height: 80%; }
+  .dashboard_nav .dashboard_icon {
+    width: 50px;
+    height: 50%; }
+    .dashboard_nav .dashboard_icon:hover {
+      cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
