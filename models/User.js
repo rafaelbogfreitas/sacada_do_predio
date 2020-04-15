@@ -30,11 +30,11 @@ const userSchema = new Schema({
     },
     imageName:{
         type:String,
-        default:''
+        default:'avatar'
     },
     imageUrl:{
         type:String,
-        default:''
+        default:'/images/avatar.png'
     },
     casesCreated:[],
 
