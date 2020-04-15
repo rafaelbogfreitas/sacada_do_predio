@@ -40,8 +40,13 @@ let dashboradControllers = {
             address: address
         })
         .then( response => {
-            console.log('New case created')
-            res.redirect('/dashbord');
+            console.log(response);
+            User.findByIdAndUpdate(user, {casesCreated: [response]})
+            .then( response => {
+                console.log(response)
+                res.redirect('/dashboard');
+            })
+            .catch( error => console.log(error))
         })
         .catch(error => console.log(error));
     }

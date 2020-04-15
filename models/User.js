@@ -37,6 +37,7 @@ const userSchema = new Schema({
         default:''
     },
     casesCreated:[],
+
     donations:[]
 })
 
