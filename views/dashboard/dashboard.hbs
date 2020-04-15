@@ -1,3 +1,8 @@
 <h1>HELLO YOU ARE IN THE DASHBOARD</h1>
-
+{{#if user}}
+    {{#user}}
+        <p>{{username}}</p>
+        <img src="{{imageUrl}}" alt="{{imageName}}">
+    {{/user}}
+{{/if}}
 <a href="/logout">LOGOUT</a>

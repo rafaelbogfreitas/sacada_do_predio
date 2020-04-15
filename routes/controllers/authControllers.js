@@ -42,12 +42,14 @@ let authControllers = {
             .catch(error => console.log(error))
         res.redirect('/');
     },
+    
     loginPost: passport.authenticate("local", {
         successRedirect: "/dashboard",
         failureRedirect: "/",
         failureFlash: true,
         passReqToCallback: true,
     }),
+    
     logoutPost: (req, res) => {
         req.logout();
         res.redirect("/");
