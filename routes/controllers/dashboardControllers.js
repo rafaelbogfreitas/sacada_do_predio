@@ -26,29 +26,48 @@ let dashboradControllers = {
             address,
         } = req.body;
         
-        const {
-            originalname,
-            url
-        } = req.file;
-        
-        Case.create({
-            title: title,
-            description: description,
-            imageName: originalname,
-            imageUrl: url,
-            user: user,
-            address: address
-        })
-        .then( response => {
-            console.log(response);
-            User.findByIdAndUpdate(user, { $push: {casesCreated: response}})
-            .then( response => {
-                console.log(response)
-                res.redirect('/dashboard');
+        if (req.file) {
+            const {
+                originalname,
+                url
+            } = req.file;
+            
+            Case.create({
+                title: title,
+                description: description,
+                imageName: originalname,
+                imageUrl: url,
+                user: user,
+                address: address
             })
-            .catch( error => console.log(error))
-        })
-        .catch(error => console.log(error));
+            .then( response => {
+                console.log(response);
+                User.findByIdAndUpdate(user, { $push: {casesCreated: response}})
+                .then( response => {
+                    console.log(response)
+                    res.redirect('/dashboard');
+                })
+                .catch( error => console.log(error))
+            })
+            .catch(error => console.log(error));
+        } else {
+            Case.create({
+                title: title,
+                description: description,
+                user: user,
+                address: address
+            })
+            .then( response => {
+                console.log(response);
+                User.findByIdAndUpdate(user, { $push: {casesCreated: response}})
+                .then( response => {
+                    console.log(response)
+                    res.redirect('/dashboard');
+                })
+                .catch( error => console.log(error))
+            })
+            .catch(error => console.log(error));
+        }
     }
     //DELETE DASHBOARD/DELETE/:ID
     //GET DASHBOARD/EDIT/:ID
