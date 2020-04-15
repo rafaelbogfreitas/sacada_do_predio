@@ -26,10 +26,10 @@
                 <div class="user_cases_container">
 
                     <h1>CASOS CRIADOS</h1>
-                     {{#if_eq status 'registered'}}
+                    {{#if_eq status 'registered'}}
                         <a href="/dashboard/new-case">CREATE NEW CASE</a>
                     {{/if_eq}}
-                    
+
                     {{#casesCreated}}
                     <div class="case_container">
                         <h2 class="case_title">{{title}}</h2>
