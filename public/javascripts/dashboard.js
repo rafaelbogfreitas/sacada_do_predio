@@ -62,7 +62,7 @@ let casesContainer = document.querySelector('.user_cases_container');
 casesCreated.addEventListener('click', function(){
     if(arrow.style.transform == "rotate(0deg)"){
         arrow.style.transform = "rotate(-90deg)";
-        casesContainer.classList.add('open_down');
+        casesContainer.classList.remove('open_down');
         
     } else {
         casesContainer.classList.add('open_down');
