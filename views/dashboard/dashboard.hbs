@@ -38,7 +38,7 @@
                 <div class="user_cases_container">
                     {{#casesCreated}}
                         <div class="case_container">
-                            <a href="/case/:{{_id}}">
+                            <a href="/case/{{_id}}">
                                 <h2 class="case_title">{{title}}</h2>
                             </a>
                             <p class="case_description">{{description}}</p>
@@ -51,7 +51,7 @@
 
     {{#if cases}}
         {{#cases}}
-            <h1>{{title}}</h1>
+            {{> case }}
         {{/cases}}
     {{/if}}
 
