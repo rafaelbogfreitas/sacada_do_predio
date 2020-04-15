@@ -147,6 +147,8 @@ hbs.registerHelper('if_eq', function(a, b, opts) {
     }
 });
 
+hbs.registerPartials('./views/partials');
+
 //Routes
 
 const index = require('./routes/index');
