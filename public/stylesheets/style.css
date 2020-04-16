@@ -71,6 +71,9 @@ table {
 
 html {
   font-family: Nevermind, Helvetica, sans-serif; }
+  @media (max-width: 800px) {
+    html {
+      font-size: 8px; } }
 
 main {
   width: 100vw;
@@ -107,7 +110,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .main_nav, .main_nav form, .main_new_case .new_case_container {
+.center, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -233,13 +236,29 @@ nav {
     .main_nav .login_form input[type="submit"] {
       color: #8f211d; }
 
-.subtitle {
+.main_text_content {
+  width: 50%; }
+  @media (max-width: 800px) {
+    .main_text_content {
+      width: 100%;
+      height: 30%;
+      margin-top: 100px; } }
+
+.title {
   font-weight: bold;
-  width: 50%;
+  width: 100%;
   margin-left: 30px;
   margin-bottom: 50px;
-  font-size: 4.2rem;
+  font-size: 5rem;
   color: #c6480c; }
+
+.subtitle {
+  font-weight: bold;
+  width: 100%;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: #8f211d; }
 
 section {
   width: 100vw;
@@ -248,21 +267,6 @@ section {
 .cases_presentation {
   position: relative;
   overflow: hidden;
-  display: flex;
-  -moz-display: flex;
-  -o-display: flex;
-  -ms-display: flex;
-  -webkit-display: flex;
-  align-items: center;
-  -moz-align-items: center;
-  -o-align-items: center;
-  -ms-align-items: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  -ms-justify-content: center;
-  -webkit-justify-content: center;
   background-color: #cad1da; }
   .cases_presentation:after {
     content: '';
@@ -342,12 +346,21 @@ section {
   -o-align-items: center;
   -ms-align-items: center;
   -webkit-align-items: center; }
+  @media (max-width: 800px) {
+    .home_content_container {
+      flex-direction: column;
+      -moz-flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column; } }
   .home_content_container .ilustration {
     width: 50%;
-    height: auto;
-    align-self: flex-end; }
-  .home_content_container h1 {
-    width: 50%; }
+    align-self: flex-end;
+    height: auto; }
+    @media (max-width: 800px) {
+      .home_content_container .ilustration {
+        width: 100%;
+        align-self: center; } }
 
 .dashboard {
   position: relative;
@@ -590,5 +603,70 @@ img {
   -o-align-items: flex-end;
   -ms-align-items: flex-end;
   -webkit-align-items: flex-end; }
+
+.single_case_card {
+  width: 100%;
+  max-width: 900px;
+  height: 90%;
+  padding: 20px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  flex-direction: row;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-around;
+  -moz-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -webkit-justify-content: space-around; }
+  .single_case_card .user_info {
+    width: 30%;
+    background-color: #fce1d5;
+    justify-content: space-around;
+    -moz-justify-content: space-around;
+    -o-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column; }
+    .single_case_card .user_info .user_img_container {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      overflow: hidden;
+      background-color: #fff; }
+  .single_case_card .case_info {
+    width: 70%;
+    border-left: 2px solid #711e19;
+    justify-content: space-around;
+    -moz-justify-content: space-around;
+    -o-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column; }
+  .single_case_card .case_img_container {
+    width: 90%; }
+    .single_case_card .case_img_container img {
+      width: 100%;
+      height: auto; }
+  .single_case_card a {
+    color: #cad1da; }
+  .single_case_card h1 {
+    color: #8f211d;
+    font-size: 2rem; }
 
 /*# sourceMappingURL=style.css.map */

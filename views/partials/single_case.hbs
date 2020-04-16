@@ -1,14 +1,33 @@
-<div class="case_card">
-    {{#if owner}}
-        <a href="/case/delete/{{case._id}}">DELETE</a>
-        <a href="/case/edit/{{case._id}}">EDIT</a>
-    {{/if}}
-    <img style="width: 100px; height: auto" src="{{case.imageUrl}}" alt="{{case.imageName}}">
-    <h1>{{case.title}}</h1>
-    <p>{{case.description}}</p>
-    <p>{{case.address}}</p>
-    <p>{{case.user.email}}</p>
-    <p>{{case.user.phoneNumber}}</p>
-    <a href="mailto:{{case.user.email}}">Email</a>
-    <a href="https://wa.me/55{{case.user.phoneNumber}}">Whatsapp</a>
+<div class="single_case_card">
+    {{!-- User info --}}
+    <div class="user_info">
+        <div class="user_img_container">
+            <img  class="user_img" src="{{case.user.imageUrl}}" alt="{{case.user.imageName}}">
+        </div>
+        <h1>{{case.user.username}}</h1>
+        <p>Number: {{case.user.phoneNumber}}</p>
+        <div class="contact">
+            <a href="mailto:{{case.user.email}}">Email</a>
+            <a href="https://wa.me/55{{case.user.phoneNumber}}">Whatsapp</a>
+        </div>
+        <a href="/dashboard">dashbord</a>
+    </div>
+
+    {{!-- Case info --}}
+    <div class="case_info">
+        <div class="case_img_container">
+            <img src="{{case.imageUrl}}" alt="{{case.imageName}}">
+        </div>
+        <h1>{{case.title}}</h1>
+        <p>{{case.description}}</p>
+        <p>{{case.address}}</p>
+    
+        {{#if owner}}
+            <div class="manage_btns">
+                <a href="/case/delete/{{case._id}}">DELETE</a>
+                <a href="/case/edit/{{case._id}}">EDIT</a>
+            </div>
+        {{/if}}
+    </div>
+    
 </div>

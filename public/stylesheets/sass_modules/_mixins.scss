@@ -14,6 +14,6 @@
     -webkit-#{box-shadow}:$value;
 }
 
-@mixin mediaQuery($breakpoint){
+@mixin mediaquery($breakpoint){
     @media (max-width: $breakpoint) { @content; }
 }
