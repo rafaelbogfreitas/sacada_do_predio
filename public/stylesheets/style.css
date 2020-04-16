@@ -107,6 +107,30 @@ nav {
   width: 200px;
   height: 200px; }
 
+.center, .main_new_case .new_case_container {
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center; }
+
+.box-shadow, .main_new_case .new_case_container {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
+  -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
+  -ms-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241); }
+
 .main_home {
   position: relative;
   overflow: hidden;
@@ -237,10 +261,10 @@ nav {
 
 .subtitle {
   font-weight: bold;
-  width: 52%;
-  margin-left: 50px;
+  width: 50%;
+  margin-left: 30px;
   margin-bottom: 50px;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   color: #c6480c; }
 
 section {
@@ -331,10 +355,25 @@ section {
   -ms-display: flex;
   -webkit-display: flex; }
 
-.ilustration {
-  position: absolute;
-  bottom: 0;
-  right: 0; }
+.home_content_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center; }
+  .home_content_container .ilustration {
+    width: 50%;
+    height: auto;
+    align-self: flex-end; }
+  .home_content_container h1 {
+    width: 50%; }
 
 .dashboard {
   position: relative;
@@ -568,5 +607,14 @@ img {
     font-weight: bold; }
   .case_card p {
     color: #7e8188; }
+
+.main_new_case .new_case_container {
+  width: 90%;
+  height: 90%;
+  align-items: flex-end;
+  -moz-align-items: flex-end;
+  -o-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -webkit-align-items: flex-end; }
 
 /*# sourceMappingURL=style.css.map */
