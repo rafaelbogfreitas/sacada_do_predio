@@ -69,7 +69,7 @@ table {
   width: 300px !important;
   transition: height 0.3s ease-in-out; }
 
-* {
+html {
   font-family: Nevermind, Helvetica, sans-serif; }
 
 main {
@@ -196,6 +196,7 @@ nav {
       width: 80%;
       height: 40px;
       font-size: 1.1rem;
+      color: #cad1da;
       padding-left: 20px;
       margin-bottom: 20px; }
     .main_nav .signup_form input[type="submit"], .main_nav .login_form input[type="submit"] {
@@ -214,6 +215,8 @@ nav {
     padding: 10px 20px;
     color: #8f211d;
     border: 1px solid #8f211d; }
+    .main_nav .signup_btn:hover, .main_nav .login_btn:hover {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.289); }
   .main_nav .signup_btn {
     color: #c6480c;
     border: 1px solid #c6480c; }
@@ -269,6 +272,24 @@ section {
     height: 300px;
     transform: rotate(10deg);
     background-color: white; }
+  .team_presentation .credits_box {
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 2; }
+    .team_presentation .credits_box h2 {
+      margin-bottom: 10px;
+      margin-left: 10px;
+      font-weight: bold;
+      color: #c6480c; }
+    .team_presentation .credits_box .devs {
+      color: #7e8188;
+      margin-left: 10px; }
 
 .btn_container {
   display: flex;
@@ -400,6 +421,7 @@ section {
   position: relative;
   width: auto;
   height: 80%;
+  padding: 20px;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.283);
   transition: box-shadow 0.5s ease-in-out;
   display: flex;
@@ -425,7 +447,7 @@ section {
     height: 50px;
     overflow: hidden;
     border-radius: 100%;
-    border: 2px solid #ecec7b; }
+    border: 2px solid #f1cf00; }
   .profile_info .profile_options_box {
     background-color: #fff;
     box-shadow: 1px 1px 3px 0 #00000091;
@@ -435,7 +457,33 @@ section {
     width: 140%;
     height: 0px;
     overflow: hidden;
-    transition: height 0.3s ease-in-out; }
+    transition: height 0.3s ease-in-out;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-around;
+    -moz-justify-content: space-around;
+    -o-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center; }
+    .profile_info .profile_options_box a {
+      margin-left: 10px;
+      color: #c6480c; }
+      .profile_info .profile_options_box a:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s linear; }
 
 img {
   height: 80%; }
@@ -449,7 +497,7 @@ img {
 .cards_container {
   width: 90%;
   height: 90%;
-  margin: 100px 0; }
+  padding: 70px 0; }
   @supports (display: grid) {
     .cards_container {
       display: grid;
@@ -458,6 +506,7 @@ img {
 
 .case_card {
   width: 100%;
+  max-width: 900px;
   height: 300px;
   padding: 20px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);

@@ -3,6 +3,7 @@
 
     width: auto;
     height: 80%;
+    padding: 20px;
     
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.283);
     transition: box-shadow 0.5s ease-in-out;
@@ -34,8 +35,7 @@
 
     //popup profile options box
     .profile_options_box {
-        //for visualization
-        // outline: 1px solid red;
+        
         background-color: #fff;
         box-shadow: 1px 1px 3px 0 #00000091;
 
@@ -46,6 +46,21 @@
         height: 0px;
         overflow: hidden;
         transition: height 0.3s ease-in-out;
+
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        @include flexbox(justify-content, space-around);
+        @include flexbox(align-items, center);
+
+        a {
+            margin-left: 10px;
+            color: $orange;
+
+            &:hover {
+                transform:scale(1.1);
+                transition:transform 0.3s linear;
+            }
+        }
     }
 
 }

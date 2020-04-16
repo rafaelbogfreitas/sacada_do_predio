@@ -67,10 +67,12 @@
         background-color: #fff;
         transition: width 0.3s linear;
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276);
+        
         input {
             width: 80%;
             height: 40px;
             font-size: 1.1rem;
+            color: $x_light_gray;
             padding-left: 20px;
             margin-bottom: 20px;
         }
@@ -97,6 +99,10 @@
         padding: 10px 20px;
         color:  $red;
         border: 1px solid $red;
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.289);
+        }
     }
 
     .signup_btn {
@@ -170,6 +176,26 @@ section {
         height: 300px;
         transform: rotate(10deg);
         background-color: white;
+    }
+    
+    .credits_box {
+        @include flexbox(display, flex);
+        position: absolute;
+        bottom :20px;
+        left: 0;
+        z-index: 2;
+
+        h2 {
+            margin-bottom: 10px;
+            margin-left: 10px;
+            font-weight: bold;
+            color: $orange;
+        }
+
+        .devs {
+            color: $light_gray;
+            margin-left: 10px;
+        }
     }
 }
 

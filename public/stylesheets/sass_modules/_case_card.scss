@@ -1,7 +1,7 @@
 .cards_container {
     width: 90%;
     height: 90%;
-    margin: 100px 0;
+    padding: 70px 0;
 
     @supports(display: grid){
         display: grid;
@@ -13,6 +13,7 @@
 
 .case_card {
     width: 100%;
+    max-width: 900px;
     height: 300px;
     padding:20px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
