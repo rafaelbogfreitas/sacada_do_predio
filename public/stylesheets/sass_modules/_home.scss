@@ -1,7 +1,33 @@
+.main_home {
+    position: relative;
+    overflow: hidden;
+
+    @include flexbox(justify-content, flex-start);
+
+    background-image: url('/images/bgcircle.svg');
+    background-attachment: fixed;
+    background-position-y: 15%;
+    background-position-x: 70%;
+    background-repeat: no-repeat;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        right: 100px;
+        top: 100%;
+        height: 200px;
+        transform: rotate(10deg);
+        background-color: $x_light_gray;
+    }
+   
+}
 
 .main_nav {
     width: 100vw;
     height: 70px;
+    background-color: #fff;
+    z-index: 2;
 
     @include flexbox(display, flex);
     @include flexbox(justify-content, space-between);
@@ -11,67 +37,149 @@
     form {
         @include flexbox(display, flex);
         @include flexbox(flex-direction, column);
+        @include flexbox(justify-content, center);
+        @include flexbox(align-items, center);
     }
 
     .close_form {
+        cursor: pointer;
+        position: absolute;
+        top:10px;
+        left:10px;
         width: 20px;
         height: auto;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s linear;
+        }
     }
 
-    .login_form {
+    .signup_form, .login_form {
         position: absolute;
         top:100%;
         right: 30px;
 
         width: 0;
         height: 300px;
+        padding-top: 50px;
         overflow: hidden;
-
+        background-color: #fff;
         transition: width 0.3s linear;
-
-        @include flexbox(display, flex);
-        @include flexbox(flex-direction, column);
-        @include flexbox(justify-content, center);
-        @include flexbox(align-items, center);
-
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276);
-    }
+        input {
+            width: 80%;
+            height: 40px;
+            font-size: 1.1rem;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
 
-    .signup_form {
-        position: absolute;
-        top:100%;
-        right: 30px;
+        input[type="submit"]{
+            width: auto;
+            padding-left: 0;
+            cursor: pointer;
+            margin-bottom: 0;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
 
-        width: 0;
-        height: 300px;
-        overflow: hidden;
-
-        transition: width 0.3s linear;
-
-        @include flexbox(display, flex);
-        @include flexbox(flex-direction, column);
-        @include flexbox(justify-content, center);
-        @include flexbox(align-items, center);
-
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276);
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s linear;
+            }
+        }
     }
     
     
     .signup_btn, .login_btn {
         margin: 10px;
         padding: 10px 20px;
-        color:  rgb(255, 66, 66);
-        border: 1px solid rgb(255, 66, 66);
+        color:  $red;
+        border: 1px solid $red;
+    }
+
+    .signup_btn {
+        color:  $orange;
+        border: 1px solid $orange;
+    }
+
+    .signup_form {
+        input {
+            border: 1px solid $orange;
+        }
+        input[type="submit"]{
+            color:  $orange;
+        }
+        color: $orange;
+    }
+
+    .login_form {
+        input {
+            border: 1px solid $red;
+        }
+        input[type="submit"]{
+            color:  $red;
+        }
+        color: $red;
     }
 }
 
-.cases_presentation {
+.subtitle {
+    font-weight: bold;
+    width: 52%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 4.5rem;
+    color: $orange;
+}
+
+section {
     width: 100vw;
     height: 100vh;
+}
+
+.cases_presentation {
+    position: relative;
+    overflow: hidden;
     background-color:$x_light_gray;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -50px;
+        left: 100px;
+        top: 100%;
+        height: 200px;
+        transform: rotate(-10deg);
+        background-color: lighten($orange, 30%);
+    }
+}
+
+.team_presentation {
+    position: relative;
+    overflow: hidden;
+    background-color:lighten($orange, 30%);
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        right: 100px;
+        top: 90%;
+        height: 300px;
+        transform: rotate(10deg);
+        background-color: white;
+    }
 }
 
 .btn_container {
     @include flexbox(display, flex)
+}
+
+.ilustration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 

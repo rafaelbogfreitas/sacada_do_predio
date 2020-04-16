@@ -95,11 +95,7 @@ a {
   text-decoration: none; }
 
 button {
-  cursor: pointer;
-  background: linear-gradient(20deg, #ffc40089 50%, white 50%); }
-  button:hover {
-    font-weight: bold;
-    background: linear-gradient(340deg, #ffc40089 50%, white 50%); }
+  cursor: pointer; }
 
 nav {
   position: fixed;
@@ -111,9 +107,34 @@ nav {
   width: 200px;
   height: 200px; }
 
+.main_home {
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  background-image: url("/images/bgcircle.svg");
+  background-attachment: fixed;
+  background-position-y: 15%;
+  background-position-x: 70%;
+  background-repeat: no-repeat; }
+  .main_home:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    right: 100px;
+    top: 100%;
+    height: 200px;
+    transform: rotate(10deg);
+    background-color: #cad1da; }
+
 .main_nav {
   width: 100vw;
   height: 70px;
+  background-color: #fff;
+  z-index: 2;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -139,78 +160,115 @@ nav {
     -moz-flex-direction: column;
     -o-flex-direction: column;
     -ms-flex-direction: column;
-    -webkit-flex-direction: column; }
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center; }
   .main_nav .close_form {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     width: 20px;
     height: auto; }
-  .main_nav .login_form {
+    .main_nav .close_form:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s linear; }
+  .main_nav .signup_form, .main_nav .login_form {
     position: absolute;
     top: 100%;
     right: 30px;
     width: 0;
     height: 300px;
+    padding-top: 50px;
     overflow: hidden;
+    background-color: #fff;
     transition: width 0.3s linear;
-    display: flex;
-    -moz-display: flex;
-    -o-display: flex;
-    -ms-display: flex;
-    -webkit-display: flex;
-    flex-direction: column;
-    -moz-flex-direction: column;
-    -o-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    justify-content: center;
-    -moz-justify-content: center;
-    -o-justify-content: center;
-    -ms-justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    -moz-align-items: center;
-    -o-align-items: center;
-    -ms-align-items: center;
-    -webkit-align-items: center;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276); }
-  .main_nav .signup_form {
-    position: absolute;
-    top: 100%;
-    right: 30px;
-    width: 0;
-    height: 300px;
-    overflow: hidden;
-    transition: width 0.3s linear;
-    display: flex;
-    -moz-display: flex;
-    -o-display: flex;
-    -ms-display: flex;
-    -webkit-display: flex;
-    flex-direction: column;
-    -moz-flex-direction: column;
-    -o-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    justify-content: center;
-    -moz-justify-content: center;
-    -o-justify-content: center;
-    -ms-justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    -moz-align-items: center;
-    -o-align-items: center;
-    -ms-align-items: center;
-    -webkit-align-items: center;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276); }
+    .main_nav .signup_form input, .main_nav .login_form input {
+      width: 80%;
+      height: 40px;
+      font-size: 1.1rem;
+      padding-left: 20px;
+      margin-bottom: 20px; }
+    .main_nav .signup_form input[type="submit"], .main_nav .login_form input[type="submit"] {
+      width: auto;
+      padding-left: 0;
+      cursor: pointer;
+      margin-bottom: 0;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: bold; }
+      .main_nav .signup_form input[type="submit"]:hover, .main_nav .login_form input[type="submit"]:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s linear; }
   .main_nav .signup_btn, .main_nav .login_btn {
     margin: 10px;
     padding: 10px 20px;
-    color: #ff4242;
-    border: 1px solid #ff4242; }
+    color: #8f211d;
+    border: 1px solid #8f211d; }
+  .main_nav .signup_btn {
+    color: #c6480c;
+    border: 1px solid #c6480c; }
+  .main_nav .signup_form {
+    color: #c6480c; }
+    .main_nav .signup_form input {
+      border: 1px solid #c6480c; }
+    .main_nav .signup_form input[type="submit"] {
+      color: #c6480c; }
+  .main_nav .login_form {
+    color: #8f211d; }
+    .main_nav .login_form input {
+      border: 1px solid #8f211d; }
+    .main_nav .login_form input[type="submit"] {
+      color: #8f211d; }
+
+.subtitle {
+  font-weight: bold;
+  width: 52%;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  font-size: 4.5rem;
+  color: #c6480c; }
+
+section {
+  width: 100vw;
+  height: 100vh; }
 
 .cases_presentation {
-  width: 100vw;
-  height: 100vh;
-  background-color: #f8f8f9; }
+  position: relative;
+  overflow: hidden;
+  background-color: #cad1da; }
+  .cases_presentation:after {
+    content: '';
+    position: absolute;
+    right: -50px;
+    left: 100px;
+    top: 100%;
+    height: 200px;
+    transform: rotate(-10deg);
+    background-color: #f79e74; }
+
+.team_presentation {
+  position: relative;
+  overflow: hidden;
+  background-color: #f79e74; }
+  .team_presentation:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    right: 100px;
+    top: 90%;
+    height: 300px;
+    transform: rotate(10deg);
+    background-color: white; }
 
 .btn_container {
   display: flex;
@@ -218,6 +276,11 @@ nav {
   -o-display: flex;
   -ms-display: flex;
   -webkit-display: flex; }
+
+.ilustration {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
 
 .dashboard {
   position: relative;
@@ -238,8 +301,8 @@ nav {
   -webkit-align-items: center;
   width: 400px;
   height: 100vh;
-  background-color: #f8f8f9;
-  box-shadow: 2px 0 5px 0 #b3bbbe;
+  background-color: #cad1da;
+  box-shadow: 2px 0 5px 0 #7e8188;
   position: fixed;
   top: 0;
   left: 0;
@@ -259,7 +322,7 @@ nav {
     -ms-align-items: center;
     -webkit-align-items: center; }
     .dashboard .cases_title_container h1 {
-      color: #5d1711;
+      color: #711e19;
       font-size: 25px;
       font-weight: bold; }
     .dashboard .cases_title_container .arrow {
@@ -404,9 +467,9 @@ img {
     box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.193);
     transition: box-shadow 0.3s ease-in-out; }
   .case_card h1 {
-    color: #5d1711;
+    color: #711e19;
     font-weight: bold; }
   .case_card p {
-    color: #b3bbbe; }
+    color: #7e8188; }
 
 /*# sourceMappingURL=style.css.map */

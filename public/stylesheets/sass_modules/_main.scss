@@ -21,12 +21,6 @@ a {
 
 button {
     cursor: pointer;
-    background:linear-gradient(20deg, #ffc40089 50%, white 50%);
-
-    &:hover {
-        font-weight: bold;
-        background:linear-gradient(340deg, #ffc40089 50%, white 50%);
-    }
 }
 
 nav {
