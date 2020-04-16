@@ -115,6 +115,16 @@ let dashboradControllers = {
                     .catch(error => console.log(error));
             })
             .catch(error => console.log(error));
+    },
+    getEditCase: (req, res, next) => {
+        const caseId = req.params.id;
+        Case
+            .findById(caseId)
+            .then(cases => {
+                console.log(cases)
+                res.render('dashboard/edit-case', cases)
+            })
+            .catch(error => console.log(error))
     }
 }
 

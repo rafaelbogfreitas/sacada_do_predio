@@ -4,7 +4,7 @@
 
 main {
     width: 100vw;
-    // height: 100vh;
+    height: 100vh;
     // overflow: scroll;
 
     @include flexbox(display, flex);
@@ -27,6 +27,13 @@ button {
         font-weight: bold;
         background:linear-gradient(340deg, #ffc40089 50%, white 50%);
     }
+}
+
+nav {
+    position: fixed;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
 }
 
 .profile_img {

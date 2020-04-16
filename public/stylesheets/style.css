@@ -54,6 +54,7 @@ table {
 
 .open_down {
   transform: scaleY(1) !important;
+  transform-origin: top;
   transition: transform 0.3s ease-in-out; }
 
 .no_shadow {
@@ -64,11 +65,16 @@ table {
   height: 100px !important;
   transition: height 0.3s ease-in-out; }
 
+.increase_width {
+  width: 300px !important;
+  transition: height 0.3s ease-in-out; }
+
 * {
   font-family: Nevermind, Helvetica, sans-serif; }
 
 main {
   width: 100vw;
+  height: 100vh;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -95,11 +101,19 @@ button {
     font-weight: bold;
     background: linear-gradient(340deg, #ffc40089 50%, white 50%); }
 
+nav {
+  position: fixed;
+  padding: 0 20px;
+  top: 0;
+  left: 0; }
+
 .profile_img {
   width: 200px;
   height: 200px; }
 
 .main_nav {
+  width: 100vw;
+  height: 70px;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -125,13 +139,85 @@ button {
     -moz-flex-direction: column;
     -o-flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-flex-direction: column; }
+  .main_nav .close_form {
+    width: 20px;
+    height: auto; }
+  .main_nav .login_form {
+    position: absolute;
+    top: 100%;
+    right: 30px;
+    width: 0;
+    height: 300px;
+    overflow: hidden;
+    transition: width 0.3s linear;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
     -webkit-flex-direction: column;
-    border: 1px solid #e28a8a; }
-  .main_nav .signup_btn {
+    justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276); }
+  .main_nav .signup_form {
+    position: absolute;
+    top: 100%;
+    right: 30px;
+    width: 0;
+    height: 300px;
+    overflow: hidden;
+    transition: width 0.3s linear;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276); }
+  .main_nav .signup_btn, .main_nav .login_btn {
     margin: 10px;
     padding: 10px 20px;
     color: #ff4242;
     border: 1px solid #ff4242; }
+
+.cases_presentation {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f9; }
+
+.btn_container {
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex; }
 
 .dashboard {
   position: relative;
@@ -185,10 +271,6 @@ button {
   .dashboard .user_cases_container {
     width: 100%;
     height: auto;
-    transform: scaleY(0);
-    transition: transform 0.3s linear;
-    padding: 10px 20px;
-    overflow: hidden;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -203,7 +285,12 @@ button {
     -moz-align-items: center;
     -o-align-items: center;
     -ms-align-items: center;
-    -webkit-align-items: center; }
+    -webkit-align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s linear;
+    padding: 10px 20px;
+    overflow: hidden; }
   .dashboard .close_icon {
     position: absolute;
     top: 10px;

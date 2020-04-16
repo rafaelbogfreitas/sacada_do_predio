@@ -1,5 +1,8 @@
 
 .main_nav {
+    width: 100vw;
+    height: 70px;
+
     @include flexbox(display, flex);
     @include flexbox(justify-content, space-between);
     @include flexbox(align-items, center);
@@ -8,21 +11,67 @@
     form {
         @include flexbox(display, flex);
         @include flexbox(flex-direction, column);
-        border: 1px solid rgb(226, 138, 138);
-        
-        
-        // position: absolute;
-        // right: 10px;
-        // top: 50px;
-        // // display: none;
+    }
+
+    .close_form {
+        width: 20px;
+        height: auto;
+    }
+
+    .login_form {
+        position: absolute;
+        top:100%;
+        right: 30px;
+
+        width: 0;
+        height: 300px;
+        overflow: hidden;
+
+        transition: width 0.3s linear;
+
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        @include flexbox(justify-content, center);
+        @include flexbox(align-items, center);
+
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276);
+    }
+
+    .signup_form {
+        position: absolute;
+        top:100%;
+        right: 30px;
+
+        width: 0;
+        height: 300px;
+        overflow: hidden;
+
+        transition: width 0.3s linear;
+
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        @include flexbox(justify-content, center);
+        @include flexbox(align-items, center);
+
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.276);
     }
     
     
-    .signup_btn {
+    .signup_btn, .login_btn {
         margin: 10px;
         padding: 10px 20px;
         color:  rgb(255, 66, 66);
         border: 1px solid rgb(255, 66, 66);
     }
+}
+
+.cases_presentation {
+    width: 100vw;
+    height: 100vh;
+    background-color:$x_light_gray;
+}
+
+.btn_container {
+    @include flexbox(display, flex)
 }
 
