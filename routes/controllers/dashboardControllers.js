@@ -90,11 +90,25 @@ let dashboradControllers = {
     },
     getDeleteCase: (req, res, next) => {
         const caseId = req.params.id;
+        let { user } = req.session.passport;
 
         Case
             .findByIdAndRemove(caseId)
             .then(() => {
                 res.redirect('/dashboard');
+            })
+            .catch(error => console.log(error));
+            
+        User
+            .findById(user)
+            .then(response => {
+                let newArr = response.casesCreated.filter(elem => elem._id != caseId)
+                User
+                    .findByIdAndUpdate(user, {casesCreated: newArr})
+                    .then(() => {
+                        res.redirect('/dashboard')
+                    })
+                    .catch(error => console.log(error));
             })
             .catch(error => console.log(error));
     },
