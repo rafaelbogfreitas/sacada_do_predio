@@ -28,6 +28,10 @@
         width: 50px;
         height: 50px;
         overflow: hidden;
+
+        @include flexbox(display, flex);
+        @include flexbox(justify-content, center);
+        @include flexbox(align-items, center);
         
         border-radius: 100%;
         border: 2px solid $lemon_yellow;

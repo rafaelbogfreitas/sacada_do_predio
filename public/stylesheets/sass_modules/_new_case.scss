@@ -1,0 +1,10 @@
+.main_new_case {
+    .new_case_container {
+        width: 90%;
+        height:90%;
+
+        @extend .center;
+        @include flexbox(align-items, flex-end);
+        @extend .box-shadow;
+    }
+}

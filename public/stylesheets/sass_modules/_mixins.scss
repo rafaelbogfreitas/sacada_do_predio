@@ -6,6 +6,14 @@
     -webkit-#{$property}:$value;
 }
 
+@mixin boxshadow ($value){
+    #{box-shadow}: $value;
+    -moz-#{box-shadow}:$value;
+    -o-#{box-shadow}:$value;
+    -ms-#{box-shadow}:$value;
+    -webkit-#{box-shadow}:$value;
+}
+
 @mixin mediaQuery($breakpoint){
     @media (max-width: $breakpoint) { @content; }
 }
