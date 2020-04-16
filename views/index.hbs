@@ -1,29 +1,37 @@
 
-<main>
-<nav class="main_nav">
+<main class="main_home">
+    <nav class="main_nav">
 
-    <h1>Hello SACADA</h1>
+        <img src="/images/logo.png" alt="logo">
 
+        <div class="btn_container">
+            <div class="signup_container">
+                <button class="signup_btn">SIGNUP</button>
+                <form  class="signup_form" action="/signup" method="POST" enctype="multipart/form-data">
+                    <img class="close_form" src="/images/close_icon.svg" alt="close icon">
+                    <input type="text" placeholder="Name" name="username" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <input type="submit" value="SIGNUP"/>
+                </form>
+            </div>
+            <div class="login_container">
+                <button class="login_btn">LOGIN</button>
+                <form  class="login_form" action="/login" method="POST">
+                    <img class="close_form" src="/images/close_icon.svg" alt="close icon">
+                    <input type="text" placeholder="Name" name="username" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <input type="submit" value="LOGIN"/>
+                </form>
+            </div>
+        </div>
 
-    <form  class="signup_form" action="/signup" method="POST" enctype="multipart/form-data">
-        <input type="text" placeholder="Name" name="username" required>
-        <input type="email" placeholder="Email" name="email" required>
-        <input type="password" placeholder="Password" name="password" required>
-        {{!-- <input type="text" placeholder="address" name="address">
-        <input type="text" placeholder="state" name="state">
-        <input type="file" placeholder="File" name="file"/> --}}
-        <input type="submit"/>
-    </form>
+    </nav>
 
-    {{!-- <button class="signup_btn">SIGNUP</button> --}}
+    <h1 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h1>
 
-    <form  class="signup_form" action="/login" method="POST">
-        <input type="text" placeholder="Name" name="username" required>
-        <input type="password" placeholder="Password" name="password" required>
-        <input type="submit"/>
-    </form>
-
-    {{!-- <button class="signup_btn">LOGIN</button> --}}
-</nav>
+    <img class="ilustration" src="/images/sacada.png" alt="sacada ilustration">
 </main>
+<section class="cases_presentation"></section>
+<section class="team_presentation"></section>
 <script src="javascripts/home.js"></script>

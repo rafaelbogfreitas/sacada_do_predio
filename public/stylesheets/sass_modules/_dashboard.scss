@@ -45,14 +45,16 @@
     .user_cases_container {
         width: 100%;
         height: auto;
+
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        @include flexbox(align-items, center);
+        
         transform: scaleY(0);
+        transform-origin: top;
         transition: transform 0.3s linear;
         padding: 10px 20px;
         overflow: hidden;
-        @include flexbox(display, flex);
-        @include flexbox(flex-direction, column);
-        // @include flexbox(justify-content, center);
-        @include flexbox(align-items, center);
     }
 
     .close_icon {

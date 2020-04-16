@@ -5,6 +5,7 @@
 
 .open_down {
     transform: scaleY(1) !important;
+    transform-origin: top;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -15,5 +16,10 @@
 
 .increase_height {
     height: 100px !important;
+    transition: height 0.3s ease-in-out ;
+}
+
+.increase_width {
+    width: 300px !important;
     transition: height 0.3s ease-in-out ;
 }
