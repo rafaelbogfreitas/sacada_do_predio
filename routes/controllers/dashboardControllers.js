@@ -1,7 +1,7 @@
 const User = require('../../models/User');
 const Case = require('../../models/Case')
 
-let dashboradControllers = {
+let dashboardControllers = {
     //GET DASHBOARD
     getDashboard: (req, res, next) => {
         let { user } = req.session.passport;
@@ -80,6 +80,7 @@ let dashboradControllers = {
 
         Case
             .findById(caseId)
+            .populate('user')
             .then(cases => {
                 if (user == cases.user) {
                     owner = true;
@@ -158,4 +159,4 @@ let dashboradControllers = {
     }
 }
 
-module.exports = dashboradControllers;
+module.exports = dashboardControllers;

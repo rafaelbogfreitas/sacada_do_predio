@@ -2,7 +2,7 @@
 {{_id}}
 <form class="new_case_form" action="/case/edit/{{_id}}" method="POST" enctype="multipart/form-data">
     <input placeholder="title" type="text" name="title" value="{{title}}">
-    <textarea placeholder="description" type="text" name="description" value="{{description}}"></textarea>
+    <textarea placeholder="description" type="text" name="description">{{description}}</textarea>
     <input placeholder="address" type="text" name="address" value="{{address}}">
     <input type="file" name="file">
     <input type="submit" value="save">
