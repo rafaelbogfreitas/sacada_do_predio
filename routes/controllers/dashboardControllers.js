@@ -11,7 +11,7 @@ let dashboradControllers = {
                 .find()
                 .then( cases => {
                     // console.log(cases);
-                    console.log({ user: user, cases: cases });
+                    // console.log({ user: user, cases: cases });
                     // res.send({ user: user, cases: cases });
                     res.render('dashboard/dashboard', { user: user, cases: cases });
                 })
@@ -26,7 +26,7 @@ let dashboradControllers = {
     //POST DASHBOARD/CREATE
     postNewCase: (req, res, next) => {
         let { user } = req.session.passport;
-        
+        // console.log(req.body)
         const {
             title,
             description,
@@ -48,10 +48,10 @@ let dashboradControllers = {
                 address: address
             })
             .then( response => {
-                console.log(response);
+                // console.log(response);
                 User.findByIdAndUpdate(user, { $push: {casesCreated: response}})
                 .then( response => {
-                    console.log(response)
+                    // console.log(response)
                     res.redirect('/dashboard');
                 })
                 .catch( error => console.log(error))
@@ -65,10 +65,10 @@ let dashboradControllers = {
                 address: address
             })
             .then( response => {
-                console.log(response);
+                // console.log(response);
                 User.findByIdAndUpdate(user, { $push: {casesCreated: response}})
                 .then( response => {
-                    console.log(response)
+                    // console.log(response)
                     res.redirect('/dashboard');
                 })
                 .catch( error => console.log(error))
@@ -87,7 +87,7 @@ let dashboradControllers = {
                 if (user == cases.user) {
                     owner = true;
                 }
-                console.log({ owner: owner, case: cases })
+                // console.log({ owner: owner, case: cases })
                 res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
             })
             .catch(error => console.log(error));
@@ -115,6 +115,59 @@ let dashboradControllers = {
                     .catch(error => console.log(error));
             })
             .catch(error => console.log(error));
+    },
+    getEditCase: (req, res, next) => {
+        const caseId = req.params.id;
+        Case
+            .findById(caseId)
+            .then(cases => {
+                // console.log(cases)
+                res.render('dashboard/edit-case', cases)
+            })
+            .catch(error => console.log(error))
+    },
+    postEditCase: (req, res, next) => {
+        const caseId = req.params.id;
+        let { user } = req.session.passport;
+
+        const {
+            title,
+            description,
+            address
+        } = req.body
+        
+        if (req.file) {
+            const {
+                originalname,
+                url
+            } = req.file;
+            
+            Case
+                .findByIdAndUpdate(caseId, {
+                    title: title,
+                    description: description,
+                    imageName: originalname,
+                    imageUrl: url,
+                    user: user,
+                    address: address
+                })
+                .then(() => {
+                    res.redirect('/dashboard');
+                })
+                .catch(error => console.log(error));
+        } else {
+            Case
+                .findByIdAndUpdate(caseId, {
+                    title: title,
+                    description: description,
+                    user: user,
+                    address: address
+                })
+                .then(() => {
+                    res.redirect('/dashboard');
+                })
+                .catch(error => console.log(error));
+        }
     }
 }
 

@@ -16,9 +16,9 @@ router.get('/dashboard/new-case', ensureLogin.ensureLoggedIn('/'), controllers.g
 
 router.get('/case/delete/:id', controllers.getDeleteCase);
 
-// router.get('/case/edit/:id', controllers.getEditCase);
+router.get('/case/edit/:id', controllers.getEditCase);
 
-// router.post('/case/edit/:id', controllers.postEditCase);
+router.post('/case/edit/:id', uploadCloud.single('file'), controllers.postEditCase);
 
 router.get('/case/:id', controllers.getCaseById);
 
