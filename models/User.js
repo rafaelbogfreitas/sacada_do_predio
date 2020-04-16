@@ -43,7 +43,11 @@ const userSchema = new Schema({
     donations: [{
         type: Schema.Types.ObjectId,
         ref: 'Case'
-    }]
+    }],
+    phoneNumber: {
+        type: String,
+        default: ''
+    }
 })
 
 const User = mongoose.model('User', userSchema);

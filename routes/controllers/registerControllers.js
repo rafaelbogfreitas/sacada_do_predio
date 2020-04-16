@@ -9,7 +9,8 @@ let registerControllers = {
 
         const {
             state,
-            address
+            address,
+            phoneNumber
         } = req.body;
 
         if (req.file) {
@@ -23,6 +24,7 @@ let registerControllers = {
                     status: 'registered',
                     state,
                     address,
+                    phoneNumber,
                     imageName: originalname,
                     imageUrl: url
                 })
@@ -37,7 +39,8 @@ let registerControllers = {
                 .findByIdAndUpdate(user, {
                     status: 'registered',
                     state,
-                    address
+                    address,
+                    phoneNumber
                 })
                 .then(response => {
                     console.log('then else')

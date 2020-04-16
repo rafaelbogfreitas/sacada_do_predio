@@ -8,5 +8,7 @@
     <p>{{case.description}}</p>
     <p>{{case.address}}</p>
     <p>{{case.user.email}}</p>
-    <a href="https://wa.me/55{{case.user.number}}">Whatsapp</a>
+    <p>{{case.user.phoneNumber}}</p>
+    <a href="mailto:{{case.user.email}}">Email</a>
+    <a href="https://wa.me/55{{case.user.phoneNumber}}">Whatsapp</a>
 </div>

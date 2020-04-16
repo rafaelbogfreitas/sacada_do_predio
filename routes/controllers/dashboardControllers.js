@@ -1,8 +1,9 @@
 const User = require('../../models/User');
-const Case = require('../../models/Case')
+const Case = require('../../models/Case');
+
 
 let dashboardControllers = {
-    //GET DASHBOARD
+    // GET DASHBOARD
     getDashboard: (req, res, next) => {
         let { user } = req.session.passport;
         User
@@ -18,11 +19,11 @@ let dashboardControllers = {
             })
             .catch(error => console.log(error));
     },
-    //GET DASHBOARD/CREATE
+    // GET DASHBOARD/CREATE
     getNewCase: (req, res, next) => {
         res.render('dashboard/new-case');
     },
-    //POST DASHBOARD/CREATE
+    // POST DASHBOARD/CREATE
     postNewCase: (req, res, next) => {
         let { user } = req.session.passport;
         // console.log(req.body)
@@ -73,6 +74,7 @@ let dashboardControllers = {
             .catch(error => console.log(error));
         }
     },
+    // GET DASHBOARD/CASE/:ID
     getCaseById: (req, res, next) => {
         const caseId = req.params.id;
         let { user } = req.session.passport;
@@ -82,13 +84,14 @@ let dashboardControllers = {
             .findById(caseId)
             .populate('user')
             .then(cases => {
-                if (user == cases.user) {
+                if (user == cases.user._id) {
                     owner = true;
                 }
                 res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
             })
             .catch(error => console.log(error));
     },
+    // GET CASE/DELETE/:ID
     getDeleteCase: (req, res, next) => {
         const caseId = req.params.id;
         let { user } = req.session.passport;
@@ -105,6 +108,7 @@ let dashboardControllers = {
             })
             .catch(error => console.log(error));
     },
+    // GET CASE/EDIT/:ID
     getEditCase: (req, res, next) => {
         const caseId = req.params.id;
         Case
@@ -114,6 +118,7 @@ let dashboardControllers = {
             })
             .catch(error => console.log(error))
     },
+    // POST CASE/EDIT/:ID
     postEditCase: (req, res, next) => {
         const caseId = req.params.id;
         let { user } = req.session.passport;
@@ -150,6 +155,64 @@ let dashboardControllers = {
                     description: description,
                     user: user,
                     address: address
+                })
+                .then(() => {
+                    res.redirect('/dashboard');
+                })
+                .catch(error => console.log(error));
+        }
+    },
+    // GET USER EDIT
+    getEditUser: (req, res, next) => {
+        let { user } = req.session.passport;
+        User
+            .findById(user)
+            .then( user => {
+                res.render('dashboard/edit-user', {user});
+            })
+            .catch(error => console.log(error));
+    },
+    // POST USER EDIT
+    postEditUser: (req, res, next) => {
+        let {
+            user
+        } = req.session.passport;
+
+        const {
+            username,
+            email,
+            state,
+            address,
+            phoneNumber
+        } = req.body;
+
+        if (req.file) {
+            const {
+                originalname,
+                url
+            } = req.file;
+            User
+                .findByIdAndUpdate(user, {
+                    username: username,
+                    email: email,
+                    state: state,
+                    address: address,
+                    phoneNumber: phoneNumber,
+                    imageName: originalname,
+                    imageUrl: url
+                })
+                .then(() => {
+                    res.redirect('/dashboard');
+                })
+                .catch(error => console.log(error));
+        } else {
+            User
+                .findByIdAndUpdate(user, {
+                    username: username,
+                    email: email,
+                    state: state,
+                    address: address,
+                    phoneNumber: phoneNumber,
                 })
                 .then(() => {
                     res.redirect('/dashboard');
