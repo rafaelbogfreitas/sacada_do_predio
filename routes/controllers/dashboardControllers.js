@@ -82,7 +82,7 @@ let dashboardControllers = {
             .findById(caseId)
             .populate('user')
             .then(cases => {
-                if (user == cases.user) {
+                if (user == cases.user._id) {
                     owner = true;
                 }
                 res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})

@@ -216,7 +216,8 @@ nav {
     color: #8f211d;
     border: 1px solid #8f211d; }
     .main_nav .signup_btn:hover, .main_nav .login_btn:hover {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.289); }
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.289);
+      transition: box-shadow 0.3s linear; }
   .main_nav .signup_btn {
     color: #c6480c;
     border: 1px solid #c6480c; }
@@ -248,6 +249,21 @@ section {
 .cases_presentation {
   position: relative;
   overflow: hidden;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   background-color: #cad1da; }
   .cases_presentation:after {
     content: '';
@@ -258,6 +274,22 @@ section {
     height: 200px;
     transform: rotate(-10deg);
     background-color: #f79e74; }
+  .cases_presentation .ajude_btn {
+    margin-bottom: 100px;
+    padding: 20px 40px;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 2px solid #c6480c;
+    color: #c6480c;
+    align-self: flex-end;
+    -moz-align-self: flex-end;
+    -o-align-self: flex-end;
+    -ms-align-self: flex-end;
+    -webkit-align-self: flex-end;
+    transition: box-shadow 0.3s linear; }
+    .cases_presentation .ajude_btn:hover {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+      transition: box-shadow 0.3s linear; }
 
 .team_presentation {
   position: relative;
@@ -446,6 +478,21 @@ section {
     width: 50px;
     height: 50px;
     overflow: hidden;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
     border-radius: 100%;
     border: 2px solid #f1cf00; }
   .profile_info .profile_options_box {

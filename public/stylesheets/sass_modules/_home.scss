@@ -102,6 +102,7 @@
 
         &:hover {
             box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.289);
+            transition: box-shadow 0.3s linear;
         }
     }
 
@@ -148,6 +149,11 @@ section {
 .cases_presentation {
     position: relative;
     overflow: hidden;
+
+    @include flexbox(display, flex);
+    @include flexbox(align-items, center);
+    @include flexbox(justify-content, center);
+
     background-color:$x_light_gray;
 
     &:after {
@@ -159,6 +165,22 @@ section {
         height: 200px;
         transform: rotate(-10deg);
         background-color: lighten($orange, 30%);
+    }
+
+    .ajude_btn {
+        margin-bottom: 100px;
+        padding: 20px 40px;
+        font-size: 2rem;
+        background-color: transparent;
+        border: 2px solid $orange;
+        color: $orange;
+        @include flexbox(align-self, flex-end);
+        transition: box-shadow 0.3s linear;
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+            transition: box-shadow 0.3s linear;
+        }
     }
 }
 
