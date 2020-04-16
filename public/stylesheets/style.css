@@ -135,6 +135,7 @@ nav {
   height: 70px;
   background-color: #fff;
   z-index: 2;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.235);
   display: flex;
   -moz-display: flex;
   -o-display: flex;
