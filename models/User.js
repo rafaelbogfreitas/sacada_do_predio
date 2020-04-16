@@ -24,21 +24,26 @@ const userSchema = new Schema({
         type: String,
         default: 'missing state'
     },
-    address:{
+    address: {
         type:String,
         default: 'missing address'
     },
-    imageName:{
+    imageName: {
         type:String,
         default:'avatar'
     },
-    imageUrl:{
+    imageUrl: {
         type:String,
         default:'/images/avatar.png'
     },
-    casesCreated:[],
-
-    donations:[]
+    casesCreated: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Case'
+    }],
+    donations: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Case'
+    }]
 })
 
 const User = mongoose.model('User', userSchema);

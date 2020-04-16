@@ -23,5 +23,4 @@ router.post('/case/edit/:id', uploadCloud.single('file'), controllers.postEditCa
 router.get('/case/:id', controllers.getCaseById);
 
 
-
 module.exports = router;
