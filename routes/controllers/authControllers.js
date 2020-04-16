@@ -17,7 +17,8 @@ let authControllers = {
         let salt = bcrypt.genSaltSync(bcryptSalt);
         let hash = bcrypt.hashSync(password, salt);
         
-        User.find({
+        User
+            .find({
                 username: username
             })
             .then(response => {

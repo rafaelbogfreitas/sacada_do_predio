@@ -20,7 +20,7 @@ const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 
 //MONGODB connection
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(process.env.MONGODB_REFURBISHED, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
