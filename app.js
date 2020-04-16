@@ -163,5 +163,8 @@ app.use('/', dashboard);
 const register = require('./routes/register');
 app.use('/', register);
 
+const api = require('./routes/api');
+app.use('/', api);
+
 
 module.exports = app;
