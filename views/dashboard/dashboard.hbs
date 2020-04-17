@@ -108,7 +108,8 @@
                     <label for="address">
                         Enter your address
                     </label>
-                        <input id="address" type="text" placeholder="address" name="address">
+                    <input id="address" type="text" placeholder="address" name="address" required >
+                    <div class="results_box"></div>
                     <input type="text" placeholder="state" name="state">
                     <input type="text" placeholder="phone number" name="phoneNumber">
                     <input type="file" placeholder="File" name="file" />
@@ -125,6 +126,7 @@
 </main>
 {{#if user}}
 <script src="javascripts/dashboard.js"></script>
+<script src="javascripts/address_autocomplete.js"></script>
 {{else}}
 <script src="javascripts/dashboard.js"></script>
 <script src="javascripts/home.js"></script>
