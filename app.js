@@ -166,5 +166,11 @@ app.use('/', register);
 const api = require('./routes/api');
 app.use('/', api);
 
+const user = require('./routes/user');
+app.use('/', user);
+
+const caseRoutes = require('./routes/case');
+app.use('/', caseRoutes);
+
 
 module.exports = app;

@@ -7,23 +7,12 @@ const ensureLogin = require("connect-ensure-login");
 //Cloudinary config import
 const uploadCloud = require('../config/cloudinary.js');
 
+// DASHBOARD ROUTES
 
 router.get('/dashboard', controllers.getDashboard);
 
 router.post('/dashboard/new-case', uploadCloud.single('file'), controllers.postNewCase);
 
 router.get('/dashboard/new-case', ensureLogin.ensureLoggedIn('/'), controllers.getNewCase);
-
-router.get('/case/delete/:id', controllers.getDeleteCase);
-
-router.get('/case/edit/:id', controllers.getEditCase);
-
-router.post('/case/edit/:id', uploadCloud.single('file'), controllers.postEditCase);
-
-router.get('/case/:id', controllers.getCaseById);
-
-router.get('/dashboard/user/edit', ensureLogin.ensureLoggedIn('/'), controllers.getEditUser);
-
-router.post('/dashboard/user/edit', uploadCloud.single('file'), controllers.postEditUser);
 
 module.exports = router;
