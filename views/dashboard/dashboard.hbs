@@ -5,6 +5,11 @@
             {{!-- Nav that appears only if logged in --}}
             <nav class="dashboard_nav">
                 <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
+                {{#if_eq status 'waiting'}}
+                <button class="btn register_btn">
+                    REGISTRE
+                </button>
+                {{/if_eq }}
                 <div class="profile_info">
                     <div class="user_name">
                         <p>{{username}}</p>
@@ -26,12 +31,14 @@
                 <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
                
                <div class="cases_title_container">
-                    <h1>CASOS CRIADOS</h1>
+                   <div class="title_box">
+                        <h1>CASOS CRIADOS</h1>
+                        <img  class="arrow" src="/images/arrow.svg" alt="">
+                   </div>
                     {{#if_eq status 'registered'}}
                         <a href="/dashboard/new-case">
-                            <img src="/images/plus.svg" alt="plus icon">
+                            <img class="create_icon" src="/images/plus.svg" alt="plus icon">
                         </a>
-                        <img  class="arrow" src="/images/arrow.svg" alt="">
                     {{/if_eq}}
                </div>
 
@@ -92,17 +99,35 @@
     {{!-- Registration Container --}}
 
     {{#with user}}
-    {{#if_eq status "waiting"}}
-    <p>Complete your registration:</p>
-    <form class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
-        <input type="text" placeholder="address" name="address">
-        <input type="text" placeholder="state" name="state">
-        <input type="text" placeholder="phone number" name="phoneNumber">
-        <input type="file" placeholder="File" name="file" />
-        <input type="submit" />
-    </form>
-    {{/if_eq}}
+        {{#if_eq status "waiting"}}
+        <div class="registration_layer">
+            <div class="registration_container">
+                <img src="/images/close_icon.svg" class="close_register"/>
+                <p>Complete your registration:</p>
+                <form class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
+                    <label for="address">
+                        Enter your address
+                    </label>
+                    <input id="address" type="text" placeholder="address" name="address" required >
+                    <div class="results_box"></div>
+                    <input type="text" placeholder="state" name="state">
+                    <input type="text" placeholder="phone number" name="phoneNumber">
+                    <input type="file" placeholder="File" name="file" />
+                    <div class="file_label_box">
+                        <label class="btn" for="file">Image</label>
+                        <div class="file_text">Select a image</div>
+                    </div>
+                    <input type="submit" class="btn register_save" value="SAVE"/>
+                </form>
+            </div>
+        </div>
+        {{/if_eq}}
     {{/with}}
 </main>
+{{#if user}}
+<script src="javascripts/dashboard.js"></script>
+<script src="javascripts/address_autocomplete.js"></script>
+{{else}}
 <script src="javascripts/dashboard.js"></script>
 <script src="javascripts/home.js"></script>
+{{/if}}

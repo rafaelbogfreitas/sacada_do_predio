@@ -26,6 +26,7 @@
         @include flexbox(align-items,center);
 
         h1 {
+            height: 100%;
             color: $dark_red;
             font-size: 25px;
             font-weight: bold;
@@ -37,6 +38,26 @@
             transition: transform 0.3s linear;
         }
 
+        .title_box{
+            cursor: pointer;
+            height: 100%;
+            @include flexbox(display, flex);
+            @include flexbox(align-items, center);
+
+            img{
+                margin: 0 0 5px 20px;
+            };
+        }
+
+        .create_icon {
+            width: 20px;
+            transition: transform 0.3s linear;
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s linear;
+            }
+        }
+
         & > * {
             margin: 0 10px;
         }
@@ -44,17 +65,15 @@
 
     .user_cases_container {
         width: 100%;
-        height: auto;
+        height: 0;
 
         @include flexbox(display, flex);
         @include flexbox(flex-direction, column);
         @include flexbox(align-items, center);
         
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.3s linear;
+        transition: height 0.3s ease-in-out;
         padding: 10px 20px;
-        overflow: hidden;
+        overflow: scroll;
     }
 
     .close_icon {
@@ -76,8 +95,16 @@
         width: 95%;
         height: auto;
         padding:10px;
-        background-color: #fff;
-        box-shadow: 1px 1px 3px 0 black;
+        background-color: lighten($x_light_gray, 15%);
+        transition: box-shadow 0.3s linear;
+        &:hover {
+            @extend .box-shadow;
+        }
+
+        .case_title {
+            color: $red;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -100,6 +127,4 @@
 
     //info about profile box (name, pic)
     
-
-
 }
