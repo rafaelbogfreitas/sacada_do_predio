@@ -1,11 +1,20 @@
-<main>
-<form class="new_case_form" action="/case/edit/{{_id}}" method="POST" enctype="multipart/form-data">
-    <input placeholder="title" type="text" name="title" value="{{title}}">
-    <textarea placeholder="description" type="text" name="description">{{description}}</textarea>
-    <input placeholder="address" type="text" name="address" value="{{address}}">
-    <input type="file" name="file">
-    <input type="submit" value="save">
-</form>
+<main class="main_new_case">
+    <div class="new_case_container">
+        <h1>EDIT CASE</h1>
+        <form class="new_case_form" action="/case/edit/{{_id}}" method="POST" enctype="multipart/form-data">
+            <input placeholder="title" type="text" name="title" value="{{title}}">
+            <textarea placeholder="description" type="text" name="description">{{description}}</textarea>
+            <input placeholder="address" type="text" name="address" value="{{address}}">
+            <div class="file_label_box">
+                <label class="btn" for="file">Image</label>
+                <div class="file_text">Select a image</div>
+            </div>
+            <input id="file" type="file" name="file">
+            <div class="hor_btn_box">
+                <a class="btn back_btn" href="/dashboard">Back to dashboard</a>
+                <input class="btn" type="submit" value="save">
+            </div>
+        </form>
+    </div>
 
-<a href="/dashboard">Back to dashboard</a>
 </main>

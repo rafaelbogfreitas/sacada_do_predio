@@ -22,7 +22,7 @@
             @extend .center;
             @include flexbox(flex-direction, column);
 
-            input:not([type="submit"]), textarea {
+            input:not([type="submit"]), textarea, .file_label_box {
                 width: 100%;
                 padding-left: 20px;
                 font-size: 1.5rem;
@@ -34,7 +34,7 @@
                 }
             }
 
-            input {
+            input, .file_label_box {
                 height: 50px;
             }
 
@@ -42,6 +42,30 @@
                 min-width: 100%;
                 height: 200px;
                 padding-top: 20px;
+            }
+
+            input[type="file"]{
+                width: 0.01px;
+                height: 0.01px;
+                padding:0;
+                margin: 0;
+                border: none;
+                overflow: hidden;
+            }
+
+            .file_label_box {
+                padding: 0;
+               @extend .center;
+               @include flexbox(justify-content, space-between);
+                label {
+                    width: 20%;
+                }
+                .file_text {
+                    width: 80%;
+                    padding-left: 20px;
+                    overflow: hidden;
+                    color: $x_light_gray;
+                }
             }
 
             & > * {

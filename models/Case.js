@@ -26,6 +26,8 @@ const caseSchema = new Schema({
         type: String,
         required: true
     }
+},{
+    timestamps: true
 });
 
 const Case = mongoose.model('Case', caseSchema);
