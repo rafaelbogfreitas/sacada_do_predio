@@ -9,6 +9,14 @@ let apiControllers = {
                 res.send(users);
             })
             .catch( error => console.log( error));
+    },
+    casesApi: function(req, res, next) {
+        Case.find()
+        .populate('user')
+            .then( cases => {
+                res.send(cases);
+            })
+            .catch( error => console.log( error));
     }
 }
 
