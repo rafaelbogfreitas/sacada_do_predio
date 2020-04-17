@@ -3,5 +3,28 @@
     top: 0;
     left: 0;
     z-index: 5;
-    
+
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(lighten($x_light_gray, 15%), 0.5);
+
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+
+    @extend .center;
+
+    .registraton_container{
+        width: 80%;
+        height: 80%;
+        background-color: #fff;
+
+        @extend .box-shadow;
+        @extend .center;
+        @include flexbox(flex-direction, column);
+        
+        form {
+            @extend .center;
+            @include flexbox(flex-direction, column);
+        }
+    }
 }

@@ -69,6 +69,19 @@ casesCreated.addEventListener('click', function(){
         arrow.style.transform = "rotate(0deg)"
         
     }
+});
+
+
+//Event listener for register btn
+let registerBtn = document.querySelector('.register_btn');
+let registerForm = document.querySelector('.registration_layer');
+
+registerBtn.addEventListener('click', function(){
+    if(registerForm.classList.includes('translateY')){
+        registerForm.classList.remove('translateY');
+    } else {
+        registerForm.classList.add('translateY');
+    }
 })
 
 

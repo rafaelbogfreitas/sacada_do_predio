@@ -23,3 +23,8 @@
     width: 300px !important;
     transition: height 0.3s ease-in-out ;
 }
+
+.translateY {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
