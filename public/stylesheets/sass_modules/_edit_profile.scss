@@ -1,0 +1,17 @@
+.edit_profile {
+    .img_container {
+        width: 20%;
+        margin-right: 20px;
+
+        @include flexbox(align-self, flex-start);
+    }
+    img {
+        width: 100%;
+    };
+
+    form {
+        width: 80%;
+    }
+    width: 80%;
+    @extend .center
+}

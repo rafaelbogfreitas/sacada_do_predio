@@ -110,7 +110,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -127,7 +127,7 @@ nav {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
@@ -679,19 +679,40 @@ img {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
-    .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea {
+    .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box {
       width: 100%;
       padding-left: 20px;
       font-size: 1.5rem;
       border: none; }
-      .main_new_case .new_case_container form input:not([type="submit"])::placeholder, .main_new_case .new_case_container form textarea::placeholder {
+      .main_new_case .new_case_container form input:not([type="submit"])::placeholder, .main_new_case .new_case_container form textarea::placeholder, .main_new_case .new_case_container form .file_label_box::placeholder {
         color: #cad1da; }
-    .main_new_case .new_case_container form input {
+    .main_new_case .new_case_container form input, .main_new_case .new_case_container form .file_label_box {
       height: 50px; }
     .main_new_case .new_case_container form textarea {
       min-width: 100%;
       height: 200px;
       padding-top: 20px; }
+    .main_new_case .new_case_container form input[type="file"] {
+      width: 0.01px;
+      height: 0.01px;
+      padding: 0;
+      margin: 0;
+      border: none;
+      overflow: hidden; }
+    .main_new_case .new_case_container form .file_label_box {
+      padding: 0;
+      justify-content: space-between;
+      -moz-justify-content: space-between;
+      -o-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -webkit-justify-content: space-between; }
+      .main_new_case .new_case_container form .file_label_box label {
+        width: 20%; }
+      .main_new_case .new_case_container form .file_label_box .file_text {
+        width: 80%;
+        padding-left: 20px;
+        overflow: hidden;
+        color: #cad1da; }
     .main_new_case .new_case_container form > * {
       margin-bottom: 10px; }
     .main_new_case .new_case_container form .back_btn {
@@ -782,5 +803,20 @@ img {
     bottom: 20px;
     left: 20px;
     font-weight: bold; }
+
+.edit_profile {
+  width: 80%; }
+  .edit_profile .img_container {
+    width: 20%;
+    margin-right: 20px;
+    align-self: flex-start;
+    -moz-align-self: flex-start;
+    -o-align-self: flex-start;
+    -ms-align-self: flex-start;
+    -webkit-align-self: flex-start; }
+  .edit_profile img {
+    width: 100%; }
+  .edit_profile form {
+    width: 80%; }
 
 /*# sourceMappingURL=style.css.map */
