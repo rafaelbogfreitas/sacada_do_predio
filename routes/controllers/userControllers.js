@@ -31,20 +31,29 @@ let userControllers = {
         if (req.file) {
             const {
                 originalname,
-                url
+                url,
+                public_id
             } = req.file;
-            User
-                .findByIdAndUpdate(user, {
-                    username: username,
-                    email: email,
-                    state: state,
-                    address: address,
-                    phoneNumber: phoneNumber,
-                    imageName: originalname,
-                    imageUrl: url
-                })
-                .then(() => {
-                    res.redirect('/dashboard');
+
+            User.findById(user)
+                .then(userToDeleteImage => {
+                    cloudinary.v2.uploader.destroy(`${userToDeleteImage.public_id}`, function(error,result) {
+                        console.log(result, error) });
+                    User
+                        .findByIdAndUpdate(user, {
+                            username: username,
+                            email: email,
+                            state: state,
+                            address: address,
+                            phoneNumber: phoneNumber,
+                            imageName: originalname,
+                            public_id: public_id,
+                            imageUrl: url
+                        })
+                        .then(() => {
+                            res.redirect('/dashboard');
+                        })
+                        .catch(error => console.log(error));
                 })
                 .catch(error => console.log(error));
         } else {
