@@ -28,8 +28,17 @@ const caseSchema = new Schema({
     address: {
         type: String,
         required: true
+    },
+    location: {
+        type: {
+            type: String, 
+            enum: ['Point'],
+        },
+        coordinates: {
+            type: [Number]
+        }
     }
-},{
+}, {
     timestamps: true
 });
 
