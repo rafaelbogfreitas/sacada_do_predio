@@ -9,7 +9,7 @@
 
     width: 400px;
     height: 100vh;
-    background-color: $x_light_gray;
+    background-color: lighten($x_light_gray, 15%);
     box-shadow: 2px 0 5px 0 $light_gray;
 
     //remove it from screen

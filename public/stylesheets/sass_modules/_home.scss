@@ -245,11 +245,11 @@ section {
     &:after {
         content: '';
         position: absolute;
-        left: -50px;
-        right: 100px;
+        left: -300px;
+        right: 0;
         top: 90%;
         height: 300px;
-        transform: rotate(10deg);
+        transform: rotate(5deg);
         background-color: white;
     }
     

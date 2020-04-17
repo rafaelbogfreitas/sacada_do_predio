@@ -1,13 +1,16 @@
 <main class="main_new_case">
     <div class="new_case_container">
+        <h1>Criar novo caso</h1>
         <form class="new_case_form" action="/dashboard/new-case" method="POST" enctype="multipart/form-data">
             <input placeholder="title" type="text" name="title">
             <textarea placeholder="description" type="text" name="description"></textarea>
             <input placeholder="address" type="text" name="address">
             <input type="file" name="file">
-            <input type="submit" value="save">
+            <div class="hor_btn_box">
+                <a class="btn back_btn" href="/dashboard">Back to dashboard</a>
+                <input class="btn" type="submit" value="save">
+            </div>
         </form>
 
-        <a href="/dashboard">Back to dashboard</a>
     </div>
 </main>

@@ -73,7 +73,7 @@ html {
   font-family: "Brown", Helvetica, sans-serif; }
   @media (max-width: 800px) {
     html {
-      font-size: 8px; } }
+      font-size: 10px; } }
 
 main {
   width: 100vw;
@@ -110,7 +110,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -127,13 +127,29 @@ nav {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_new_case .new_case_container {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -ms-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   transition: box-shadow 0.3s linear; }
+
+.btn {
+  cursor: pointer;
+  color: #8f211d;
+  border: 1px solid #8f211d;
+  padding: 20px 40px;
+  font-size: 100%;
+  line-height: 0; }
+
+.hor_btn_box {
+  width: 100%;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex; }
 
 .main_home {
   position: relative;
@@ -347,11 +363,11 @@ section {
   .team_presentation:after {
     content: '';
     position: absolute;
-    left: -50px;
-    right: 100px;
+    left: -300px;
+    right: 0;
     top: 90%;
     height: 300px;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     background-color: white; }
   .team_presentation .credits_box {
     display: flex;
@@ -427,7 +443,7 @@ section {
   -webkit-align-items: center;
   width: 400px;
   height: 100vh;
-  background-color: #cad1da;
+  background-color: #f7f8f9;
   box-shadow: 2px 0 5px 0 #7e8188;
   position: fixed;
   top: 0;
@@ -644,11 +660,50 @@ img {
 .main_new_case .new_case_container {
   width: 90%;
   height: 90%;
-  align-items: flex-end;
-  -moz-align-items: flex-end;
-  -o-align-items: flex-end;
-  -ms-align-items: flex-end;
-  -webkit-align-items: flex-end; }
+  flex-direction: column;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column; }
+  .main_new_case .new_case_container h1 {
+    width: 60%;
+    margin-bottom: 20px;
+    color: #8f211d;
+    text-align: left;
+    font-weight: bold;
+    font-size: 3rem; }
+  .main_new_case .new_case_container form {
+    width: 60%;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column; }
+    .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea {
+      width: 100%;
+      padding-left: 20px;
+      font-size: 1.5rem;
+      border: none; }
+      .main_new_case .new_case_container form input:not([type="submit"])::placeholder, .main_new_case .new_case_container form textarea::placeholder {
+        color: #cad1da; }
+    .main_new_case .new_case_container form input {
+      height: 50px; }
+    .main_new_case .new_case_container form textarea {
+      min-width: 100%;
+      height: 200px;
+      padding-top: 20px; }
+    .main_new_case .new_case_container form > * {
+      margin-bottom: 10px; }
+    .main_new_case .new_case_container form .back_btn {
+      height: 50px;
+      color: #7e8188;
+      border-color: #7e8188; }
+    .main_new_case .new_case_container form .hor_btn_box {
+      justify-content: space-between;
+      -moz-justify-content: space-between;
+      -o-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -webkit-justify-content: space-between; }
 
 .single_case_card {
   position: relative;

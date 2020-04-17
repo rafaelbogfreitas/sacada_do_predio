@@ -4,7 +4,59 @@
         height:90%;
 
         @extend .center;
-        @include flexbox(align-items, flex-end);
+        @include flexbox(flex-direction, column);
         @extend .box-shadow;
+
+        h1 {
+            width: 60%;
+            margin-bottom: 20px;
+            color: $red;
+            text-align: left;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        form {
+            width: 60%;
+
+            @extend .center;
+            @include flexbox(flex-direction, column);
+
+            input:not([type="submit"]), textarea {
+                width: 100%;
+                padding-left: 20px;
+                font-size: 1.5rem;
+                border: none;
+                @extend .box-shadow;
+
+                &::placeholder {
+                    color: $x_light_gray;
+                }
+            }
+
+            input {
+                height: 50px;
+            }
+
+            textarea {
+                min-width: 100%;
+                height: 200px;
+                padding-top: 20px;
+            }
+
+            & > * {
+                margin-bottom: 10px;
+            }
+
+            .back_btn {
+                height: 50px;
+                color: $light_gray;
+                border-color: $light_gray;
+            }
+
+            .hor_btn_box {
+                @include flexbox(justify-content, space-between)
+            }
+        }
     }
 }

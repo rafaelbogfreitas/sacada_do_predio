@@ -2,7 +2,7 @@
 html {
     font-family: $main_font;
     @include mediaquery(800px){
-       font-size: 8px;
+       font-size: 10px;
     }
 }
 
@@ -48,5 +48,25 @@ nav {
 .box-shadow {
     @include boxshadow(0px 0px 5px 0px rgba(0, 0, 0, 0.241));
     transition: box-shadow 0.3s linear;
+}
+
+.btn {
+    cursor: pointer;
+    color: $red;
+    border: 1px solid $red;
+    padding: 20px 40px;
+    font-size: 100%;
+    line-height: 0;
+
+    @extend .center;
+
+    &:hover {
+        @extend .box-shadow;
+    }
+}
+
+.hor_btn_box {
+    width:100%;
+    @include flexbox(display, flex);
 }
 
