@@ -55,7 +55,7 @@ userBox.addEventListener('mouseout', function(){
 });
 
 //Click event to show/hide cases created by the user
-let casesCreated = document.querySelector('.cases_title_container');
+let casesCreated = document.querySelector('.title_box');
 let arrow = document.querySelector('.arrow');
 let casesContainer = document.querySelector('.user_cases_container');
 
@@ -75,14 +75,20 @@ casesCreated.addEventListener('click', function(){
 //Event listener for register btn
 let registerBtn = document.querySelector('.register_btn');
 let registerForm = document.querySelector('.registration_layer');
+let saveRegisterBtn = document.querySelector('.register_save');
+let closeRegisterLayer = document.querySelector('.close_register');
 
 registerBtn.addEventListener('click', function(){
-    if(registerForm.classList.includes('translateY')){
-        registerForm.classList.remove('translateY');
-    } else {
-        registerForm.classList.add('translateY');
-    }
-})
+    registerForm.classList.add('translateY');
+});
+
+saveRegisterBtn.addEventListener('click', function(){
+    registerForm.classList.remove('translateY');
+});
+
+closeRegisterLayer.addEventListener('click', function(){
+    registerForm.classList.remove('translateY');
+});
 
 
 

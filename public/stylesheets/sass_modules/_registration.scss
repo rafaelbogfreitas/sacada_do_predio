@@ -13,7 +13,9 @@
 
     @extend .center;
 
-    .registraton_container{
+    .registration_container{
+        position: relative;
+
         width: 80%;
         height: 80%;
         background-color: #fff;
@@ -26,5 +28,17 @@
             @extend .center;
             @include flexbox(flex-direction, column);
         }
+
+        .close_register {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 50px;
+            height: auto;
+        }
     }
+}
+
+.register_btn {
+    margin-left: auto;
 }

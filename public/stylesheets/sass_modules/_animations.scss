@@ -4,9 +4,8 @@
 }
 
 .open_down {
-    transform: scaleY(1) !important;
-    transform-origin: top;
-    transition: transform 0.3s ease-in-out;
+    height:80vh !important;
+    transition: height 0.3s ease-in-out;
 }
 
 .no_shadow {
@@ -25,6 +24,6 @@
 }
 
 .translateY {
-    transform: translateY(0);
+    transform: translateY(0) !important;
     transition: transform 0.3s ease-in-out;
 }

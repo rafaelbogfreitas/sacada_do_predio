@@ -53,9 +53,8 @@ table {
   transition: transform 0.5s ease-in-out; }
 
 .open_down {
-  transform: scaleY(1) !important;
-  transform-origin: top;
-  transition: transform 0.3s ease-in-out; }
+  height: 80vh !important;
+  transition: height 0.3s ease-in-out; }
 
 .no_shadow {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.193) !important;
@@ -70,7 +69,7 @@ table {
   transition: height 0.3s ease-in-out; }
 
 .translateY {
-  transform: translateY(0);
+  transform: translateY(0) !important;
   transition: transform 0.3s ease-in-out; }
 
 html {
@@ -114,7 +113,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registraton_container, .registration_layer .registraton_container form {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -131,7 +130,7 @@ nav {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .registration_layer .registraton_container {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .registration_layer .registration_container {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
@@ -472,6 +471,7 @@ section {
     -ms-align-items: center;
     -webkit-align-items: center; }
     .dashboard .cases_title_container h1 {
+      height: 100%;
       color: #711e19;
       font-size: 25px;
       font-weight: bold; }
@@ -479,11 +479,32 @@ section {
       width: 20px;
       transform: rotate(-90deg);
       transition: transform 0.3s linear; }
+    .dashboard .cases_title_container .title_box {
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      -moz-display: flex;
+      -o-display: flex;
+      -ms-display: flex;
+      -webkit-display: flex;
+      align-items: center;
+      -moz-align-items: center;
+      -o-align-items: center;
+      -ms-align-items: center;
+      -webkit-align-items: center; }
+      .dashboard .cases_title_container .title_box img {
+        margin: 0 0 5px 20px; }
+    .dashboard .cases_title_container .create_icon {
+      width: 20px;
+      transition: transform 0.3s linear; }
+      .dashboard .cases_title_container .create_icon:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s linear; }
     .dashboard .cases_title_container > * {
       margin: 0 10px; }
   .dashboard .user_cases_container {
     width: 100%;
-    height: auto;
+    height: 0;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -499,11 +520,9 @@ section {
     -o-align-items: center;
     -ms-align-items: center;
     -webkit-align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s linear;
+    transition: height 0.3s ease-in-out;
     padding: 10px 20px;
-    overflow: hidden; }
+    overflow: scroll; }
   .dashboard .close_icon {
     position: absolute;
     top: 10px;
@@ -517,8 +536,11 @@ section {
     width: 95%;
     height: auto;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 1px 1px 3px 0 black; }
+    background-color: #f7f8f9;
+    transition: box-shadow 0.3s linear; }
+    .dashboard .case_container .case_title {
+      color: #8f211d;
+      margin-bottom: 10px; }
 
 .dashboard_nav {
   position: fixed;
@@ -545,9 +567,6 @@ section {
   -o-align-items: center;
   -ms-align-items: center;
   -webkit-align-items: center; }
-
-.registre_btn {
-  margin-left: auto; }
 
 .profile_info {
   position: relative;
@@ -594,14 +613,14 @@ section {
     -ms-align-items: center;
     -webkit-align-items: center;
     border-radius: 100%;
-    border: 2px solid #f1cf00; }
+    border: 2px solid #c6480c; }
   .profile_info .profile_options_box {
     background-color: #fff;
     box-shadow: 1px 1px 3px 0 #00000091;
     position: absolute;
     top: 120%;
     right: 0;
-    width: 140%;
+    width: 100%;
     height: 0px;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
@@ -620,17 +639,19 @@ section {
     -o-justify-content: space-around;
     -ms-justify-content: space-around;
     -webkit-justify-content: space-around;
-    align-items: center;
-    -moz-align-items: center;
-    -o-align-items: center;
-    -ms-align-items: center;
-    -webkit-align-items: center; }
+    align-items: flex-start;
+    -moz-align-items: flex-start;
+    -o-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -webkit-align-items: flex-start; }
     .profile_info .profile_options_box a {
+      width: 100%;
+      height: 49%;
+      padding-top: 20px;
       margin-left: 10px;
-      color: #c6480c; }
+      color: #8f211d; }
       .profile_info .profile_options_box a:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s linear; }
+        font-weight: bold; }
 
 img {
   height: 80%; }
@@ -840,7 +861,8 @@ img {
   background-color: rgba(247, 248, 249, 0.5);
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out; }
-  .registration_layer .registraton_container {
+  .registration_layer .registration_container {
+    position: relative;
     width: 80%;
     height: 80%;
     background-color: #fff;
@@ -849,11 +871,20 @@ img {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
-    .registration_layer .registraton_container form {
+    .registration_layer .registration_container form {
       flex-direction: column;
       -moz-flex-direction: column;
       -o-flex-direction: column;
       -ms-flex-direction: column;
       -webkit-flex-direction: column; }
+    .registration_layer .registration_container .close_register {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 50px;
+      height: auto; }
+
+.register_btn {
+  margin-left: auto; }
 
 /*# sourceMappingURL=style.css.map */
