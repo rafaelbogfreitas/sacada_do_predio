@@ -137,6 +137,7 @@ nav {
 
 .btn {
   cursor: pointer;
+  background-color: #fff;
   color: #8f211d;
   border: 1px solid #8f211d;
   padding: 20px 40px;
@@ -538,6 +539,9 @@ section {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
+.registre_btn {
+  margin-left: auto; }
+
 .profile_info {
   position: relative;
   width: auto;
@@ -818,5 +822,11 @@ img {
     width: 100%; }
   .edit_profile form {
     width: 80%; }
+
+.registration_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5; }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,11 @@
             {{!-- Nav that appears only if logged in --}}
             <nav class="dashboard_nav">
                 <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
+                {{#if_eq status 'waiting'}}
+                <button class="btn registre_btn">
+                    REGISTRE
+                </button>
+                {{/if_eq }}
                 <div class="profile_info">
                     <div class="user_name">
                         <p>{{username}}</p>
@@ -92,16 +97,20 @@
     {{!-- Registration Container --}}
 
     {{#with user}}
-    {{#if_eq status "waiting"}}
-    <p>Complete your registration:</p>
-    <form class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
-        <input type="text" placeholder="address" name="address">
-        <input type="text" placeholder="state" name="state">
-        <input type="text" placeholder="phone number" name="phoneNumber">
-        <input type="file" placeholder="File" name="file" />
-        <input type="submit" />
-    </form>
-    {{/if_eq}}
+        {{#if_eq status "waiting"}}
+        <div class="registration_layer">
+            <div class="registraton_container">
+                <p>Complete your registration:</p>
+                <form class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
+                    <input type="text" placeholder="address" name="address">
+                    <input type="text" placeholder="state" name="state">
+                    <input type="text" placeholder="phone number" name="phoneNumber">
+                    <input type="file" placeholder="File" name="file" />
+                    <input type="submit" />
+                </form>
+            </div>
+        </div>
+        {{/if_eq}}
     {{/with}}
 </main>
 <script src="javascripts/dashboard.js"></script>
