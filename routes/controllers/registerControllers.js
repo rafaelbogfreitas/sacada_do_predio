@@ -14,11 +14,12 @@ let registerControllers = {
         } = req.body;
 
         if (req.file) {
-            console.log('if')
             const {
                 originalname,
-                url
+                url,
+                public_id
             } = req.file;
+            
             User
                 .findByIdAndUpdate(user, {
                     status: 'registered',
@@ -26,15 +27,14 @@ let registerControllers = {
                     address,
                     phoneNumber,
                     imageName: originalname,
-                    imageUrl: url
+                    imageUrl: url,
+                    public_id: public_id
                 })
-                .then(response => {
-                    console.log('then if')
+                .then(() => {
                     res.redirect('/dashboard');
                 })
                 .catch(error => console.log(error));
         } else {
-            console.log('else')
             User
                 .findByIdAndUpdate(user, {
                     status: 'registered',
@@ -42,8 +42,7 @@ let registerControllers = {
                     address,
                     phoneNumber
                 })
-                .then(response => {
-                    console.log('then else')
+                .then(() => {
                     res.redirect('/dashboard');
                 })
                 .catch(error => console.log(error));

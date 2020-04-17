@@ -18,6 +18,9 @@ const caseSchema = new Schema({
         type: String,
         default: '/images/no-case.jpg'
     },
+    public_id: {
+        type: String
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'

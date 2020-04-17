@@ -36,6 +36,9 @@ const userSchema = new Schema({
         type:String,
         default:'/images/avatar.png'
     },
+    public_id: {
+        type: String
+    },
     casesCreated: [{
         type: Schema.Types.ObjectId,
         ref: 'Case'
