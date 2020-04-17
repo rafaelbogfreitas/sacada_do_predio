@@ -1,6 +1,6 @@
 <p>EDIT YOUR INFO:</p>
 {{#with user}}
-<form class="signup_form" action="/dashboard/user/edit" method="POST" enctype="multipart/form-data">
+<form class="signup_form" action="/user/edit" method="POST" enctype="multipart/form-data">
     <input type="text" placeholder="Name" name="username" value="{{username}}">
     <input type="email" placeholder="Email" name="email" value="{{email}}">
     <input type="text" placeholder="address" name="address" value="{{address}}">
@@ -9,4 +9,5 @@
     <input type="file" placeholder="File" name="file" />
     <input type="submit" />
 </form>
+<a href="/user/delete">DELETE USER</a>
 {{/with}}
