@@ -42,7 +42,33 @@ username.addEventListener('keyup', function(e){
             username.style.outline = "none";
         })
         .catch( error => console.log(error));
-})
+});
+
+username.addEventListener('blur', function(){
+    username.style.outline = "none";
+});
+
+//Verifies if email is already registered
+let email = document.querySelector('.signup_form > input[placeholder="Email"]');
+
+email.addEventListener('keyup', function(e){
+    console.log(e.target.value);
+
+    axios.get('http://localhost:3000/api/users')
+        .then( data => {
+            console.log(data);
+            let options = data.data.filter( a => a.email == e.target.value);
+
+            options.length > 0 ?
+            email.style.outline = "2px solid red" :
+            email.style.outline = "none";
+        })
+        .catch( error => console.log(error));
+});
+
+email.addEventListener('blur', function(){
+    email.style.outline = "none";
+});
 
 //Verifies if password is strong
 let password = document.querySelector('.signup_form input[type="password"]');
