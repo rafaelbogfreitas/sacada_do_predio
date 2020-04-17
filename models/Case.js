@@ -18,6 +18,9 @@ const caseSchema = new Schema({
         type: String,
         default: '/images/no-case.jpg'
     },
+    public_id: {
+        type: String
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
@@ -26,6 +29,8 @@ const caseSchema = new Schema({
         type: String,
         required: true
     }
+},{
+    timestamps: true
 });
 
 const Case = mongoose.model('Case', caseSchema);

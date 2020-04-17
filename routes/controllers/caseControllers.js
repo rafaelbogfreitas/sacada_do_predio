@@ -1,5 +1,6 @@
 const User = require('../../models/User');
 const Case = require('../../models/Case');
+const cloudinary = require('cloudinary');
 
 
 let caseControllers = {
@@ -10,13 +11,13 @@ let caseControllers = {
 
         Case
             .findByIdAndRemove(caseId)
-            .then(() => {
-                
+            .then(caseToRemove => {
+                cloudinary.v2.uploader.destroy(`${caseToRemove.public_id}`, function(error,result) {
+                    console.log(result, error) });
                 User.findByIdAndUpdate(user, 
                 { $pull: {casesCreated:caseId}})
                 .then( _ => res.redirect('/dashboard'))
                 .catch( error => console.log(error));
-
             })
             .catch(error => console.log(error));
     },
@@ -44,7 +45,8 @@ let caseControllers = {
         if (req.file) {
             const {
                 originalname,
-                url
+                url,
+                public_id,
             } = req.file;
             
             Case
@@ -53,6 +55,7 @@ let caseControllers = {
                     description: description,
                     imageName: originalname,
                     imageUrl: url,
+                    public_id: public_id,
                     user: user,
                     address: address
                 })

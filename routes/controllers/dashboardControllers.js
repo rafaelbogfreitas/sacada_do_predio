@@ -36,7 +36,8 @@ let dashboardControllers = {
         if (req.file) { // CASO TENHA UPLOAD DE IMAGEM
             const {
                 originalname,
-                url
+                url,
+                public_id
             } = req.file;
             
             Case.create({
@@ -44,6 +45,7 @@ let dashboardControllers = {
                 description: description,
                 imageName: originalname,
                 imageUrl: url,
+                public_id: public_id,
                 user: user,
                 address: address
             })

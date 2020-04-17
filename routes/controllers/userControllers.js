@@ -1,5 +1,6 @@
 const User = require('../../models/User');
 const Case = require('../../models/Case');
+const cloudinary = require('cloudinary');
 
 
 let userControllers = {
@@ -61,21 +62,32 @@ let userControllers = {
                 .catch(error => console.log(error));
         }
     },
-
     // GET DELETE USER
     getDeleteUser: (req, res, next) => {
         let { user } = req.session.passport;
 
         User
             .findByIdAndRemove(user)
-            .then(() => {
+            .then(userToDelete => {
+                cloudinary.v2.uploader.destroy(`${userToDelete.public_id}`, function(error,result) {
+                    console.log(result, error) });
                 Case
-                    .deleteMany({user: user})
-                    .then( () => res.redirect('/logout'))
-                    .catch( error => console.log(error));
+                    .find({user: user})
+                    .then(casesToDelete => {
+                        casesToDelete.forEach(caseToDelete => {
+                            cloudinary.v2.uploader.destroy(`${caseToDelete.public_id}`, function(error,result) {
+                                console.log(result, error) });
+                        });
+                        Case
+                            .deleteMany({user: user})
+                            .then(() => {
+                                res.redirect('/logout')
+                            })
+                            .catch(error => console.log(error));
+                    })
+                    .catch(error => console.log(error));
             })
             .catch(error => console.log(error));
-            
     }
 }
 
