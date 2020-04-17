@@ -48,19 +48,25 @@ let caseControllers = {
                 url,
                 public_id,
             } = req.file;
-            
-            Case
-                .findByIdAndUpdate(caseId, {
-                    title: title,
-                    description: description,
-                    imageName: originalname,
-                    imageUrl: url,
-                    public_id: public_id,
-                    user: user,
-                    address: address
-                })
-                .then(() => {
-                    res.redirect('/dashboard');
+
+            Case.findById(caseId)
+                .then(caseToDelete => {
+                    cloudinary.v2.uploader.destroy(`${caseToDelete.public_id}`, function(error,result) {
+                        console.log(result, error) });
+                    Case
+                        .findByIdAndUpdate(caseId, {
+                            title: title,
+                            description: description,
+                            imageName: originalname,
+                            imageUrl: url,
+                            public_id: public_id,
+                            user: user,
+                            address: address
+                        })
+                        .then(() => {
+                            res.redirect('/dashboard');
+                        })
+                        .catch(error => console.log(error));
                 })
                 .catch(error => console.log(error));
         } else {
