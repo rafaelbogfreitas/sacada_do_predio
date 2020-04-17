@@ -1,6 +1,9 @@
 
 html {
     font-family: $main_font;
+    @include mediaquery(800px){
+       font-size: 8px;
+    }
 }
 
 main {

@@ -1,0 +1,80 @@
+.single_case_card {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 90%;
+    padding:20px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
+    transition: box-shadow 0.3s ease-in-out;
+
+    @include flexbox(display, flex);
+    @include flexbox(flex-direction, row);
+    @include flexbox(justify-content, space-around);
+
+    .user_info {
+        width: 30%;
+
+        @extend .center;
+        @include flexbox(justify-content, space-around);
+        @include flexbox(flex-direction, column);
+
+        .user_img_container {
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            overflow: hidden;
+            background-color: #fff;
+
+            @extend .center;
+        }
+
+        aside {
+            height: 60%;
+        }
+    }
+
+    .case_info {
+        width: 70%;
+        border-left: 2px solid $dark_red;
+
+        @extend .center;
+        @include flexbox(justify-content, space-around);
+        @include flexbox(flex-direction, column);
+
+        aside {
+            width: 80%;
+            height: 50%;
+
+            h1 {
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .case_img_container {
+        width: 90%;
+        @extend .center;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    a {
+        color: $orange;
+    }
+
+    h1 {
+        color: $red;
+        font-size: 2rem;
+    }
+
+    .dashboard_btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+        font-weight: bold;
+    }
+}
