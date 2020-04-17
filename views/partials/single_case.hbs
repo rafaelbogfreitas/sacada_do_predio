@@ -4,13 +4,15 @@
         <div class="user_img_container">
             <img  class="user_img" src="{{case.user.imageUrl}}" alt="{{case.user.imageName}}">
         </div>
-        <h1>{{case.user.username}}</h1>
-        <p>Number: {{case.user.phoneNumber}}</p>
-        <div class="contact">
-            <a href="mailto:{{case.user.email}}">Email</a>
-            <a href="https://wa.me/55{{case.user.phoneNumber}}">Whatsapp</a>
-        </div>
-        <a href="/dashboard">dashbord</a>
+        <aside>
+            <h1>{{case.user.username}}</h1>
+            <p>Number: {{case.user.phoneNumber}}</p>
+            <div class="contact">
+                <a href="mailto:{{case.user.email}}">Email</a>
+                <a href="https://wa.me/55{{case.user.phoneNumber}}">Whatsapp</a>
+            </div>
+        </aside>
+        <a class="dashboard_btn" href="/dashboard">dashbord</a>
     </div>
 
     {{!-- Case info --}}
@@ -18,9 +20,11 @@
         <div class="case_img_container">
             <img src="{{case.imageUrl}}" alt="{{case.imageName}}">
         </div>
-        <h1>{{case.title}}</h1>
-        <p>{{case.description}}</p>
-        <p>{{case.address}}</p>
+        <aside>
+            <h1>{{case.title}}</h1>
+            <p>{{case.description}}</p>
+            <p>{{case.address}}</p>
+        </aside>
     
         {{#if owner}}
             <div class="manage_btns">

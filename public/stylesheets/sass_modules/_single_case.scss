@@ -1,4 +1,5 @@
 .single_case_card {
+    position: relative;
     width: 100%;
     max-width: 900px;
     height: 90%;
@@ -12,20 +13,23 @@
 
     .user_info {
         width: 30%;
-        background-color:lighten($orange, 50%);
 
         @extend .center;
         @include flexbox(justify-content, space-around);
         @include flexbox(flex-direction, column);
 
         .user_img_container {
-            width: 200px;
-            height: 200px;
-            border-radius: 200px;
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
             overflow: hidden;
             background-color: #fff;
 
             @extend .center;
+        }
+
+        aside {
+            height: 60%;
         }
     }
 
@@ -36,6 +40,16 @@
         @extend .center;
         @include flexbox(justify-content, space-around);
         @include flexbox(flex-direction, column);
+
+        aside {
+            width: 80%;
+            height: 50%;
+
+            h1 {
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
     }
 
     .case_img_container {
@@ -48,11 +62,19 @@
     }
     
     a {
-        color: $x_light_gray;
+        color: $orange;
     }
 
     h1 {
         color: $red;
         font-size: 2rem;
+    }
+
+    .dashboard_btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+        font-weight: bold;
     }
 }

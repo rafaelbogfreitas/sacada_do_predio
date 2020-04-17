@@ -70,7 +70,7 @@ table {
   transition: height 0.3s ease-in-out; }
 
 html {
-  font-family: Nevermind, Helvetica, sans-serif; }
+  font-family: "Brown", Helvetica, sans-serif; }
   @media (max-width: 800px) {
     html {
       font-size: 8px; } }
@@ -156,7 +156,7 @@ nav {
     top: 100%;
     height: 200px;
     transform: rotate(10deg);
-    background-color: #cad1da; }
+    background-color: #f79e74; }
 
 .main_nav {
   width: 100vw;
@@ -267,7 +267,7 @@ section {
 .cases_presentation {
   position: relative;
   overflow: hidden;
-  background-color: #cad1da; }
+  background-color: #f79e74; }
   .cases_presentation:after {
     content: '';
     position: absolute;
@@ -276,19 +276,65 @@ section {
     top: 100%;
     height: 200px;
     transform: rotate(-10deg);
-    background-color: #f79e74; }
+    background-color: #cad1da; }
+  .cases_presentation .cases_img_container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    align-items: flex-end;
+    -moz-align-items: flex-end;
+    -o-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -webkit-align-items: flex-end; }
+    .cases_presentation .cases_img_container img {
+      width: 100%;
+      height: auto; }
+  .cases_presentation .cases_presentation_content {
+    width: 70%;
+    height: 100%;
+    color: white;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-between;
+    -moz-justify-content: space-between;
+    -o-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: flex-start;
+    -moz-align-items: flex-start;
+    -o-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -webkit-align-items: flex-start; }
+    .cases_presentation .cases_presentation_content h1 {
+      font-weight: bold;
+      font-size: 5rem;
+      margin-top: 50px; }
+    .cases_presentation .cases_presentation_content p {
+      font-size: 2rem; }
   .cases_presentation .ajude_btn {
     margin-bottom: 100px;
     padding: 20px 40px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: transparent;
-    border: 2px solid #c6480c;
-    color: #c6480c;
-    align-self: flex-end;
-    -moz-align-self: flex-end;
-    -o-align-self: flex-end;
-    -ms-align-self: flex-end;
-    -webkit-align-self: flex-end;
+    border: 2px solid white;
+    color: white;
     transition: box-shadow 0.3s linear; }
     .cases_presentation .ajude_btn:hover {
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
@@ -297,7 +343,7 @@ section {
 .team_presentation {
   position: relative;
   overflow: hidden;
-  background-color: #f79e74; }
+  background-color: #cad1da; }
   .team_presentation:after {
     content: '';
     position: absolute;
@@ -605,6 +651,7 @@ img {
   -webkit-align-items: flex-end; }
 
 .single_case_card {
+  position: relative;
   width: 100%;
   max-width: 900px;
   height: 90%;
@@ -628,7 +675,6 @@ img {
   -webkit-justify-content: space-around; }
   .single_case_card .user_info {
     width: 30%;
-    background-color: #fce1d5;
     justify-content: space-around;
     -moz-justify-content: space-around;
     -o-justify-content: space-around;
@@ -640,11 +686,13 @@ img {
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
     .single_case_card .user_info .user_img_container {
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
       overflow: hidden;
       background-color: #fff; }
+    .single_case_card .user_info aside {
+      height: 60%; }
   .single_case_card .case_info {
     width: 70%;
     border-left: 2px solid #711e19;
@@ -658,15 +706,26 @@ img {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
+    .single_case_card .case_info aside {
+      width: 80%;
+      height: 50%; }
+      .single_case_card .case_info aside h1 {
+        font-weight: bold;
+        margin-bottom: 20px; }
   .single_case_card .case_img_container {
     width: 90%; }
     .single_case_card .case_img_container img {
       width: 100%;
       height: auto; }
   .single_case_card a {
-    color: #cad1da; }
+    color: #c6480c; }
   .single_case_card h1 {
     color: #8f211d;
     font-size: 2rem; }
+  .single_case_card .dashboard_btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
