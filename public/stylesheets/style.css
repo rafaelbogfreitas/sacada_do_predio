@@ -124,7 +124,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -377,7 +377,70 @@ section {
 .team_presentation {
   position: relative;
   overflow: hidden;
-  background-color: #cad1da; }
+  background-color: #cad1da;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  color: white; }
+  @media (max-width: 500px) {
+    .team_presentation {
+      flex-direction: column;
+      -moz-flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column;
+      align-items: center;
+      -moz-align-items: center;
+      -o-align-items: center;
+      -ms-align-items: center;
+      -webkit-align-items: center;
+      justify-content: center;
+      -moz-justify-content: center;
+      -o-justify-content: center;
+      -ms-justify-content: center;
+      -webkit-justify-content: center; } }
+  .team_presentation .daniel, .team_presentation .rafael {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column; }
+  .team_presentation .team_about {
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0; }
+    .team_presentation .team_about p {
+      padding: 20px 0;
+      width: 70%;
+      margin: 0 !important; }
+  .team_presentation .team_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 5px solid white; }
+  .team_presentation .socialmedia_img {
+    width: 20px;
+    height: 20px; }
+  .team_presentation .team_about {
+    height: 70%;
+    width: 100%; }
   .team_presentation:after {
     content: '';
     position: absolute;

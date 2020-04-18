@@ -186,6 +186,7 @@ section {
         height: 200px;
         transform: rotate(-10deg);
         background-color: $x_light_gray;
+        // background-color:lighten(#711e19, 35%);
     }
 
     .cases_img_container {
@@ -244,6 +245,58 @@ section {
     position: relative;
     overflow: hidden;
     background-color:$x_light_gray;
+    // background-color:lighten(#711e19, 35%);
+    // background-color: lighten(#f1cf00, 70%);
+    @include flexbox(display, flex);
+    color: white;
+
+    @include mediaquery(500px){
+        @include flexbox(flex-direction, column);
+        @include flexbox(align-items, center);
+        @include flexbox(justify-content, center);
+    }
+
+    .daniel, .rafael {
+        width: 50%;
+        height: 100%;
+        @extend .center;
+        @include flexbox(flex-direction, column);
+        // padding: 10rem;
+    }
+
+    .team_about {
+        @include flexbox(display, flex);
+        @include flexbox(flex-direction, column);
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        width: 100%;
+        padding: 40px 0;
+
+        p {
+            padding: 20px 0;
+            width: 70%;
+            margin: 0!important;
+        }
+    }
+
+    .team_img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 5px solid white;
+    }
+
+    .socialmedia_img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .team_about {
+        height: 70%;
+        width: 100%;
+    }
 
     &:after {
         content: '';
@@ -310,4 +363,3 @@ section {
     }
 
 }
-
