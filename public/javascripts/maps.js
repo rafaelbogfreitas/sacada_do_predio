@@ -1,28 +1,28 @@
-let lat = document.querySelector('input[name="lat"]').value
-let lng = document.querySelector('input[name="lng"]').value
-console.log(lat);
-console.log(lng);
 
-// latLng = JSON.parse(latLng);
-// console.log(latLng)
-console.log('1')
-console.log(+'-1')
-// console.log
 
-// console.log(lat)
-// console.log(lng)
+
+
+
+// let lat = document.querySelector('input[name="lat"]') == null ? 
+//             user_location.lat:
+//             document.querySelector('input[name="lat"]').value;
+//  let lng = document.querySelector('input[name="lng"]') == null ? 
+//             user_location.long :
+//             document.querySelector('input[name="lng"]').value;
+
+
+
 
 function startMap() {
-    // console.log(lat)
-    // console.log(lng)
-    const userPosition = {
-        lat: +lat,
-        lng: +lng
-    };
+
+    // const userPosition = {
+    //     lat: user_location.lat,
+    //     lng: user_location.lng
+    // };
     const map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 10,
-            center: userPosition,
+            zoom: 15,
+            // center: userPosition,
             styles: [{
                     elementType: 'geometry',
                     stylers: [{
@@ -149,6 +149,16 @@ function startMap() {
             ]
         }
     );
+
+
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(function(position){
+            map.setCenter({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            })
+        });
+    }
 }
 
 startMap();

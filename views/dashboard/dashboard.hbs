@@ -1,4 +1,4 @@
-<main>
+<main class="map_cases_container">
 
     {{#if user}}
     {{#user}}
@@ -97,8 +97,17 @@
     {{/if}}
 
     {{!-- Map --}}
-    <div class="map_box">
-        <div id="map"></div>
+    <div class="map_content_container">
+        <aside class="intro_text">
+            <h1 class="title --intro">Descubra quem precisa de você no seu bairro</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non ipsa consectetur assumenda eius eveniet nesciunt dolores aperiam, illo doloribus, nobis doloremque corrupti excepturi delectus? Enim fuga accusamus eaque temporibus.</p>
+            <div class="down_arrow">
+                <img class="jump" src="/images/down_arrow.svg" alt="seta para baixo">
+            </div>
+        </aside>
+        <div class="map_box">
+            <div id="map"></div>
+        </div>
     </div>
 
     {{!-- Cases container --}}
@@ -141,12 +150,13 @@
             </div>
         </div>
     </div>
+    <script src="/javascripts/register.js"></script>
+    <script src="javascripts/address_autocomplete.js" defer></script>
     {{/if_eq}}
     {{/with}}
 </main>
 {{#if user}}
 <script src="javascripts/dashboard.js" defer></script>
-<script src="javascripts/address_autocomplete.js" defer></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE" defer></script>
 <script type="text/javascript" src="javascripts/maps.js" defer></script>
 

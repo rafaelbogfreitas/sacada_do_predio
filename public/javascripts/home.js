@@ -34,7 +34,6 @@ username.addEventListener('keyup', function(e){
 
     axios.get('http://localhost:3000/api/users')
         .then( data => {
-            console.log(data);
             let options = data.data.filter( a => a.username == e.target.value);
 
             options.length > 0 ?

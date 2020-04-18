@@ -1,0 +1,69 @@
+//Map and content container
+.map_content_container {
+    width: 100%;
+    height: auto;
+    padding: 0 70px;
+    margin-top: 700px;
+    @extend .center;
+    @include flexbox(justify-content, space-around);
+    @include mediaquery(900px){
+        @include flexbox(flex-direction, column);
+    }
+
+    .--intro {
+        width:100%;
+        font-size: 3rem;
+        margin-left: 0;
+    }
+
+    .intro_text {
+        width: 50%;
+        height: 100%;
+        padding: 50px;
+        @extend .box-shadow;
+
+        @include mediaquery(900px){
+            width: 100%;
+            height: 50%;
+        }
+
+        .down_arrow {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            margin: 100px auto 0;
+            border-radius: 100%;
+            overflow: hidden;
+
+            @extend .center;
+            @extend .box-shadow;
+            img {
+                width: 60%;
+                height: auto;
+            }
+
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+}
+
+.map_box {
+    width: 50%;
+    height: 600px;
+    @include mediaquery(900px){
+        width: 100%;
+        height: 50%;
+    }
+    
+    border: 8px solid white;
+
+ @include boxshadow(1px 1px 5px 0 black);
+}

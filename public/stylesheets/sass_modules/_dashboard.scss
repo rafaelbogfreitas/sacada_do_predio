@@ -9,6 +9,7 @@
 
     width: 400px;
     height: 100vh;
+    z-index: 10;
     background-color: lighten($x_light_gray, 15%);
     box-shadow: 2px 0 5px 0 $light_gray;
 
@@ -113,9 +114,10 @@
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 5;
     width: 100vw;
     height: 70px;
-    padding: 0 20px;
+    padding: 0 70px;
     background-color: white;
     box-shadow: 0 1px 3px 0 #00000091;
     transition: box-shadow 0.3s ease-in-out;
@@ -127,4 +129,9 @@
 
     //info about profile box (name, pic)
     
+}
+
+//Cases/Map Area
+.map_cases_container {
+    @include flexbox(flex-direction, column);
 }

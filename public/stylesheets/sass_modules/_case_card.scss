@@ -7,6 +7,14 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap:20px;
+
+        @include mediaquery(1000px){
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @include mediaquery(500px){
+            grid-template-columns: 1fr;
+        }
     };
 
 }

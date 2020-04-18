@@ -47,24 +47,16 @@ casesCreated.addEventListener('click', function(){
     }
 });
 
+//down arrow click event
+let downArrow = document.querySelector('.down_arrow');
 
-//Event listener for register btn
-let registerBtn = document.querySelector('.register_btn');
-let registerForm = document.querySelector('.registration_layer');
-let saveRegisterBtn = document.querySelector('.register_save');
-let closeRegisterLayer = document.querySelector('.close_register');
-
-registerBtn.addEventListener('click', function(){
-    registerForm.classList.add('translateY');
-});
-
-saveRegisterBtn.addEventListener('click', function(){
-    registerForm.classList.remove('translateY');
-});
-
-closeRegisterLayer.addEventListener('click', function(){
-    registerForm.classList.remove('translateY');
-});
+downArrow.addEventListener('click', function(){
+    window.scrollBy({
+        top: window.innerHeight - 50,
+        left: 0,
+        behavior: 'smooth'
+      });
+})
 
 
 
