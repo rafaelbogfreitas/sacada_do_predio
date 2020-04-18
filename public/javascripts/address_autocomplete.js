@@ -36,8 +36,8 @@ container.addEventListener('click', function(e){
     .then( data => {
         let [ lat, long ] = data.data.features[0].center;
         console.log(lat, long, data);
-        document.querySelector('input[name="lat"]').value = lat;
-        document.querySelector('input[name="lng"]').value = long;
+        document.querySelector('.lat').value = lat;
+        document.querySelector('.lng').value = long;
     })
 });
 

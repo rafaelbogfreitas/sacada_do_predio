@@ -4,8 +4,9 @@
     {{#user}}
 
     {{!-- User coordinates --}}
-    <input type="hidden" name="lat" value="{{location.[1]}}">
-    <input type="hidden" name="lng" value="{{location.[0]}}">
+    
+    <input type="hidden" name="lat" value="{{location.coordinates.[0]}}">
+    <input type="hidden" name="lng" value="{{location.coordinates.[1]}}">
     
     {{!-- Nav that appears only if logged in --}}
     <nav class="dashboard_nav">
@@ -124,8 +125,8 @@
                     <div class="autocomplete_box">
                         <input id="address" type="text" placeholder="address" autocomplete="no" name="address" required >
                         {{!-- hidden inputs to get coordinates --}}
-                        <input type="hidden" name="lat">
-                        <input type="hidden" name="lng">
+                        <input class="lat" type="hidden" name="lat">
+                        <input class="lng" type="hidden" name="lng">
                         <div class="results_box"></div>
                     </div>
                     <input type="text" placeholder="state" name="state" required>

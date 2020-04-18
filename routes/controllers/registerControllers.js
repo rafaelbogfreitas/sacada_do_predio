@@ -7,11 +7,27 @@ let registerControllers = {
             user
         } = req.session.passport;
 
-        const {
+        let {
             state,
             address,
-            phoneNumber
+            phoneNumber,
+            lat,
+            lng
         } = req.body;
+
+        console.log(lng);
+        console.log(lat);
+
+        lng = Number(lng);
+        lat = Number(lat);
+
+        console.log(lng);
+        console.log(lat);
+
+        const coordinates = {
+            type: 'Point',
+            coordinates: [lng, lat]
+          }
 
         if (req.file) {
             const {
@@ -28,7 +44,8 @@ let registerControllers = {
                     phoneNumber,
                     imageName: originalname,
                     imageUrl: url,
-                    public_id: public_id
+                    public_id: public_id,
+                    location: coordinates
                 })
                 .then(() => {
                     res.redirect('/dashboard');
@@ -40,7 +57,8 @@ let registerControllers = {
                     status: 'registered',
                     state,
                     address,
-                    phoneNumber
+                    phoneNumber,
+                    location: coordinates
                 })
                 .then(() => {
                     res.redirect('/dashboard');
