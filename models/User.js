@@ -21,10 +21,6 @@ const userSchema = new Schema({
         enum: ['registered', 'waiting'],
         default: 'waiting',
     },
-    state: {
-        type: String,
-        default: 'missing state'
-    },
     address: {
         type: String,
         default: 'missing address'

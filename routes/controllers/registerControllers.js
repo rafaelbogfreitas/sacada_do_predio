@@ -8,7 +8,6 @@ let registerControllers = {
         } = req.session.passport;
 
         let {
-            state,
             address,
             phoneNumber,
             lat,
@@ -30,7 +29,6 @@ let registerControllers = {
             User
                 .findByIdAndUpdate(user, {
                     status: 'registered',
-                    state,
                     address,
                     phoneNumber,
                     imageName: originalname,
@@ -46,10 +44,9 @@ let registerControllers = {
             User
                 .findByIdAndUpdate(user, {
                     status: 'registered',
-                    state,
                     address,
                     phoneNumber,
-                    location: coordinates
+                    location: location
                 })
                 .then(() => {
                     res.redirect('/dashboard');

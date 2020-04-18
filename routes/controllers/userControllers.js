@@ -23,7 +23,6 @@ let userControllers = {
         const {
             username,
             email,
-            state,
             address,
             phoneNumber,
             lat,
@@ -50,7 +49,6 @@ let userControllers = {
                         .findByIdAndUpdate(user, {
                             username: username,
                             email: email,
-                            state: state,
                             address: address,
                             phoneNumber: phoneNumber,
                             imageName: originalname,
@@ -69,7 +67,6 @@ let userControllers = {
                 .findByIdAndUpdate(user, {
                     username: username,
                     email: email,
-                    state: state,
                     address: address,
                     phoneNumber: phoneNumber,
                     location: location
