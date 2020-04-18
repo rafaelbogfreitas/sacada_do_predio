@@ -159,6 +159,28 @@ function startMap() {
             })
         });
     }
+
+
+    //markers initialization
+
+    axios.get('http://localhost:3000/api/cases')
+    .then(data => {
+        console.log(data.data);
+
+        data.data.forEach( caseData => {
+            console.log(caseData.location.coordinates[1]);
+            new google.maps.Marker({
+                position: {
+                    lat: caseData.location.coordinates[0],
+                    lng: caseData.location.coordinates[1]
+                },
+                map: map,
+                title: caseData.title
+            });
+        })
+    });
 }
 
+
 startMap();
+
