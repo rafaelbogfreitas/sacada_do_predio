@@ -131,7 +131,8 @@
     
 }
 
-//Cases/Map Area
+// Cases/Map Area
 .map_cases_container {
+    height: auto;
     @include flexbox(flex-direction, column);
 }
