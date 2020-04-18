@@ -3,7 +3,7 @@
     width: 100%;
     height: auto;
     padding: 0 70px;
-    margin-top: 700px;
+    margin-top: 600px;
     @extend .center;
     @include flexbox(justify-content, space-around);
     @include mediaquery(900px){
