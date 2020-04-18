@@ -166,6 +166,10 @@ nav {
   -ms-display: flex;
   -webkit-display: flex; }
 
+--delete {
+  color: red !important;
+  border-color: red !important; }
+
 .main_home {
   position: relative;
   overflow: hidden;

@@ -6,6 +6,7 @@
 <div class="edit_profile">
     <div class="img_container">
         <img src="{{imageUrl}}" alt="">
+        <a class="btn --delete" href="/user/delete">DELETE ACCOUNT</a>
     </div>
 
 <form class="signup_form" action="/user/edit" method="POST" enctype="multipart/form-data">
@@ -21,7 +22,6 @@
     <input type="submit" value="SAVE" class="btn"/>
 </form>
 </div>
-<a href="/user/delete">DELETE ACCOUNT</a>
 {{/with}}
     </div>
     <script src="/javascripts/file_input.js"></script>
