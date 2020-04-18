@@ -363,7 +363,7 @@ section {
       font-size: 5rem;
       margin-top: 50px; }
     .cases_presentation .cases_presentation_content p {
-      font-size: 2rem; }
+      font-size: 3rem; }
   .cases_presentation .ajude_btn {
     margin-left: 50px;
     margin-bottom: 100px;
@@ -491,7 +491,9 @@ section {
     position: absolute;
     bottom: 20px;
     left: 0;
-    z-index: 2; }
+    z-index: 2;
+    margin-left: 50px;
+    margin-bottom: 10px; }
     .team_presentation .credits_box h2 {
       margin-bottom: 10px;
       margin-left: 10px;
