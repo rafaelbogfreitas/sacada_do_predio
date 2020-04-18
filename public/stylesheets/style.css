@@ -109,7 +109,8 @@ main {
   -webkit-justify-content: center; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 button {
   cursor: pointer; }
@@ -124,7 +125,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .cases_presentation, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -285,7 +286,7 @@ nav {
 .title {
   font-weight: bold;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-bottom: 50px;
   font-size: 5rem;
   color: #c6480c; }
@@ -293,7 +294,7 @@ nav {
 .subtitle {
   font-weight: bold;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-bottom: 50px;
   font-size: 2rem;
   color: #8f211d; }
@@ -305,6 +306,7 @@ section {
 .cases_presentation {
   position: relative;
   overflow: hidden;
+  padding-right: 50px;
   background-color: #f79e74; }
   .cases_presentation:after {
     content: '';
@@ -314,7 +316,7 @@ section {
     top: 100%;
     height: 200px;
     transform: rotate(-10deg);
-    background-color: #cad1da; }
+    background-color: #e06965; }
   .cases_presentation .cases_img_container {
     width: 40%;
     height: 100%;
@@ -350,11 +352,11 @@ section {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
-    justify-content: space-between;
-    -moz-justify-content: space-between;
-    -o-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -webkit-justify-content: space-between;
+    justify-content: space-around;
+    -moz-justify-content: space-around;
+    -o-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -webkit-justify-content: space-around;
     align-items: flex-start;
     -moz-align-items: flex-start;
     -o-align-items: flex-start;
@@ -365,8 +367,9 @@ section {
       font-size: 5rem;
       margin-top: 50px; }
     .cases_presentation .cases_presentation_content p {
-      font-size: 2rem; }
+      font-size: 3rem; }
   .cases_presentation .ajude_btn {
+    margin-left: 50px;
     margin-bottom: 100px;
     padding: 20px 40px;
     font-size: 1.5rem;
@@ -381,7 +384,99 @@ section {
 .team_presentation {
   position: relative;
   overflow: hidden;
-  background-color: #cad1da; }
+  background-color: #e06965;
+  display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  padding-bottom: 50px;
+  color: white; }
+  @media (max-width: 500px) {
+    .team_presentation {
+      flex-direction: column;
+      -moz-flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column;
+      align-items: center;
+      -moz-align-items: center;
+      -o-align-items: center;
+      -ms-align-items: center;
+      -webkit-align-items: center;
+      justify-content: center;
+      -moz-justify-content: center;
+      -o-justify-content: center;
+      -ms-justify-content: center;
+      -webkit-justify-content: center; } }
+  .team_presentation .team_header {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 4rem;
+    align-self: flex-end;
+    -moz-align-self: flex-end;
+    -o-align-self: flex-end;
+    -ms-align-self: flex-end;
+    -webkit-align-self: flex-end; }
+  .team_presentation .daniel, .team_presentation .rafael {
+    width: 50%;
+    height: 70%;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column; }
+    .team_presentation .daniel h2, .team_presentation .rafael h2 {
+      font-weight: bold;
+      font-size: 1.6rem; }
+    .team_presentation .daniel p, .team_presentation .rafael p {
+      font-size: 1rem;
+      padding: 20px 0;
+      width: 70%;
+      margin: 0 !important; }
+  .team_presentation .team_about {
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0; }
+  .team_presentation .team_img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 5px solid white; }
+  .team_presentation .socialmedia_img {
+    width: 30px;
+    height: 30px; }
+  .team_presentation .social_media {
+    width: 30%;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    justify-content: space-around;
+    -moz-justify-content: space-around;
+    -o-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -webkit-justify-content: space-around; }
   .team_presentation:after {
     content: '';
     position: absolute;
@@ -400,7 +495,9 @@ section {
     position: absolute;
     bottom: 20px;
     left: 0;
-    z-index: 2; }
+    z-index: 2;
+    margin-left: 50px;
+    margin-bottom: 10px; }
     .team_presentation .credits_box h2 {
       margin-bottom: 10px;
       margin-left: 10px;
