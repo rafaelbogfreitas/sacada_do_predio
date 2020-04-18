@@ -115,11 +115,11 @@
                         <input id="address" type="text" placeholder="address" autocomplete="no" name="address" required >
                         {{!-- hidden inputs to get coordinates --}}
                         <input type="hidden" name="lat">
-                        <input type="hidden" name="long">
+                        <input type="hidden" name="lng">
                         <div class="results_box"></div>
                     </div>
-                    <input type="text" placeholder="state" name="state">
-                    <input type="text" placeholder="phone number" name="phoneNumber">
+                    <input type="text" placeholder="state" name="state" required>
+                    <input type="text" placeholder="phone number" name="phoneNumber" required>
                     <input type="file" placeholder="File" name="file" />
                     <div class="file_label_box">
                         <label class="btn" for="file">Image</label>

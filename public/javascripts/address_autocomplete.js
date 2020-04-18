@@ -35,12 +35,9 @@ container.addEventListener('click', function(e){
     axios.get(api + e.target.value + accessToken)
     .then( data => {
         let [ lat, long ] = data.data.features[0].center;
-        console.log(lat, long);
 
         document.querySelector('input[name="lat"]').value = lat;
-        document.querySelector('input[name="long"]').value = long;
-
-        console.log(document.querySelector('input[name="lat"]'));
+        document.querySelector('input[name="lng"]').value = long;
     })
 });
 
