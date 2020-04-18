@@ -674,7 +674,7 @@ section {
         font-weight: bold; }
 
 img {
-  height: 80%; }
+  height: 100%; }
 
 .dashboard_icon {
   width: 50px;
@@ -936,9 +936,9 @@ img {
 
 .map_content_container {
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding: 0 70px;
-  margin-top: 600px;
+  margin-top: 100px;
   justify-content: space-around;
   -moz-justify-content: space-around;
   -o-justify-content: space-around;
@@ -967,7 +967,7 @@ img {
       cursor: pointer;
       width: 100px;
       height: 100px;
-      margin: 100px auto 0;
+      margin: 50px auto 0;
       border-radius: 100%;
       overflow: hidden; }
       .map_content_container .intro_text .down_arrow img {

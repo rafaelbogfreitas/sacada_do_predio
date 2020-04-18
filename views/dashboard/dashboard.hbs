@@ -89,7 +89,9 @@
                     <input type="text" placeholder="Name" name="username" required>
                     <input type="password" placeholder="Password" name="password" required>
                     <input type="submit" value="LOGIN" />
-                    <a href="/auth/google">Login With Google</a>
+                    <div class="social_login_box">
+                        <a href="/auth/google">Login With Google</a>
+                    </div>
                 </form>
             </div>
         </div>
@@ -128,7 +130,7 @@
             <div class="registration_container">
                 <img src="/images/close_icon.svg" class="close_register"/>
                 <p>Complete your registration:</p>
-                <form class="signup_form" action="/register" method="POST" enctype="multipart/form-data">
+                <form class="signup_form" action="/register" method="POST" autocomplete="no" enctype="multipart/form-data">
                     <label for="address">
                         Enter your address
                     </label>

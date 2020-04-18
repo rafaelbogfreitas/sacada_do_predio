@@ -4,7 +4,14 @@
         <form class="new_case_form" action="/dashboard/new-case" method="POST" enctype="multipart/form-data">
             <input placeholder="title" type="text" name="title">
             <textarea placeholder="description" type="text" name="description"></textarea>
-            <input placeholder="address" type="text" name="address">
+            {{!-- <input placeholder="address" type="text" name="address"> --}}
+            <div class="autocomplete_box">
+                <input id="address" type="text" placeholder="address" autocomplete="no" name="address" required >
+                {{!-- hidden inputs to get coordinates --}}
+                <input class="lat" type="hidden" name="lat">
+                <input class="lng" type="hidden" name="lng">
+                <div class="results_box" style="z-index:100"></div>
+            </div>
             <div class="file_label_box">
                 <label class="btn" for="file">Image</label>
                 <div class="file_text">No image selected</div>
@@ -18,4 +25,5 @@
 
     </div>
     <script src="/javascripts/file_input.js"></script>
+    <script src="/javascripts/address_autocomplete.js" defer></script>
 </main>

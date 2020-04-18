@@ -1,11 +1,11 @@
-console.log('É Nóis')
+console.log('É Nóis');
 
 let addressInput = document.querySelector('input[name="address"]');
 let container = document.querySelector('.results_box');
 
 let api = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 let accessToken = '.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw&cachebuster=1586829538543&autocomplete=true&types=address';
-addressInput.addEventListener('keydown', (e) => {
+addressInput.addEventListener('keyup', (e) => {
     console.log(e.target.value);
 
     axios.get(api + e.target.value + accessToken)
@@ -17,6 +17,13 @@ addressInput.addEventListener('keydown', (e) => {
             })
             container.innerHTML = options;
             console.log(data)
+
+            let [ lat, long ] = data.data.features[0].center;
+            console.log(lat, long, data);
+            document.querySelector('.lat').value = lat;
+            document.querySelector('.lng').value = long;
+
+        console.log(document.querySelector('.lat'));
         })
         .catch(error => console.log(error));
 
@@ -38,6 +45,8 @@ container.addEventListener('click', function(e){
         console.log(lat, long, data);
         document.querySelector('.lat').value = lat;
         document.querySelector('.lng').value = long;
+
+        console.log(document.querySelector('.lat'));
     })
 });
 
