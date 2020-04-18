@@ -8,7 +8,7 @@ let accessToken = '.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiw
 addressInput.addEventListener('keydown', (e) => {
     console.log(e.target.value);
 
-        let data = axios.get(api + e.target.value + accessToken)
+    axios.get(api + e.target.value + accessToken)
         .then( data => {
             let arr = data.data.features;
             let options = ''

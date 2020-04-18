@@ -1,11 +1,16 @@
+let lat = document.querySelector('input[name="lat"]');
+let lng = document.querySelector('input[name="lng"]');
+
+console.log()
+
 function startMap() {
     const ironhackBCN = {
-        lat: 41.3977381,
-        lng: 2.190471916
+        lat: lat,
+        lng: lng
     };
     const map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 5,
+            zoom: 9,
             center: ironhackBCN,
             styles: [{
                     elementType: 'geometry',
