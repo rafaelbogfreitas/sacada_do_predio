@@ -5,7 +5,7 @@ const Case = require('../../models/Case');
 let dashboardControllers = {
     // GET DASHBOARD
     getDashboard: (req, res, next) => {
-        let { user } = req.session.passport;
+        let { user } = req.session.passport || null;
         User
             .findById(user)
             .populate('casesCreated') // POPULANDO O ARRAY CASES CREATED PARA MOSTRAR NA DASHBOARD MY CASES
