@@ -6,9 +6,15 @@
         @extend .center;
         @include flexbox(flex-direction, column);
         @extend .box-shadow;
+        @include mediaquery(500px){
+            box-shadow: none;
+        }
 
         h1 {
             width: 60%;
+            @include mediaquery(500px){
+                width: 100%;
+            }
             margin-bottom: 20px;
             color: $red;
             text-align: left;
@@ -18,6 +24,10 @@
 
         form {
             width: 60%;
+
+            @include mediaquery(500px){
+                width: 100%;
+            }
 
             @extend .center;
             @include flexbox(flex-direction, column);
@@ -79,7 +89,14 @@
             }
 
             .hor_btn_box {
-                @include flexbox(justify-content, space-between)
+                @include flexbox(justify-content, space-between);
+                @include mediaquery(500px){
+                    @include flexbox(flex-direction, column);
+                    & > * {
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+                }
             }
         }
     }
