@@ -4,5 +4,7 @@
         <h1>{{title}}</h1>
         <p>{{description}}</p>
         <p>{{address}}</p>
+        <input type="hidden" name="lat" value="{{location.coordinates.[0]}}">
+        <input type="hidden" name="lng" value="{{location.coordinates.[1]}}">
     </div>
 </a>

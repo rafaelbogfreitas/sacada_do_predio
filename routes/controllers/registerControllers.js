@@ -49,7 +49,7 @@ let registerControllers = {
                     state,
                     address,
                     phoneNumber,
-                    location: coordinates
+                    location: location
                 })
                 .then(() => {
                     res.redirect('/dashboard');
