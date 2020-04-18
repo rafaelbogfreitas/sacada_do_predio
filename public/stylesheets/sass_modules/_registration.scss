@@ -43,7 +43,31 @@
     margin-left: auto;
 }
 
+.autocomplete_box {
+    width: 200px;
+    position: relative;
+}
+
 .results_box {
+    position: absolute;
+    right: 0;
+    top: 100%;
     width: 100%;
     height: auto;
+    overflow: hidden;
+    background-color: #fff;
+
+    @extend .box-shadow;
+
+    p {
+        width: 100%;
+        margin: 5px;
+        transition: font-weigh 0.3s linear;
+        &:hover {
+            cursor: pointer;
+            font-weight: bold;
+
+            transition: font-weigh 0.3s linear;
+        }
+    }
 }

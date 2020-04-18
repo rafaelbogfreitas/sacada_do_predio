@@ -130,7 +130,7 @@ nav {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .registration_layer .registration_container {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .registration_layer .registration_container, .results_box {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
@@ -887,8 +887,25 @@ img {
 .register_btn {
   margin-left: auto; }
 
+.autocomplete_box {
+  width: 200px;
+  position: relative; }
+
 .results_box {
+  position: absolute;
+  right: 0;
+  top: 100%;
   width: 100%;
-  height: auto; }
+  height: auto;
+  overflow: hidden;
+  background-color: #fff; }
+  .results_box p {
+    width: 100%;
+    margin: 5px;
+    transition: font-weigh 0.3s linear; }
+    .results_box p:hover {
+      cursor: pointer;
+      font-weight: bold;
+      transition: font-weigh 0.3s linear; }
 
 /*# sourceMappingURL=style.css.map */
