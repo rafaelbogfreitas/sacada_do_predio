@@ -18,9 +18,10 @@ const LocalStrategy = require('passport-local').Strategy;
 const User = require('./models/User');
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 //MONGODB connection
-mongoose.connect(process.env.MONGODB_ATLAS, {
+mongoose.connect(process.env.MONGODB, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
@@ -109,6 +110,40 @@ passport.use(new LocalStrategy({
     });
 }));
 
+// PASSPORT GOOGLE STRATEGY
+
+passport.use(new GoogleStrategy({
+            clientID: process.env.GOOGLE_AUTH_ID,
+            clientSecret: process.env.GOOGLE_AUTH_SECRET,
+            callbackURL: "/auth/google/callback"
+        },
+        (accessToken, refreshToken, profile, done) => {
+            // to see the structure of the data in received response:
+            console.log("Google account details:", profile);
+
+            User.findOne({
+                    googleID: profile.id
+                })
+                .then(user => {
+                    if (user) {
+                        done(null, user);
+                        return;
+                    }
+
+                    User.create({
+                            googleID: profile.id,
+                            username: profile.name.givenName,
+                            email: profile.emails[0].value,
+                            imageUrl: profile.photos[0].value
+                        })
+                        .then(newUser => {
+                            done(null, newUser);
+                        })
+                        .catch(err => done(err)); // closes User.create()
+                })
+                .catch(err => done(err)); // closes User.findOne()
+        }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -139,7 +174,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 });
 
 //HBS helper
-hbs.registerHelper('if_eq', function(a, b, opts) {
+hbs.registerHelper('if_eq', function (a, b, opts) {
     if (a == b) {
         return opts.fn(this);
     } else {

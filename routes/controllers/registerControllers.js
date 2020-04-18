@@ -27,7 +27,7 @@ let registerControllers = {
         const coordinates = {
             type: 'Point',
             coordinates: [lng, lat]
-          }
+        }
 
         if (req.file) {
             const {
