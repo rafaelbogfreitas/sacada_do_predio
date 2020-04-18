@@ -7,6 +7,7 @@
     @extend .center;
     @include flexbox(justify-content, space-around);
     @include mediaquery(900px){
+        padding:0;
         @include flexbox(flex-direction, column);
     }
 
@@ -34,9 +35,16 @@
             margin: 50px auto 0;
             border-radius: 100%;
             overflow: hidden;
-
+            
             @extend .center;
             @extend .box-shadow;
+            
+            @include mediaquery(500px){
+                width: 80px;
+                height: 80px;
+                margin: 20px auto 0;
+            }
+
             img {
                 width: 60%;
                 height: auto;

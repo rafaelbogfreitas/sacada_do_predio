@@ -966,6 +966,7 @@ img {
   -webkit-justify-content: space-around; }
   @media (max-width: 900px) {
     .map_content_container {
+      padding: 0;
       flex-direction: column;
       -moz-flex-direction: column;
       -o-flex-direction: column;
@@ -990,6 +991,11 @@ img {
       margin: 50px auto 0;
       border-radius: 100%;
       overflow: hidden; }
+      @media (max-width: 500px) {
+        .map_content_container .intro_text .down_arrow {
+          width: 80px;
+          height: 80px;
+          margin: 20px auto 0; } }
       .map_content_container .intro_text .down_arrow img {
         width: 60%;
         height: auto; }
