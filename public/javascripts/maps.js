@@ -1,12 +1,27 @@
+let latLng = document.querySelector('input[name="latLng"]').value
+console.log(latLng)
+
+// latLng = JSON.parse(latLng);
+// console.log(latLng)
+console.log('1')
+console.log(+'-1')
+console.log(typeof latLng)
+// console.log
+
+// console.log(lat)
+// console.log(lng)
+
 function startMap() {
-    const ironhackBCN = {
-        lat: 41.3977381,
-        lng: 2.190471916
+    // console.log(lat)
+    // console.log(lng)
+    const userPosition = {
+        lat: 0,
+        lng: 0
     };
     const map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 5,
-            center: ironhackBCN,
+            center: userPosition,
             styles: [{
                     elementType: 'geometry',
                     stylers: [{

@@ -2,6 +2,12 @@
 
     {{#if user}}
     {{#user}}
+
+    {{!-- User coordinates --}}
+    
+    
+    <input type="hidden" name="latLng" value="{{location}}">
+    
     {{!-- Nav that appears only if logged in --}}
     <nav class="dashboard_nav">
         <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
@@ -90,7 +96,12 @@
     </nav>
     {{/if}}
 
-    <div id="map"></div>
+    {{!-- Map --}}
+    <div class="map_box">
+        <div id="map"></div>
+    </div>
+
+    {{!-- Cases container --}}
     {{#if cases}}
     <div class="cards_container">
         {{#cases}}
