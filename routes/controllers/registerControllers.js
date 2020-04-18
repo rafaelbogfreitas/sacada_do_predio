@@ -10,7 +10,9 @@ let registerControllers = {
         const {
             state,
             address,
-            phoneNumber
+            phoneNumber,
+            lat,
+            lng
         } = req.body;
 
         if (req.file) {
@@ -28,7 +30,8 @@ let registerControllers = {
                     phoneNumber,
                     imageName: originalname,
                     imageUrl: url,
-                    public_id: public_id
+                    public_id: public_id,
+                    location: [lat, lng]
                 })
                 .then(() => {
                     res.redirect('/dashboard');
@@ -40,7 +43,8 @@ let registerControllers = {
                     status: 'registered',
                     state,
                     address,
-                    phoneNumber
+                    phoneNumber,
+                    location: [lat, lng]
                 })
                 .then(() => {
                     res.redirect('/dashboard');
