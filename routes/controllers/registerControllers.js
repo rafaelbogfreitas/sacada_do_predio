@@ -15,18 +15,9 @@ let registerControllers = {
             lng
         } = req.body;
 
-        console.log(lng);
-        console.log(lat);
-
-        lng = Number(lng);
-        lat = Number(lat);
-
-        console.log(lng);
-        console.log(lat);
-
-        const coordinates = {
+        const location = {
             type: 'Point',
-            coordinates: [lng, lat]
+            coordinates: [+lng, +lat]
         }
 
         if (req.file) {
@@ -45,7 +36,7 @@ let registerControllers = {
                     imageName: originalname,
                     imageUrl: url,
                     public_id: public_id,
-                    location: coordinates
+                    location: location
                 })
                 .then(() => {
                     res.redirect('/dashboard');

@@ -25,8 +25,15 @@ let userControllers = {
             email,
             state,
             address,
-            phoneNumber
+            phoneNumber,
+            lat,
+            lng
         } = req.body;
+
+        const location = {
+            type: 'Point',
+            coordinates: [+lng, +lat]
+        }
 
         if (req.file) {
             const {
@@ -48,7 +55,8 @@ let userControllers = {
                             phoneNumber: phoneNumber,
                             imageName: originalname,
                             public_id: public_id,
-                            imageUrl: url
+                            imageUrl: url,
+                            location: location
                         })
                         .then(() => {
                             res.redirect('/dashboard');
@@ -64,6 +72,7 @@ let userControllers = {
                     state: state,
                     address: address,
                     phoneNumber: phoneNumber,
+                    location: location
                 })
                 .then(() => {
                     res.redirect('/dashboard');

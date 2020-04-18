@@ -31,7 +31,14 @@ let dashboardControllers = {
             title,
             description,
             address,
+            lat,
+            lng
         } = req.body;
+
+        const location = {
+            type: 'Point',
+            coordinates: [+lng, +lat]
+        }
         
         if (req.file) { // CASO TENHA UPLOAD DE IMAGEM
             const {
@@ -47,7 +54,8 @@ let dashboardControllers = {
                 imageUrl: url,
                 public_id: public_id,
                 user: user,
-                address: address
+                address: address,
+                location: location
             })
             .then( caseResponse => {
                 User
@@ -63,7 +71,8 @@ let dashboardControllers = {
                 title: title,
                 description: description,
                 user: user,
-                address: address
+                address: address,
+                location: location
             })
             .then( caseResponse => {
                 User

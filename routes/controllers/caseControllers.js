@@ -39,8 +39,15 @@ let caseControllers = {
         const {
             title,
             description,
-            address
+            address,
+            lat,
+            lng
         } = req.body
+
+        const location = {
+            type: 'Point',
+            coordinates: [+lng, +lat]
+        }
 
         if (req.file) {
             const {
@@ -61,7 +68,8 @@ let caseControllers = {
                             imageUrl: url,
                             public_id: public_id,
                             user: user,
-                            address: address
+                            address: address,
+                            location: location
                         })
                         .then(() => {
                             res.redirect('/dashboard');
@@ -75,7 +83,8 @@ let caseControllers = {
                     title: title,
                     description: description,
                     user: user,
-                    address: address
+                    address: address,
+                    location: location
                 })
                 .then(() => {
                     res.redirect('/dashboard');
