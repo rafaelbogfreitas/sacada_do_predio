@@ -17,7 +17,7 @@ const userSchema = new Schema({
     },
     status: {
         type: String,
-        enum: [ 'registered', 'waiting'],
+        enum: ['registered', 'waiting'],
         default: 'waiting',
     },
     state: {
@@ -25,16 +25,16 @@ const userSchema = new Schema({
         default: 'missing state'
     },
     address: {
-        type:String,
+        type: String,
         default: 'missing address'
     },
     imageName: {
-        type:String,
-        default:'avatar'
+        type: String,
+        default: 'avatar'
     },
     imageUrl: {
-        type:String,
-        default:'/images/avatar.png'
+        type: String,
+        default: '/images/avatar.png'
     },
     public_id: {
         type: String
@@ -50,10 +50,19 @@ const userSchema = new Schema({
     phoneNumber: {
         type: String,
         default: ''
+    },
+    location: {
+        type: {
+            type: String, 
+            enum: ['Point'],
+        },
+        coordinates: {
+            type: [Number]
+        }
     }
 }, {
     timestamps: true
-})
+});
 
 const User = mongoose.model('User', userSchema);
 

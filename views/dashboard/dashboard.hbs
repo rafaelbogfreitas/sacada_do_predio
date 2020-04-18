@@ -1,99 +1,102 @@
 <main>
-    
+
     {{#if user}}
-        {{#user}}
-            {{!-- Nav that appears only if logged in --}}
-            <nav class="dashboard_nav">
-                <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
-                {{#if_eq status 'waiting'}}
-                <button class="btn register_btn">
-                    REGISTRE
-                </button>
-                {{/if_eq }}
-                <div class="profile_info">
-                    <div class="user_name">
-                        <p>{{username}}</p>
-                    </div>
-                    <div class="user_img_container">
-                        <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
-                    </div>
+    {{#user}}
+    {{!-- Nav that appears only if logged in --}}
+    <nav class="dashboard_nav">
+        <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
+        {{#if_eq status 'waiting'}}
+        <button class="btn register_btn">
+            REGISTRE
+        </button>
+        {{/if_eq }}
+        <div class="profile_info">
+            <div class="user_name">
+                <p>{{username}}</p>
+            </div>
+            <div class="user_img_container">
+                <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
+            </div>
 
-                    {{!-- profile box --}}
+            {{!-- profile box --}}
 
-                    <aside class="profile_options_box">
-                        <a href="/logout">LOGOUT</a>
-                        <a href="/user/edit">EDIT PROFILE</a>
-                    </aside>
-                </div>
-            </nav>
-
-            <aside class="dashboard leave_screen">
-                <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
-               
-               <div class="cases_title_container">
-                   <div class="title_box">
-                        <h1>CASOS CRIADOS</h1>
-                        <img  class="arrow" src="/images/arrow.svg" alt="">
-                   </div>
-                    {{#if_eq status 'registered'}}
-                        <a href="/dashboard/new-case">
-                            <img class="create_icon" src="/images/plus.svg" alt="plus icon">
-                        </a>
-                    {{/if_eq}}
-               </div>
-
-                <div class="user_cases_container">
-                    {{#casesCreated}}
-                        <div class="case_container">
-                            <a href="/case/{{_id}}">
-                                <h2 class="case_title">{{title}}</h2>
-                            </a>
-                            <p class="case_description">{{description}}</p>
-                        </div>
-                    {{/casesCreated}}
-                </div>
+            <aside class="profile_options_box">
+                <a href="/logout">LOGOUT</a>
+                <a href="/user/edit">EDIT PROFILE</a>
             </aside>
-        {{/user}}
+        </div>
+    </nav>
+
+    <aside class="dashboard leave_screen">
+        <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
+
+        <div class="cases_title_container">
+            <div class="title_box">
+                <h1>CASOS CRIADOS</h1>
+                <img class="arrow" src="/images/arrow.svg" alt="">
+            </div>
+            {{#if_eq status 'registered'}}
+            <a href="/dashboard/new-case">
+                <img class="create_icon" src="/images/plus.svg" alt="plus icon">
+            </a>
+            {{/if_eq}}
+        </div>
+
+        
+
+        <div class="user_cases_container">
+            {{#casesCreated}}
+            <div class="case_container">
+                <a href="/case/{{_id}}">
+                    <h2 class="case_title">{{title}}</h2>
+                </a>
+                <p class="case_description">{{description}}</p>
+            </div>
+            {{/casesCreated}}
+        </div>
+    </aside>
+    {{/user}}
     {{else}}
 
     {{!-- Nav bar for display when no user logged --}}
-    
-        <nav class="main_nav">
-            <a class="logo_wrapper" href="/">
-                <img src="/images/logo.png" alt="logo">
-            </a>
+
+    <nav class="main_nav">
+        <a class="logo_wrapper" href="/">
+            <img src="/images/logo.png" alt="logo">
+        </a>
 
         <div class="btn_container">
             <div class="signup_container">
                 <button class="signup_btn">SIGNUP</button>
-                <form  class="signup_form" action="/signup" method="POST" enctype="multipart/form-data">
+                <form class="signup_form" action="/signup" method="POST" enctype="multipart/form-data">
                     <img class="close_form" src="/images/close_icon.svg" alt="close icon">
                     <input type="text" placeholder="Name" name="username" required>
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="password" placeholder="Password" name="password" required>
-                    <input type="submit" value="SIGNUP"/>
+                    <input type="submit" value="SIGNUP" />
                 </form>
             </div>
             <div class="login_container">
                 <button class="login_btn">LOGIN</button>
-                <form  class="login_form" action="/login" method="POST">
+                <form class="login_form" action="/login" method="POST">
                     <img class="close_form" src="/images/close_icon.svg" alt="close icon">
                     <input type="text" placeholder="Name" name="username" required>
                     <input type="password" placeholder="Password" name="password" required>
-                    <input type="submit" value="LOGIN"/>
+                    <input type="submit" value="LOGIN" />
                 </form>
             </div>
         </div>
 
-        </nav>
+    </nav>
     {{/if}}
 
+    <div id="map"></div>
     {{#if cases}}
-        <div class="cards_container">
-            {{#cases}}
-                {{> case }}
-            {{/cases}}
-        </div>
+    <div class="cards_container">
+        {{#cases}}
+        {{> case }}
+        {{/cases}}
+    </div>
     {{/if}}
 
     {{!-- Registration Container --}}
@@ -126,13 +129,19 @@
                 </form>
             </div>
         </div>
-        {{/if_eq}}
+    </div>
+    {{/if_eq}}
     {{/with}}
 </main>
 {{#if user}}
 <script src="javascripts/dashboard.js" defer></script>
 <script src="javascripts/address_autocomplete.js" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE" defer></script>
+<script type="text/javascript" src="javascripts/maps.js" defer></script>
+
 {{else}}
 <script src="javascripts/dashboard.js" defer></script>
 <script src="javascripts/home.js" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE" defer></script>
+<script type="text/javascript" src="javascripts/maps.js" defer></script>
 {{/if}}

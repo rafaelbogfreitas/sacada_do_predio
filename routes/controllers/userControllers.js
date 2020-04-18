@@ -75,7 +75,7 @@ let userControllers = {
     getDeleteUser: (req, res, next) => {
         let { user } = req.session.passport;
 
-        User
+        User // VER MONGOOSE PRE
             .findByIdAndRemove(user)
             .then(userToDelete => {
                 cloudinary.v2.uploader.destroy(`${userToDelete.public_id}`, function(error,result) {
