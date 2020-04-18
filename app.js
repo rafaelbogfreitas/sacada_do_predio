@@ -113,36 +113,35 @@ passport.use(new LocalStrategy({
 // PASSPORT GOOGLE STRATEGY
 
 passport.use(new GoogleStrategy({
-            clientID: process.env.GOOGLE_AUTH_ID,
-            clientSecret: process.env.GOOGLE_AUTH_SECRET,
-            callbackURL: "/auth/google/callback"
-        },
-        (accessToken, refreshToken, profile, done) => {
-            // to see the structure of the data in received response:
-            console.log("Google account details:", profile);
+    clientID: process.env.GOOGLE_AUTH_ID,
+    clientSecret: process.env.GOOGLE_AUTH_SECRET,
+    callbackURL: "/auth/google/callback"
+}, (accessToken, refreshToken, profile, done) => {
+    // to see the structure of the data in received response:
+    console.log("Google account details:", profile);
 
-            User.findOne({
-                    googleID: profile.id
-                })
-                .then(user => {
-                    if (user) {
-                        done(null, user);
-                        return;
-                    }
+    User.findOne({
+            googleID: profile.id
+        })
+        .then(user => {
+            if (user) {
+                done(null, user);
+                return;
+            }
 
-                    User.create({
-                            googleID: profile.id,
-                            username: profile.name.givenName,
-                            email: profile.emails[0].value,
-                            imageUrl: profile.photos[0].value
-                        })
-                        .then(newUser => {
-                            done(null, newUser);
-                        })
-                        .catch(err => done(err)); // closes User.create()
+            User.create({
+                    googleID: profile.id,
+                    username: profile.name.givenName,
+                    email: profile.emails[0].value,
+                    imageUrl: profile.photos[0].value
                 })
-                .catch(err => done(err)); // closes User.findOne()
-        }));
+                .then(newUser => {
+                    done(null, newUser);
+                })
+                .catch(err => done(err)); // closes User.create()
+        })
+        .catch(err => done(err)); // closes User.findOne()
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
