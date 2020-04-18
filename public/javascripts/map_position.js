@@ -175,7 +175,7 @@ function startMap() {
                     lng: caseData.location.coordinates[1]
                 },
                 map: map,
-                title: "I'm here"
+                title: caseData.title
             });
         })
     });
