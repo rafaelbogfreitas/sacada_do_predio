@@ -21,3 +21,28 @@ signupBtn.addEventListener('click', function(){
     signupForm.classList.add('increase_width');
 });
 
+//intersection observer for pics
+
+let img = document.querySelectorAll('.team_img');
+
+let options = {
+    root: null,
+    rootMargin: "100px",
+    threshold: 1
+};
+
+const observer = new IntersectionObserver(function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('animated', 'fadeInUp');
+            document.querySelector('.rafael .team_about').classList.add('animated', 'fadeInUp');
+            document.querySelector('.daniel .team_about').classList.add('animated', 'fadeInUp');
+        }
+    });
+}, options);
+
+
+img.forEach( image => observer.observe(image));
+
+
+

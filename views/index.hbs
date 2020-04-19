@@ -1,4 +1,8 @@
+
+{{!-- Home's first section --}}
 <main class="main_home">
+
+    {{!-- Nav --}}
     <nav class="main_nav">
 
         <img src="/images/logo.png" alt="logo">
@@ -35,9 +39,7 @@
         </div>
 
     </nav>
-    {{#if message}}
-        <div style="font-size: 7rem;">{{message}}</div>   
-    {{/if }}
+    
     <div class="home_content_container">
         <div class="main_text_content">
             <h1 class="title">Ajude pessoas da sua comunidade</h1>
@@ -46,6 +48,8 @@
         <img class="ilustration" src="/images/sacada.png" alt="sacada ilustration">
     </div>
 </main>
+
+{{!-- Cases presentation section --}}
 <section class="cases_presentation">
     <div class="cases_img_container">
         <img src="/images/sacada_close.png" alt="close das sacadas">
@@ -58,6 +62,8 @@
         </a>
     </div>
 </section>
+
+{{!-- Team presentation section --}}
 <section class="team_presentation">
     <h1 class="team_header">Quem Somos</h1>
     <div class="daniel">
@@ -97,4 +103,6 @@
         <p class="devs"><a target="_blank" href="https://www.linkedin.com/in/fernandamarsuradias/">Fernanda Dias</a></p>
     </div>
 </section>
+
+{{!-- Home Scripts --}}
 <script src="javascripts/home.js"></script>
