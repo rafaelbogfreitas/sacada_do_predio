@@ -19,8 +19,8 @@
         height: 200px;
         transform: rotate(10deg);
         background-color: lighten($orange, 30%);
+        box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
     }
-   
 }
 
 .main_nav {
@@ -40,8 +40,8 @@
     }
     
     form {
-       @extend .center;
-       @include flexbox(flex-direction, column);
+        @extend .center;
+        @include flexbox(flex-direction, column);
     }
 
     .close_form {
@@ -151,7 +151,7 @@
     width: 100%;
     margin-left: 50px;
     margin-bottom: 50px;
-    font-size: 5rem;
+    font-size: 6rem;
     color: $orange;
 }
 
@@ -160,7 +160,7 @@
     width: 100%;
     margin-left: 50px;
     margin-bottom: 50px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $red;
 }
 
@@ -177,6 +177,7 @@ section {
     @extend .center;
 
     background-color:lighten($orange, 30%);
+    // box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
 
     &:after {
         content: '';
@@ -188,10 +189,11 @@ section {
         transform: rotate(-10deg);
         // background-color: $x_light_gray;
         background-color:lighten($red, 30%);
+        box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
     }
 
     .cases_img_container {
-        width: 40%;
+        width: 55%;
         height: 100%;
 
         @include flexbox(display, flex);
@@ -205,8 +207,8 @@ section {
     }
 
     .cases_presentation_content {
-        width: 70%;
-        height: 100%;
+        width: 75%;
+        height: 70%;
         color: white;
         
 
@@ -217,17 +219,21 @@ section {
 
         h1 {
             font-weight: bold;
-            font-size: 5rem;
-            margin-top: 50px;
+            font-size: 3rem;
+            margin: 0 50px;
+            text-shadow: 0px 0px 17px rgba(0,0,0,0.15);
         }
 
         p {
+            // font-weight: bold;
+            margin: 0 50px;
             font-size: 3rem;
+            text-shadow: 0px 0px 17px rgba(0,0,0,0.15);
         }
     }
 
     .ajude_btn {
-        margin-left: 50px;
+        margin: 0 auto;
         margin-bottom: 100px;
         padding: 20px 40px;
         font-size: 1.5rem;
@@ -263,8 +269,8 @@ section {
     .team_header {
         width: 100%;
         text-align: center;
-        margin-top: 30px;
-        font-size: 4rem;
+        margin-top: 10px;
+        font-size: 3rem;
         @include flexbox(align-self, flex-end);
     }
 
@@ -280,9 +286,9 @@ section {
         }
 
         p {
-            font-size: 1rem;
-            padding: 20px 0;
-            width: 70%;
+            font-size: 1.2rem;
+            padding: 40px 0;
+            width: 60%;
             margin: 0!important;
         }
     }
@@ -298,8 +304,8 @@ section {
     }
 
     .team_img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         border-radius: 100%;
         overflow: hidden;
         border: 5px solid white;
@@ -311,7 +317,7 @@ section {
     }
 
     .social_media {
-        width: 30%;
+        width: 20%;
         @include flexbox(display, flex);
         @include flexbox(justify-content, space-around);
     }

@@ -188,7 +188,8 @@ nav {
     top: 100%;
     height: 200px;
     transform: rotate(10deg);
-    background-color: #f79e74; }
+    background-color: #f79e74;
+    box-shadow: 0px 0px 38px -11px rgba(0, 0, 0, 0.35); }
 
 .main_nav {
   width: 100vw;
@@ -284,7 +285,7 @@ nav {
   width: 100%;
   margin-left: 50px;
   margin-bottom: 50px;
-  font-size: 5rem;
+  font-size: 6rem;
   color: #c6480c; }
 
 .subtitle {
@@ -292,7 +293,7 @@ nav {
   width: 100%;
   margin-left: 50px;
   margin-bottom: 50px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #8f211d; }
 
 section {
@@ -312,9 +313,10 @@ section {
     top: 100%;
     height: 200px;
     transform: rotate(-10deg);
-    background-color: #e06965; }
+    background-color: #e06965;
+    box-shadow: 0px 0px 38px -11px rgba(0, 0, 0, 0.35); }
   .cases_presentation .cases_img_container {
-    width: 40%;
+    width: 55%;
     height: 100%;
     display: flex;
     -moz-display: flex;
@@ -335,8 +337,8 @@ section {
       width: 100%;
       height: auto; }
   .cases_presentation .cases_presentation_content {
-    width: 70%;
-    height: 100%;
+    width: 75%;
+    height: 70%;
     color: white;
     display: flex;
     -moz-display: flex;
@@ -360,12 +362,15 @@ section {
     -webkit-align-items: flex-start; }
     .cases_presentation .cases_presentation_content h1 {
       font-weight: bold;
-      font-size: 5rem;
-      margin-top: 50px; }
+      font-size: 3rem;
+      margin: 0 50px;
+      text-shadow: 0px 0px 17px rgba(0, 0, 0, 0.15); }
     .cases_presentation .cases_presentation_content p {
-      font-size: 3rem; }
+      margin: 0 50px;
+      font-size: 3rem;
+      text-shadow: 0px 0px 17px rgba(0, 0, 0, 0.15); }
   .cases_presentation .ajude_btn {
-    margin-left: 50px;
+    margin: 0 auto;
     margin-bottom: 100px;
     padding: 20px 40px;
     font-size: 1.5rem;
@@ -413,8 +418,8 @@ section {
   .team_presentation .team_header {
     width: 100%;
     text-align: center;
-    margin-top: 30px;
-    font-size: 4rem;
+    margin-top: 10px;
+    font-size: 3rem;
     align-self: flex-end;
     -moz-align-self: flex-end;
     -o-align-self: flex-end;
@@ -432,9 +437,9 @@ section {
       font-weight: bold;
       font-size: 1.6rem; }
     .team_presentation .daniel p, .team_presentation .rafael p {
-      font-size: 1rem;
-      padding: 20px 0;
-      width: 70%;
+      font-size: 1.2rem;
+      padding: 40px 0;
+      width: 60%;
       margin: 0 !important; }
   .team_presentation .team_about {
     display: flex;
@@ -453,8 +458,8 @@ section {
     width: 100%;
     padding: 40px 0; }
   .team_presentation .team_img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     overflow: hidden;
     border: 5px solid white; }
@@ -462,7 +467,7 @@ section {
     width: 30px;
     height: 30px; }
   .team_presentation .social_media {
-    width: 30%;
+    width: 20%;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
