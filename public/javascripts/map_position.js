@@ -1,28 +1,8 @@
-
-
-
-
-
-// let lat = document.querySelector('input[name="lat"]') == null ? 
-//             user_location.lat:
-//             document.querySelector('input[name="lat"]').value;
-//  let lng = document.querySelector('input[name="lng"]') == null ? 
-//             user_location.long :
-//             document.querySelector('input[name="lng"]').value;
-
-
-
-
 function startMap() {
 
-    // const userPosition = {
-    //     lat: user_location.lat,
-    //     lng: user_location.lng
-    // };
     const map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 15,
-            // center: userPosition,
             styles: [{
                     elementType: 'geometry',
                     stylers: [{
@@ -165,7 +145,6 @@ function startMap() {
 
     axios.get('http://localhost:3000/api/cases')
     .then(data => {
-        console.log(data.data);
 
         data.data.forEach( caseData => {
             console.log(caseData.location.coordinates[1]);

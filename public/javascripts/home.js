@@ -1,5 +1,3 @@
-//Helper functions
-const passwordStrenghtChecker = str => /.{5,6}/g.test(str);
 
 //Login button event listener
 let loginForm = document.querySelector('.login_form');
@@ -23,64 +21,3 @@ signupBtn.addEventListener('click', function(){
     signupForm.classList.add('increase_width');
 });
 
-
-//Frontend verification
-
-//Verifies if user already exists
-let username = document.querySelector('.signup_form > input[placeholder="Name"]');
-
-username.addEventListener('keyup', function(e){
-    console.log(e.target.value);
-
-    axios.get('http://localhost:3000/api/users')
-        .then( data => {
-            let options = data.data.filter( a => a.username == e.target.value);
-
-            options.length > 0 ?
-            username.style.outline = "2px solid red" :
-            username.style.outline = "none";
-        })
-        .catch( error => console.log(error));
-});
-
-username.addEventListener('blur', function(){
-    username.style.outline = "none";
-});
-
-//Verifies if email is already registered
-let email = document.querySelector('.signup_form > input[placeholder="Email"]');
-
-email.addEventListener('keyup', function(e){
-    console.log(e.target.value);
-
-    axios.get('http://localhost:3000/api/users')
-        .then( data => {
-            console.log(data);
-            let options = data.data.filter( a => a.email == e.target.value);
-
-            options.length > 0 ?
-            email.style.outline = "2px solid red" :
-            email.style.outline = "none";
-        })
-        .catch( error => console.log(error));
-});
-
-email.addEventListener('blur', function(){
-    email.style.outline = "none";
-});
-
-//Verifies if password is strong
-let password = document.querySelector('.signup_form input[type="password"]');
-
-password.addEventListener('keyup', function(e){
-    let isStrong = passwordStrenghtChecker(e.target.value);
-
-    !isStrong ?
-    password.style.outline = '1px solid red' :
-    password.style.outline = '1px solid green'; 
-
-});
-
-password.addEventListener('blur', function(){
-    password.style.outline = 'none'; 
-});

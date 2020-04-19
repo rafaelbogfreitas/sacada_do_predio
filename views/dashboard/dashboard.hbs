@@ -152,18 +152,23 @@
             </div>
         </div>
     </div>
-    <script src="/javascripts/register.js"></script>
-    <script src="javascripts/address_autocomplete.js" defer></script>
-    <script type="text/javascript" src="javascripts/map_position.js" defer></script>
     {{/if_eq}}
     {{/with}}
 </main>
+
+{{!-- Scripts rendering conditionally --}}
+
+{{#if_eq status "waiting"}}
+    <script src="/javascripts/register.js"></script>
+    <script src="javascripts/address_autocomplete.js" defer></script>
+    <script type="text/javascript" src="javascripts/map_position.js" defer></script>
+{{/if_eq}}
 {{#if user}}
     <script src="javascripts/dashboard.js" defer></script>
     <script src="javascripts/map_registered.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE"></script>
 {{else}}
-    <script src="javascripts/dashboard.js" defer></script>
+    <script src="javascripts/dashboard_nouser.js" defer></script>
     <script src="javascripts/home.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE"></script>
     <script type="text/javascript" src="javascripts/map_position.js" defer></script>

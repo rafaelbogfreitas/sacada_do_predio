@@ -1,11 +1,8 @@
 let lat = document.querySelector('input[name="lat"]').value;
 let lng = document.querySelector('input[name="lng"]').value;
 
-console.log("Aqui");
-
 lat = Number(lat);
 lng = Number(lng);
-
 
 function startMap() {
 
@@ -13,7 +10,6 @@ function startMap() {
         lat: lat,
         lng: lng
     };
-
 
     const map = new google.maps.Map(
         document.getElementById('map'), {
@@ -153,7 +149,7 @@ function startMap() {
         console.log(data.data);
 
         data.data.forEach( caseData => {
-            console.log(caseData.location.coordinates[1]);
+
             new google.maps.Marker({
                 position: {
                     lat: caseData.location.coordinates[0],
