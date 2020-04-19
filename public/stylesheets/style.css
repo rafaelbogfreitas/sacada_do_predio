@@ -125,7 +125,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -302,8 +302,7 @@ nav {
 
 section {
   width: 100vw;
-  height: auto;
-  min-height: 100vh; }
+  height: 100vh; }
 
 .cases_presentation {
   position: relative;
@@ -432,8 +431,7 @@ section {
     -webkit-align-self: flex-end; }
   .team_presentation .daniel, .team_presentation .rafael {
     width: 50%;
-    height: auto;
-    margin: 20px auto;
+    height: 70%;
     flex-direction: column;
     -moz-flex-direction: column;
     -o-flex-direction: column;
