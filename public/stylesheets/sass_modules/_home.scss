@@ -149,6 +149,7 @@
                 height: 100%;
                 padding:10px;
 
+
                 overflow: hidden;
            
                 @extend .center;
@@ -208,7 +209,8 @@
 
 section {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 .cases_presentation {
@@ -321,10 +323,10 @@ section {
 
     .daniel, .rafael {
         width: 50%;
-        height: 70%;
+        margin: 20px 0;
         @extend .center;
         @include flexbox(flex-direction, column);
-        // padding: 10rem;
+
         h2 {
             font-weight: bold;
             font-size: 1.6rem;
@@ -349,6 +351,9 @@ section {
     }
 
     .team_img {
+
+        @extend .center;
+
         width: 200px;
         height: 200px;
         border-radius: 100%;
