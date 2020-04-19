@@ -303,6 +303,8 @@ section {
     // background-color:lighten($orange, 25%);
     background-color:lighten($red, 25%);
     // background-color: lighten(#f1cf00, 70%);
+    // box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
+
     @include flexbox(display, flex);
     @include flexbox(flex-wrap, wrap);
     @include flexbox(justify-content, center);
