@@ -424,6 +424,11 @@ section {
   -o-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
+  justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   padding-bottom: 50px;
   color: white; }
   @media (max-width: 500px) {
@@ -454,7 +459,7 @@ section {
     -ms-align-self: flex-end;
     -webkit-align-self: flex-end; }
   .team_presentation .daniel, .team_presentation .rafael {
-    width: 50%;
+    width: 40%;
     margin: 20px 0;
     flex-direction: column;
     -moz-flex-direction: column;
