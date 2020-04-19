@@ -1,4 +1,5 @@
 //Event listener for register btn
+console.log('Aqui')
 let registerBtn = document.querySelector('.register_btn');
 let registerForm = document.querySelector('.registration_layer');
 let saveRegisterBtn = document.querySelector('.register_save');

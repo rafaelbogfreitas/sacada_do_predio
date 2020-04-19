@@ -83,7 +83,7 @@ passport.deserializeUser((id, cb) => {
 });
 
 // adding flash to be used with passport
-app.use(flash()); // NAO SEI O QUE FAZ
+app.use(flash()); 
 
 // passport local strategy
 passport.use(new LocalStrategy({
@@ -97,12 +97,12 @@ passport.use(new LocalStrategy({
         }
         if (!user) {
             return next(null, false, {
-                message: "Incorrect username"
+                message: "Incorrect username or password"
             });
         }
         if (!bcrypt.compareSync(password, user.password)) {
             return next(null, false, {
-                message: "Incorrect password"
+                message: "Incorrect username or password"
             });
         }
         // on success

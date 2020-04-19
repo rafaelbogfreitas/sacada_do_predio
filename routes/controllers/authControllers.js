@@ -16,6 +16,8 @@ let authControllers = {
         
         let salt = bcrypt.genSaltSync(bcryptSalt);
         let hash = bcrypt.hashSync(password, salt);
+
+        if(password.length < 5) res.redirect('/', 304)
         
         User
             .find({

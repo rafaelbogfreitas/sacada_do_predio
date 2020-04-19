@@ -167,7 +167,8 @@
 
 section {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 .cases_presentation {
@@ -280,7 +281,8 @@ section {
 
     .daniel, .rafael {
         width: 50%;
-        height: 70%;
+        height: auto;
+        margin: 20px auto;
         @extend .center;
         @include flexbox(flex-direction, column);
         // padding: 10rem;
@@ -313,6 +315,7 @@ section {
         border-radius: 100%;
         overflow: hidden;
         border: 5px solid white;
+        @extend .center;
     }
 
     .socialmedia_img {

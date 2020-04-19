@@ -1,28 +1,8 @@
-
-
-
-
-
-// let lat = document.querySelector('input[name="lat"]') == null ? 
-//             user_location.lat:
-//             document.querySelector('input[name="lat"]').value;
-//  let lng = document.querySelector('input[name="lng"]') == null ? 
-//             user_location.long :
-//             document.querySelector('input[name="lng"]').value;
-
-
-
-
 function startMap() {
 
-    // const userPosition = {
-    //     lat: user_location.lat,
-    //     lng: user_location.lng
-    // };
     const map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 15,
-            // center: userPosition,
             styles: [{
                     elementType: 'geometry',
                     stylers: [{
@@ -165,17 +145,26 @@ function startMap() {
 
     axios.get('http://localhost:3000/api/cases')
     .then(data => {
-        console.log(data.data);
 
         data.data.forEach( caseData => {
             console.log(caseData.location.coordinates[1]);
-            new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: {
                     lat: caseData.location.coordinates[0],
                     lng: caseData.location.coordinates[1]
                 },
                 map: map,
                 title: caseData.title
+            });
+
+            let infoWindow = new google.maps.InfoWindow({
+                content:`<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
+                         <a href="/case/${caseData._id}">Veja caso</a>   
+                `
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker)
             });
         })
     });
