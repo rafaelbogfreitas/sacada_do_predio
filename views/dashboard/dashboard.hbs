@@ -126,14 +126,11 @@
 
     {{#with user}}
         {{#if_eq status "waiting"}}
-            <div class="registration_layer">
-                <div class="registration_container">
+            <div class="registration_layer main_new_case">
+                <div class="registration_container new_case_container">
                     <img src="/images/close_icon.svg" class="close_register"/>
-                    <p>Complete your registration:</p>
-                    <form class="signup_form" action="/register" method="POST" autocomplete="no" enctype="multipart/form-data">
-                        <label for="address">
-                            Enter your address
-                        </label>
+                    <h1>Complete o seu cadastro:</h1>
+                    <form class="registration_form new_case_form" action="/register" method="POST" autocomplete="no" enctype="multipart/form-data">
                         <div class="autocomplete_box">
                             <input id="address" type="text" placeholder="address" autocomplete="no" name="address" required >
                             {{!-- hidden inputs to get coordinates --}}

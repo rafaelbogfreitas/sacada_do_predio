@@ -15,18 +15,14 @@
 
     .registration_container{
         position: relative;
-
-        width: 80%;
-        height: 80%;
         background-color: #fff;
-
-        @extend .box-shadow;
-        @extend .center;
-        @include flexbox(flex-direction, column);
         
+        h1 {
+            width: 50%;
+        }
+
         form {
-            @extend .center;
-            @include flexbox(flex-direction, column);
+            width: 50%;
         }
 
         .close_register {

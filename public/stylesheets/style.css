@@ -125,7 +125,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, .btn, .main_nav, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -142,7 +142,7 @@ nav {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_nav .login_form .social_login_box a:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .registration_layer .registration_container, .results_box, .map_content_container .intro_text, .map_content_container .intro_text .down_arrow {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_nav .login_form .social_login_box a:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .results_box, .map_content_container .intro_text, .map_content_container .intro_text .down_arrow {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
@@ -839,7 +839,7 @@ img {
 .case_card {
   width: 100%;
   max-width: 900px;
-  height: 300px;
+  height: 400px;
   padding: 20px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
   transition: box-shadow 0.3s ease-in-out; }
@@ -853,7 +853,7 @@ img {
       filter: sepia(1); }
   .case_card .case_img_container {
     width: 100%;
-    height: 30%;
+    height: 40%;
     overflow: hidden; }
     .case_card .case_img_container img {
       width: 100%;
@@ -989,6 +989,14 @@ img {
   -o-justify-content: space-around;
   -ms-justify-content: space-around;
   -webkit-justify-content: space-around; }
+  @media (max-width: 800px) {
+    .single_case_card {
+      padding: 20px 0;
+      flex-direction: column;
+      -moz-flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column; } }
   .single_case_card .user_info {
     width: 30%;
     justify-content: space-around;
@@ -1001,12 +1009,28 @@ img {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
+    @media (max-width: 800px) {
+      .single_case_card .user_info {
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        -moz-flex-direction: row;
+        -o-flex-direction: row;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row; } }
     .single_case_card .user_info .user_img_container {
       width: 150px;
       height: 150px;
       border-radius: 150px;
       overflow: hidden;
       background-color: #fff; }
+      @media (max-width: 800px) {
+        .single_case_card .user_info .user_img_container {
+          width: 100px;
+          height: 100px; } }
+      .single_case_card .user_info .user_img_container img {
+        width: 100%;
+        height: auto; }
     .single_case_card .user_info aside {
       height: 60%; }
   .single_case_card .case_info {
@@ -1022,27 +1046,47 @@ img {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
+    @media (max-width: 800px) {
+      .single_case_card .case_info {
+        width: 100%;
+        height: 80%;
+        margin-top: 20px;
+        border-left: none;
+        border-top: 2px solid #711e19;
+        flex-direction: column;
+        -moz-flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column; } }
     .single_case_card .case_info aside {
       width: 80%;
       height: 50%; }
       .single_case_card .case_info aside h1 {
         font-weight: bold;
         margin-bottom: 20px; }
+      .single_case_card .case_info aside p {
+        overflow: scroll; }
   .single_case_card .case_img_container {
-    width: 90%; }
+    width: 100%; }
     .single_case_card .case_img_container img {
-      width: 100%;
+      width: 80%;
       height: auto; }
+      @media (max-width: 800px) {
+        .single_case_card .case_img_container img {
+          width: auto;
+          height: 100%; } }
   .single_case_card a {
     color: #c6480c; }
   .single_case_card h1 {
     color: #8f211d;
     font-size: 2rem; }
   .single_case_card .dashboard_btn {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    margin: 0 auto;
     font-weight: bold; }
+    @media (max-width: 800px) {
+      .single_case_card .dashboard_btn {
+        position: absolute;
+        bottom: 20px; } }
 
 .edit_profile {
   width: 80%; }
@@ -1071,20 +1115,11 @@ img {
   transition: transform 0.3s ease-in-out; }
   .registration_layer .registration_container {
     position: relative;
-    width: 80%;
-    height: 80%;
-    background-color: #fff;
-    flex-direction: column;
-    -moz-flex-direction: column;
-    -o-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column; }
+    background-color: #fff; }
+    .registration_layer .registration_container h1 {
+      width: 50%; }
     .registration_layer .registration_container form {
-      flex-direction: column;
-      -moz-flex-direction: column;
-      -o-flex-direction: column;
-      -ms-flex-direction: column;
-      -webkit-flex-direction: column; }
+      width: 50%; }
     .registration_layer .registration_container .close_register {
       position: absolute;
       top: 50px;
