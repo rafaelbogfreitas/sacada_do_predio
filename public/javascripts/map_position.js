@@ -1,5 +1,5 @@
 function startMap() {
-
+    
     const map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 15,
@@ -130,13 +130,23 @@ function startMap() {
         }
     );
 
+    map.zoom = 4;
+
+    map.setCenter({
+        lat: -10.197558,
+        lng: -51.792006
+    });
 
     if(navigator.geolocation){
+
         navigator.geolocation.getCurrentPosition(function(position){
+            map.zoom = 10;
             map.setCenter({
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
-            })
+            });
+
+            
         });
     }
 
@@ -168,7 +178,7 @@ function startMap() {
             });
         })
     });
-}
+}//start map
 
 
 startMap();
