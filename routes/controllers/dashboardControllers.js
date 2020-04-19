@@ -20,7 +20,7 @@ let dashboardControllers = {
                             $near: {
                                 $geometry: {
                                     type: "Point",
-                                    coordinates: [user.location.coordinates[0] || 0, user.location.coordinates[1] || 0]
+                                    coordinates: [user.location.coordinates[0] || -12.954675,, user.location.coordinates[1] || -47.873106]
                                 },
                                 $maxDistance: 5000
                             }
