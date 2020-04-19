@@ -364,11 +364,11 @@ section {
       font-weight: bold;
       font-size: 3rem;
       margin: 0 50px;
-      text-shadow: 0px 0px 17px rgba(0, 0, 0, 0.15); }
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05); }
     .cases_presentation .cases_presentation_content p {
       margin: 0 50px;
       font-size: 3rem;
-      text-shadow: 0px 0px 17px rgba(0, 0, 0, 0.15); }
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05); }
   .cases_presentation .ajude_btn {
     margin: 0 auto;
     margin-bottom: 100px;
