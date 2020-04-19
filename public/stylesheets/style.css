@@ -125,7 +125,7 @@ nav {
   width: 200px;
   height: 200px; }
 
-.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -301,7 +301,8 @@ nav {
 
 section {
   width: 100vw;
-  height: 100vh; }
+  height: auto;
+  min-height: 100vh; }
 
 .cases_presentation {
   position: relative;
@@ -367,7 +368,8 @@ section {
       font-size: 5rem;
       margin-top: 50px; }
     .cases_presentation .cases_presentation_content p {
-      font-size: 3rem; }
+      font-size: 2rem;
+      margin: 30px 0; }
   .cases_presentation .ajude_btn {
     margin-left: 50px;
     margin-bottom: 100px;
@@ -426,7 +428,8 @@ section {
     -webkit-align-self: flex-end; }
   .team_presentation .daniel, .team_presentation .rafael {
     width: 50%;
-    height: 70%;
+    height: auto;
+    margin: 20px auto;
     flex-direction: column;
     -moz-flex-direction: column;
     -o-flex-direction: column;
@@ -457,8 +460,8 @@ section {
     width: 100%;
     padding: 40px 0; }
   .team_presentation .team_img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 100%;
     overflow: hidden;
     border: 5px solid white; }

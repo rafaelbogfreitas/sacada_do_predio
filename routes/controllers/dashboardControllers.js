@@ -12,6 +12,7 @@ let dashboardControllers = {
             .then( user => {
                 Case
                     .find()
+                    .populate('user')
                     .then( cases => {
                         res.render('dashboard/dashboard', { user: user, cases: cases }); // PASSANDO O USER E CASES PARA A DASHBOARD
                     })
@@ -25,7 +26,7 @@ let dashboardControllers = {
     },
     // POST DASHBOARD/CREATE
     postNewCase: (req, res, next) => {
-        let { user } = req.session.passport;
+        let { user } = req.session.passport || null;
         // console.log(req.body)
         const {
             title,

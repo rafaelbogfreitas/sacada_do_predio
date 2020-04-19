@@ -150,13 +150,23 @@ function startMap() {
 
         data.data.forEach( caseData => {
 
-            new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: {
                     lat: caseData.location.coordinates[0],
                     lng: caseData.location.coordinates[1]
                 },
                 map: map,
                 title: caseData.title
+            });
+
+            let infoWindow = new google.maps.InfoWindow({
+                content:`<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
+                         <a href="/case/${caseData._id}">Veja caso</a>   
+                `
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker)
             });
         })
     });

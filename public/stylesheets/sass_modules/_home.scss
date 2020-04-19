@@ -166,7 +166,8 @@
 
 section {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 .cases_presentation {
@@ -186,7 +187,6 @@ section {
         top: 100%;
         height: 200px;
         transform: rotate(-10deg);
-        // background-color: $x_light_gray;
         background-color:lighten($red, 30%);
     }
 
@@ -222,7 +222,8 @@ section {
         }
 
         p {
-            font-size: 3rem;
+            font-size: 2rem;
+            margin: 30px 0;
         }
     }
 
@@ -246,9 +247,7 @@ section {
 .team_presentation {
     position: relative;
     overflow: hidden;
-    // background-color:$x_light_gray;
     background-color:lighten($red, 30%);
-    // background-color: lighten(#f1cf00, 70%);
     @include flexbox(display, flex);
     @include flexbox(flex-wrap, wrap);
     padding-bottom: 50px;
@@ -270,7 +269,8 @@ section {
 
     .daniel, .rafael {
         width: 50%;
-        height: 70%;
+        height: auto;
+        margin: 20px auto;
         @extend .center;
         @include flexbox(flex-direction, column);
         // padding: 10rem;
@@ -298,11 +298,12 @@ section {
     }
 
     .team_img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
         border-radius: 100%;
         overflow: hidden;
         border: 5px solid white;
+        @extend .center;
     }
 
     .socialmedia_img {
