@@ -8,7 +8,7 @@ let dashboardControllers = {
         let {
             user
         } = req.session.passport || null;
-        
+
         User
             .findById(user)
             .populate('casesCreated') // POPULANDO O ARRAY CASES CREATED PARA MOSTRAR NA DASHBOARD MY CASES
@@ -20,7 +20,7 @@ let dashboardControllers = {
                             $near: {
                                 $geometry: {
                                     type: "Point",
-                                    coordinates: [user.location.coordinates[0] || -12.954675,, user.location.coordinates[1] || -47.873106]
+                                    coordinates: [user.location.coordinates[0] || -12.954675, user.location.coordinates[1] || -47.873106]
                                 },
                                 $maxDistance: 5000
                             }
@@ -36,6 +36,17 @@ let dashboardControllers = {
                         }); // PASSANDO O USER E CASES PARA A DASHBOARD
                     })
                     .catch(error => console.log(error));
+            })
+            .catch(error => console.log(error));
+    },
+    getPublicDashboard: (req, res, next) => {
+        Case
+            .find()
+            .populate('user')
+            .then(cases => {
+                res.render('dashboard/dashboard', {
+                    cases: cases
+                }); // PASSANDO O USER E CASES PARA A DASHBOARD
             })
             .catch(error => console.log(error));
     },

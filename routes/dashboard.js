@@ -9,7 +9,9 @@ const uploadCloud = require('../config/cloudinary.js');
 
 // DASHBOARD ROUTES
 
-router.get('/dashboard', controllers.getDashboard);
+router.get('/dashboard', ensureLogin.ensureLoggedIn('/'), controllers.getDashboard);
+
+router.get('/dashboard/public', controllers.getPublicDashboard);
 
 router.post('/dashboard/new-case', uploadCloud.single('file'), controllers.postNewCase);
 
