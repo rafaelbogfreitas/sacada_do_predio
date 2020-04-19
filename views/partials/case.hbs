@@ -1,10 +1,12 @@
 <a href="/case/{{_id}}">
     <div class="case_card">
-        <img style="width: 100px; height: auto" src="{{imageUrl}}" alt="{{imageName}}">
+        <div class="case_img_container">
+            <img src="{{imageUrl}}" alt="{{imageName}}">
+        </div>
         <h1>{{title}}</h1>
-        <p>{{description}}</p>
-        <p>{{address}}</p>
-        <p><span>Postado por:</span> {{user.username}}</p>
+        <p class="description">{{description}}</p>
+        <p class="address">{{address}}</p>
+        <p>Postado por: <span>{{user.username}}</span></p>
         <input type="hidden" name="lat" value="{{location.coordinates.[0]}}">
         <input type="hidden" name="lng" value="{{location.coordinates.[1]}}">
     </div>

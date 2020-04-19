@@ -1,7 +1,7 @@
 .cards_container {
     width: 90%;
     height: 90%;
-    padding: 70px 0;
+    padding: 40px 0;
 
     @supports(display: grid){
         display: grid;
@@ -31,14 +31,52 @@
         cursor: pointer;
         box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.193);
         transition: box-shadow 0.3s ease-in-out;
+
+        .case_img_container img {
+            transform: scale(1.2);
+            transition: transform 3s linear, filter 3s linear;
+            filter: sepia(1);
+        }
+    }
+
+    .case_img_container {
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            filter: sepia(0);
+            transition: transform 1s linear, filter 1s linear;
+        }
     }
 
     h1 {
+        margin: 10px 0;
         color: $dark_red;
         font-weight: bold;
     }
 
     p {
         color: $light_gray;
+    }
+
+    .description {
+        height: 30%;
+        overflow: hidden;
+    }
+
+    .address {
+        margin: 10px 0;
+
+        & + p {
+            font-style: italic;
+
+            span {
+                font-weight: bold;
+                font-style: normal;
+                text-transform: capitalize;
+            }
+        }
     }
 }
