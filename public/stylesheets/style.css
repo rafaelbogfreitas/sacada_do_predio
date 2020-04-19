@@ -125,7 +125,11 @@ nav {
   width: 200px;
   height: 200px; }
 
+<<<<<<< HEAD
 .center, .btn, .main_nav, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+=======
+.center, .btn, .main_nav, .main_nav form, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .registration_layer .registration_container, .registration_layer .registration_container form, .map_content_container, .map_content_container .intro_text .down_arrow {
+>>>>>>> 28057b66f6caab4fcae776fd4f561f4397ab433d
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -192,7 +196,8 @@ nav {
     top: 100%;
     height: 200px;
     transform: rotate(10deg);
-    background-color: #f79e74; }
+    background-color: #f58e5c;
+    box-shadow: 0px 0px 38px -11px rgba(0, 0, 0, 0.35); }
 
 .main_nav {
   width: 100vw;
@@ -311,7 +316,7 @@ nav {
   width: 100%;
   margin-left: 50px;
   margin-bottom: 50px;
-  font-size: 5rem;
+  font-size: 6rem;
   color: #c6480c; }
 
 .subtitle {
@@ -319,19 +324,18 @@ nav {
   width: 100%;
   margin-left: 50px;
   margin-bottom: 50px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #8f211d; }
 
 section {
   width: 100vw;
-  height: auto;
-  min-height: 100vh; }
+  height: 100vh; }
 
 .cases_presentation {
   position: relative;
   overflow: hidden;
   padding-right: 50px;
-  background-color: #f79e74; }
+  background-color: #f58e5c; }
   .cases_presentation:after {
     content: '';
     position: absolute;
@@ -340,9 +344,10 @@ section {
     top: 100%;
     height: 200px;
     transform: rotate(-10deg);
-    background-color: #e06965; }
+    background-color: #dc5550;
+    box-shadow: 0px 0px 38px -11px rgba(0, 0, 0, 0.35); }
   .cases_presentation .cases_img_container {
-    width: 40%;
+    width: 55%;
     height: 100%;
     display: flex;
     -moz-display: flex;
@@ -363,8 +368,8 @@ section {
       width: 100%;
       height: auto; }
   .cases_presentation .cases_presentation_content {
-    width: 70%;
-    height: 100%;
+    width: 75%;
+    height: 70%;
     color: white;
     display: flex;
     -moz-display: flex;
@@ -388,13 +393,15 @@ section {
     -webkit-align-items: flex-start; }
     .cases_presentation .cases_presentation_content h1 {
       font-weight: bold;
-      font-size: 5rem;
-      margin-top: 50px; }
+      font-size: 4rem;
+      margin: 0 50px;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05); }
     .cases_presentation .cases_presentation_content p {
-      font-size: 2rem;
-      margin: 30px 0; }
+      margin: 0 50px;
+      font-size: 2.5rem;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05); }
   .cases_presentation .ajude_btn {
-    margin-left: 50px;
+    margin: 0 auto;
     margin-bottom: 100px;
     padding: 20px 40px;
     font-size: 1.5rem;
@@ -409,7 +416,7 @@ section {
 .team_presentation {
   position: relative;
   overflow: hidden;
-  background-color: #e06965;
+  background-color: #dc5550;
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -442,7 +449,7 @@ section {
   .team_presentation .team_header {
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 4rem;
     align-self: flex-end;
     -moz-align-self: flex-end;
@@ -451,8 +458,7 @@ section {
     -webkit-align-self: flex-end; }
   .team_presentation .daniel, .team_presentation .rafael {
     width: 50%;
-    height: auto;
-    margin: 20px auto;
+    height: 70%;
     flex-direction: column;
     -moz-flex-direction: column;
     -o-flex-direction: column;
@@ -462,9 +468,9 @@ section {
       font-weight: bold;
       font-size: 1.6rem; }
     .team_presentation .daniel p, .team_presentation .rafael p {
-      font-size: 1rem;
-      padding: 20px 0;
-      width: 70%;
+      font-size: 1.2rem;
+      padding: 40px 0;
+      width: 60%;
       margin: 0 !important; }
   .team_presentation .team_about {
     display: flex;
@@ -483,8 +489,8 @@ section {
     width: 100%;
     padding: 40px 0; }
   .team_presentation .team_img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     overflow: hidden;
     border: 5px solid white; }
@@ -492,7 +498,7 @@ section {
     width: 30px;
     height: 30px; }
   .team_presentation .social_media {
-    width: 30%;
+    width: 20%;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -522,7 +528,8 @@ section {
     bottom: 20px;
     left: 0;
     z-index: 2;
-    margin-left: 50px; }
+    margin-left: 50px;
+    margin-bottom: 10px; }
     .team_presentation .credits_box h2 {
       margin-bottom: 10px;
       margin-left: 10px;

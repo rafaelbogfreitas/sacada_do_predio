@@ -5,6 +5,7 @@
     @include flexbox(justify-content, flex-start);
 
     background-image: url('/images/bgcircle.svg');
+    
     background-attachment: fixed;
     background-position-y: 15%;
     background-position-x: 70%;
@@ -18,9 +19,9 @@
         top: 100%;
         height: 200px;
         transform: rotate(10deg);
-        background-color: lighten($orange, 30%);
+        background-color: lighten($orange, 25%);
+        box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
     }
-   
 }
 
 .main_nav {
@@ -40,8 +41,8 @@
     }
     
     form {
-       @extend .center;
-       @include flexbox(flex-direction, column);
+        @extend .center;
+        @include flexbox(flex-direction, column);
     }
 
     .close_form {
@@ -192,7 +193,7 @@
     width: 100%;
     margin-left: 50px;
     margin-bottom: 50px;
-    font-size: 5rem;
+    font-size: 6rem;
     color: $orange;
 }
 
@@ -201,14 +202,13 @@
     width: 100%;
     margin-left: 50px;
     margin-bottom: 50px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $red;
 }
 
 section {
     width: 100vw;
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .cases_presentation {
@@ -218,7 +218,9 @@ section {
 
     @extend .center;
 
-    background-color:lighten($orange, 30%);
+    background-color:lighten($orange, 25%);
+    // background-color:lighten($red, 30%);
+    // box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
 
     &:after {
         content: '';
@@ -228,11 +230,14 @@ section {
         top: 100%;
         height: 200px;
         transform: rotate(-10deg);
-        background-color:lighten($red, 30%);
+        // background-color: $x_light_gray;
+        // background-color:lighten($orange, 25%);
+        background-color:lighten($red, 25%);
+        box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
     }
 
     .cases_img_container {
-        width: 40%;
+        width: 55%;
         height: 100%;
 
         @include flexbox(display, flex);
@@ -246,8 +251,8 @@ section {
     }
 
     .cases_presentation_content {
-        width: 70%;
-        height: 100%;
+        width: 75%;
+        height: 70%;
         color: white;
         
 
@@ -258,18 +263,21 @@ section {
 
         h1 {
             font-weight: bold;
-            font-size: 5rem;
-            margin-top: 50px;
+            font-size: 4rem;
+            margin: 0 50px;
+            text-shadow: 0px 0px 30px rgba(0,0,0,0.05);
         }
 
         p {
-            font-size: 2rem;
-            margin: 30px 0;
+            // font-weight: bold;
+            margin: 0 50px;
+            font-size: 2.5rem;
+            text-shadow: 0px 0px 30px rgba(0,0,0,0.05);
         }
     }
 
     .ajude_btn {
-        margin-left: 50px;
+        margin: 0 auto;
         margin-bottom: 100px;
         padding: 20px 40px;
         font-size: 1.5rem;
@@ -288,7 +296,10 @@ section {
 .team_presentation {
     position: relative;
     overflow: hidden;
-    background-color:lighten($red, 30%);
+    // background-color:$x_light_gray;
+    // background-color:lighten($orange, 25%);
+    background-color:lighten($red, 25%);
+    // background-color: lighten(#f1cf00, 70%);
     @include flexbox(display, flex);
     @include flexbox(flex-wrap, wrap);
     padding-bottom: 50px;
@@ -303,15 +314,14 @@ section {
     .team_header {
         width: 100%;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 10px;
         font-size: 4rem;
         @include flexbox(align-self, flex-end);
     }
 
     .daniel, .rafael {
         width: 50%;
-        height: auto;
-        margin: 20px auto;
+        height: 70%;
         @extend .center;
         @include flexbox(flex-direction, column);
         // padding: 10rem;
@@ -321,9 +331,9 @@ section {
         }
 
         p {
-            font-size: 1rem;
-            padding: 20px 0;
-            width: 70%;
+            font-size: 1.2rem;
+            padding: 40px 0;
+            width: 60%;
             margin: 0!important;
         }
     }
@@ -339,12 +349,11 @@ section {
     }
 
     .team_img {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
         border-radius: 100%;
         overflow: hidden;
         border: 5px solid white;
-        @extend .center;
     }
 
     .socialmedia_img {
@@ -353,7 +362,7 @@ section {
     }
 
     .social_media {
-        width: 30%;
+        width: 20%;
         @include flexbox(display, flex);
         @include flexbox(justify-content, space-around);
     }
@@ -376,7 +385,7 @@ section {
         left: 0;
         z-index: 2;
         margin-left: 50px;
-        // margin-bottom: 10px;
+        margin-bottom: 10px;
 
         h2 {
             margin-bottom: 10px;
