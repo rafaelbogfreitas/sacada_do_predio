@@ -204,21 +204,12 @@ function startMap() {
                 `
                 });
 
-<<<<<<< HEAD
             marker.addListener('click', function(){
                 infoWindow.open(map, marker)
             });
         })
     });
 }//start map
-=======
-                marker.addListener('click', function () {
-                    infoWindow.open(map, marker)
-                });
-            })
-        });
-}
->>>>>>> f8e4709c965436b907e86e5296c0dbca32b39bc9
 
 
 startMap();
