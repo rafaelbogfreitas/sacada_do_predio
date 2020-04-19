@@ -21,7 +21,7 @@ const bcrypt = require('bcrypt');
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 //MONGODB connection
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(process.env.MONGODB_ATLAS, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

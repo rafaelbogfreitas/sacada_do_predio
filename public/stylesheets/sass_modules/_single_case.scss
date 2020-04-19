@@ -93,6 +93,11 @@
         img{
             width: 80%;
             height: auto;
+
+            @include mediaquery(800px){
+                width: auto;
+                height: 100%;
+            }
         }
     }
     
@@ -106,9 +111,12 @@
     }
 
     .dashboard_btn {
-        
         margin: 0 auto;
-
         font-weight: bold;
+
+        @include mediaquery(800px){
+            position: absolute;
+            bottom: 20px;
+        }
     }
 }
