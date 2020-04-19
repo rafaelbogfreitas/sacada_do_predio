@@ -167,7 +167,7 @@ nav {
   -ms-display: flex;
   -webkit-display: flex; }
 
---delete {
+.--delete {
   color: red !important;
   border-color: red !important; }
 
@@ -496,8 +496,7 @@ section {
     bottom: 20px;
     left: 0;
     z-index: 2;
-    margin-left: 50px;
-    margin-bottom: 10px; }
+    margin-left: 50px; }
     .team_presentation .credits_box h2 {
       margin-bottom: 10px;
       margin-left: 10px;
