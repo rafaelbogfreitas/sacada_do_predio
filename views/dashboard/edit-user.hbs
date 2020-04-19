@@ -12,7 +12,13 @@
 <form class="signup_form" action="/user/edit" method="POST" enctype="multipart/form-data">
     <input type="text" placeholder="Name" name="username" value="{{username}}">
     <input type="email" placeholder="Email" name="email" value="{{email}}">
-    <input type="text" placeholder="address" name="address" value="{{address}}">
+    <div class="autocomplete_box">
+        <input id="address" type="text" placeholder="address" autocomplete="no" name="address" value="{{address}}" required >
+        {{!-- hidden inputs to get coordinates --}}
+        <input class="lat" type="hidden" name="lat">
+        <input class="lng" type="hidden" name="lng">
+        <div class="results_box"></div>
+    </div>
     <input type="text" placeholder="phone number" name="phoneNumber" value="{{phoneNumber}}">
     <div class="file_label_box">
         <label class="btn" for="file">Image</label>
@@ -25,4 +31,5 @@
 {{/with}}
     </div>
     <script src="/javascripts/file_input.js"></script>
+    <script src="/javascripts/address_autocomplete.js"></script>
 </main>
