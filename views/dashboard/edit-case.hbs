@@ -4,7 +4,13 @@
         <form class="new_case_form" action="/case/edit/{{_id}}" method="POST" enctype="multipart/form-data">
             <input placeholder="title" type="text" name="title" value="{{title}}">
             <textarea placeholder="description" type="text" name="description">{{description}}</textarea>
-            <input placeholder="address" type="text" name="address" value="{{address}}">
+            <div class="autocomplete_box">
+            <input id="address" type="text" placeholder="address" autocomplete="no" name="address" value="{{address}}" required >
+                {{!-- hidden inputs to get coordinates --}}
+                <input class="lat" type="hidden" name="lat">
+                <input class="lng" type="hidden" name="lng">
+                <div class="results_box"></div>
+            </div>
             <div class="file_label_box">
                 <label class="btn" for="file">Image</label>
                 <div class="file_text">Select a image</div>
@@ -16,5 +22,5 @@
             </div>
         </form>
     </div>
-
+    <script src="/javascripts/address_autocomplete.js"></script>
 </main>
