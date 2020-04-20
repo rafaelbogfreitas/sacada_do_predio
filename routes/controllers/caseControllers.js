@@ -94,20 +94,23 @@ let caseControllers = {
     },
     getCaseById: (req, res, next) => {
         const caseId = req.params.id;
-        let { user } = req.session.passport;
         let owner = false;
-
+        
         Case
-            .findById(caseId)
-            .populate('user')
-            .then(cases => {
-                if (user == cases.user._id) {
-                    owner = true;
-                }
-                res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
-            })
-            .catch(error => console.log(error));
-    }
+        .findById(caseId)
+        .populate('user')
+        .then(cases => {
+                    if (req.session.passport) {
+                        let { user } = req.session.passport;
+                        if (user == cases.user._id) {
+                            owner = true;
+                        }
+                    }
+                    res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
+                })
+                .catch(error => console.log(error));
+        }
 }
+
 
 module.exports = caseControllers;
