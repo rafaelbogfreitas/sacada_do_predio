@@ -394,7 +394,8 @@ section {
       margin: 0 50px;
       text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05); }
     .cases_presentation .cases_presentation_content p {
-      margin: 0 50px;
+      line-height: 1.3em;
+      margin: 100px 50px;
       font-size: 2.5rem;
       text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05); }
   .cases_presentation .ajude_btn {
@@ -823,7 +824,7 @@ img {
 .cards_container {
   width: 90%;
   height: 90%;
-  padding: 40px 0; }
+  padding-bottom: 100px; }
   @supports (display: grid) {
     .cards_container {
       display: grid;
@@ -1033,6 +1034,8 @@ img {
         height: auto; }
     .single_case_card .user_info aside {
       height: 60%; }
+      .single_case_card .user_info aside h1, .single_case_card .user_info aside p, .single_case_card .user_info aside div {
+        margin-top: 15px; }
   .single_case_card .case_info {
     width: 70%;
     border-left: 2px solid #711e19;
@@ -1103,6 +1106,14 @@ img {
   .edit_profile form {
     width: 80%; }
 
+.botoes_edit_user {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end; }
+  .botoes_edit_user .btn {
+    margin-left: 30px; }
+
 .registration_layer {
   position: fixed;
   top: 0;
@@ -1153,9 +1164,9 @@ img {
 
 .map_content_container {
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   padding: 0 70px;
-  margin-top: 40px;
+  margin-top: 70px;
   justify-content: space-around;
   -moz-justify-content: space-around;
   -o-justify-content: space-around;
@@ -1175,12 +1186,18 @@ img {
     margin-left: 0; }
   .map_content_container .intro_text {
     width: 50%;
-    height: 600px;
+    height: 80%;
     padding: 50px; }
     @media (max-width: 900px) {
       .map_content_container .intro_text {
         width: 100%;
         height: 50%; } }
+    .map_content_container .intro_text h1 {
+      margin-bottom: 50px; }
+    .map_content_container .intro_text p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin: 50px 0; }
     .map_content_container .intro_text .down_arrow {
       cursor: pointer;
       width: 100px;
@@ -1206,7 +1223,7 @@ img {
 
 .map_box {
   width: 50%;
-  height: 600px;
+  height: 80%;
   border: 8px solid white;
   box-shadow: 1px 1px 5px 0 black;
   -moz-box-shadow: 1px 1px 5px 0 black;

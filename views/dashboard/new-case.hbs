@@ -2,24 +2,24 @@
     <div class="new_case_container">
         <h1>CRIAR NOVO CASO</h1>
         <form class="new_case_form" action="/dashboard/new-case" method="POST" enctype="multipart/form-data">
-            <input placeholder="title" type="text" name="title">
-            <textarea placeholder="description" type="text" name="description"></textarea>
+            <input placeholder="Título" type="text" name="title">
+            <textarea placeholder="Descrição" type="text" name="description"></textarea>
             {{!-- <input placeholder="address" type="text" name="address"> --}}
             <div class="autocomplete_box">
-                <input id="address" type="text" placeholder="address" autocomplete="no" name="address" required >
+                <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" required >
                 {{!-- hidden inputs to get coordinates --}}
                 <input class="lat" type="hidden" name="lat">
                 <input class="lng" type="hidden" name="lng">
                 <div class="results_box" style="z-index:100"></div>
             </div>
             <div class="file_label_box">
-                <label class="btn" for="file">Image</label>
-                <div class="file_text">No image selected</div>
+                <label class="btn" for="file">Imagem</label>
+                <div class="file_text">Selecione a imagem</div>
             </div>
             <input id="file" type="file" name="file">
             <div class="hor_btn_box">
-                <a class="btn back_btn" href="/dashboard">Back to dashboard</a>
-                <input class="btn" type="submit" value="save">
+                <a class="btn back_btn" href="/dashboard">Voltar</a>
+                <input class="btn" type="submit" value="Salvar">
             </div>
         </form>
 

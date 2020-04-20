@@ -1,31 +1,34 @@
 <main class="main_new_case">
     <div class="new_case_container">
 
-<h1>EDIT PROFILE:</h1>
+<h1>EDITAR PERFIL</h1>
 {{#with user}}
 <div class="edit_profile">
     <div class="img_container">
         <img src="{{imageUrl}}" alt="">
-        <a class="btn --delete" href="/user/delete">DELETE</a>
+        <a class="btn --delete" href="/user/delete">DELETAR PERFIL</a>
     </div>
 
 <form class="signup_form" action="/user/edit" method="POST" enctype="multipart/form-data">
-    <input type="text" placeholder="Name" name="username" value="{{username}}">
+    <input type="text" placeholder="Nome" name="username" value="{{username}}">
     <input type="email" placeholder="Email" name="email" value="{{email}}">
     <div class="autocomplete_box">
-        <input id="address" type="text" placeholder="address" autocomplete="no" name="address" value="{{address}}" required >
+        <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" value="{{address}}" required >
         {{!-- hidden inputs to get coordinates --}}
         <input class="lat" type="hidden" name="lat">
         <input class="lng" type="hidden" name="lng">
         <div class="results_box"></div>
     </div>
-    <input type="text" placeholder="phone number" name="phoneNumber" value="{{phoneNumber}}">
+    <input type="text" placeholder="Telefone" name="phoneNumber" value="{{phoneNumber}}">
     <div class="file_label_box">
-        <label class="btn" for="file">Image</label>
-        <div class="file_text">Select a image</div>
+        <label class="btn" for="file">Imagem</label>
+        <div class="file_text">Selecione uma imagem</div>
     </div>
     <input id="file" type="file" placeholder="File" name="file" />
-    <input type="submit" value="SAVE" class="btn"/>
+    <div class="botoes_edit_user">
+        <input type="submit" value="SALVAR" class="btn"/>
+        <a class="dashboard_btn btn" href="/dashboard">VOLTAR</a>
+    </div>
 </form>
 </div>
 {{/with}}

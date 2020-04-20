@@ -6,7 +6,7 @@
         </div>
         <aside>
             <h1>{{case.user.username}}</h1>
-            <p>Number: {{case.user.phoneNumber}}</p>
+            <p>Telefone: {{case.user.phoneNumber}}</p>
             <div class="contact">
                 <a href="mailto:{{case.user.email}}">Email</a>
                 <a href="https://wa.me/55{{case.user.phoneNumber}}">Whatsapp</a>
@@ -28,8 +28,8 @@
     
         {{#if owner}}
             <div class="manage_btns">
-                <a href="/case/delete/{{case._id}}">DELETE</a>
-                <a href="/case/edit/{{case._id}}">EDIT</a>
+                <a href="/case/edit/{{case._id}}">EDITAR</a>
+                <a href="/case/delete/{{case._id}}">DELETAR</a>
             </div>
         {{/if}}
     </div>

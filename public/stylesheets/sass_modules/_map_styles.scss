@@ -1,9 +1,9 @@
 //Map and content container
 .map_content_container {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     padding: 0 70px;
-    margin-top: 40px;
+    margin-top: 70px;
     @extend .center;
     @include flexbox(justify-content, space-around);
     @include mediaquery(900px){
@@ -19,13 +19,21 @@
 
     .intro_text {
         width: 50%;
-        height: 600px;
+        height: 80%;
         padding: 50px;
         @extend .box-shadow;
 
         @include mediaquery(900px){
             width: 100%;
             height: 50%;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 50px 0;
         }
 
         .down_arrow {
@@ -65,7 +73,7 @@
 
 .map_box {
     width: 50%;
-    height: 600px;
+    height: 80%;
     @include mediaquery(900px){
         width: 100%;
         height: 50%;
