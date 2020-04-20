@@ -1,49 +1,94 @@
-// body {
-    // background-color: lighten(lightgray, 10%);
-// }
 .single_case_card {
-    background-color: white;
     position: relative;
-    width: 100%;
-    max-width: 900px;
+    width: 60%;
     height: 90%;
-    padding:20px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
-    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    
+    @extend .box-shadow;
 
-    @include flexbox(display, flex);
-    @include flexbox(flex-direction, row);
-    @include flexbox(justify-content, space-around);
-
-    @include mediaquery(800px){
-        padding:20px 0;
-        @include flexbox(flex-direction, column);
+    @include mediaquery(600px){
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+        box-shadow: none;
+        @include flexbox(align-self, flex-start)
     }
 
-    .user_info {
-        width: 30%;
+    .close_icon {
 
-        @extend .center;
-        @include flexbox(justify-content, space-around);
-        @include flexbox(flex-direction, column);
+        position: absolute;
+        top:2%;
+        right:3%;
+        z-index: 20;
 
-        @include mediaquery(800px){
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: #fff;
+
+        @extend .box-shadow;
+
+        transition: transform 0.3s linear;
+
+        img {
             width: 100%;
-            height: 20%;
-            @include flexbox(flex-direction, row);
+            height: auto;
         }
 
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s linear;
+        }
+
+    }
+
+    img {
+        width: 100%;
+    }
+
+    //user
+    .user_info {
+
+        .user_info_content {
+            height: 60px;
+            margin-bottom: 20px;
+            position: relative;
+            @include flexbox(display, flex);
+            @include flexbox(align-items, flex-end);
+        }
+
+
+        .case_img_container {
+            // display: none;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+
+            @include mediaquery(500px){
+                height: 150px;
+            }
+
+            img {
+                height: 100%;
+                height: auto;
+                filter: opacity(0.4);
+            }
+        }
+
+
         .user_img_container {
+
             width: 150px;
             height: 150px;
-            border-radius: 150px;
+            border-radius: 100%;
             overflow: hidden;
-            background-color: #fff;
 
+            margin:0 20px;
+            @include boxshadow(0 0 5px 0 rgba(0, 0, 0, 0.835));
             @extend .center;
-            @extend .box-shadow;
 
-            @include mediaquery(800px){
+            @include mediaquery(950px){
                 width: 100px;
                 height: 100px;
             }
@@ -53,78 +98,86 @@
                 height: auto;
             }
         }
+        
+        h1 {
+            width: 30%;
+            color: $red;
+            font-size: 2rem;
+        }
 
-        aside {
-            height: 60%;
+        .contact {
+            width: auto;
+            margin-right: auto;
+            @include flexbox(display, flex);
+            @include flexbox(justify-content, flex-end);
 
-            h1, p, div {
-                margin-top: 15px;
+            @include mediaquery(500px){
+                width:20%;
+            }
+
+            img {
+                width: 50px;
+                height: auto;
+                margin-right: 10px;
+
+
+                @include mediaquery(500px){
+                    width: 30px;
+                }
+
             }
         }
-    }
+    }//user_info
 
+    //Case
     .case_info {
-        width: 70%;
-        border-left: 2px solid $dark_red;
+        height: 300px;
+        padding: 20px;
+        .manage_btns {
+            margin: 20px auto;
 
-        @extend .center;
-        @include flexbox(justify-content, space-around);
-        @include flexbox(flex-direction, column);
-
-        @include mediaquery(800px){
             width: 100%;
-            height: 80%;
-            margin-top: 20px;
-            border-left: none;
-            border-top: 2px solid $dark_red;
-            @include flexbox(flex-direction, column);
-        }
 
-        aside {
-            width: 80%;
-            height: 50%;
+            @include flexbox(display, flex);
+            @include flexbox(justify-content, space-around);
 
-            h1 {
-                font-weight: bold;
-                margin-bottom: 20px;
+            & > * {
+                width: 40%;
             }
 
-            p {
-                overflow: scroll;
+            @include mediaquery(400px){
+                @include flexbox(flex-direction, column);
+
+                & > * {
+                    width: 100%;
+                    margin-top: 10px;
+                }
             }
         }
-    }
 
-    .case_img_container {
-        width: 100%;
-        @extend .center;
-        img{
-            width: 80%;
+        h1 {
+            font-size: 2.5rem;
+            color: $red;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: $red;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            height: 40%;
+            overflow: scroll;
+        }
+
+        @include mediaquery(500px){
             height: auto;
-
-            @include mediaquery(800px){
-                width: auto;
-                height: 100%;
-            }
-        }
-    }
-    
-    a {
-        color: $orange;
-    }
-
-    h1 {
-        color: $red;
-        font-size: 2rem;
-    }
-
-    .dashboard_btn {
-        margin: 0 auto;
-        font-weight: bold;
-
-        @include mediaquery(800px){
-            position: absolute;
-            bottom: 20px;
         }
     }
 }

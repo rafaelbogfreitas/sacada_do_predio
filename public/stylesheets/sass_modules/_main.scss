@@ -2,8 +2,12 @@
 html {
     font-family: $main_font;
     @include mediaquery(800px){
-       font-size: 10px;
+       font-size: 12px;
     }
+}
+
+.no_opacity {
+    opacity:0;
 }
 
 .center {
@@ -20,14 +24,12 @@ html {
 main {
     width: 100vw;
     height: 100vh;
-    // overflow: scroll;
 
-    @include flexbox(display, flex);
-    @include flexbox(align-items, center);
-    @include flexbox(justify-content, center);
+    @extend .center;
 
-
-    // background-color: $x_light_gray;
+    @include mediaquery(600px){
+        height: auto;
+    }
 }
 
 a {
@@ -55,6 +57,10 @@ nav {
 
     @extend .center;
     @include flexbox(justify-content, space-between);
+
+    @include mediaquery(500px){
+        padding: 0 10px;
+    }
 }
 
 .profile_img {

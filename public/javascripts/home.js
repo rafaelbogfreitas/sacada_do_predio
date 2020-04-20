@@ -24,10 +24,19 @@ signupBtn.addEventListener('click', function(){
 //intersection observer for pics
 
 let img = document.querySelectorAll('.team_img');
+let ilustration = document.querySelector('.main_home img');
+let headers = document.querySelectorAll('h1');
+let buildingImg = document.querySelector(".cases_img_container");
 
 let options = {
     root: null,
-    rootMargin: "100px",
+    rootMargin: "0px",
+    threshold: 1
+};
+
+let options2 = {
+    root: null,
+    rootMargin: "300px",
     threshold: 1
 };
 
@@ -41,8 +50,17 @@ const observer = new IntersectionObserver(function(entries){
     });
 }, options);
 
+const imageObserver = new IntersectionObserver(function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('animated', 'fadeInLeft');
+        }
+    });
+}, options2);
+
 
 img.forEach( image => observer.observe(image));
-
-
+headers.forEach( h => observer.observe(h));
+imageObserver.observe(ilustration);
+imageObserver.observe(buildingImg);
 
