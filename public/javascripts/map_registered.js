@@ -172,10 +172,14 @@ function startMap() {
 
     axios.get('http://localhost:3000/api/cases')
         .then(data => {
-            console.log(data.data);
 
-            data.data.forEach(caseData => {
-
+            let markers = data.data.map(caseData => {
+                // console.log(caseData.location.coordinates[1]);
+                let infoWindow = new google.maps.InfoWindow({
+                    content: `<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
+                             <a href="/case/${caseData._id}">Veja caso</a>   
+                    `
+                });
                 let marker = new google.maps.Marker({
                     position: {
                         lat: caseData.location.coordinates[0],
@@ -185,17 +189,20 @@ function startMap() {
                     title: caseData.title
                 });
 
-                let infoWindow = new google.maps.InfoWindow({
-                    content: `<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
-                         <a href="/case/${caseData._id}">Veja caso</a>   
-                `
-                });
-
                 marker.addListener('click', function () {
                     infoWindow.open(map, marker)
                 });
-            })
-        });
+
+                return marker
+            });
+
+            let markerCluster = new MarkerClusterer(map, markers, {
+                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+            });
+
+            
+
+        })
 }
 
 startMap();

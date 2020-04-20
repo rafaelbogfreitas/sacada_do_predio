@@ -163,15 +163,9 @@ function startMap() {
         lng: -51.792006
     });
 
-<<<<<<< HEAD
-    if(navigator.geolocation){
-
-        navigator.geolocation.getCurrentPosition(function(position){
-=======
     if (navigator.geolocation) {
 
         navigator.geolocation.getCurrentPosition(function (position) {
->>>>>>> 7d141c2710898953a0291444d5e6cc062f956849
             map.zoom = 10;
             map.setCenter({
                 lat: position.coords.latitude,
@@ -208,28 +202,18 @@ function startMap() {
                     infoWindow.open(map, marker)
                 });
 
-<<<<<<< HEAD
-            marker.addListener('click', function(){
-                infoWindow.open(map, marker)
-=======
                 return marker
             });
 
             let markerCluster = new MarkerClusterer(map, markers, {
                 imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
->>>>>>> 7d141c2710898953a0291444d5e6cc062f956849
             });
 
             
 
         })
-<<<<<<< HEAD
-    });
-}//start map
-=======
 };
 //start map
->>>>>>> 7d141c2710898953a0291444d5e6cc062f956849
 
 
 startMap();
