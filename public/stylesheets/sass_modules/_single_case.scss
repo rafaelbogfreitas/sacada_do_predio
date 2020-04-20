@@ -1,4 +1,8 @@
+body {
+    background-color: lighten(lightgray, 10%);
+}
 .single_case_card {
+    background-color: white;
     position: relative;
     width: 100%;
     max-width: 900px;

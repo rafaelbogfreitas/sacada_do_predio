@@ -299,6 +299,9 @@ nav {
           background-color: #fff;
           color: #cad1da; }
 
+.home_content_container {
+  background-color: white; }
+
 .main_text_content {
   width: 50%; }
   @media (max-width: 800px) {
@@ -838,6 +841,7 @@ img {
           grid-template-columns: 1fr; } } }
 
 .case_card {
+  background-color: white;
   width: 100%;
   max-width: 900px;
   height: 400px;
@@ -967,7 +971,11 @@ img {
             width: 100%;
             margin-bottom: 5px; } }
 
+body {
+  background-color: #ededed; }
+
 .single_case_card {
+  background-color: white;
   position: relative;
   width: 100%;
   max-width: 900px;
@@ -1162,6 +1170,9 @@ img {
       font-weight: bold;
       transition: font-weigh 0.3s linear; }
 
+.map_cases_container {
+  background-color: #ededed; }
+
 .map_content_container {
   width: 100%;
   height: 85vh;
@@ -1185,6 +1196,7 @@ img {
     font-size: 3rem;
     margin-left: 0; }
   .map_content_container .intro_text {
+    background-color: white;
     width: 50%;
     height: 80%;
     padding: 50px; }

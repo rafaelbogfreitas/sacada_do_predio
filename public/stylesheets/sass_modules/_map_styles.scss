@@ -1,5 +1,9 @@
 //Map and content container
+.map_cases_container {
+    background-color: lighten(lightgray, 10%);
+}
 .map_content_container {
+    // background-color: cyan;
     width: 100%;
     height: 85vh;
     padding: 0 70px;
@@ -18,6 +22,7 @@
     }
 
     .intro_text {
+        background-color: white;
         width: 50%;
         height: 80%;
         padding: 50px;
