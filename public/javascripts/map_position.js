@@ -1,5 +1,5 @@
 function startMap() {
-    
+
     const map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 15,
@@ -163,16 +163,16 @@ function startMap() {
         lng: -51.792006
     });
 
-    if(navigator.geolocation){
+    if (navigator.geolocation) {
 
-        navigator.geolocation.getCurrentPosition(function(position){
+        navigator.geolocation.getCurrentPosition(function (position) {
             map.zoom = 10;
             map.setCenter({
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             });
 
-            
+
         });
     }
 
@@ -182,8 +182,13 @@ function startMap() {
     axios.get('http://localhost:3000/api/cases')
         .then(data => {
 
-            data.data.forEach(caseData => {
-                console.log(caseData.location.coordinates[1]);
+            let markers = data.data.map(caseData => {
+                // console.log(caseData.location.coordinates[1]);
+                let infoWindow = new google.maps.InfoWindow({
+                    content: `<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
+                             <a href="/case/${caseData._id}">Veja caso</a>   
+                    `
+                });
                 let marker = new google.maps.Marker({
                     position: {
                         lat: caseData.location.coordinates[0],
@@ -193,18 +198,22 @@ function startMap() {
                     title: caseData.title
                 });
 
-                let infoWindow = new google.maps.InfoWindow({
-                    content: `<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
-                         <a href="/case/${caseData._id}">Veja caso</a>   
-                `
+                marker.addListener('click', function () {
+                    infoWindow.open(map, marker)
                 });
 
-            marker.addListener('click', function(){
-                infoWindow.open(map, marker)
+                return marker
             });
+
+            let markerCluster = new MarkerClusterer(map, markers, {
+                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+            });
+
+            
+
         })
-    });
-}//start map
+};
+//start map
 
 
 startMap();
