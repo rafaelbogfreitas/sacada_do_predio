@@ -34,6 +34,14 @@ let userControllers = {
             coordinates: [+lng, +lat]
         }
 
+        let userToEdit = {
+            username: username,
+            email: email,
+            address: address,
+            phoneNumber: phoneNumber,
+            location: location
+        }
+
         if (req.file) {
             const {
                 originalname,
@@ -41,41 +49,31 @@ let userControllers = {
                 public_id
             } = req.file;
 
+            userToEdit = {
+                username: username,
+                email: email,
+                address: address,
+                phoneNumber: phoneNumber,
+                imageName: originalname,
+                public_id: public_id,
+                imageUrl: url,
+                location: location
+            }
+
             User.findById(user)
                 .then(userToDeleteImage => {
-                    cloudinary.v2.uploader.destroy(`${userToDeleteImage.public_id}`, function(error,result) {
-                        console.log(result, error) });
-                    User
-                        .findByIdAndUpdate(user, {
-                            username: username,
-                            email: email,
-                            address: address,
-                            phoneNumber: phoneNumber,
-                            imageName: originalname,
-                            public_id: public_id,
-                            imageUrl: url,
-                            location: location
-                        })
-                        .then(() => {
-                            res.redirect('/dashboard');
-                        })
-                        .catch(error => console.log(error));
-                })
-                .catch(error => console.log(error));
-        } else {
-            User
-                .findByIdAndUpdate(user, {
-                    username: username,
-                    email: email,
-                    address: address,
-                    phoneNumber: phoneNumber,
-                    location: location
-                })
-                .then(() => {
-                    res.redirect('/dashboard');
+                cloudinary.v2.uploader.destroy(`${userToDeleteImage.public_id}`, function(error,result) {
+                    console.log(result, error) });
                 })
                 .catch(error => console.log(error));
         }
+        User
+            .findByIdAndUpdate(user, userToEdit)
+            .then(() => {
+                res.redirect('/dashboard');
+            })
+            .catch(error => console.log(error));
+        
     },
     // GET DELETE USER
     getDeleteUser: (req, res, next) => {

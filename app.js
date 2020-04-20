@@ -118,7 +118,7 @@ passport.use(new GoogleStrategy({
     callbackURL: "/auth/google/callback"
 }, (accessToken, refreshToken, profile, done) => {
     // to see the structure of the data in received response:
-    console.log("Google account details:", profile);
+    // console.log("Google account details:", profile);
 
     User.findOne({
             googleID: profile.id

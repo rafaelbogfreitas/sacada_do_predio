@@ -73,6 +73,14 @@ let dashboardControllers = {
             coordinates: [+lng, +lat]
         }
 
+        let caseToCreate = {
+            title: title,
+            description: description,
+            user: user,
+            address: address,
+            location: location
+        }
+
         if (req.file) { // CASO TENHA UPLOAD DE IMAGEM
             const {
                 originalname,
@@ -80,52 +88,45 @@ let dashboardControllers = {
                 public_id
             } = req.file;
 
-            Case.create({
-                    title: title,
-                    description: description,
-                    imageName: originalname,
-                    imageUrl: url,
-                    public_id: public_id,
-                    user: user,
-                    address: address,
-                    location: location
-                })
-                .then(caseResponse => {
-                    User
-                        .findByIdAndUpdate(user, {
-                            $push: {
-                                casesCreated: caseResponse
-                            }
-                        }) // PUSH NO ARRAY CASESCREATED
-                        .then(() => {
-                            res.redirect('/dashboard');
-                        })
-                        .catch(error => console.log(error))
-                })
-                .catch(error => console.log(error));
-        } else { // CASO NAO HAJA UPLOAD DE IMAGEM
-            Case.create({
-                    title: title,
-                    description: description,
-                    user: user,
-                    address: address,
-                    location: location
-                })
-                .then(caseResponse => {
-                    User
-                        .findByIdAndUpdate(user, {
-                            $push: {
-                                casesCreated: caseResponse
-                            }
-                        })
-                        .then(() => {
-                            res.redirect('/dashboard');
-                        })
-                        .catch(error => console.log(error))
-                })
-                .catch(error => console.log(error));
+            caseToCreate = {
+                title: title,
+                description: description,
+                imageName: originalname,
+                imageUrl: url,
+                public_id: public_id,
+                user: user,
+                address: address,
+                location: location
+            }
         }
+
+        Case.create(caseToCreate)
+            .then(caseResponse => {
+                User
+                    .findByIdAndUpdate(user, {
+                        $push: {
+                            casesCreated: caseResponse
+                        }
+                    }) // PUSH NO ARRAY CASESCREATED
+                    .then(() => {
+                        res.redirect('/dashboard');
+                    })
+                    .catch(error => console.log(error))
+                // User
+                //     .find({
+                //         location: {
+                //             $near: {
+                //                 $geometry: caseResponse.location,
+                //                 $maxDistance: 5000
+                //             }
+                //         }
+                //     })
+                //     .then(users => console.log(users))
+                //     .catch(error => console.log(error))
+            })
+            .catch(error => console.log(error));
     }
 }
+
 
 module.exports = dashboardControllers;
