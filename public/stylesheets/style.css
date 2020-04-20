@@ -886,6 +886,7 @@ img {
 .main_new_case .new_case_container {
   width: 90%;
   height: 90%;
+  background-color: white;
   flex-direction: column;
   -moz-flex-direction: column;
   -o-flex-direction: column;
@@ -970,9 +971,6 @@ img {
           .main_new_case .new_case_container form .hor_btn_box > * {
             width: 100%;
             margin-bottom: 5px; } }
-
-body {
-  background-color: #ededed; }
 
 .single_case_card {
   background-color: white;
@@ -1169,9 +1167,6 @@ body {
       cursor: pointer;
       font-weight: bold;
       transition: font-weigh 0.3s linear; }
-
-.map_cases_container {
-  background-color: #ededed; }
 
 .map_content_container {
   width: 100%;

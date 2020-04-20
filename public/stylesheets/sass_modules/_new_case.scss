@@ -2,6 +2,7 @@
     .new_case_container {
         width: 90%;
         height:90%;
+        background-color: white;
 
         @extend .center;
         @include flexbox(flex-direction, column);
