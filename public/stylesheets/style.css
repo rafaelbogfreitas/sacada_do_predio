@@ -87,7 +87,7 @@ html {
   font-family: "Brown", Helvetica, sans-serif; }
   @media (max-width: 800px) {
     html {
-      font-size: 10px; } }
+      font-size: 12px; } }
 
 .center, main, nav, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
