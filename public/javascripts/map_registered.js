@@ -170,8 +170,8 @@ function startMap() {
 
     //markers initialization
 
-    axios.get('http://localhost:3000/api/cases')
-    // axios.get('http://sacada-do-predio.herokuapp.com/api/cases')
+    // axios.get('http://localhost:3000/api/cases')
+    axios.get('http://sacada-do-predio.herokuapp.com/api/cases')
 
         .then(data => {
 
