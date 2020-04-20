@@ -142,7 +142,7 @@ nav {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_nav .login_form .social_login_box a:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .results_box, .map_content_container .intro_text, .map_content_container .intro_text .down_arrow {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_nav .login_form .social_login_box a:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .results_box, .map_content_container, .map_content_container .intro_text .down_arrow {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
@@ -1169,10 +1169,10 @@ img {
       transition: font-weigh 0.3s linear; }
 
 .map_content_container {
-  width: 100%;
-  height: 85vh;
-  padding: 0 70px;
-  margin-top: 70px;
+  width: 90%;
+  height: 50%;
+  padding: 20px;
+  margin: 80px 0 50px;
   justify-content: space-around;
   -moz-justify-content: space-around;
   -o-justify-content: space-around;
@@ -1230,7 +1230,7 @@ img {
 
 .map_box {
   width: 50%;
-  height: 80%;
+  height: 85vh;
   border: 8px solid white;
   box-shadow: 1px 1px 5px 0 black;
   -moz-box-shadow: 1px 1px 5px 0 black;
@@ -1240,6 +1240,6 @@ img {
   @media (max-width: 900px) {
     .map_box {
       width: 100%;
-      height: 50%; } }
+      height: 50vh; } }
 
 /*# sourceMappingURL=style.css.map */
