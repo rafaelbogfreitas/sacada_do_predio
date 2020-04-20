@@ -89,7 +89,7 @@ html {
     html {
       font-size: 10px; } }
 
-.center, nav, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info, .single_case_card .user_info .user_img_container, .single_case_card .case_info, .single_case_card .case_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, main, nav, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -106,7 +106,7 @@ html {
   -ms-align-items: center;
   -webkit-align-items: center; }
 
-.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_nav .login_form .social_login_box a:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .results_box, .map_content_container, .map_content_container .intro_text .down_arrow {
+.box-shadow, .btn:hover, .main_nav .signup_form, .main_nav .login_form, .main_nav .signup_btn:hover, .main_nav .login_btn:hover, .main_nav .login_form .social_login_box a:hover, .dashboard .case_container:hover, .main_new_case .new_case_container, .main_new_case .new_case_container form input:not([type="submit"]), .main_new_case .new_case_container form textarea, .main_new_case .new_case_container form .file_label_box, .single_case_card, .single_case_card .close_icon, .results_box, .map_content_container, .map_content_container .intro_text .down_arrow {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
   -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
@@ -116,22 +116,7 @@ html {
 
 main {
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  -moz-display: flex;
-  -o-display: flex;
-  -ms-display: flex;
-  -webkit-display: flex;
-  align-items: center;
-  -moz-align-items: center;
-  -o-align-items: center;
-  -ms-align-items: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  -ms-justify-content: center;
-  -webkit-justify-content: center; }
+  height: 100vh; }
 
 a {
   text-decoration: none;
@@ -953,129 +938,144 @@ img {
             margin-bottom: 5px; } }
 
 .single_case_card {
-  background-color: white;
   position: relative;
-  width: 100%;
-  max-width: 900px;
+  width: 60%;
   height: 90%;
-  padding: 20px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.193);
-  transition: box-shadow 0.3s ease-in-out;
-  display: flex;
-  -moz-display: flex;
-  -o-display: flex;
-  -ms-display: flex;
-  -webkit-display: flex;
-  flex-direction: row;
-  -moz-flex-direction: row;
-  -o-flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  justify-content: space-around;
-  -moz-justify-content: space-around;
-  -o-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -webkit-justify-content: space-around; }
-  @media (max-width: 800px) {
+  overflow: hidden; }
+  @media (max-width: 600px) {
     .single_case_card {
-      padding: 20px 0;
-      flex-direction: column;
-      -moz-flex-direction: column;
-      -o-flex-direction: column;
-      -ms-flex-direction: column;
-      -webkit-flex-direction: column; } }
-  .single_case_card .user_info {
-    width: 30%;
-    justify-content: space-around;
-    -moz-justify-content: space-around;
-    -o-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -webkit-justify-content: space-around;
-    flex-direction: column;
-    -moz-flex-direction: column;
-    -o-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column; }
-    @media (max-width: 800px) {
-      .single_case_card .user_info {
-        width: 100%;
-        height: 20%;
-        flex-direction: row;
-        -moz-flex-direction: row;
-        -o-flex-direction: row;
-        -ms-flex-direction: row;
-        -webkit-flex-direction: row; } }
-    .single_case_card .user_info .user_img_container {
-      width: 150px;
-      height: 150px;
-      border-radius: 150px;
-      overflow: hidden;
-      background-color: #fff; }
-      @media (max-width: 800px) {
-        .single_case_card .user_info .user_img_container {
-          width: 100px;
-          height: 100px; } }
-      .single_case_card .user_info .user_img_container img {
-        width: 100%;
-        height: auto; }
-    .single_case_card .user_info aside {
-      height: 60%; }
-      .single_case_card .user_info aside h1, .single_case_card .user_info aside p, .single_case_card .user_info aside div {
-        margin-top: 15px; }
-  .single_case_card .case_info {
-    width: 70%;
-    border-left: 2px solid #711e19;
-    justify-content: space-around;
-    -moz-justify-content: space-around;
-    -o-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -webkit-justify-content: space-around;
-    flex-direction: column;
-    -moz-flex-direction: column;
-    -o-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column; }
-    @media (max-width: 800px) {
-      .single_case_card .case_info {
-        width: 100%;
-        height: 80%;
-        margin-top: 20px;
-        border-left: none;
-        border-top: 2px solid #711e19;
-        flex-direction: column;
-        -moz-flex-direction: column;
-        -o-flex-direction: column;
-        -ms-flex-direction: column;
-        -webkit-flex-direction: column; } }
-    .single_case_card .case_info aside {
-      width: 80%;
-      height: 50%; }
-      .single_case_card .case_info aside h1 {
-        font-weight: bold;
-        margin-bottom: 20px; }
-      .single_case_card .case_info aside p {
-        overflow: scroll; }
-  .single_case_card .case_img_container {
-    width: 100%; }
-    .single_case_card .case_img_container img {
-      width: 80%;
+      width: 100%;
+      padding: 0 10px;
+      box-shadow: none; } }
+  .single_case_card .close_icon {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    z-index: 20;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s linear; }
+    .single_case_card .close_icon img {
+      width: 100%;
       height: auto; }
-      @media (max-width: 800px) {
-        .single_case_card .case_img_container img {
-          width: auto;
-          height: 100%; } }
-  .single_case_card a {
-    color: #c6480c; }
-  .single_case_card h1 {
+    .single_case_card .close_icon:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s linear; }
+  .single_case_card img {
+    width: 100%; }
+  .single_case_card .user_info .user_info_content {
+    height: 60px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: flex-end;
+    -moz-align-items: flex-end;
+    -o-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -webkit-align-items: flex-end; }
+  .single_case_card .user_info .case_img_container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden; }
+    @media (max-width: 500px) {
+      .single_case_card .user_info .case_img_container {
+        height: 150px; } }
+    .single_case_card .user_info .case_img_container img {
+      height: 100%;
+      height: auto;
+      filter: opacity(0.4); }
+  .single_case_card .user_info .user_img_container {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.835);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.835);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.835);
+    -ms-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.835);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.835); }
+    @media (max-width: 950px) {
+      .single_case_card .user_info .user_img_container {
+        width: 100px;
+        height: 100px; } }
+    .single_case_card .user_info .user_img_container img {
+      width: 100%;
+      height: auto; }
+  .single_case_card .user_info h1 {
+    width: 30%;
     color: #8f211d;
     font-size: 2rem; }
-  .single_case_card .dashboard_btn {
-    margin: 0 auto;
-    font-weight: bold; }
-    @media (max-width: 800px) {
-      .single_case_card .dashboard_btn {
-        position: absolute;
-        bottom: 20px; } }
+  .single_case_card .user_info .contact {
+    width: auto;
+    margin-right: auto;
+    display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -webkit-justify-content: flex-end; }
+    @media (max-width: 500px) {
+      .single_case_card .user_info .contact {
+        width: 20%; } }
+    .single_case_card .user_info .contact img {
+      width: 50px;
+      height: auto;
+      margin-right: 10px; }
+      @media (max-width: 500px) {
+        .single_case_card .user_info .contact img {
+          width: 30px; } }
+  .single_case_card .case_info {
+    height: 300px;
+    padding: 20px; }
+    .single_case_card .case_info .manage_btns {
+      margin: 20px auto;
+      width: 100%;
+      display: flex;
+      -moz-display: flex;
+      -o-display: flex;
+      -ms-display: flex;
+      -webkit-display: flex;
+      justify-content: space-around;
+      -moz-justify-content: space-around;
+      -o-justify-content: space-around;
+      -ms-justify-content: space-around;
+      -webkit-justify-content: space-around; }
+      .single_case_card .case_info .manage_btns > * {
+        width: 40%; }
+      @media (max-width: 400px) {
+        .single_case_card .case_info .manage_btns {
+          flex-direction: column;
+          -moz-flex-direction: column;
+          -o-flex-direction: column;
+          -ms-flex-direction: column;
+          -webkit-flex-direction: column; }
+          .single_case_card .case_info .manage_btns > * {
+            width: 100%; } }
+    .single_case_card .case_info h1 {
+      font-size: 2.5rem;
+      color: #8f211d;
+      font-weight: bolder;
+      margin-bottom: 20px; }
+    .single_case_card .case_info h2 {
+      color: #8f211d; }
+    .single_case_card .case_info p {
+      font-size: 1.2rem; }
+    .single_case_card .case_info .description {
+      margin-bottom: 20px;
+      height: 40%;
+      overflow: scroll; }
 
 .edit_profile {
   width: 80%; }

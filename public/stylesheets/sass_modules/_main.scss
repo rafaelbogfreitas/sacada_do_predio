@@ -20,14 +20,8 @@ html {
 main {
     width: 100vw;
     height: 100vh;
-    // overflow: scroll;
 
-    @include flexbox(display, flex);
-    @include flexbox(align-items, center);
-    @include flexbox(justify-content, center);
-
-
-    // background-color: $x_light_gray;
+    @extend .center;
 }
 
 a {
