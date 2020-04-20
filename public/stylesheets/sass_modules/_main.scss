@@ -49,6 +49,10 @@ nav {
 
     @extend .center;
     @include flexbox(justify-content, space-between);
+
+    @include mediaquery(500px){
+        padding: 0 10px;
+    }
 }
 
 .profile_img {

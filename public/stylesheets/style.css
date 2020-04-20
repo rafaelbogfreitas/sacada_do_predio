@@ -141,6 +141,9 @@ nav {
   -o-justify-content: space-between;
   -ms-justify-content: space-between;
   -webkit-justify-content: space-between; }
+  @media (max-width: 500px) {
+    nav {
+      padding: 0 10px; } }
 
 .profile_img {
   width: 200px;
@@ -945,8 +948,14 @@ img {
   @media (max-width: 600px) {
     .single_case_card {
       width: 100%;
+      height: auto;
       padding: 0 10px;
-      box-shadow: none; } }
+      box-shadow: none;
+      align-self: flex-start;
+      -moz-align-self: flex-start;
+      -o-align-self: flex-start;
+      -ms-align-self: flex-start;
+      -webkit-align-self: flex-start; } }
   .single_case_card .close_icon {
     position: absolute;
     top: 2%;
@@ -1062,7 +1071,8 @@ img {
           -ms-flex-direction: column;
           -webkit-flex-direction: column; }
           .single_case_card .case_info .manage_btns > * {
-            width: 100%; } }
+            width: 100%;
+            margin-top: 10px; } }
     .single_case_card .case_info h1 {
       font-size: 2.5rem;
       color: #8f211d;
@@ -1076,6 +1086,9 @@ img {
       margin-bottom: 20px;
       height: 40%;
       overflow: scroll; }
+    @media (max-width: 500px) {
+      .single_case_card .case_info {
+        height: auto; } }
 
 .edit_profile {
   width: 80%; }
