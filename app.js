@@ -97,8 +97,8 @@ passport.use(new LocalStrategy({
         }
         if (!user) {
             return next(null, false, {
-                message: "Incorrect username or password"
-            });
+                message: req.flash("Incorrect username or password"
+            )});
         }
         if (!bcrypt.compareSync(password, user.password)) {
             return next(null, false, {

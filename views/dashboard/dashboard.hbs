@@ -85,6 +85,9 @@
             <div class="login_container">
                 <button class="login_btn">LOGIN</button>
                 <form class="login_form" action="/login" method="POST">
+                    {{#if errorMessage}}
+                        <div>{{errorMessage}}</div>
+                    {{/if}}
                     <img class="close_form" src="/images/close_icon.svg" alt="close icon">
                     <input type="text" placeholder="Name" name="username" required>
                     <input type="password" placeholder="Password" name="password" required>
@@ -139,7 +142,7 @@
                             <div class="results_box"></div>
                         </div>
                         <input type="text" placeholder="phone number" name="phoneNumber" required>
-                        <input type="file" placeholder="File" name="file" />
+                        <input id="file" type="file" placeholder="File" name="file" />
                         <div class="file_label_box">
                             <label class="btn" for="file">Image</label>
                             <div class="file_text">Select a image</div>

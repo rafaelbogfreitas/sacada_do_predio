@@ -163,15 +163,10 @@ function startMap() {
         lng: -51.792006
     });
 
-<<<<<<< HEAD
     if(navigator.geolocation){
 
         navigator.geolocation.getCurrentPosition(function(position){
             map.zoom = 10;
-=======
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
->>>>>>> f8e4709c965436b907e86e5296c0dbca32b39bc9
             map.setCenter({
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
