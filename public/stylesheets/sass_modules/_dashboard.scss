@@ -68,7 +68,7 @@
 
     .user_cases_container {
         width: 100%;
-        height: 0;
+        height: 80%;
 
         @include flexbox(display, flex);
         @include flexbox(flex-direction, column);

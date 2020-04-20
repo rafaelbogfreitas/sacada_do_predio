@@ -1,67 +1,67 @@
 <main class="map_cases_container">
 
     {{#if user}}
-    {{#user}}
+        {{#user}}
 
-    {{!-- User coordinates --}}
-    
-    <input type="hidden" name="lat" value="{{location.coordinates.[0]}}">
-    <input type="hidden" name="lng" value="{{location.coordinates.[1]}}">
-    
-    {{!-- Nav that appears only if logged in --}}
-    <nav class="dashboard_nav">
-        <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
-        {{#if_eq status 'waiting'}}
-        <button class="btn register_btn">
-            Complete seu cadastro
-        </button>
-        {{/if_eq }}
-        <div class="profile_info">
-            <div class="user_name">
-                <p>{{username}}</p>
-            </div>
-            <div class="user_img_container">
-                <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
-            </div>
-
-            {{!-- profile box --}}
-
-            <aside class="profile_options_box">
-                <a href="/logout">SAIR</a>
-                <a href="/user/edit">EDITAR PERFIL</a>
-            </aside>
-        </div>
-    </nav>
-
-    <aside class="dashboard leave_screen">
-        <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
-
-        <div class="cases_title_container">
-            <div class="title_box">
-                <h1>MEUS CASOS</h1>
-                <img class="arrow" src="/images/arrow.svg" alt="">
-            </div>
-            {{#if_eq status 'registered'}}
-            <a href="/dashboard/new-case">
-                <img class="create_icon" src="/images/plus.svg" alt="plus icon">
-            </a>
-            {{/if_eq}}
-        </div>
-
+        {{!-- User coordinates --}}
         
+        <input type="hidden" name="lat" value="{{location.coordinates.[0]}}">
+        <input type="hidden" name="lng" value="{{location.coordinates.[1]}}">
+        
+        {{!-- Nav that appears only if logged in --}}
+        <nav class="dashboard_nav">
+            <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
+            {{#if_eq status 'waiting'}}
+            <button class="btn register_btn">
+                Complete seu cadastro
+            </button>
+            {{/if_eq }}
+            <div class="profile_info">
+                <div class="user_name">
+                    <p>{{username}}</p>
+                </div>
+                <div class="user_img_container">
+                    <img class="user_img" src="{{imageUrl}}" alt="{{imageName}}">
+                </div>
 
-        <div class="user_cases_container">
-            {{#casesCreated}}
-            <div class="case_container">
-                <a href="/case/{{_id}}">
-                    <h2 class="case_title">{{title}}</h2>
-                </a>
-                <p class="case_description">{{description}}</p>
+                {{!-- profile box --}}
+
+                <aside class="profile_options_box">
+                    <a href="/logout">SAIR</a>
+                    <a href="/user/edit">EDITAR PERFIL</a>
+                </aside>
             </div>
-            {{/casesCreated}}
-        </div>
-    </aside>
-    {{/user}}
+        </nav>
+
+        {{!-- User side bar --}}
+        <aside class="dashboard leave_screen">
+            <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
+
+            <div class="cases_title_container">
+                <div class="title_box">
+                    <h1>MEUS CASOS</h1>
+                </div>
+                {{#if_eq status 'registered'}}
+                <a href="/dashboard/new-case">
+                    <img class="create_icon" src="/images/plus.svg" alt="plus icon">
+                </a>
+                {{/if_eq}}
+            </div>
+
+            
+            <div class="user_cases_container">
+                {{#casesCreated}}
+                <div class="case_container">
+                    <a href="/case/{{_id}}">
+                        <h2 class="case_title">{{title}}</h2>
+                    </a>
+                    <p class="case_description">{{description}}</p>
+                </div>
+                {{/casesCreated}}
+            </div>
+
+        </aside>
+        {{/user}}
     {{else}}
 
     {{!-- Nav bar for display when no user logged --}}
@@ -93,7 +93,13 @@
                     <input type="password" placeholder="Senha" name="password" required>
                     <input type="submit" value="ENTRAR" />
                     <div class="social_login_box">
-                        <a href="/auth/google">Entre com Google</a>
+                        <a href="/auth/google">
+                            <div>or</div>
+                            <img src="/images/google_logo.svg" alt="google logo">
+                            <p>
+                                Entrar com <span>Google</span>
+                            </p>
+                        </a>
                     </div>
                 </form>
             </div>

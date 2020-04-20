@@ -29,22 +29,22 @@ userBox.addEventListener('mouseout', function () {
     userInfoBox.classList.remove('increase_height');
 });
 
-//Click event to show/hide cases created by the user
-let casesCreated = document.querySelector('.title_box');
-let arrow = document.querySelector('.arrow');
-let casesContainer = document.querySelector('.user_cases_container');
+// //Click event to show/hide cases created by the user
+// let casesCreated = document.querySelector('.title_box');
+// let arrow = document.querySelector('.arrow');
+// let casesContainer = document.querySelector('.user_cases_container');
 
-casesCreated.addEventListener('click', function () {
-    if (arrow.style.transform == "rotate(0deg)") {
-        arrow.style.transform = "rotate(-90deg)";
-        casesContainer.classList.remove('open_down');
+// casesCreated.addEventListener('click', function () {
+//     if (arrow.style.transform == "rotate(0deg)") {
+//         arrow.style.transform = "rotate(-90deg)";
+//         casesContainer.classList.remove('open_down');
 
-    } else {
-        casesContainer.classList.add('open_down');
-        arrow.style.transform = "rotate(0deg)"
+//     } else {
+//         casesContainer.classList.add('open_down');
+//         arrow.style.transform = "rotate(0deg)"
 
-    }
-});
+//     }
+// });
 
 //down arrow click event
 let downArrow = document.querySelector('.down_arrow');
