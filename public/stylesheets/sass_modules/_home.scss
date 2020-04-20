@@ -25,16 +25,16 @@
 }
 
 .main_nav {
-    width: 100vw;
-    height: 70px;
-    background-color: #fff;
-    z-index: 2;
+    // width: 100vw;
+    // height: 70px;
+    // background-color: #fff;
+    // z-index: 2;
 
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.235);
+    // box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.235);
 
 
-    @extend .center;    
-    @include flexbox(justify-content, space-between);
+    // @extend .center;    
+    // @include flexbox(justify-content, space-between);
 
     .logo_wrapper {
         height: 100%;

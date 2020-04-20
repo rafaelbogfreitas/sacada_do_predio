@@ -111,28 +111,6 @@
     }
 }
 
-
-.dashboard_nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 5;
-    width: 100vw;
-    height: 70px;
-    padding: 0 70px;
-    background-color: white;
-    box-shadow: 0 1px 3px 0 #00000091;
-    transition: box-shadow 0.3s ease-in-out;
-
-    @include flexbox(display, flex);
-    @include flexbox(justify-content, space-between);
-    @include flexbox(align-items, center);
-    
-
-    //info about profile box (name, pic)
-    
-}
-
 // Cases/Map Area
 .map_cases_container {
     height: auto;

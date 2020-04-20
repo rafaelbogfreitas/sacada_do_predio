@@ -6,6 +6,17 @@ html {
     }
 }
 
+.center {
+    @include flexbox(display, flex);
+    @include flexbox(justify-content, center);
+    @include flexbox(align-items, center);
+}
+
+.box-shadow {
+    @include boxshadow(0px 0px 5px 0px rgba(0, 0, 0, 0.241));
+    transition: box-shadow 0.3s linear;
+}
+
 main {
     width: 100vw;
     height: 100vh;
@@ -30,25 +41,25 @@ button {
 
 nav {
     position: fixed;
-    padding: 0 20px;
     top: 0;
     left: 0;
+    z-index: 5;
+    
+    width: 100vw;
+    height: 70px;
+    padding: 0 70px;
+
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 #00000091;
+    transition: box-shadow 0.3s ease-in-out;
+
+    @extend .center;
+    @include flexbox(justify-content, space-between);
 }
 
 .profile_img {
     width: 200px;
     height: 200px;
-}
-
-.center {
-    @include flexbox(display, flex);
-    @include flexbox(justify-content, center);
-    @include flexbox(align-items, center);
-}
-
-.box-shadow {
-    @include boxshadow(0px 0px 5px 0px rgba(0, 0, 0, 0.241));
-    transition: box-shadow 0.3s linear;
 }
 
 .btn {
