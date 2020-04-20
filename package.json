@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/markerclustererplus": "^5.0.3",
     "@googlemaps/google-maps-services-js": "^2.5.5",
     "axios": "^0.19.2",
     "bcrypt": "^4.0.1",
