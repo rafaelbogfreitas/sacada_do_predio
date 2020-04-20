@@ -117,6 +117,9 @@ html {
 main {
   width: 100vw;
   height: 100vh; }
+  @media (max-width: 600px) {
+    main {
+      height: auto; } }
 
 a {
   text-decoration: none;
@@ -308,18 +311,28 @@ nav {
 .title {
   font-weight: bold;
   width: 100%;
-  margin-left: 50px;
+  padding-left: 50px;
   margin-bottom: 50px;
   font-size: 6rem;
   color: #c6480c; }
+  @media (max-width: 650px) {
+    .title {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      font-size: 3rem; } }
 
 .subtitle {
   font-weight: bold;
   width: 100%;
-  margin-left: 50px;
+  padding-left: 50px;
   margin-bottom: 50px;
   font-size: 2.5rem;
   color: #8f211d; }
+  @media (max-width: 650px) {
+    .subtitle {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      font-size: 1.6rem; } }
 
 section {
   width: 100vw;
@@ -604,6 +617,9 @@ section {
   top: 0;
   left: 0;
   transition: transform 0.5s ease-in-out; }
+  @media (max-width: 400px) {
+    .dashboard {
+      width: 100%; } }
   .dashboard .cases_title_container {
     width: 100%;
     margin-top: 50px;

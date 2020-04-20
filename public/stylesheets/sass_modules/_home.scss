@@ -192,22 +192,35 @@
         margin-top: 100px;
     }
 }
+
 .title {
     font-weight: bold;
     width: 100%;
-    margin-left: 50px;
+    padding-left: 50px;
     margin-bottom: 50px;
     font-size: 6rem;
     color: $orange;
+
+    @include mediaquery(650px){
+        padding-left: 20px;
+        margin-bottom: 20px;
+        font-size: 3rem;
+    }
 }
 
 .subtitle {
     font-weight: bold;
     width: 100%;
-    margin-left: 50px;
+    padding-left: 50px;
     margin-bottom: 50px;
     font-size: 2.5rem;
     color: $red;
+
+    @include mediaquery(650px){
+        padding-left: 20px;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+    }
 }
 
 section {
