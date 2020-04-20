@@ -28,7 +28,7 @@ let authControllers = {
                             email,
                             password: hash,
                         })
-                        .then(response => console.log('New user created'))
+                        .then(() => console.log('New user created'))
                         .catch(error => console.log(error));
                 }
             })

@@ -1,5 +1,17 @@
+require('dotenv').config();
 const User = require('../../models/User');
 const Case = require('../../models/Case');
+const nodemailer = require('nodemailer');
+
+// NODEMAILER CONFIG
+let transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'sacadadopredio@gmail.com',
+        pass: 'Sacada123!'
+    }
+});
+
 
 
 let dashboardControllers = {
@@ -14,31 +26,45 @@ let dashboardControllers = {
             .populate('casesCreated') // POPULANDO O ARRAY CASES CREATED PARA MOSTRAR NA DASHBOARD MY CASES
             .then(user => {
                 // console.log(`User Location: ${user.location}`)
-                Case
-                    .find({
-                        location: {
-                            $near: {
-                                $geometry: {
-                                    type: "Point",
-                                    coordinates: [user.location.coordinates[0] || -12.954675, user.location.coordinates[1] || -47.873106]
-                                },
-                                $maxDistance: 5000
+                if (user.status == 'registered') {
+                    Case
+                        .find({
+                            location: {
+                                $near: {
+                                    $geometry: {
+                                        type: "Point",
+                                        coordinates: [user.location.coordinates[0], user.location.coordinates[1]]
+                                    },
+                                    $maxDistance: 5000
+                                }
                             }
-                        }
-                    })
-                    .populate('user')
-                    .then(cases => {
-                        // console.log(cases)
-                        res.render('dashboard/dashboard', {
-                            user: user,
-                            cases: cases
-                        }); // PASSANDO O USER E CASES PARA A DASHBOARD
-                    })
-                    .catch(error => console.log(error));
+                        })
+                        .populate('user')
+                        .then(cases => {
+                            // console.log(cases)
+                            res.render('dashboard/dashboard', {
+                                user: user,
+                                cases: cases
+                            }); // PASSANDO O USER E CASES PARA A DASHBOARD
+                        })
+                        .catch(error => console.log(error));
+                } else {
+                    Case
+                        .find()
+                        .populate('user')
+                        .then(cases => {
+                            // console.log(cases)
+                            res.render('dashboard/dashboard', {
+                                user: user,
+                                cases: cases
+                            }); // PASSANDO O USER E CASES PARA A DASHBOARD
+                        })
+                        .catch(error => console.log(error));
+                }
             })
             .catch(error => console.log(error));
     },
-    
+    // GET PUBLIC DASHBOARD
     getPublicDashboard: (req, res, next) => {
         Case
             .find()
@@ -112,17 +138,30 @@ let dashboardControllers = {
                         res.redirect('/dashboard');
                     })
                     .catch(error => console.log(error))
-                // User
-                //     .find({
-                //         location: {
-                //             $near: {
-                //                 $geometry: caseResponse.location,
-                //                 $maxDistance: 5000
-                //             }
-                //         }
-                //     })
-                //     .then(users => console.log(users))
-                //     .catch(error => console.log(error))
+                User
+                    .find({
+                        location: {
+                            $near: {
+                                $geometry: caseResponse.location,
+                                $maxDistance: 5000
+                            }
+                        }
+                    })
+                    .then(users => {
+                        console.log(users)
+                        users.forEach(user => {
+                            transporter.sendMail({
+                                    from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
+                                    to: user.email,
+                                    subject: 'Novo caso na sua região', 
+                                    text: `Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}`,
+                                    html: `<b>Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}</b>`
+                            })
+                            .then(info => console.log(info))
+                            .catch(error => console.log(error))
+                        })
+                    })
+                    .catch(error => console.log(error))
             })
             .catch(error => console.log(error));
     }
