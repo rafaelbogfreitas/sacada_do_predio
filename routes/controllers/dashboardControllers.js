@@ -28,8 +28,7 @@ let dashboardControllers = {
                     })
                     .populate('user')
                     .then(cases => {
-                        // cases.forEach(x => console.log(`Case location ${x.location}`))
-                        // console.log(cases)
+                       
                         res.render('dashboard/dashboard', {
                             user: user,
                             cases: cases
@@ -39,6 +38,7 @@ let dashboardControllers = {
             })
             .catch(error => console.log(error));
     },
+    
     getPublicDashboard: (req, res, next) => {
         Case
             .find()
