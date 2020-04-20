@@ -352,11 +352,7 @@ section {
 .team_presentation {
     position: relative;
     overflow: hidden;
-    // background-color:$x_light_gray;
-    // background-color:lighten($orange, 25%);
     background-color:lighten($red, 25%);
-    // background-color: lighten(#f1cf00, 70%);
-    // box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.35);
 
     @include flexbox(display, flex);
     @include flexbox(flex-wrap, wrap);
@@ -375,7 +371,12 @@ section {
         text-align: center;
         margin-top: 10px;
         font-size: 4rem;
+        font-weight: bold;
         @include flexbox(align-self, flex-end);
+
+        @include mediaquery(650px){
+            font-size: 3rem;
+        }
     }
 
     .daniel, .rafael {
@@ -395,6 +396,13 @@ section {
             padding: 40px 0;
             width: 60%;
             margin: 0!important;
+        }
+        @include mediaquery(650px){
+            width: 90%;
+
+            h2, p {
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -420,6 +428,11 @@ section {
         border-radius: 100%;
         overflow: hidden;
         border: 5px solid white;
+
+        @include mediaquery(650px){
+            width: 150px;
+            height: 150px;
+        }
     }
 
     .socialmedia_img {
@@ -431,6 +444,10 @@ section {
         width: 20%;
         @include flexbox(display, flex);
         @include flexbox(justify-content, space-around);
+
+        @include mediaquery(650px){
+            width: 50%;
+        }
     }
 
     &:after {
@@ -464,7 +481,21 @@ section {
             color: $light_gray;
             margin-left: 10px;
         }
+
+        @include mediaquery(650px){
+            bottom: 0;
+            @include flexbox(flex-direction, column);
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
     }
+
 }
 
 .btn_container {

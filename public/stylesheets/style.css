@@ -504,11 +504,15 @@ section {
     text-align: center;
     margin-top: 10px;
     font-size: 4rem;
+    font-weight: bold;
     align-self: flex-end;
     -moz-align-self: flex-end;
     -o-align-self: flex-end;
     -ms-align-self: flex-end;
     -webkit-align-self: flex-end; }
+    @media (max-width: 650px) {
+      .team_presentation .team_header {
+        font-size: 3rem; } }
   .team_presentation .daniel, .team_presentation .rafael {
     width: 40%;
     margin: 20px 0;
@@ -525,6 +529,11 @@ section {
       padding: 40px 0;
       width: 60%;
       margin: 0 !important; }
+    @media (max-width: 650px) {
+      .team_presentation .daniel, .team_presentation .rafael {
+        width: 90%; }
+        .team_presentation .daniel h2, .team_presentation .daniel p, .team_presentation .rafael h2, .team_presentation .rafael p {
+          font-size: 1.3rem; } }
   .team_presentation .team_about {
     display: flex;
     -moz-display: flex;
@@ -549,6 +558,10 @@ section {
     border-radius: 100%;
     overflow: hidden;
     border: 5px solid white; }
+    @media (max-width: 650px) {
+      .team_presentation .team_img {
+        width: 150px;
+        height: 150px; } }
   .team_presentation .socialmedia_img {
     width: 30px;
     height: 30px; }
@@ -564,6 +577,9 @@ section {
     -o-justify-content: space-around;
     -ms-justify-content: space-around;
     -webkit-justify-content: space-around; }
+    @media (max-width: 650px) {
+      .team_presentation .social_media {
+        width: 50%; } }
   .team_presentation:after {
     content: '';
     position: absolute;
@@ -593,6 +609,18 @@ section {
     .team_presentation .credits_box .devs {
       color: #7e8188;
       margin-left: 10px; }
+    @media (max-width: 650px) {
+      .team_presentation .credits_box {
+        bottom: 0;
+        flex-direction: column;
+        -moz-flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column; }
+        .team_presentation .credits_box h2 {
+          margin-bottom: 0; }
+        .team_presentation .credits_box p {
+          margin-bottom: 5px; } }
 
 .btn_container {
   display: flex;
