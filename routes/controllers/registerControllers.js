@@ -19,40 +19,37 @@ let registerControllers = {
             coordinates: [+lng, +lat]
         }
 
+        let userToRegister = {
+            status: 'registered',
+            address,
+            phoneNumber,
+            location: location
+        }
+
         if (req.file) {
             const {
                 originalname,
                 url,
                 public_id
             } = req.file;
-            
-            User
-                .findByIdAndUpdate(user, {
-                    status: 'registered',
-                    address,
-                    phoneNumber,
-                    imageName: originalname,
-                    imageUrl: url,
-                    public_id: public_id,
-                    location: location
-                })
-                .then(() => {
-                    res.redirect('/dashboard');
-                })
-                .catch(error => console.log(error));
-        } else {
-            User
-                .findByIdAndUpdate(user, {
-                    status: 'registered',
-                    address,
-                    phoneNumber,
-                    location: location
-                })
-                .then(() => {
-                    res.redirect('/dashboard');
-                })
-                .catch(error => console.log(error));
+
+            userToRegister = {
+                status: 'registered',
+                address,
+                phoneNumber,
+                imageName: originalname,
+                imageUrl: url,
+                public_id: public_id,
+                location: location
+            }
         }
+            User
+                .findByIdAndUpdate(user, userToRegister)
+                .then(() => {
+                    res.redirect('/dashboard');
+                })
+                .catch(error => console.log(error));
+        
     },
 
     getRegister: (req, res, next) => {

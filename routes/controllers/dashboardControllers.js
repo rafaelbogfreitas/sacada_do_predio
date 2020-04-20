@@ -28,7 +28,7 @@ let dashboardControllers = {
                     })
                     .populate('user')
                     .then(cases => {
-                       
+                        // console.log(cases)
                         res.render('dashboard/dashboard', {
                             user: user,
                             cases: cases
