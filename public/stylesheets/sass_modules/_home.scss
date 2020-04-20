@@ -299,12 +299,11 @@ section {
 
             @include mediaquery(650px){
                 font-size: 3rem;
-                margin: 0 20px;
+                margin: 20px 20px;
             }
         }
 
         p {
-            // font-weight: bold;
             line-height: 1.3em;
             margin: 100px 50px;
             font-size: 2.5rem;
@@ -475,6 +474,7 @@ section {
         }
 
         @include mediaquery(650px){
+            margin-left: 20px;
             bottom: 0;
             @include flexbox(flex-direction, column);
 
