@@ -6,6 +6,10 @@ html {
     }
 }
 
+.no_opacity {
+    opacity:0;
+}
+
 .center {
     @include flexbox(display, flex);
     @include flexbox(justify-content, center);
