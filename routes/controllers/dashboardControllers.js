@@ -138,32 +138,32 @@ let dashboardControllers = {
                         res.redirect('/dashboard');
                     })
                     .catch(error => console.log(error))
-                User
-                    .find({
-                        location: {
-                            $near: {
-                                $geometry: caseResponse.location,
-                                $maxDistance: 5000
-                            }
-                        }
-                    })
-                    .then(users => {
-                        console.log(users)
-                        users.forEach(user => {
-                            transporter.sendMail({
-                                    from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
-                                    to: user.email,
-                                    subject: 'Novo caso na sua região', 
-                                    text: `Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}`,
-                                    html: `<b>Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}</b>`
-                            })
-                            .then(info => console.log(info))
-                            .catch(error => console.log(error))
-                        })
-                    })
-                    .catch(error => console.log(error))
-            })
-            .catch(error => console.log(error));
+            //     User
+            //         .find({
+            //             location: {
+            //                 $near: {
+            //                     $geometry: caseResponse.location,
+            //                     $maxDistance: 5000
+            //                 }
+            //             }
+            //         })
+            //         .then(users => {
+            //             console.log(users)
+            //             users.forEach(user => {
+            //                 transporter.sendMail({
+            //                         from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
+            //                         to: user.email,
+            //                         subject: 'Novo caso na sua região', 
+            //                         text: `Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}`,
+            //                         html: `<b>Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}</b>`
+            //                 })
+            //                 .then(info => console.log(info))
+            //                 .catch(error => console.log(error))
+            //             })
+            //         })
+            //         .catch(error => console.log(error))
+            // })
+            // .catch(error => console.log(error));
     }
 }
 
