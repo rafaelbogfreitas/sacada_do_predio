@@ -163,7 +163,7 @@ let dashboardControllers = {
 
                                         <p>Muito obrigado,</p>
 
-                                        <strong>Sacada Team</strong>
+                                        <strong style="">Sacada Team</strong>
                                     `
                             })
                             .then(info => console.log(info))
