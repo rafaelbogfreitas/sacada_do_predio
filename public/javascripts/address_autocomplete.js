@@ -85,7 +85,7 @@ if(window.innerWidth < 600){
 }
 
 form.addEventListener('submit', function(){
-    axios.get(api + addressInput.value + accessToken)
+    axios.get(api + addressInput.value + sacadaToken)
     .then( data => {
         let [ lat, long ] = data.data.features[0].center;
         console.log(lat, long, data);

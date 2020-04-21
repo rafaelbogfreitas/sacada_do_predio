@@ -155,8 +155,16 @@ let dashboardControllers = {
                                     from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
                                     to: user.email,
                                     subject: 'Novo caso na sua região', 
-                                    text: `Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseResponse._id}`,
-                                    html: `<b>Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseToCreate._id}</b>`
+                                    text: ``,
+                                    html: `
+                                        <p>Olá ${user.username},</p>
+
+                                        <p style="color: red">Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseResponse._id}</p>
+
+                                        <p>Muito obrigado,</p>
+
+                                        <strong>Sacada Team</strong>
+                                    `
                             })
                             .then(info => console.log(info))
                             .catch(error => console.log(error))
