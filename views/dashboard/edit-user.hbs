@@ -10,10 +10,10 @@
     </div>
 
 <form class="signup_form" action="/user/edit" method="POST" enctype="multipart/form-data">
-    <input type="text" placeholder="Nome" name="username" value="{{username}}">
-    <input type="email" placeholder="Email" name="email" value="{{email}}">
+    <input type="text" placeholder="Nome" required name="username" value="{{username}}">
+    <input type="email" placeholder="Email" required name="email" value="{{email}}">
     <div class="autocomplete_box">
-        <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" value="{{address}}" required >
+        <input id="address" type="text" placeholder="Endereço" autocomplete="no" required name="address" value="{{address}}" required >
         {{!-- hidden inputs to get coordinates --}}
         <input class="lat" type="hidden" name="lat" value="{{location.coordinates.[1]}}">
         <input class="lng" type="hidden" name="lng" value="{{location.coordinates.[0]}}">
