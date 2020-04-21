@@ -2,6 +2,10 @@ let addressInput = document.querySelector('input[name="address"]');
 let container = document.querySelector('.results_box');
 let form = document.querySelector('form');
 
+
+// let api = 'https://maps.googleapis.com/maps/api/geocode/json?address='
+// let accessToken = '&key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE'
+
 let api = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 let accessToken = '.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw&cachebuster=1586829538543&autocomplete=true&types=address';
 addressInput.addEventListener('keypress', (e) => {
@@ -9,6 +13,7 @@ addressInput.addEventListener('keypress', (e) => {
 
     axios.get(api + e.target.value + accessToken)
         .then( data => {
+            // console.log(api + e.target.value + accessToken)
             let arr = data.data.features;
             let options = ''
             arr.map( option => {
