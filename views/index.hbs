@@ -39,6 +39,12 @@
         </div>
 
     </nav>
+
+    {{#if error}}
+        {{#each error}}
+            <div class="login_error animated fadeInDown">{{this}}</div>
+        {{/each}}
+    {{/if}}
     
     <div class="home_content_container">
         <div class="main_text_content">

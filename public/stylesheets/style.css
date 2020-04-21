@@ -13,7 +13,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+menu, nav, .login_error, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, .login_error, section {
   display: block; }
 
 body {
@@ -92,7 +92,7 @@ html {
 .no_opacity, .cases_presentation .cases_img_container, .cases_presentation .cases_presentation_content h1, .team_presentation .team_header {
   opacity: 0; }
 
-.center, main, nav, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, main, nav, .login_error, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -131,7 +131,7 @@ a {
 button {
   cursor: pointer; }
 
-nav {
+nav, .login_error {
   position: fixed;
   top: 0;
   left: 0;
@@ -148,7 +148,7 @@ nav {
   -ms-justify-content: space-between;
   -webkit-justify-content: space-between; }
   @media (max-width: 500px) {
-    nav {
+    nav, .login_error {
       padding: 0 10px; } }
 
 .profile_img {
@@ -303,6 +303,17 @@ nav {
         padding: 0 5px;
         background-color: #fff;
         color: #cad1da; }
+
+.login_error {
+  top: 70px;
+  z-index: 2;
+  height: auto;
+  padding: 5px 50px;
+  opacity: 0;
+  background-color: #dc5550;
+  color: white;
+  text-align: center;
+  font-weight: bold; }
 
 .home_content_container {
   background-color: white; }

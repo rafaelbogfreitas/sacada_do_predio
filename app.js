@@ -98,8 +98,8 @@ passport.use(new LocalStrategy({
         if (!user) {
             console.log('email not found')
             return next(null, false, {
-                message: req.flash("Incorrect email or password"
-            )});
+                message: "Incorrect email or password"
+            });
         }
         if (!bcrypt.compareSync(password, user.password)) {
             console.log('incorrect password')

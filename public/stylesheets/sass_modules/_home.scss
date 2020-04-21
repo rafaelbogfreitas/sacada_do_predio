@@ -94,7 +94,6 @@
         }
     }
     
-    
     .signup_btn, .login_btn {
         margin: 10px;
         padding: 10px 20px;
@@ -176,6 +175,22 @@
         }
     }
 }
+
+
+.login_error {
+    @extend nav;
+    top:70px;
+    z-index: 2;
+
+    height: auto;
+    padding: 5px 50px;
+    opacity: 0;
+    background-color:#dc5550;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
 .home_content_container {
     background-color: white;
 }

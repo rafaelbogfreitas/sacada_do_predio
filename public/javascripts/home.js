@@ -64,3 +64,10 @@ headers.forEach( h => observer.observe(h));
 imageObserver.observe(ilustration);
 imageObserver.observe(buildingImg);
 
+//Remove login feedback 
+let error = document.querySelector('.login_error');
+
+setTimeout(function(){
+    error.classList.remove('fadeInDown');
+    error.classList.add('fadeOutUp');
+}, 5000);
