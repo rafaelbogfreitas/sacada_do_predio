@@ -7,8 +7,8 @@
             <div class="autocomplete_box">
             <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" value="{{address}}" required >
                 {{!-- hidden inputs to get coordinates --}}
-                <input class="lat" type="hidden" name="lat">
-                <input class="lng" type="hidden" name="lng">
+                <input class="lat" type="hidden" name="lat" value="{{location.coordinates.[1]}}">
+                <input class="lng" type="hidden" name="lng" value="{{location.coordinates.[0]}}">
                 <div class="results_box"></div>
             </div>
             <div class="file_label_box">
