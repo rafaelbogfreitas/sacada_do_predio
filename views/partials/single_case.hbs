@@ -11,13 +11,13 @@
             <div class="user_img_container animated fadeInUp">
                 <img  class="user_img" src="{{case.user.imageUrl}}" alt="{{case.user.imageName}}">
             </div>
-            <h1>{{case.user.username}}</h1>
+            <div><h1>{{case.user.username}}</h1></div>
             <div class="contact">
                 <a href="mailto:{{case.user.email}}">
-                    <img src="/images/mail_icon.png" alt="mail icon">
+                    <img src="/images/email_darkred.png" alt="mail icon">
                 </a>
                 <a href="https://wa.me/55{{case.user.phoneNumber}}">
-                    <img src="/images/whatsapp.png" alt="whatsapp icon">
+                    <img src="/images/whatsapp_darkred.png" alt="whatsapp icon">
                 </a>
             </div>
         </div>
@@ -25,7 +25,7 @@
 
     {{!-- Case info --}}
     <div class="case_info">
-        <aside>
+        <aside class="case_aside">
             <h1>{{case.title}}</h1>
             <p class="description">{{case.description}}</p>
             <h2>Endereço:</h2>
@@ -36,6 +36,7 @@
             <div class="manage_btns">
                 <a href="/case/edit/{{case._id}}" class="btn">EDITAR</a>
                 <a href="/case/delete/{{case._id}}" class="btn --delete">DELETAR</a>
+                {{!-- <a href="/dashboard" class="btn">VOLTAR</a> --}}
             </div>
         {{/if}}
     </div>

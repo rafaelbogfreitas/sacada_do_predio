@@ -1,15 +1,15 @@
 .single_case_card {
     position: relative;
     width: 60%;
-    height: 90%;
-    overflow: hidden;
+    height: 90vh;
+    overflow: scroll;
     
     @extend .box-shadow;
 
     @include mediaquery(600px){
         width: 100%;
         height: auto;
-        padding: 0 10px;
+        padding: 10px;
         box-shadow: none;
         @include flexbox(align-self, flex-start)
     }
@@ -17,15 +17,24 @@
     .close_icon {
 
         position: absolute;
-        top:2%;
+        top:3%;
         right:3%;
         z-index: 20;
 
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         border-radius: 100%;
         overflow: hidden;
         background-color: #fff;
+
+        @include mediaquery(500px){
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top:5%;
+            right:7%;
+        }
+
 
         @extend .box-shadow;
 
@@ -56,17 +65,24 @@
             position: relative;
             @include flexbox(display, flex);
             @include flexbox(align-items, flex-end);
+            
+            .contact {
+                width: 20%;
+                margin-left: 20px;
+                @include flexbox(display, flex);
+                @include flexbox(justify-content, flex-start);
+            }
         }
 
 
         .case_img_container {
             // display: none;
             width: 100%;
-            height: 200px;
+            height: 300px;
             overflow: hidden;
 
             @include mediaquery(500px){
-                height: 150px;
+                height: 200px;
             }
 
             img {
@@ -100,30 +116,27 @@
         }
         
         h1 {
-            width: 30%;
+            width: auto;
             color: $red;
             font-size: 2rem;
         }
 
         .contact {
             width: auto;
-            margin-right: auto;
-            @include flexbox(display, flex);
-            @include flexbox(justify-content, flex-end);
+            margin-right: 10px;
+            // @include flexbox(display, flex);
+            // @include flexbox(justify-content, flex-end);
 
             @include mediaquery(500px){
                 width:20%;
             }
 
             img {
-                width: 50px;
-                height: auto;
-                margin-right: 10px;
-
-
-                @include mediaquery(500px){
-                    width: 30px;
-                }
+                // width: 50px;
+                height: 2rem;
+                width: 2rem;
+                // height: auto;
+                margin-right: 1rem;
 
             }
         }
@@ -131,18 +144,30 @@
 
     //Case
     .case_info {
-        height: 300px;
+        height: auto;
         padding: 20px;
+
+        aside {
+            padding: 20px 20px;
+
+            @include mediaquery(400px){
+                padding: 0;
+            }
+
+        }
         .manage_btns {
             margin: 20px auto;
 
             width: 100%;
 
             @include flexbox(display, flex);
+            // @include flexbox(flex-direction, column);
+            // @include flexbox(align-items, center);
             @include flexbox(justify-content, space-around);
 
             & > * {
-                width: 40%;
+                width: 30%;
+                margin-top: 20px;
             }
 
             @include mediaquery(400px){
@@ -150,7 +175,7 @@
 
                 & > * {
                     width: 100%;
-                    margin-top: 10px;
+                    margin-top: 20px;
                 }
             }
         }
@@ -169,6 +194,11 @@
         p {
             font-size: 1.2rem;
         }
+
+        // a {
+        //     margin-top: 30px;
+        //     width: 50%;
+        // }
 
         .description {
             margin-bottom: 20px;
