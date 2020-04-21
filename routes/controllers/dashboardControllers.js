@@ -8,7 +8,7 @@ let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: 'sacadadopredio@gmail.com',
-        pass: proccess.env.SACADA_EMAIL_PASSWORD
+        pass: process.env.SACADA_EMAIL_PASSWORD
     }
 });
 
