@@ -786,8 +786,8 @@ section {
     overflow: scroll; }
   .dashboard .close_icon {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     width: 30px;
     height: auto; }
     .dashboard .close_icon:hover {
@@ -902,6 +902,10 @@ img {
 .dashboard_icon {
   width: 50px;
   height: 50%; }
+  @media (max-width: 650px) {
+    .dashboard_icon {
+      margin-left: 10px;
+      width: 30px; } }
   .dashboard_icon:hover {
     cursor: pointer; }
 
@@ -1131,8 +1135,7 @@ img {
         height: 200px; } }
     .single_case_card .user_info .case_img_container img {
       height: 100%;
-      height: auto;
-      filter: opacity(0.4); }
+      height: auto; }
   .single_case_card .user_info .user_img_container {
     width: 150px;
     height: 150px;
