@@ -49,6 +49,14 @@ let caseControllers = {
             coordinates: [+lng, +lat]
         }
 
+        let caseToEdit = {
+            title: title,
+            description: description,
+            user: user,
+            address: address,
+            location: location
+        }
+
         if (req.file) {
             const {
                 originalname,
@@ -56,41 +64,31 @@ let caseControllers = {
                 public_id,
             } = req.file;
 
+            caseToEdit = {
+                title: title,
+                description: description,
+                imageName: originalname,
+                imageUrl: url,
+                public_id: public_id,
+                user: user,
+                address: address,
+                location: location
+            }
+
             Case.findById(caseId)
                 .then(caseToDelete => {
                     cloudinary.v2.uploader.destroy(`${caseToDelete.public_id}`, function(error,result) {
                         console.log(result, error) });
-                    Case
-                        .findByIdAndUpdate(caseId, {
-                            title: title,
-                            description: description,
-                            imageName: originalname,
-                            imageUrl: url,
-                            public_id: public_id,
-                            user: user,
-                            address: address,
-                            location: location
-                        })
-                        .then(() => {
-                            res.redirect('/dashboard');
-                        })
-                        .catch(error => console.log(error));
                 })
                 .catch(error => console.log(error));
-        } else {
-            Case
-                .findByIdAndUpdate(caseId, {
-                    title: title,
-                    description: description,
-                    user: user,
-                    address: address,
-                    location: location
-                })
-                .then(() => {
-                    res.redirect('/dashboard');
-                })
-                .catch(error => console.log(error));
-        }
+            }
+        Case
+            .findByIdAndUpdate(caseId, caseToEdit)
+            .then(() => {
+                res.redirect('/dashboard');
+            })
+            .catch(error => console.log(error));
+    
     },
     getCaseById: (req, res, next) => {
         const caseId = req.params.id;

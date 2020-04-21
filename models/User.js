@@ -23,7 +23,7 @@ const userSchema = new Schema({
     },
     address: {
         type: String,
-        default: 'missing address'
+        // default: 'missing address'
     },
     imageName: {
         type: String,
@@ -52,9 +52,11 @@ const userSchema = new Schema({
         type: {
             type: String, 
             enum: ['Point'],
+            default: undefined
         },
         coordinates: {
-            type: [Number]
+            type: [Number],
+            default: undefined
         }
     }
 }, {
