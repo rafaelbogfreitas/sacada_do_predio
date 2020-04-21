@@ -160,10 +160,11 @@ let dashboardControllers = {
                                         <p>Olá ${user.username},</p>
 
                                         <p style="color: red">Novo caso na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseResponse._id}</p>
+                                        <p style="color:red">Postado pelo usuário: <strong>${caseResponse.user.username}</strong></p>
 
                                         <p>Muito obrigado,</p>
 
-                                        <strong style="">Sacada Team</strong>
+                                        <strong style="rgb(198, 72, 12)">Sacada Team</strong>
                                     `
                             })
                             .then(info => console.log(info))
