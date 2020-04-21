@@ -41,7 +41,7 @@ addressInput.addEventListener('blur', function(){
         console.log(document.querySelector('.lat'));
         console.log(document.querySelector('.lng'));
     });
-    
+
     setTimeout(function(){
         container.innerHTML = "";
     }, 500);
@@ -50,6 +50,19 @@ addressInput.addEventListener('blur', function(){
 container.addEventListener('click', function(e){
     addressInput.value = e.target.innerHTML;
     container.innerHTML = "";
+});
+
+form.addEventListener('touchend', function(){
+    axios.get(api + addressInput.value + accessToken)
+    .then( data => {
+        let [ lat, long ] = data.data.features[0].center;
+        console.log(lat, long, data);
+        document.querySelector('.lat').value = lat;
+        document.querySelector('.lng').value = long;
+
+        console.log(document.querySelector('.lat'));
+        console.log(document.querySelector('.lng'));
+    });
 });
 
 form.addEventListener('submit', function(){
