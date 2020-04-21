@@ -331,13 +331,16 @@ nav, .login_error {
   width: 100%;
   padding-left: 50px;
   margin-bottom: 50px;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #c6480c; }
   @media (max-width: 650px) {
     .title {
       padding-left: 20px;
       margin-bottom: 20px;
       font-size: 3rem; } }
+  @media (min-width: 1500px) {
+    .title {
+      font-size: 5.5rem; } }
 
 .subtitle {
   font-weight: bold;
@@ -351,6 +354,9 @@ nav, .login_error {
       padding-left: 20px;
       margin-bottom: 20px;
       font-size: 1.6rem; } }
+  @media (min-width: 1500px) {
+    .subtitle {
+      font-size: 3.5rem; } }
 
 section {
   width: 100vw;
@@ -493,6 +499,11 @@ section {
   -o-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
+  align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
   -moz-justify-content: center;
   -o-justify-content: center;
