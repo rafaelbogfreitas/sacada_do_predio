@@ -88,21 +88,23 @@ app.use(flash());
 // passport local strategy
 passport.use(new LocalStrategy({
     passReqToCallback: true
-}, (req, username, password, next) => {
+}, (req, email, password, next) => {
     User.findOne({
-        username
+        email
     }, (err, user) => {
         if (err) {
             return next(err);
         }
         if (!user) {
+            console.log('email not found')
             return next(null, false, {
-                message: req.flash("Incorrect username or password"
+                message: req.flash("Incorrect email or password"
             )});
         }
         if (!bcrypt.compareSync(password, user.password)) {
+            console.log('incorrect password')
             return next(null, false, {
-                message: "Incorrect username or password"
+                message: "Incorrect email or password"
             });
         }
         // on success

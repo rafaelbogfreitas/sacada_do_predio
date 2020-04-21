@@ -19,7 +19,7 @@ let authControllers = {
         
         User
             .find({
-                username: username
+                email: email
             })
             .then(response => {
                 if (response.length == 0) {
@@ -30,6 +30,8 @@ let authControllers = {
                         })
                         .then(() => console.log('New user created'))
                         .catch(error => console.log(error));
+                } else {
+                    // console.log('user not created')
                 }
             })
             .catch(error => console.log(error))
