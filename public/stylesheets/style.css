@@ -13,7 +13,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, .login_error, output, ruby, section, summary,
+menu, nav, .login_error, .signup_success, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, .login_error, section {
+footer, header, hgroup, menu, nav, .login_error, .signup_success, section {
   display: block; }
 
 body {
@@ -92,7 +92,7 @@ html {
 .no_opacity, .cases_presentation .cases_img_container, .cases_presentation .cases_presentation_content h1, .team_presentation .team_header {
   opacity: 0; }
 
-.center, main, nav, .login_error, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, main, nav, .login_error, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -131,7 +131,7 @@ a {
 button {
   cursor: pointer; }
 
-nav, .login_error {
+nav, .login_error, .signup_success {
   position: fixed;
   top: 0;
   left: 0;
@@ -142,13 +142,14 @@ nav, .login_error {
   background-color: #fff;
   box-shadow: 0 1px 3px 0 #00000091;
   transition: box-shadow 0.3s ease-in-out;
+  text-align: right;
   justify-content: space-between;
   -moz-justify-content: space-between;
   -o-justify-content: space-between;
   -ms-justify-content: space-between;
   -webkit-justify-content: space-between; }
   @media (max-width: 500px) {
-    nav, .login_error {
+    nav, .login_error, .signup_success {
       padding: 0 10px; } }
 
 .profile_img {
@@ -311,6 +312,17 @@ nav, .login_error {
   padding: 5px 50px;
   opacity: 0;
   background-color: #dc5550;
+  color: white;
+  text-align: center;
+  font-weight: bold; }
+
+.signup_success {
+  top: 70px;
+  z-index: 2;
+  height: auto;
+  padding: 5px 50px;
+  opacity: 0;
+  background-color: green;
   color: white;
   text-align: center;
   font-weight: bold; }

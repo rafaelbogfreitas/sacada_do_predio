@@ -13,7 +13,7 @@ if(window.innerWidth >= 600) {
     addressInput.addEventListener('keypress', (e) => {
         console.log(e.target.value);
         
-        axios.get(api + e.target.value + accessToken)
+        axios.get(api + e.target.value + sacadaToken)
         .then( data => {
             // console.log(api + e.target.value + accessToken)
             let arr = data.data.features;
@@ -37,7 +37,7 @@ if(window.innerWidth >= 600) {
 }
 
 addressInput.addEventListener('blur', function(){
-    axios.get(api + addressInput.value + accessToken)
+    axios.get(api + addressInput.value + sacadaToken)
     .then( data => {
         let [ lat, long ] = data.data.features[0].center;
         console.log(lat, long, data);

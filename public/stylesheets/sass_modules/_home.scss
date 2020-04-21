@@ -191,6 +191,20 @@
     font-weight: bold;
 }
 
+.signup_success {
+    @extend nav;
+    top:70px;
+    z-index: 2;
+
+    height: auto;
+    padding: 5px 50px;
+    opacity: 0;
+    background-color:green;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
 .home_content_container {
     background-color: white;
 }

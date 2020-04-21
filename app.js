@@ -105,13 +105,13 @@ passport.use(new LocalStrategy({
         if (!user) {
             console.log('email not found')
             return next(null, false, {
-                message: "Incorrect email or password"
+                message: "Senha ou email incorreto"
             });
         }
         if (!bcrypt.compareSync(password, user.password)) {
             console.log('incorrect password')
             return next(null, false, {
-                message: "Incorrect email or password"
+                message: "Senha ou email incorreto"
             });
         }
         // on success
