@@ -2,13 +2,13 @@
     <div class="new_case_container">
         <h1>EDITAR CASO</h1>
         <form class="new_case_form" action="/case/edit/{{_id}}" method="POST" enctype="multipart/form-data">
-            <input placeholder="title" type="text" name="title" value="{{title}}">
-            <textarea placeholder="Descrição" type="text" name="description">{{description}}</textarea>
+            <input placeholder="title" type="text" required name="title" value="{{title}}">
+            <textarea placeholder="Descrição" type="text" required name="description">{{description}}</textarea>
             <div class="autocomplete_box">
-            <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" value="{{address}}" required >
+            <input id="address" type="text" placeholder="Endereço" autocomplete="no" required name="address" value="{{address}}" required >
                 {{!-- hidden inputs to get coordinates --}}
-                <input class="lat" type="hidden" name="lat">
-                <input class="lng" type="hidden" name="lng">
+                <input class="lat" type="hidden" name="lat" value="{{location.coordinates.[1]}}">
+                <input class="lng" type="hidden"  name="lng" value="{{location.coordinates.[0]}}">
                 <div class="results_box"></div>
             </div>
             <div class="file_label_box">

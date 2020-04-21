@@ -2,9 +2,7 @@ let addressInput = document.querySelector('input[name="address"]');
 let container = document.querySelector('.results_box');
 let form = document.querySelector('form');
 
-
-// let api = 'https://maps.googleapis.com/maps/api/geocode/json?address='
-// let accessToken = '&key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE'
+console.log(form);
 
 let api = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 let accessToken = '.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw&cachebuster=1586829538543&autocomplete=true&types=address';
@@ -34,6 +32,17 @@ addressInput.addEventListener('keypress', (e) => {
 });
 
 addressInput.addEventListener('blur', function(){
+    axios.get(api + addressInput.value + accessToken)
+    .then( data => {
+        let [ lat, long ] = data.data.features[0].center;
+        console.log(lat, long, data);
+        document.querySelector('.lat').value = lat;
+        document.querySelector('.lng').value = long;
+
+        console.log(document.querySelector('.lat'));
+        console.log(document.querySelector('.lng'));
+    });
+
     setTimeout(function(){
         container.innerHTML = "";
     }, 500);
@@ -42,6 +51,19 @@ addressInput.addEventListener('blur', function(){
 container.addEventListener('click', function(e){
     addressInput.value = e.target.innerHTML;
     container.innerHTML = "";
+});
+
+form.addEventListener('touchend', function(){
+    axios.get(api + addressInput.value + accessToken)
+    .then( data => {
+        let [ lat, long ] = data.data.features[0].center;
+        console.log(lat, long, data);
+        document.querySelector('.lat').value = lat;
+        document.querySelector('.lng').value = long;
+
+        console.log(document.querySelector('.lat'));
+        console.log(document.querySelector('.lng'));
+    });
 });
 
 form.addEventListener('submit', function(){
