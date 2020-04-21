@@ -95,6 +95,13 @@ passport.use(new LocalStrategy({
         if (err) {
             return next(err);
         }
+
+        // if(!user.verified){
+        //     return next(null, false, {
+        //         message: "Please confirm your email"
+        //     });
+        // }
+
         if (!user) {
             console.log('email not found')
             return next(null, false, {
