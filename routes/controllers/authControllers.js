@@ -30,12 +30,12 @@ let authControllers = {
                         })
                         .then(() => {
                             console.log('New user created');
-                            req.flash('error','User created suscessfully');
+                            req.flash('success','Novo usuário cadastrado');
                             res.redirect('/');
                         })
                         .catch(error => console.log(error));
                 } else {
-                    req.flash('error','Email is already registered');
+                    req.flash('error','Email já cadastrado');
                     res.redirect('/');
                 }
             })
