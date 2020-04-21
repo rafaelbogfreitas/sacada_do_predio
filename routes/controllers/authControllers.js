@@ -28,14 +28,19 @@ let authControllers = {
                             email,
                             password: hash,
                         })
-                        .then(() => console.log('New user created'))
+                        .then(() => {
+                            console.log('New user created');
+                            req.flash('error','User created suscessfully');
+                            res.redirect('/');
+                        })
                         .catch(error => console.log(error));
                 } else {
-                    // console.log('user not created')
+                    req.flash('error','Email is already registered');
+                    res.redirect('/');
                 }
             })
             .catch(error => console.log(error))
-        res.redirect('/');
+        // res.redirect('/');
     },
     
     loginPost: passport.authenticate("local", {
