@@ -6,7 +6,7 @@ console.log(form);
 
 let api = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 let accessToken = '.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw&cachebuster=1586829538543&autocomplete=true&types=address';
-let sacadaToken = '.json?access_token=pk.eyJ1IjoicmFmYWVsYm9nZnJlaXRhcyIsImEiOiJjazk5d29kencxd3N0M25uMWlvdjludmM3In0.zeXPdzxNYeAo0x9jpu4fJw&cachebuster=1586829538543&autocomplete=true&types=address';
+let sacadaToken = '.json?access_token=pk.eyJ1IjoicmFmYWVsYm9nZnJlaXRhcyIsImEiOiJjazk5d29kencxd3N0M25uMWlvdjludmM3In0.zeXPdzxNYeAo0x9jpu4fJw&autocomplete=true&types=address';
 
 if(window.innerWidth >= 600) {
 
