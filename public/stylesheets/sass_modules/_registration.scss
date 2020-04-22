@@ -68,7 +68,7 @@
 }
 
 .registration_reminder {
-    display: none;
+    // display: none;
     @extend .login_error;
     @include flexbox(justify-content, center);
     opacity: 1;
@@ -80,9 +80,9 @@
         text-decoration: underline;
     }
 
-    @include mediaquery(650px){
-        display: block;
-    }
+    // @include mediaquery(650px){
+    //     display: block;
+    // }
 }
 
 .btn_box {
