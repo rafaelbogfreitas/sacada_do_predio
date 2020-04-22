@@ -13,7 +13,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, .login_error, .signup_success, output, ruby, section, summary,
+menu, nav, .login_error, .registration_reminder, .signup_success, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, .login_error, .signup_success, section {
+footer, header, hgroup, menu, nav, .login_error, .registration_reminder, .signup_success, section {
   display: block; }
 
 body {
@@ -92,7 +92,7 @@ html {
 .no_opacity, .cases_presentation .cases_img_container, .cases_presentation .cases_presentation_content h1, .team_presentation .team_header {
   opacity: 0; }
 
-.center, main, nav, .login_error, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, main, nav, .login_error, .registration_reminder, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -131,7 +131,7 @@ a {
 button {
   cursor: pointer; }
 
-nav, .login_error, .signup_success {
+nav, .login_error, .registration_reminder, .signup_success {
   position: fixed;
   top: 0;
   left: 0;
@@ -149,7 +149,7 @@ nav, .login_error, .signup_success {
   -ms-justify-content: space-between;
   -webkit-justify-content: space-between; }
   @media (max-width: 500px) {
-    nav, .login_error, .signup_success {
+    nav, .login_error, .registration_reminder, .signup_success {
       padding: 0 10px; } }
 
 .profile_img {
@@ -305,7 +305,7 @@ nav, .login_error, .signup_success {
         background-color: #fff;
         color: #cad1da; }
 
-.login_error {
+.login_error, .registration_reminder {
   top: 70px;
   z-index: 2;
   height: auto;
@@ -900,7 +900,6 @@ section {
     -ms-align-items: flex-start;
     -webkit-align-items: flex-start; }
     .profile_info .profile_options_box a {
-      width: 100%;
       height: 49%;
       padding-top: 20px;
       margin-left: 10px;
@@ -1255,7 +1254,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   background-color: rgba(247, 248, 249, 0.5);
@@ -1274,9 +1273,51 @@ img {
       right: 50px;
       width: 50px;
       height: auto; }
+    @media (max-width: 650px) {
+      .registration_layer .registration_container {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-shadow: none; }
+        .registration_layer .registration_container h1, .registration_layer .registration_container form {
+          width: 100%; } }
 
-.register_btn {
+.dashboard_nav .register_btn {
   margin-left: auto; }
+  @media (max-width: 650px) {
+    .dashboard_nav .register_btn {
+      display: none; } }
+
+.dashboard .register_btn {
+  display: none; }
+  @media (max-width: 650px) {
+    .dashboard .register_btn {
+      display: block;
+      margin: 20px auto; } }
+
+.registration_reminder {
+  display: none;
+  justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  opacity: 1;
+  padding: 5px 20px; }
+  .registration_reminder span {
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: underline; }
+  @media (max-width: 650px) {
+    .registration_reminder {
+      display: block; } }
+
+.btn_box {
+  width: 100%; }
+
+@media (max-width: 650px) {
+  .register_save {
+    width: 100%; } }
 
 .autocomplete_box {
   width: 100%;

@@ -12,9 +12,9 @@
         <nav class="dashboard_nav">
             <img class="dashboard_icon" src="images/burguer.svg" alt="burguer icon">
             {{#if_eq status 'waiting'}}
-            <button class="btn register_btn">
-                Complete seu cadastro
-            </button>
+                <button class="btn register_btn">
+                    Complete seu cadastro
+                </button>
             {{/if_eq }}
             <div class="profile_info">
                 <div class="user_name">
@@ -33,6 +33,10 @@
             </div>
         </nav>
 
+        <div class="registration_reminder animated fadeInDown">
+            Para criar casos, termine seu <span class="registration_link">cadastro</span>
+        </div>
+
         {{!-- User side bar --}}
         <aside class="dashboard leave_screen">
             <img class="close_icon" src="/images/close_icon.svg" alt="close tab icon">
@@ -47,6 +51,12 @@
                 </a>
                 {{/if_eq}}
             </div>
+
+            {{#if_eq status 'waiting'}}
+                <button class="btn register_btn">
+                    Complete seu cadastro
+                </button>
+            {{/if_eq }}
 
             
             <div class="user_cases_container">
@@ -155,7 +165,11 @@
                             <label class="btn" for="file">Imagem</label>
                             <div class="file_text">Selecione a imagem</div>
                         </div>
-                        <input type="submit" class="btn register_save" value="SALVAR"/>
+
+                        <div class="btn_box">
+                            <input type="submit" class="btn register_save" value="SALVAR"/>
+                            {{!-- <button type="submit" class="btn close_register">VOLTAR</button> --}}
+                        </div>
                     </form>
                 </div>
             </div>
