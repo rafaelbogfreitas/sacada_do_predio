@@ -13,7 +13,7 @@ if(window.innerWidth >= 600) {
     addressInput.addEventListener('keypress', (e) => {
         console.log(e.target.value);
         
-        axios.get(api + e.target.value + sacadaToken, { headers: { referer: window.location.href}})
+        axios.get(api + e.target.value + sacadaToken, { headers: { origin: window.location.href}})
         .then( data => {
             // console.log(api + e.target.value + accessToken)
             let arr = data.data.features;
