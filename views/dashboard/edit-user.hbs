@@ -1,14 +1,12 @@
 <main class="main_new_case">
     <div class="new_case_container">
 
-<h1>EDITAR PERFIL</h1>
+<h1 class="edit_user_header">EDITAR PERFIL</h1>
 {{#with user}}
 <div class="edit_profile">
     <div class="img_container">
         <img src="{{imageUrl}}" alt="">
-        <a class="btn --delete" href="/user/delete">DELETAR PERFIL</a>
     </div>
-
 <form class="signup_form" action="/user/edit" method="POST" enctype="multipart/form-data">
     <input type="text" placeholder="Nome" required name="username" value="{{username}}">
     <input type="email" placeholder="Email" required name="email" value="{{email}}">
@@ -28,6 +26,7 @@
     <div class="botoes_edit_user">
         <input type="submit" value="SALVAR" class="btn"/>
         <a class="dashboard_btn btn" href="/dashboard">VOLTAR</a>
+        <a class="btn --delete" href="/user/delete">DELETAR PERFIL</a>
     </div>
 </form>
 </div>

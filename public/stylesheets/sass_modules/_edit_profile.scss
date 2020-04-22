@@ -1,6 +1,15 @@
+.edit_user_header {
+    text-align: center !important;
+    margin-bottom: 0 !important;
+}
+
 .edit_profile {
     .img_container {
-        width: 20%;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        overflow: hidden;
+        @extend .box-shadow;
         margin-right: 20px;
 
         @include flexbox(align-self, flex-start);
@@ -13,16 +22,34 @@
         width: 80%;
     }
     width: 80%;
-    @extend .center
+    @extend .center;
+
+    @include mediaquery(600px){
+        @include flexbox(flex-direction, column);
+        .img_container {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+    }
 }
 
 .botoes_edit_user {
     width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
+
+    @include flexbox(display, flex);
+    @include flexbox(flex-wrap, wrap);
+    @include flexbox(flex-direction, row-reverse);
+    @include flexbox(justify-content, space-between);
 
     .btn {
-        margin-left: 30px;
+        width: 49%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .--delete {
+        width: 100%;
     }
 }
