@@ -20,16 +20,9 @@ const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
-
 // NODEMAILER CONFIG
-const nodemailer = require('nodemailer');
-let transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'sacadadopredio@gmail.com',
-        pass: process.env.SACADA_EMAIL_PASSWORD
-    }
-});
+const transporter = require('./config/nodemailer');
+
 
 //MONGODB connection
 mongoose.connect(process.env.MONGODB_ATLAS, {
@@ -240,6 +233,5 @@ app.use('/', user);
 
 const caseRoutes = require('./routes/case');
 app.use('/', caseRoutes);
-
 
 module.exports = app;
