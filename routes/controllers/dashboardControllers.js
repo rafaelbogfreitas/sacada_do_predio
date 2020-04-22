@@ -150,7 +150,7 @@ let dashboardControllers = {
                                     html: `
                                         <p>Olá ${user.username},</p>
 
-                                        <p>Um novo caso foi registrado na sua região, confira: http://sacada-do-predio.herokuapp.com/case/${caseResponse._id}</p>
+                                        <p>Um novo caso foi registrado na sua região, confira: http://www.sacadadopredio.com/case/${caseResponse._id}</p>
 
                                         <p>Postado pelo usuário <strong>${caseResponse.user.username}</strong></p>
 
