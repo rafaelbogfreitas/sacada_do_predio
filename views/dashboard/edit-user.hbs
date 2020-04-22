@@ -11,7 +11,9 @@
     <input type="text" placeholder="Nome" required name="username" value="{{username}}">
     <input type="email" placeholder="Email" required name="email" value="{{email}}">
     <div class="autocomplete_box">
-        <input id="address" type="text" placeholder="Endereço" autocomplete="no" required name="address" value="{{address}}" required >
+        {{!-- <input id="address" type="text" placeholder="Endereço" autocomplete="no" required name="address" value="{{address}}" required > --}}
+        <input id="autocomplete" placeholder="Endereço" type="text" />
+
         {{!-- hidden inputs to get coordinates --}}
         <input class="lat" type="hidden" name="lat" value="{{location.coordinates.[1]}}">
         <input class="lng" type="hidden" name="lng" value="{{location.coordinates.[0]}}">
@@ -33,5 +35,6 @@
 {{/with}}
     </div>
     <script src="/javascripts/file_input.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE&libraries=places"></script>
     <script src="/javascripts/address_autocomplete.js"></script>
 </main>

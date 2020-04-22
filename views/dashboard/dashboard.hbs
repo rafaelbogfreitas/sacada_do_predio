@@ -163,7 +163,8 @@
                     <h1>Complete o seu cadastro:</h1>
                     <form class="registration_form new_case_form" action="/register" method="POST" autocomplete="no" enctype="multipart/form-data">
                         <div class="autocomplete_box">
-                            <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" required >
+                            {{!-- <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" required > --}}
+                            <input id="autocomplete" placeholder="Endereço" type="text" required/>
                             {{!-- hidden inputs to get coordinates --}}
                             <input class="lat" type="hidden" name="lat">
                             <input class="lng" type="hidden" name="lng">
@@ -195,19 +196,19 @@
         <script src="/javascripts/register.js" defer></script>
         <script src="/javascripts/address_autocomplete.js" defer></script>
         <script type="text/javascript" src="/javascripts/map_position.js" defer></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE&libraries=places"></script>
         <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
         {{else}}
         <script src="/javascripts/dashboard.js" defer></script>
         <script src="/javascripts/map_registered.js" defer></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE&libraries=places"></script>
         <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     {{/if_eq}}
 {{/with }}
 {{#unless user}}
     <script src="/javascripts/dashboard_nouser.js" defer></script>
     <script src="/javascripts/home.js" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE&libraries=places"></script>
     <script type="text/javascript" src="/javascripts/map_position.js" defer></script>
     <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
 {{/unless}}

@@ -6,7 +6,8 @@
             <textarea placeholder="Descrição" type="text" name="description" required></textarea>
             {{!-- <input placeholder="address" type="text" name="address"> --}}
             <div class="autocomplete_box">
-                <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" required >
+                {{!-- <input id="address" type="text" placeholder="Endereço" autocomplete="no" name="address" required > --}}
+                <input id="autocomplete" placeholder="Endereço" type="text" required/>
                 {{!-- hidden inputs to get coordinates --}}
                 <input class="lat" type="hidden" name="lat">
                 <input class="lng" type="hidden" name="lng">
@@ -25,5 +26,6 @@
 
     </div>
     <script src="/javascripts/file_input.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjY8VOil9kraBS00iFLFDBUN_pq_tGJGE&libraries=places"></script>
     <script src="/javascripts/address_autocomplete.js" defer></script>
 </main>
