@@ -80,9 +80,10 @@
         text-decoration: underline;
     }
 
-    // @include mediaquery(650px){
-    //     display: block;
-    // }
+    @include mediaquery(650px){
+        font-size: 1.3rem;
+        padding: 10px 20px;
+    }
 }
 
 .btn_box {

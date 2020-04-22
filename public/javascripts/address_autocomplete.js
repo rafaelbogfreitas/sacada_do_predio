@@ -15,8 +15,8 @@ function onPlaceChanged() {
 
     console.log(place);
 
-    document.querySelector('.lat').value = place.geometry.location.lat();
-    document.querySelector('.lng').value = place.geometry.location.lng();
+    document.querySelector('.lat').value = place.geometry.location.lng();
+    document.querySelector('.lng').value = place.geometry.location.lat();
 
     console.log(document.querySelector('.lat'));
     

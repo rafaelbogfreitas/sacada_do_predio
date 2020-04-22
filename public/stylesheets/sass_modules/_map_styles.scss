@@ -24,6 +24,10 @@
         font-size: 3rem;
         margin-left: 0;
         padding: 0;
+
+        @include mediaquery(650px){
+            margin-top: 20px;
+        }
     }
 
     .intro_text {

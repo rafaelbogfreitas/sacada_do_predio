@@ -27,8 +27,10 @@
                 {{!-- profile box --}}
 
                 <aside class="profile_options_box">
-                    <a href="/logout">SAIR</a>
+                    {{#if_eq status "registered"}}
                     <a href="/user/edit">EDITAR PERFIL</a>
+                    {{/if_eq}}
+                    <a href="/logout">SAIR</a>
                 </aside>
             </div>
         </nav>

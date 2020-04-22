@@ -1372,6 +1372,10 @@ img {
     cursor: pointer;
     margin-left: 5px;
     text-decoration: underline; }
+  @media (max-width: 650px) {
+    .registration_reminder {
+      font-size: 1.3rem;
+      padding: 10px 20px; } }
 
 .btn_box {
   width: 100%; }
@@ -1427,6 +1431,9 @@ img {
     font-size: 3rem;
     margin-left: 0;
     padding: 0; }
+    @media (max-width: 650px) {
+      .map_content_container .--intro {
+        margin-top: 20px; } }
   .map_content_container .intro_text {
     background-color: white;
     width: 50%;
