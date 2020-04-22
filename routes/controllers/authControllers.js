@@ -2,6 +2,16 @@
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 const passport = require('passport');
+const nodemailer = require('nodemailer');
+
+// NODEMAILER CONFIG
+let transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'sacadadopredio@gmail.com',
+        pass: process.env.SACADA_EMAIL_PASSWORD
+    }
+});
 
 //User model
 const User = require("../../models/User");
@@ -28,7 +38,23 @@ let authControllers = {
                             email,
                             password: hash,
                         })
-                        .then(() => {
+                        .then(newUser => {
+                            console.log('new user created')
+                            transporter.sendMail({
+                                from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
+                                to: newUser.email,
+                                subject: 'Novo caso na sua região', 
+                                text: ``,
+                                html: `
+                                    <p>Olá ${newUser.username}, seja bem-vindo!</p>
+                                    
+                                    <p>Muito obrigado,</p>
+        
+                                    <strong style="rgb(198, 72, 12)">Sacada Team</strong>
+                                `
+                        })
+                        .then(info => console.log(info))
+                        .catch(error => console.log(error))
                             console.log('New user created');
                             req.flash('success','Novo usuário cadastrado');
                             res.redirect('/');

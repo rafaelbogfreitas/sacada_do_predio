@@ -1,18 +1,9 @@
 require('dotenv').config();
 const User = require('../../models/User');
 const Case = require('../../models/Case');
-const nodemailer = require('nodemailer');
 
 // NODEMAILER CONFIG
-let transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'sacadadopredio@gmail.com',
-        pass: process.env.SACADA_EMAIL_PASSWORD
-    }
-});
-
-
+const transporter = require('../../config/nodemailer');
 
 let dashboardControllers = {
     // GET DASHBOARD

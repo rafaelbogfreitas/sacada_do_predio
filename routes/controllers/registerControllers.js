@@ -1,5 +1,6 @@
 const User = require('../../models/User');
 
+
 let registerControllers = {
     //POST /register
     registerPost: (req, res, next) => {
@@ -46,6 +47,7 @@ let registerControllers = {
             User
                 .findByIdAndUpdate(user, userToRegister)
                 .then(() => {
+
                     res.redirect('/dashboard');
                 })
                 .catch(error => console.log(error));

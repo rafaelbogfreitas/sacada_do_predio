@@ -20,6 +20,10 @@ const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
+// NODEMAILER CONFIG
+const transporter = require('./config/nodemailer');
+
+
 //MONGODB connection
 mongoose.connect(process.env.MONGODB_ATLAS, {
         useNewUrlParser: true,
@@ -145,6 +149,21 @@ passport.use(new GoogleStrategy({
                     imageUrl: profile.photos[0].value
                 })
                 .then(newUser => {
+                    transporter.sendMail({
+                        from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
+                        to: newUser.email,
+                        subject: 'Novo caso na sua região', 
+                        text: ``,
+                        html: `
+                            <p>Olá ${newUser.username}, seja bem-vindo!</p>
+                            
+                            <p>Muito obrigado,</p>
+
+                            <strong style="rgb(198, 72, 12)">Sacada Team</strong>
+                        `
+                })
+                .then(info => console.log(info))
+                .catch(error => console.log(error))
                     done(null, newUser);
                 })
                 .catch(err => done(err)); // closes User.create()
@@ -214,6 +233,5 @@ app.use('/', user);
 
 const caseRoutes = require('./routes/case');
 app.use('/', caseRoutes);
-
 
 module.exports = app;
