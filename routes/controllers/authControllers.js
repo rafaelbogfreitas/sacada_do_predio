@@ -43,7 +43,7 @@ let authControllers = {
                             transporter.sendMail({
                                 from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
                                 to: newUser.email,
-                                subject: 'Novo caso na sua região', 
+                                subject: 'Seja bem-vindo à sacada!', 
                                 text: ``,
                                 html: `
                                     <p>Olá ${newUser.username}, seja bem-vindo!</p>

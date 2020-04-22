@@ -87,7 +87,7 @@ passport.deserializeUser((id, cb) => {
 });
 
 // adding flash to be used with passport
-app.use(flash()); 
+app.use(flash());
 
 // passport local strategy
 passport.use(new LocalStrategy({
@@ -150,20 +150,20 @@ passport.use(new GoogleStrategy({
                 })
                 .then(newUser => {
                     transporter.sendMail({
-                        from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
-                        to: newUser.email,
-                        subject: 'Novo caso na sua região', 
-                        text: ``,
-                        html: `
+                            from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
+                            to: newUser.email,
+                            subject: 'Seja bem-vindo à sacada!',
+                            text: ``,
+                            html: `
                             <p>Olá ${newUser.username}, seja bem-vindo!</p>
                             
                             <p>Muito obrigado,</p>
 
                             <strong style="rgb(198, 72, 12)">Sacada Team</strong>
                         `
-                })
-                .then(info => console.log(info))
-                .catch(error => console.log(error))
+                        })
+                        .then(info => console.log(info))
+                        .catch(error => console.log(error))
                     done(null, newUser);
                 })
                 .catch(err => done(err)); // closes User.create()
