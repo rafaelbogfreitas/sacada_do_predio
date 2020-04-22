@@ -21,7 +21,7 @@ if(window.innerWidth >= 600) {
             arr.map( option => {
                 options += `<p class="animated fadeInDown">${option.place_name}</p>`;
             })
-            .catch(error => console.log(error));
+            
             container.innerHTML = options;
             console.log(data)
             
