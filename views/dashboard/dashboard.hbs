@@ -32,10 +32,11 @@
                 </aside>
             </div>
         </nav>
-
+        {{#if_eq status 'waiting'}}
         <div class="registration_reminder animated fadeInDown">
             Para criar casos, termine seu <span class="registration_link">cadastro</span>
         </div>
+        {{/if_eq }}
 
         {{!-- User side bar --}}
         <aside class="dashboard leave_screen">
@@ -90,6 +91,15 @@
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="password" placeholder="Senha" name="password" required>
                     <input type="submit" value="CADASTRAR" />
+                    <div class="social_login_box">
+                        <a href="/auth/google">
+                            <div>or</div>
+                            <img src="/images/google_logo.svg" alt="google logo">
+                            <p>
+                                Entrar com <span>Google</span>
+                            </p>
+                        </a>
+                    </div>
                 </form>
             </div>
             <div class="login_container">
