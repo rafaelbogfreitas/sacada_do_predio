@@ -152,8 +152,6 @@ let dashboardControllers = {
 
                                         <p>Um novo caso foi registrado na sua região, confira: http://www.sacadadopredio.com/case/${caseResponse._id}</p>
 
-                                        <p>Postado pelo usuário <strong>${caseResponse.user.username}</strong></p>
-
                                         <p>Muito obrigado,</p>
 
                                         <strong style="rgb(198, 72, 12)">Sacada Team</strong>
