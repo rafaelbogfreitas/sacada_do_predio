@@ -12,7 +12,7 @@
     <input type="email" placeholder="Email" required name="email" value="{{email}}">
     <div class="autocomplete_box">
         {{!-- <input id="address" type="text" placeholder="Endereço" autocomplete="no" required name="address" value="{{address}}" required > --}}
-        <input id="autocomplete" placeholder="Endereço" type="text" />
+        <input id="autocomplete" placeholder="Endereço" type="text" name="address" value="{{address}}"/>
 
         {{!-- hidden inputs to get coordinates --}}
         <input class="lat" type="hidden" name="lat" value="{{location.coordinates.[1]}}">

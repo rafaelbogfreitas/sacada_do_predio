@@ -5,7 +5,7 @@
             <input placeholder="title" type="text" required name="title" value="{{title}}">
             <textarea placeholder="Descrição" type="text" required name="description">{{description}}</textarea>
             <div class="autocomplete_box">
-                <input id="autocomplete" placeholder="Endereço" type="text" value="{{address}}" required/>
+                <input id="autocomplete" placeholder="Endereço" type="text" name="address" value="{{address}}" required/>
             {{!-- <input id="address" type="text" placeholder="Endereço" autocomplete="no" required name="address" value="{{address}}" required > --}}
                 {{!-- hidden inputs to get coordinates --}}
                 <input class="lat" type="hidden" name="lat" value="{{location.coordinates.[1]}}">
