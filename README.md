@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Product Name Screen Shot](/public/images/readme/Sacada_Main_Page.png)
+![Sacada do prédio](/public/images/readme/Sacada_Main_Page.png)
 
 Sacada do Prédio is a web application where people can post their needs so that people from their community can help. The idea for the name comes from the multiple examples of people gathering in their balconies (Sacada in portuguese) to hang out, play music and stick together in the midst of the social distancing caused by the coronavirus pandemic.
 
@@ -28,8 +28,6 @@ Our goal is to provide a platform where users can register and post new cases. W
 * [Heroku](https://www.heroku.com/)
 
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -41,10 +39,28 @@ The application consists in three main views:
 
 The views are illustrated below for desktop and mobile devices:
 
-![Product Name Screen Shot](public/images/readme/Sacada_Readme_Desktop.png)
+![Desktop views](public/images/readme/Sacada_Readme_Desktop.png)
 
-![Product Name Screen Shot](public/images/readme/Sacada_Readme_Mobile.png)
+![Mobile views](public/images/readme/Sacada_Readme_Mobile.png)
 
+### Prerequisites
+
+In order to run this project locally you will need to:
+
+* Setup Google API keys for Google Maps and OAuth.
+* Setup Cloudinary API keys.
+
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/rafaelbogfreitas/projeto_2.git
+```
+2. Install NPM packages
+```sh
+npm install
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -68,7 +84,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Daniel Paiva - [twitter](https://twitter.com/danielcspaiva) - [email](mailto:danielcspaiva@gmail.com)
+Daniel Paiva - [twitter](https://twitter.com/danielcspaiva) - [email](mailto:danielcspaiva@gmail.com) - [linkedin](https://www.linkedin.com/in/danielcspaiva/)
 
 Rafael Freitas - 
 
@@ -77,25 +93,11 @@ Project Link: [https://github.com/rafaelbogfreitas/projeto_2](https://github.com
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Special thanks
 
 * [Ironhack São Paulo](https://www.ironhack.com/br)
-* [Joc]()
-* [Vini]()
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+* [Joc](https://github.com/jocnjr/library-project-7/commits?author=jocnjr)
+* [Vini](https://github.com/vinivibe)
+* [Mônica](https://github.com/mdccbranco)
+* [Grazi](https://github.com/grazidiandra)
+* [](https://github.com/othneildrew)
