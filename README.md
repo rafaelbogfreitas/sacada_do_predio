@@ -3,9 +3,11 @@
 
 ![Sacada do prédio](/public/images/readme/Sacada_Main_Page.png)
 
-Sacada do Prédio is a web application where people can post their needs so that people from their community can help. The idea for the name comes from the multiple examples of people gathering in their balconies (Sacada in portuguese) to hang out, play music and stick together in the midst of the social distancing caused by the coronavirus pandemic.
+The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost. Many scenes of people gathering in their balconies with their family and neighbours became very common, as well as the problems the communities around the globe started facing due to the pandemic. In face of this situation we decided to create Sacada do Prédio.
 
-Our balcony provides us with a place where we can hang out and connect with people, but it also provides us with a view of our neighbourhood and community, why not use it to help others who are in need?
+Sacada do Prédio is a web application where people can post their needs and other users from their community can help. The idea for the name came from the multiple examples of people gathering in their balconies (Sacada in portuguese) to hang out, play music and stick together in the midst of the social distancing caused by the coronavirus pandemic.
+
+Our balconies are places where we can hang out and connect with people, but they also provide us with a view of our neighbourhood and community. Why not use it to help others who are in need?
 
 Our goal is to provide a platform where users can register and post new cases. Whenever a new case is posted, all users within that area are notified so that they can possibly help.
 
@@ -100,4 +102,3 @@ Project Link: [https://github.com/rafaelbogfreitas/projeto_2](https://github.com
 * [Vini](https://github.com/vinivibe)
 * [Mônica](https://github.com/mdccbranco)
 * [Grazi](https://github.com/grazidiandra)
-* [](https://github.com/othneildrew)
