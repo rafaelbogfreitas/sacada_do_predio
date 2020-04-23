@@ -255,6 +255,8 @@ a {
   color: inherit; }
 
 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   cursor: pointer;
   font-family: 'Brown';
   font-weight: bold;
