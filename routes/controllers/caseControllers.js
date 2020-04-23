@@ -2,7 +2,6 @@ const User = require('../../models/User');
 const Case = require('../../models/Case');
 const cloudinary = require('cloudinary');
 
-
 let caseControllers = {
     // GET CASE/DELETE/:ID
     getDeleteCase: (req, res, next) => {
