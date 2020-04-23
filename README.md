@@ -22,9 +22,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][https://github.com/rafaelbogfreitas/projeto_2/graphs/contributors]
-[![Issues][issues-shield]][https://github.com/rafaelbogfreitas/projeto_2/issues]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/rafaelborgesfreitas/]
+[![Contributors][contributors-shield]]
+[![Issues][issues-shield]]
+[![LinkedIn][linkedin-shield]]
 
 
 
@@ -32,7 +32,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/rafaelbogfreitas/projeto_2">
-    <img src="./public/images/sacada.png" alt="Logo" width="80" height="80">
+    <img src="./public/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Sacada do Prédio</h3>
