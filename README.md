@@ -1,7 +1,7 @@
-<!-- ABOUT THE PROJECT -->
+![Sacada do prédio](/public/images/readme/banner.png)
+
 ## About The Project
 
-![Sacada do prédio](/public/images/readme/Sacada_Main_Page.png)
 
 The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost. Many scenes of people gathering in their balconies with their family and neighbours became very common, as well as the problems the communities around the globe started facing due to the pandemic. In face of this situation we decided to create Sacada do Prédio.
 
