@@ -3,29 +3,32 @@
 
 ![Product Name Screen Shot](/public/images/readme/Sacada_Main_Page.png)
 
-Boa tarde pessoal. Queria compartilhar com vocês um projeto que venho trabalhando com um amigo meu do bootcamp nas últimas duas semanas, o Sacada do Prédio.
+Sacada do Prédio is a web application where people can post their needs so that people from their community can help. The idea for the name comes from the multiple examples of people gathering in their balconies (Sacada in portuguese) to hang out, play music and stick together in the midst of the social distancing caused by the coronavirus pandemic.
 
-A ideia do nome veio dos vários exemplos de pessoas reunidas nas sacadas (ou varandas) em meio ao distanciamento social causado pela pandemia de coronavirus.
+Our balcony provides us with a place where we can hang out and connect with people, but it also provides us with a view of our neighbourhood and community, why not use it to help others who are in need?
 
-Da sacada do prédio nos confraternizamos com vizinhos e familiares, mas também podemos ver de perto as necessidades da nossa comunidade. A pergunta é: Como podemos ajudar?
-
-A ideia é criar uma plataforma onde os usuários podem cadastrar "Casos", ou necessidades, de modo que as pessoas ao redor possam ajudá-lo ou contribuir com a sua causa.
-
-Ao completar o cadastro você terá acesso aos casos da sua região, podendo entrar em contato com o responsável pelo caso.
-
-Quando um novo caso é criado todos os usuários que estão próximos àquele caso são notificados por email e podem entrar em contato para ajudar.
-
-Estamos em fase de testes, então por favor dêem uma olhada e mandem os seus feedbacks (podem utilizar a bolinha vermelha no canto inferior direito pra mandar feebakcs).
-
-Muito obrigado!
-
-Daniel Paiva.
+Our goal is to provide a platform where users can register and post new cases. Whenever a new case is posted, all users within that area are notified so that they can possibly help.
 
 ### Built With
 
-* [Bootstrap](https://getbootstrap.com) - used to whatever test
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+Backend:
+
+* [NodeJS](https://nodejs.org/en/)
+* [Express](https://expressjs.com/pt-br/)
+* [Handlebars](https://handlebarsjs.com/)
+* [MongoDB](https://www.mongodb.com/)
+* [Mongoose](https://mongoosejs.com/)
+* [Axios](https://github.com/axios/axios)
+* [Bcrypt](https://www.npmjs.com/package/bcrypt)
+* [Passport](http://www.passportjs.org/)
+* [Claudinary](https://cloudinary.com/)
+* [Nodemailer](https://nodemailer.com/about/)
+* [Sparkpost](https://www.sparkpost.com/)
+* [Google Maps Api](https://developers.google.com/?hl=pt-br)
+* [Hotjar](https://www.hotjar.com/)
+* [Tawk.to](https://www.tawk.to/)
+* [Heroku](https://www.heroku.com/)
+
 
 
 
