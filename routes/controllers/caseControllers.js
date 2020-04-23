@@ -98,16 +98,18 @@ let caseControllers = {
         .findById(caseId)
         .populate('user')
         .then(cases => {
-                    if (req.session.passport) {
-                        let { user } = req.session.passport;
-                        if (user == cases.user._id) {
-                            owner = true;
-                        }
-                    }
-                    res.render('dashboard/single-case', {data:[{ owner: owner, case: cases }]})
-                })
-                .catch(error => console.log(error));
-        }
+            let data = {data:[{ owner: owner, case: cases}]}
+            if (req.session.passport) {
+                let { user } = req.session.passport;
+                data = {data:[{ owner: owner, case: cases, user: user }]};
+                if (user == cases.user._id) {
+                    owner = true;
+                }
+            }
+            res.render('dashboard/single-case', data)
+        })
+        .catch(error => console.log(error));
+    }
 }
 
 
