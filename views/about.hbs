@@ -1,0 +1,112 @@
+
+{{!-- Home's first section --}}
+<main class="main_home">
+
+    {{!-- Nav --}}
+    <nav class="main_nav">
+
+        <img class="logo" src="/images/logo.png" alt="logo">
+
+        <div class="btn_container">
+            <div class="signup_container">
+                <button class="signup_btn">CADASTRE-SE</button>
+                <form class="signup_form" action="/signup" method="POST" enctype="multipart/form-data">
+                    <img class="close_form" src="/images/close_icon.svg" alt="close icon">
+                    <input type="text" placeholder="Nome" name="username" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Senha" name="password" required>
+                    <input type="submit" value="CADASTRAR" />
+                    <div class="social_login_box">
+                        <a href="/auth/google">
+                            <div>or</div>
+                            <img src="/images/google_logo.svg" alt="google logo">
+                            <p>
+                                Entrar com <span>Google</span>
+                            </p>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="login_container">
+                <button class="login_btn">ENTRE</button>
+                <form class="login_form" action="/login" method="POST">
+                    <img class="close_form" src="/images/close_icon.svg" alt="close icon">
+                    <input type="text" placeholder="Email" name="username" required>
+                    <input type="password" placeholder="Senha" name="password" required>
+                    <input type="submit" value="ENTRAR" />
+                    <div class="social_login_box">
+                        <a href="/auth/google">
+                            <div>or</div>
+                            <img src="/images/google_logo.svg" alt="google logo">
+                            <p>
+                                Entrar com <span>Google</span>
+                            </p>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    {{#if error}}
+        {{#each error}}
+            <div class="login_error animated fadeInDown">{{this}}</div>
+        {{/each}}
+    {{/if}}
+    {{#if success}}
+        {{#each success}}
+            <div class="signup_success animated fadeInDown">{{this}}</div>
+        {{/each}}
+    {{/if}}
+    
+    <div>
+        
+        <h1 class="title">Sobre</h1>
+        {{!-- <p class="subtitle">A pendemia do coronavirus mudou completamente a forma como estamos vivendo.<br> O distanciamento social vem trazendo muitas dificuldades, mas também reacendeu um senso de comunidade que estava parcialmente perdido</p> --}}
+        {{!-- <p>The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost.</p> --}}
+        <p class="subtitle">A pendemia do coronavirus mudou completamente a forma como vivemos em sociedade.<br> Junto com a pandemia o distanciamento social trouxe muitas dificuldades, mas também reacendeu um senso de comunidade que estava parcialmente perdido.</p>
+        <p class="subtitle">Cenas de pessoas se encontrando e confraternizando nas sacadas dos prédios passaram a ser muito comuns, simbolizando a união das comunidades nesse momento de crise. Porque não usar esse espaço para ajudar as pessoas da nossa comunidade?.</p>
+
+        <p class="subtitle">Diante disso, decidimos criar a Sacado do Prédio.</p>
+        {{!-- <img class="ilustration" src="/images/sacada.png" alt="sacada ilustration"> --}}
+    </div>
+</main>
+
+{{!-- Cases presentation section --}}
+<section class="cases_presentation">
+    {{!-- <div class="cases_img_container"> --}}
+        {{!-- <img src="/images/sacada_close.png" alt="close das sacadas"> --}}
+    {{!-- </div> --}}
+    <div class="cases_presentation_content">
+        <h1>O que é?</h1>
+        
+        <ul>
+            <li><p>O Sacada do Prédio é uma plataforma onde pessoas podem ver quais são as necessidades das suas comunidades.</p></li>
+            <li><p>Além disso o usuário pode cadastrar casos, que são necessidades ou demandas pessoais ou da comunidade.</p></li>
+            <li><p>A partir daí outros usuários daquela região podem ficar sabendo das necessidades e se prontificar para ajudar.</p></li>
+        </ul>
+    </div>
+</section>
+
+{{!-- Team presentation section --}}
+<section class="team_presentation">
+    <div class="cases_presentation_content">
+        <h1>Como funciona?</h1>
+        <ul>
+            <li><p>Complete o seu registro para ver os casos registrados na sua região. Você poderá ver os casos no mapa ou nos cards abaixo dele. Ao clicar num caso você terá acesso a todas as informações dele, bem como às informações de contato do usuário que registrou o caso</p></li>
+            <li><p>Poste um novo caso para comunicar alertar os usuários daquela região sobre a sua necessidade ou campanha</p></li>
+            <li><p>Receba notificações por email quando um novo caso for registrado na sua região para que você possa ajudar</p></li>
+        </ul>
+    </div>
+    
+    <div class="credits_box">
+        <h2>Designed & Developed by:</h2>
+        <p class="devs">Daniel Paiva & Rafael Freitas</p>
+        <h2>Artwork by:</h2>
+        <p class="devs"><a target="_blank" href="https://www.linkedin.com/in/fernandamarsuradias/">Fernanda Dias</a></p>
+    </div>
+</section>
+
+{{!-- Home Scripts --}}
+<script src="javascripts/home.js"></script>
