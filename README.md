@@ -2,7 +2,6 @@
 
 ## About The Project
 
-
 The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost. Many scenes of people gathering in their balconies with their family and neighbours became very common, as well as the problems the communities around the globe started facing due to the pandemic. In face of this situation we decided to create Sacada do Prédio.
 
 Sacada do Prédio is a web application where people can post their needs and other users from their community can help. The idea for the name came from the multiple examples of people gathering in their balconies (Sacada in portuguese) to hang out, play music and stick together in the midst of the social distancing caused by the coronavirus pandemic.
@@ -89,9 +88,6 @@ Contributions are what make the open source community such an amazing place to b
 Daniel Paiva - [twitter](https://twitter.com/danielcspaiva) - [email](mailto:danielcspaiva@gmail.com) - [linkedin](https://www.linkedin.com/in/danielcspaiva/)
 
 Rafael Freitas - 
-
-Project Link: [https://github.com/rafaelbogfreitas/projeto_2](https://github.com/rafaelbogfreitas/projeto_2)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
