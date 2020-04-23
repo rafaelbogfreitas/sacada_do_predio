@@ -93,7 +93,7 @@ Contributions are what make the open source community such an amazing place to b
 
 Daniel Paiva - [twitter](https://twitter.com/danielcspaiva) - [email](mailto:danielcspaiva@gmail.com) - [linkedin](https://www.linkedin.com/in/danielcspaiva/)
 
-Rafael Freitas - ....
+Rafael Freitas - .....
 
 
 <!-- ACKNOWLEDGEMENTS -->
