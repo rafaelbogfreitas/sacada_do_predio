@@ -255,7 +255,12 @@ a {
   color: inherit; }
 
 button {
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Brown';
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  background-color: white; }
 
 nav, .login_error, .registration_reminder, .signup_success {
   position: fixed;
@@ -877,7 +882,7 @@ section {
   top: 0;
   left: 0;
   transition: transform 0.5s ease-in-out; }
-  @media (max-width: 400px) {
+  @media (max-width: 650px) {
     .dashboard {
       width: 85vw; } }
   .dashboard .cases_title_container {
