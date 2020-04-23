@@ -12,12 +12,15 @@
     width: 400px;
 
     @include mediaquery(400px){
-        width: 100%;
+        width: 85%;
     }
     height: 100vh;
     z-index: 10;
-    background-color: lighten($x_light_gray, 15%);
-    box-shadow: 2px 0 5px 0 $light_gray;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.53);
+
 
     //remove it from screen
     position: fixed;
