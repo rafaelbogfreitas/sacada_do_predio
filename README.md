@@ -62,6 +62,14 @@ git clone https://github.com/rafaelbogfreitas/projeto_2.git
 ```sh
 npm install
 ```
+3. Run the app
+```sh
+npm start
+```
+Or run with Nodemon
+```sh
+npm run dev
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
