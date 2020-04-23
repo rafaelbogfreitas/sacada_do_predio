@@ -9,9 +9,7 @@ Our balcony provides us with a place where we can hang out and connect with peop
 
 Our goal is to provide a platform where users can register and post new cases. Whenever a new case is posted, all users within that area are notified so that they can possibly help.
 
-### Built With
-
-Backend:
+### Built With:
 
 * [NodeJS](https://nodejs.org/en/)
 * [Express](https://expressjs.com/pt-br/)
@@ -35,47 +33,23 @@ Backend:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+The application consists in three main views:
+
+* Main page - Information about the project.
+* Dashboard - Dashboard where the user can see registered cases nearby on a map or in the cards below.
+* Single case - This is where the user can see the details of a single case and get contact info of the user who registered the case.
+
+The views are illustrated below for desktop and mobile devices:
 
 ![Product Name Screen Shot](public/images/readme/Sacada_Readme_Desktop.png)
 
 ![Product Name Screen Shot](public/images/readme/Sacada_Readme_Mobile.png)
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
-
-### Installation
- 
-1. Clone the repo
-```sh
-git clone https://github.com/rafaelbogfreitas/projeto_2.git
-```
-2. Install NPM packages
-```sh
-npm install
-```
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/rafaelbogfreitas/projeto_2/issues) for a list of proposed features (and known issues).
-
+The project is deployd and can be accessed at http://www.sacadadopredio.com/
 
 
 <!-- CONTRIBUTING -->
@@ -96,6 +70,8 @@ Contributions are what make the open source community such an amazing place to b
 
 Daniel Paiva - [@twitter_handle](https://twitter.com/danielcspaiva) - danielcspaiva@gmail.com
 
+Rafael Freitas - 
+
 Project Link: [https://github.com/rafaelbogfreitas/projeto_2](https://github.com/rafaelbogfreitas/projeto_2)
 
 
@@ -103,12 +79,9 @@ Project Link: [https://github.com/rafaelbogfreitas/projeto_2](https://github.com
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
-
-
-
+* [Ironhack São Paulo](https://www.ironhack.com/br)
+* [Joc]()
+* [Vini]()
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
