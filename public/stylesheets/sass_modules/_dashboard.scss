@@ -11,7 +11,7 @@
 
     width: 400px;
 
-    @include mediaquery(400px){
+    @include mediaquery(650px){
         width: 85vw;
     }
     height: 100vh;
