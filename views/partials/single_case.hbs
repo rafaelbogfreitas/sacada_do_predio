@@ -1,7 +1,13 @@
 <div class="single_case_card">
-    <a class="close_icon" href="/dashboard">
+    {{#if user}}
+        <a class="close_icon" href="/dashboard/">
+            <img src="/images/close_icon.svg" alt="close icon">
+        </a>
+    {{else}}
+    <a class="close_icon" href="/dashboard/public">
         <img src="/images/close_icon.svg" alt="close icon">
     </a>
+    {{/if}}
     {{!-- User info --}}
     <div class="user_info">
         <div class="case_img_container">
