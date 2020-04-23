@@ -869,15 +869,17 @@ section {
   width: 400px;
   height: 100vh;
   z-index: 10;
-  background-color: #f7f8f9;
-  box-shadow: 2px 0 5px 0 #7e8188;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 21px -7px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 0px 0px 21px -7px rgba(0, 0, 0, 0.53);
+  box-shadow: 0px 0px 21px -7px rgba(0, 0, 0, 0.53);
   position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.5s ease-in-out; }
   @media (max-width: 400px) {
     .dashboard {
-      width: 100%; } }
+      width: 85vw; } }
   .dashboard .cases_title_container {
     width: 100%;
     margin-top: 50px;
