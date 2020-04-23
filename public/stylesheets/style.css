@@ -753,7 +753,7 @@ section {
   transition: transform 0.5s ease-in-out; }
   @media (max-width: 400px) {
     .dashboard {
-      width: 85%; } }
+      width: 85vw; } }
   .dashboard .cases_title_container {
     width: 100%;
     margin-top: 50px;
