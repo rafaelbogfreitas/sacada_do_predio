@@ -68,7 +68,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Daniel Paiva - [@twitter_handle](https://twitter.com/danielcspaiva) - danielcspaiva@gmail.com
+Daniel Paiva - [twitter](https://twitter.com/danielcspaiva) - [email](mailto:danielcspaiva@gmail.com)
 
 Rafael Freitas - 
 
