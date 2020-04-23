@@ -48,6 +48,132 @@ table {
 * {
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-RegularItalicAlt.eot");
+  src: local("Brown-RegularItalicAlt"), url("/Brown/Brown-RegularItalicAlt.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-RegularItalicAlt.woff") format("woff"), url("/Brown/Brown-RegularItalicAlt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-LightItalic.eot");
+  src: local("Brown-LightItalic"), url("/Brown/Brown-LightItalic.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-LightItalic.woff") format("woff"), url("/Brown/Brown-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-Light.eot");
+  src: local("Brown-Light"), url("/Brown/Brown-Light.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-Light.woff") format("woff"), url("/Brown/Brown-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-Regular.eot");
+  src: local("Brown-Regular"), url("/Brown/Brown-Regular.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-Regular.woff") format("woff"), url("/Brown/Brown-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-BoldAlt.eot");
+  src: local("Brown-BoldAlt"), url("/Brown/Brown-BoldAlt.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-BoldAlt.woff") format("woff"), url("/Brown/Brown-BoldAlt.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-ThinItalic.eot");
+  src: local("Brown-ThinItalic"), url("/Brown/Brown-ThinItalic.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-ThinItalic.woff") format("woff"), url("/Brown/Brown-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-Thin.eot");
+  src: local("Brown-Thin"), url("/Brown/Brown-Thin.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-Thin.woff") format("woff"), url("/Brown/Brown-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-BoldItalicAlt.eot");
+  src: local("Brown-BoldItalicAlt"), url("/Brown/Brown-BoldItalicAlt.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-BoldItalicAlt.woff") format("woff"), url("/Brown/Brown-BoldItalicAlt.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-RegularItalic.eot");
+  src: local("Brown-RegularItalic"), url("/Brown/Brown-RegularItalic.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-RegularItalic.woff") format("woff"), url("/Brown/Brown-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-LightBackslanted.eot");
+  src: local("Brown-LightBackslanted"), url("/Brown/Brown-LightBackslanted.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-LightBackslanted.woff") format("woff"), url("/Brown/Brown-LightBackslanted.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-RegularBackslantedAlt.eot");
+  src: local("Brown-RegularBackslantedAlt"), url("/Brown/Brown-RegularBackslantedAlt.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-RegularBackslantedAlt.woff") format("woff"), url("/Brown/Brown-RegularBackslantedAlt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-RegularAlt.eot");
+  src: local("Brown-RegularAlt"), url("/Brown/Brown-RegularAlt.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-RegularAlt.woff") format("woff"), url("/Brown/Brown-RegularAlt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-Bold.eot");
+  src: local("Brown-Bold"), url("/Brown/Brown-Bold.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-Bold.woff") format("woff"), url("/Brown/Brown-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-ThinBackslanted.eot");
+  src: local("Brown-ThinBackslanted"), url("/Brown/Brown-ThinBackslanted.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-ThinBackslanted.woff") format("woff"), url("/Brown/Brown-ThinBackslanted.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-RegularBackslanted.eot");
+  src: local("Brown-RegularBackslanted"), url("/Brown/Brown-RegularBackslanted.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-RegularBackslanted.woff") format("woff"), url("/Brown/Brown-RegularBackslanted.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-BoldBackslanted.eot");
+  src: local("Brown-BoldBackslanted"), url("/Brown/Brown-BoldBackslanted.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-BoldBackslanted.woff") format("woff"), url("/Brown/Brown-BoldBackslanted.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-BoldItalic.eot");
+  src: local("Brown-BoldItalic"), url("/Brown/Brown-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-BoldItalic.woff") format("woff"), url("/Brown/Brown-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brown';
+  src: url("/Brown/Brown-BoldBackslanted-Alt.eot");
+  src: local("Brown-BoldBackslanted-Alt"), url("/Brown/Brown-BoldBackslanted-Alt.eot?#iefix") format("embedded-opentype"), url("/Brown/Brown-BoldBackslanted-Alt.woff") format("woff"), url("/Brown/Brown-BoldBackslanted-Alt.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
 .leave_screen {
   transform: translateX(-400px);
   transition: transform 0.5s ease-in-out; }
