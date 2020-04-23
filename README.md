@@ -2,13 +2,11 @@
 
 ## About The Project
 
-The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost. Many scenes of people gathering in their balconies with their family and neighbours became very common, as well as the problems the communities around the globe started facing due to the pandemic. In face of this situation we decided to create Sacada do Prédio.
+The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost. Scenes of people gathering in their balconies with their family and neighbours became very common, as well as the problems the communities around the globe started facing due to the pandemic. In face of this situation we decided to create Sacada do Prédio.
 
-Sacada do Prédio is a web application where people can post their needs and other users from their community can help. The idea for the name came from the multiple examples of people gathering in their balconies (Sacada in portuguese) to hang out, play music and stick together in the midst of the social distancing caused by the coronavirus pandemic.
+Sacada do Prédio is a web application where people can post their needs and other users from their community can help. The idea for the name came from the gatherings in the balconies (Sacada in portuguese). Our balconies are places where we can hang out and connect with people, but they also provide us with a view of our neighbourhood and community. Why not use it to better understant and help the people of our community?
 
-Our balconies are places where we can hang out and connect with people, but they also provide us with a view of our neighbourhood and community. Why not use it to help others who are in need?
-
-Our goal is to provide a platform where users can register and post new cases. Whenever a new case is posted, all users within that area are notified so that they can possibly help.
+Our goal is to provide a platform where users can register and post new cases. Whenever a new case is posted, all users within that area are notified so that they can possibly help. The users can also see the cases in theys community either in a map view or card view.
 
 ### Built With:
 
@@ -32,13 +30,13 @@ Our goal is to provide a platform where users can register and post new cases. W
 <!-- GETTING STARTED -->
 ## Getting Started
 
-The application consists in three main views:
+The application UI consists in three main views:
 
 * Main page - Information about the project.
-* Dashboard - Dashboard where the user can see registered cases nearby on a map or in the cards below.
+* Dashboard - Dashboard where the user can see the cases nearby on a map or in the cards below.
 * Single case - This is where the user can see the details of a single case and get contact info of the user who registered the case.
 
-The views are illustrated below for desktop and mobile devices:
+The views are illustrated in the screenshots below for desktop and mobile devices:
 
 ![Desktop views](public/images/readme/Sacada_Readme_Desktop.png)
 
