@@ -43,7 +43,7 @@ The views are illustrated in the screenshots below for desktop and mobile device
 
 ![Desktop views](public/images/readme/Sacada_Readme_Desktop.png)
 
-![Mobile views](public/images/readme/Sacada_Readme_Mobile2.png)
+![Mobile views](public/images/readme/Sacada_Readme_Mobile3.png)
 
 ### Prerequisites
 
