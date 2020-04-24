@@ -215,10 +215,10 @@ html {
     html {
       font-size: 12px; } }
 
-.no_opacity, .cases_presentation .cases_img_container, .cases_presentation .cases_presentation_content h1, .team_presentation .team_header {
+.no_opacity, .cases_presentation .cases_img_container, .cases_presentation .cases_presentation_content h1, .team_presentation .team_header, .red_section .team_header {
   opacity: 0; }
 
-.center, main, nav, .login_error, .registration_reminder, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .main_nav .signup_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .about_container, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, main, nav, .login_error, .registration_reminder, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .main_nav .signup_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .red_section .daniel, .team_presentation .rafael, .red_section .rafael, .team_presentation .team_img, .red_section .team_img, .about_container, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -484,6 +484,27 @@ nav, .login_error, .registration_reminder, .signup_success {
 
 .home_content_container {
   background-color: white; }
+  .home_content_container .ajude_btn {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 2px solid #711e19;
+    color: #711e19;
+    transition: box-shadow 0.3s linear;
+    margin-left: 50px; }
+    @media (max-width: 650px) {
+      .home_content_container .ajude_btn {
+        width: 40%;
+        padding: 8px 0px;
+        margin-bottom: 0;
+        text-align: center;
+        display: block;
+        margin: 0 auto; } }
+    .home_content_container .ajude_btn:hover {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+      transition: box-shadow 0.3s linear; }
 
 .main_text_content {
   width: 50%; }
@@ -636,7 +657,7 @@ section {
   .cases_presentation .ajude_btn {
     margin: 0 auto;
     margin-bottom: 100px;
-    padding: 20px 40px;
+    padding: 20px 50px;
     font-size: 1.5rem;
     background-color: transparent;
     border: 2px solid white;
@@ -644,15 +665,15 @@ section {
     transition: box-shadow 0.3s linear; }
     @media (max-width: 650px) {
       .cases_presentation .ajude_btn {
-        width: 90%;
-        padding: 10px 0px;
+        width: 40%;
+        padding: 8px 0px;
         margin-bottom: 0;
         text-align: center; } }
     .cases_presentation .ajude_btn:hover {
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
       transition: box-shadow 0.3s linear; }
 
-.team_presentation {
+.team_presentation, .red_section {
   position: relative;
   overflow: hidden;
   background-color: #dc5550;
@@ -679,7 +700,7 @@ section {
   padding-bottom: 50px;
   color: white; }
   @media (max-width: 500px) {
-    .team_presentation {
+    .team_presentation, .red_section {
       flex-direction: column;
       -moz-flex-direction: column;
       -o-flex-direction: column;
@@ -695,7 +716,7 @@ section {
       -o-justify-content: center;
       -ms-justify-content: center;
       -webkit-justify-content: center; } }
-  .team_presentation .team_header {
+  .team_presentation .team_header, .red_section .team_header {
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -707,9 +728,9 @@ section {
     -ms-align-self: flex-end;
     -webkit-align-self: flex-end; }
     @media (max-width: 650px) {
-      .team_presentation .team_header {
+      .team_presentation .team_header, .red_section .team_header {
         font-size: 3rem; } }
-  .team_presentation .daniel, .team_presentation .rafael {
+  .team_presentation .daniel, .red_section .daniel, .team_presentation .rafael, .red_section .rafael {
     width: 40%;
     margin: 20px 0;
     flex-direction: column;
@@ -717,20 +738,20 @@ section {
     -o-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-flex-direction: column; }
-    .team_presentation .daniel h2, .team_presentation .rafael h2 {
+    .team_presentation .daniel h2, .red_section .daniel h2, .team_presentation .rafael h2, .red_section .rafael h2 {
       font-weight: bold;
       font-size: 1.6rem; }
-    .team_presentation .daniel p, .team_presentation .rafael p {
+    .team_presentation .daniel p, .red_section .daniel p, .team_presentation .rafael p, .red_section .rafael p {
       font-size: 1.2rem;
       padding: 40px 0;
       width: 60%;
       margin: 0 !important; }
     @media (max-width: 650px) {
-      .team_presentation .daniel, .team_presentation .rafael {
+      .team_presentation .daniel, .red_section .daniel, .team_presentation .rafael, .red_section .rafael {
         width: 90%; }
-        .team_presentation .daniel h2, .team_presentation .daniel p, .team_presentation .rafael h2, .team_presentation .rafael p {
+        .team_presentation .daniel h2, .red_section .daniel h2, .team_presentation .daniel p, .red_section .daniel p, .team_presentation .rafael h2, .red_section .rafael h2, .team_presentation .rafael p, .red_section .rafael p {
           font-size: 1.3rem; } }
-  .team_presentation .team_about {
+  .team_presentation .team_about, .red_section .team_about {
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -747,7 +768,7 @@ section {
     width: 100%;
     padding: 40px 0;
     opacity: 0; }
-  .team_presentation .team_img {
+  .team_presentation .team_img, .red_section .team_img {
     width: 200px;
     height: 200px;
     opacity: 0;
@@ -755,13 +776,13 @@ section {
     overflow: hidden;
     border: 5px solid white; }
     @media (max-width: 650px) {
-      .team_presentation .team_img {
+      .team_presentation .team_img, .red_section .team_img {
         width: 150px;
         height: 150px; } }
-  .team_presentation .socialmedia_img {
+  .team_presentation .socialmedia_img, .red_section .socialmedia_img {
     width: 30px;
     height: 30px; }
-  .team_presentation .social_media {
+  .team_presentation .social_media, .red_section .social_media {
     width: 20%;
     display: flex;
     -moz-display: flex;
@@ -774,9 +795,9 @@ section {
     -ms-justify-content: space-around;
     -webkit-justify-content: space-around; }
     @media (max-width: 650px) {
-      .team_presentation .social_media {
+      .team_presentation .social_media, .red_section .social_media {
         width: 50%; } }
-  .team_presentation:after {
+  .team_presentation:after, .red_section:after {
     content: '';
     position: absolute;
     left: -300px;
@@ -785,7 +806,7 @@ section {
     height: 300px;
     transform: rotate(5deg);
     background-color: white; }
-  .team_presentation .credits_box {
+  .team_presentation .credits_box, .red_section .credits_box {
     display: flex;
     -moz-display: flex;
     -o-display: flex;
@@ -797,16 +818,16 @@ section {
     z-index: 2;
     margin-left: 50px;
     margin-bottom: 10px; }
-    .team_presentation .credits_box h2 {
+    .team_presentation .credits_box h2, .red_section .credits_box h2 {
       margin-bottom: 10px;
       margin-left: 10px;
       font-weight: bold;
       color: #c6480c; }
-    .team_presentation .credits_box .devs {
+    .team_presentation .credits_box .devs, .red_section .credits_box .devs {
       color: #7e8188;
       margin-left: 10px; }
     @media (max-width: 650px) {
-      .team_presentation .credits_box {
+      .team_presentation .credits_box, .red_section .credits_box {
         margin-left: 20px;
         bottom: 0;
         flex-direction: column;
@@ -814,9 +835,9 @@ section {
         -o-flex-direction: column;
         -ms-flex-direction: column;
         -webkit-flex-direction: column; }
-        .team_presentation .credits_box h2 {
+        .team_presentation .credits_box h2, .red_section .credits_box h2 {
           margin-bottom: 0; }
-        .team_presentation .credits_box p {
+        .team_presentation .credits_box p, .red_section .credits_box p {
           margin-bottom: 5px; } }
 
 .btn_container {
@@ -864,33 +885,86 @@ section {
   -o-flex-direction: column;
   -ms-flex-direction: column;
   -webkit-flex-direction: column; }
-  .about_container > * {
-    width: 100%; }
+  @media (max-width: 650px) {
+    .about_container {
+      width: 100%;
+      height: 80%;
+      margin: 0 auto;
+      padding: 70px 20px; } }
 
 .about_title {
   font-size: 5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left; }
+  @media (max-width: 650px) {
+    .about_title {
+      font-size: 3rem; } }
 
 .about_text {
   font-size: 2rem; }
+  @media (max-width: 650px) {
+    .about_text {
+      font-size: 1.5rem; } }
 
-main .about_container .about_title {
-  color: green; }
-
-main .about_container .about_text {
-  color: purple; }
+main .about_container {
+  display: flex;
+  flex-direction: row; }
+  @media (max-width: 650px) {
+    main .about_container {
+      margin-top: 100px; } }
+  main .about_container .about_title {
+    color: #c6480c;
+    margin: 3rem 0; }
+  main .about_container .about_text {
+    color: #711e19;
+    margin: 3rem 0; }
 
 section:nth-child(2) .about_container .about_title {
-  color: red; }
+  align-self: flex-start;
+  color: white;
+  margin: 1.5rem 0; }
 
 section:nth-child(2) .about_container .about_text {
-  color: yellow; }
+  color: white;
+  margin: 1.5rem 0; }
 
-section:nth-child(3) .about_container .about_title {
-  color: purple; }
+.about_container .about_title {
+  align-self: flex-start;
+  margin: 1.5rem 0; }
 
-section:nth-child(3) .about_container .about_text {
-  color: turquoise; }
+.about_container .about_text {
+  margin: 1.5rem 0; }
+
+@media (max-width: 650px) {
+  .red_section:after {
+    content: '';
+    position: absolute;
+    left: -300px;
+    right: 0;
+    top: 83%;
+    height: 300px;
+    transform: rotate(5deg);
+    background-color: white; } }
+
+.ajude_btn {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: box-shadow 0.3s linear; }
+  @media (max-width: 650px) {
+    .ajude_btn {
+      width: 40%;
+      padding: 8px 0px;
+      margin-bottom: 0;
+      text-align: center; } }
+  .ajude_btn:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+    transition: box-shadow 0.3s linear; }
 
 .dashboard {
   position: relative;
