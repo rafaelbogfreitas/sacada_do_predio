@@ -1500,6 +1500,10 @@ img {
   text-align: center !important;
   margin-bottom: 0 !important; }
 
+@media (max-width: 600px) {
+  .padding_vertical {
+    padding: 50px 0; } }
+
 .edit_profile {
   width: 80%; }
   .edit_profile .img_container {
