@@ -59,7 +59,7 @@ In order to run this project locally you will need to:
 
 1. Clone the repo
 ```sh
-git clone https://github.com/rafaelbogfreitas/projeto_2.git
+git clone https://github.com/rafaelbogfreitas/sacada_do_predio.git
 ```
 2. Install NPM packages
 ```sh
