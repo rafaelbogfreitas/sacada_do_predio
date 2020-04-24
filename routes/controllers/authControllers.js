@@ -50,7 +50,7 @@ let authControllers = {
                                             <main style="background-color:#dc5550; width:100%; height:auto; display:flex; justify-content:flex-start; flex-direction:column; align-items:center">
                                             <h1 style="color:white; width:90%">Seja Bem-vindo à Sacada!</h1>
                                             <div style="width:90%; height:60%; background-color:white; box-shadow: 0 0 3px 0 black">
-                                            <h2 style="color:#c84d17; text-align:left; width:90%; margin:10px auto">Obrigado por se juntar a nossa comunidade!</h2>
+                                            <h2 style="color:#c84d17; text-align:left; width:90%; margin:10px auto">Obrigado por se juntar a nossa comunidade, ${newUser.username}!</h2>
                                             <p style="width:90%; text-align:left; margin:10px auto">
                                                 Vivemos tempos difíceis e os que estão ao nosso lado 
                                                 são os quê podemos contar. Nunca foi tão essencial a 
