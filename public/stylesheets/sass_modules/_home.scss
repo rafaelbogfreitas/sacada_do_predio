@@ -250,6 +250,32 @@
 
 .home_content_container {
     background-color: white;
+
+    .ajude_btn {
+        // margin: 0 auto;
+        margin-bottom: 100px;
+        padding: 20px 50px;
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: 2px solid $dark_red;
+        color: $dark_red;
+        transition: box-shadow 0.3s linear;
+        margin-left: 50px;
+
+        @include mediaquery(650px){
+            width: 40%;
+            padding: 8px 0px;
+            margin-bottom: 0;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+            transition: box-shadow 0.3s linear;
+        }
+    }
 }
 
 .main_text_content {
@@ -403,30 +429,31 @@ section {
                 margin: 20px;
             }
         }
-    }
 
-    .ajude_btn {
-        margin: 0 auto;
-        margin-bottom: 100px;
-        padding: 20px 40px;
-        font-size: 1.5rem;
-        background-color: transparent;
-        border: 2px solid white;
-        color: white;
-        transition: box-shadow 0.3s linear;
-
-        @include mediaquery(650px){
-            width: 90%;
-            padding: 10px 0px;
-            margin-bottom: 0;
-            text-align: center;
-        }
-
-        &:hover {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+        .ajude_btn {
+            margin: 0 auto;
+            margin-bottom: 100px;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
             transition: box-shadow 0.3s linear;
+    
+            @include mediaquery(650px){
+                width: 40%;
+                padding: 8px 0px;
+                margin-bottom: 0;
+                text-align: center;
+            }
+    
+            &:hover {
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+                transition: box-shadow 0.3s linear;
+            }
         }
     }
+
 }
 
 .team_presentation {
