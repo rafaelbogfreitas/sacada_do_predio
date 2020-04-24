@@ -66,8 +66,14 @@ imageObserver.observe(buildingImg);
 
 //Remove login feedback 
 let error = document.querySelector('.login_error');
-
+let success = document.querySelector('.signup_success');
 setTimeout(function(){
     error.classList.remove('fadeInDown');
     error.classList.add('fadeOutUp');
 }, 5000);
+
+setTimeout(function(){
+    success.classList.remove('fadeInDown');
+    success.classList.add('fadeOutUp');
+}, 5000);
+
