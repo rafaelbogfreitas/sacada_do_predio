@@ -92,7 +92,7 @@ git checkout -b feature/AmazingFeature
 ```
 3. Commit your Changes
 ```sh
-git commit -m 'Add some AmazingFeature
+git commit -m 'Add some AmazingFeature'
 ```
 4. Push to the Branch
 ```sh
@@ -113,8 +113,7 @@ Rafael Freitas - ......
 <!-- ACKNOWLEDGEMENTS -->
 ## Special thanks
 
-* [Ironhack São Paulo](https://www.ironhack.com/br)
-* [Joc](https://github.com/jocnjr/library-project-7/commits?author=jocnjr) - Lead Teacher at Ironhack São Paulo.
-* [Vini](https://github.com/vinivibe) - Teaching assistant at Ironhack São Paulo.
-* [Mônica](https://github.com/mdccbranco) - Teaching assistant at Ironhack São Paulo.
-* [Grazi](https://github.com/grazidiandra) - Teaching assistant at Ironhack São Paulo.
+* [Joc](https://github.com/jocnjr/library-project-7/commits?author=jocnjr) - Lead Teacher at [Ironhack São Paulo.](https://www.ironhack.com/br)
+* [Vini](https://github.com/vinivibe) - Teaching assistant at [Ironhack São Paulo.](https://www.ironhack.com/br)
+* [Mônica](https://github.com/mdccbranco) - Teaching assistant at [Ironhack São Paulo.](https://www.ironhack.com/br)
+* [Grazi](https://github.com/grazidiandra) - Teaching assistant at [Ironhack São Paulo.](https://www.ironhack.com/br)
