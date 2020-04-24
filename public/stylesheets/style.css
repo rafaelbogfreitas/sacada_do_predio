@@ -218,7 +218,7 @@ html {
 .no_opacity, .cases_presentation .cases_img_container, .cases_presentation .cases_presentation_content h1, .team_presentation .team_header {
   opacity: 0; }
 
-.center, main, nav, .login_error, .registration_reminder, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .main_nav .signup_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
+.center, main, nav, .login_error, .registration_reminder, .signup_success, .btn, .main_nav form, .main_nav .login_form .social_login_box a, .main_nav .signup_form .social_login_box a, .cases_presentation, .team_presentation .daniel, .team_presentation .rafael, .team_presentation .team_img, .about_container, .main_new_case .new_case_container, .main_new_case .new_case_container form, .main_new_case .new_case_container form .file_label_box, .single_case_card .user_info .user_img_container, .edit_profile, .registration_layer, .map_content_container, .map_content_container .intro_text .down_arrow {
   display: flex;
   -moz-display: flex;
   -o-display: flex;
@@ -854,6 +854,43 @@ section {
       .home_content_container .ilustration {
         width: 100%;
         align-self: center; } }
+
+.about_container {
+  width: 80%;
+  height: 90vh;
+  margin: 0 auto;
+  flex-direction: column;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column; }
+  .about_container > * {
+    width: 100%; }
+
+.about_title {
+  font-size: 5rem;
+  font-weight: bold; }
+
+.about_text {
+  font-size: 2rem; }
+
+main .about_container .about_title {
+  color: green; }
+
+main .about_container .about_text {
+  color: purple; }
+
+section:nth-child(2) .about_container .about_title {
+  color: red; }
+
+section:nth-child(2) .about_container .about_text {
+  color: yellow; }
+
+section:nth-child(3) .about_container .about_title {
+  color: purple; }
+
+section:nth-child(3) .about_container .about_text {
+  color: turquoise; }
 
 .dashboard {
   position: relative;

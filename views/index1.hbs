@@ -60,46 +60,58 @@
         {{/each}}
     {{/if}}
     
-    <div>
-        
-        <h1 class="title">Sobre</h1>
-        {{!-- <p class="subtitle">A pendemia do coronavirus mudou completamente a forma como estamos vivendo.<br> O distanciamento social vem trazendo muitas dificuldades, mas também reacendeu um senso de comunidade que estava parcialmente perdido</p> --}}
-        {{!-- <p>The coronavirus pandemic changed the way we function as a society. The social distancing we had to undergo brougth back a sense of community that had been partially lost.</p> --}}
-        <p class="subtitle">A pendemia do coronavirus mudou completamente a forma como vivemos em sociedade.<br> Junto com a pandemia o distanciamento social trouxe muitas dificuldades, mas também reacendeu um senso de comunidade que estava parcialmente perdido.</p>
-        <p class="subtitle">Cenas de pessoas se encontrando e confraternizando nas sacadas dos prédios passaram a ser muito comuns, simbolizando a união das comunidades nesse momento de crise. Porque não usar esse espaço para ajudar as pessoas da nossa comunidade?.</p>
-
-        <p class="subtitle">Diante disso, decidimos criar a Sacado do Prédio.</p>
-        {{!-- <img class="ilustration" src="/images/sacada.png" alt="sacada ilustration"> --}}
+    <div class="home_content_container">
+        <div class="main_text_content">
+            <h1 class="title">Ajude pessoas da sua comunidade</h1>
+            <p class="subtitle">O que você pode ver da sua sacada?</p>
+        </div>
+        <img class="ilustration" src="/images/sacada.png" alt="sacada ilustration">
     </div>
 </main>
 
 {{!-- Cases presentation section --}}
 <section class="cases_presentation">
-    {{!-- <div class="cases_img_container"> --}}
-        {{!-- <img src="/images/sacada_close.png" alt="close das sacadas"> --}}
-    {{!-- </div> --}}
+    <div class="cases_img_container">
+        <img src="/images/sacada_close.png" alt="close das sacadas">
+    </div>
     <div class="cases_presentation_content">
-        <h1>O que é?</h1>
-        
-        <ul>
-            <li><p>O Sacada do Prédio é uma plataforma onde pessoas podem ver quais são as necessidades das suas comunidades.</p></li>
-            <li><p>Além disso o usuário pode cadastrar casos, que são necessidades ou demandas pessoais ou da comunidade.</p></li>
-            <li><p>A partir daí outros usuários daquela região podem ficar sabendo das necessidades e se prontificar para ajudar.</p></li>
-        </ul>
+        <h1>Já pensou em ajudar alguém hoje?</h1>
+        <p>Da sacada podemos confraternizar com vizinhos, amigos e familiares, mas também conseguimos ver as necessidades da nossa comunidade.</p>
+        <a class="ajude_btn" href="/dashboard/public">
+            Ajude
+        </a>
     </div>
 </section>
 
 {{!-- Team presentation section --}}
 <section class="team_presentation">
-    <div class="cases_presentation_content">
-        <h1>Como funciona?</h1>
-        <ul>
-            <li><p>Complete o seu registro para ver os casos registrados na sua região. Você poderá ver os casos no mapa ou nos cards abaixo dele. Ao clicar num caso você terá acesso a todas as informações dele, bem como às informações de contato do usuário que registrou o caso</p></li>
-            <li><p>Poste um novo caso para comunicar alertar os usuários daquela região sobre a sua necessidade ou campanha</p></li>
-            <li><p>Receba notificações por email quando um novo caso for registrado na sua região para que você possa ajudar</p></li>
-        </ul>
+    <h1 class="team_header">Quem Somos</h1>
+    <div class="daniel">
+        <div class="team_img"><img src="/images/daniel.png" alt="IMAGE"></div>
+        <div class="team_about">
+            <h2>Daniel Paiva</h2>
+            <p>Desenvolvedor Full Stack</p>
+            <div class="social_media">
+                <a target="_blank" href="https://github.com/danielcspaiva"><img class="socialmedia_img"
+                        src="/images/github_white.png" alt=""></a>
+                <a target="_blank" href="https://www.linkedin.com/in/danielcspaiva/"><img class="socialmedia_img"
+                        src="/images/linkedin_white.png" alt=""></a>
+            </div>
+        </div>
     </div>
-    
+    <div class="rafael">
+        <div class="team_img"><img src="/images/rafael.png" alt="IMAGE"></div>
+        <div class="team_about">
+            <h2>Rafael Freitas</h2>
+            <p>Desenvolvedor Full Stack</p>
+            <div class="social_media">
+                <a target="_blank" href="https://github.com/rafaelbogfreitas/"><img class="socialmedia_img"
+                        src="/images/github_white.png" alt=""></a>
+                <a target="_blank" href="https://www.linkedin.com/in/rafaelborgesfreitas/"><img class="socialmedia_img"
+                        src="/images/linkedin_white.png" alt=""></a>
+            </div>
+        </div>
+    </div>
     <div class="credits_box">
         <h2>Designed & Developed by:</h2>
         <p class="devs">Daniel Paiva & Rafael Freitas</p>
