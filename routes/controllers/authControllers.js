@@ -44,17 +44,10 @@ let authControllers = {
         
                                     <strong style="rgb(198, 72, 12)">Sacada Team</strong>
                                 `
-<<<<<<< HEAD
                         })
                         .then(info => console.log(info))
                         .catch(error => console.log(error))
                             req.flash('success','Novo usuário cadastrado');
-=======
-                                })
-                                .then(info => console.log(info))
-                                .catch(error => console.log(error))
-                            req.flash('success', 'Novo usuário cadastrado');
->>>>>>> 78e7a87378b1ee96fcaf35d9daa4681c46adc18d
                             res.redirect('/');
                         })
                         .catch(error => console.log(error));
