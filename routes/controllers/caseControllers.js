@@ -100,9 +100,9 @@ let caseControllers = {
             let data = {data:[{ owner: owner, case: cases}]}
             if (req.session.passport) {
                 let { user } = req.session.passport;
-                data = {data:[{ owner: owner, case: cases, user: user }]};
                 if (user == cases.user._id) {
                     owner = true;
+                    data = {data:[{ owner: owner, case: cases, user: user }]};
                 }
             }
             res.render('dashboard/single-case', data)
