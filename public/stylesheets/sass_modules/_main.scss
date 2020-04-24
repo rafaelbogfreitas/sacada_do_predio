@@ -39,7 +39,13 @@ a {
 }
 
 button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     cursor: pointer;
+    font-family: 'Brown';
+    border: none;
+    border-radius:0;
+    background-color: white;
 }
 
 nav {

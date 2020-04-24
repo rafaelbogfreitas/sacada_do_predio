@@ -1,0 +1,47 @@
+.about_container {
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+
+    @extend .center;
+    @include flexbox(flex-direction, column);
+
+    & > * {
+        width: 100%;
+    }
+}
+
+
+.about_title {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.about_text {
+    font-size: 2rem;
+}
+
+main .about_container{
+    .about_title{
+        color: green;
+    }
+    .about_text{
+        color:purple;
+    }
+}
+section:nth-child(2) .about_container{
+    .about_title{
+        color: red;
+    }
+    .about_text{
+        color: yellow;
+    }
+}
+section:nth-child(3) .about_container{
+    .about_title{
+        color:purple;
+    }
+    .about_text{
+        color  : turquoise;
+    }
+}
