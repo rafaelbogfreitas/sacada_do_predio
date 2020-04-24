@@ -877,7 +877,7 @@ section {
 
 .about_container {
   width: 80%;
-  height: 90vh;
+  height: auto;
   margin: 0 auto;
   flex-direction: column;
   -moz-flex-direction: column;

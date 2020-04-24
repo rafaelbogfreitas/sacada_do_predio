@@ -1,4 +1,3 @@
-const User = require('../../models/User');
 const Case = require('../../models/Case');
 
 let apiControllers = {

@@ -176,7 +176,7 @@ function startMap() {
         .then(data => {
 
             let markers = data.data.map(caseData => {
-                // console.log(caseData.location.coordinates[1]);
+
                 let infoWindow = new google.maps.InfoWindow({
                     content: `<h1 style="font-weight:bold; color:#c6480c;">${caseData.title}</h1>
                              <a href="/case/${caseData._id}">Veja caso</a>   

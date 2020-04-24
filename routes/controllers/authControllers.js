@@ -39,7 +39,6 @@ let authControllers = {
                             password: hash,
                         })
                         .then(newUser => {
-                            console.log('new user created')
                             transporter.sendMail({
                                 from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
                                 to: newUser.email,
@@ -55,7 +54,6 @@ let authControllers = {
                         })
                         .then(info => console.log(info))
                         .catch(error => console.log(error))
-                            console.log('New user created');
                             req.flash('success','Novo usuário cadastrado');
                             res.redirect('/');
                         })
@@ -66,7 +64,6 @@ let authControllers = {
                 }
             })
             .catch(error => console.log(error))
-        // res.redirect('/');
     },
     
     loginPost: passport.authenticate("local", {

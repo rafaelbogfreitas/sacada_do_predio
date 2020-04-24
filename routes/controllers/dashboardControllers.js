@@ -32,7 +32,6 @@ let dashboardControllers = {
                         })
                         .populate('user')
                         .then(cases => {
-                            // console.log(cases)
                             res.render('dashboard/dashboard', {
                                 user: user,
                                 cases: cases
@@ -44,7 +43,6 @@ let dashboardControllers = {
                         .find()
                         .populate('user')
                         .then(cases => {
-                            // console.log(cases)
                             res.render('dashboard/dashboard', {
                                 user: user,
                                 cases: cases
@@ -76,7 +74,6 @@ let dashboardControllers = {
         let {
             user
         } = req.session.passport || null;
-        // console.log(req.body)
         const {
             title,
             description,
@@ -119,7 +116,6 @@ let dashboardControllers = {
 
         Case.create(caseToCreate)
             .then(caseResponse => {
-                console.log(caseResponse.location)
                 User
                     .findByIdAndUpdate(user, {
                         $push: {
@@ -140,7 +136,6 @@ let dashboardControllers = {
                         }
                     })
                     .then(users => {
-                        console.log(users)
                         users.forEach(user => {
                             transporter.sendMail({
                                     from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
