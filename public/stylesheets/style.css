@@ -485,7 +485,6 @@ nav, .login_error, .registration_reminder, .signup_success {
 .home_content_container {
   background-color: white; }
   .home_content_container .ajude_btn {
-    margin: 0 auto;
     margin-bottom: 100px;
     padding: 20px 50px;
     font-size: 1.5rem;
@@ -654,24 +653,24 @@ section {
         .cases_presentation .cases_presentation_content p {
           font-size: 1.3rem;
           margin: 20px; } }
-  .cases_presentation .ajude_btn {
-    margin: 0 auto;
-    margin-bottom: 100px;
-    padding: 20px 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    transition: box-shadow 0.3s linear; }
-    @media (max-width: 650px) {
-      .cases_presentation .ajude_btn {
-        width: 40%;
-        padding: 8px 0px;
-        margin-bottom: 0;
-        text-align: center; } }
-    .cases_presentation .ajude_btn:hover {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+    .cases_presentation .cases_presentation_content .ajude_btn {
+      margin: 0 auto;
+      margin-bottom: 100px;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
       transition: box-shadow 0.3s linear; }
+      @media (max-width: 650px) {
+        .cases_presentation .cases_presentation_content .ajude_btn {
+          width: 40%;
+          padding: 8px 0px;
+          margin-bottom: 0;
+          text-align: center; } }
+      .cases_presentation .cases_presentation_content .ajude_btn:hover {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
+        transition: box-shadow 0.3s linear; }
 
 .team_presentation, .red_section {
   position: relative;
@@ -948,7 +947,6 @@ section:nth-child(2) .about_container .about_text {
     background-color: white; } }
 
 .ajude_btn {
-  margin: 0 auto;
   margin-bottom: 100px;
   padding: 20px 50px;
   font-size: 1.5rem;
@@ -960,7 +958,7 @@ section:nth-child(2) .about_container .about_text {
     .ajude_btn {
       width: 40%;
       padding: 8px 0px;
-      margin-bottom: 0;
+      margin: 50px;
       text-align: center; } }
   .ajude_btn:hover {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.522);
