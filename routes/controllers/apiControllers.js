@@ -1,15 +1,13 @@
-const User = require('../../models/User');
 const Case = require('../../models/Case');
 
 let apiControllers = {
-    
-    casesApi: function(req, res, next) {
+    casesApi: function (req, res, next) {
         Case.find()
-        .populate('user')
-            .then( cases => {
+            .populate('user')
+            .then(cases => {
                 res.send(cases);
             })
-            .catch( error => console.log( error));
+            .catch(error => console.log(error));
     }
 }
 

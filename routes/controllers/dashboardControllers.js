@@ -16,7 +16,6 @@ let dashboardControllers = {
             .findById(user)
             .populate('casesCreated') // POPULANDO O ARRAY CASES CREATED PARA MOSTRAR NA DASHBOARD MY CASES
             .then(user => {
-                // console.log(`User Location: ${user.location}`)
                 if (user.status == 'registered') {
                     Case
                         .find({
@@ -32,7 +31,6 @@ let dashboardControllers = {
                         })
                         .populate('user')
                         .then(cases => {
-                            // console.log(cases)
                             res.render('dashboard/dashboard', {
                                 user: user,
                                 cases: cases
@@ -44,7 +42,6 @@ let dashboardControllers = {
                         .find()
                         .populate('user')
                         .then(cases => {
-                            // console.log(cases)
                             res.render('dashboard/dashboard', {
                                 user: user,
                                 cases: cases
@@ -76,7 +73,6 @@ let dashboardControllers = {
         let {
             user
         } = req.session.passport || null;
-        // console.log(req.body)
         const {
             title,
             description,
@@ -119,7 +115,6 @@ let dashboardControllers = {
 
         Case.create(caseToCreate)
             .then(caseResponse => {
-                console.log(caseResponse.location)
                 User
                     .findByIdAndUpdate(user, {
                         $push: {
@@ -140,12 +135,11 @@ let dashboardControllers = {
                         }
                     })
                     .then(users => {
-                        console.log(users)
                         users.forEach(user => {
                             transporter.sendMail({
                                     from: '"Sacada do Prédio" <sacadadopredio@gmail.com>',
                                     to: user.email,
-                                    subject: 'Novo caso na sua região', 
+                                    subject: 'Novo caso na sua região',
                                     text: ``,
                                     html: `
                                         <p>Olá ${user.username},</p>
@@ -156,9 +150,9 @@ let dashboardControllers = {
 
                                         <strong style="rgb(198, 72, 12)">Sacada Team</strong>
                                     `
-                            })
-                            .then(info => console.log(info))
-                            .catch(error => console.log(error))
+                                })
+                                .then(info => console.log(info))
+                                .catch(error => console.log(error))
                         })
                     })
                     .catch(error => console.log(error))
