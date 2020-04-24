@@ -5,11 +5,9 @@ const userSchema = new Schema({
     username: {
         type: String,
         required: true
-        // unique: true
     },
     password: {
-        type: String,
-        // required: true
+        type: String
     },
     googleID: String,
     email: {
@@ -19,11 +17,10 @@ const userSchema = new Schema({
     status: {
         type: String,
         enum: ['registered', 'waiting'],
-        default: 'waiting',
+        default: 'waiting'
     },
     address: {
-        type: String,
-        // default: 'missing address'
+        type: String
     },
     imageName: {
         type: String,
@@ -50,7 +47,7 @@ const userSchema = new Schema({
     },
     location: {
         type: {
-            type: String, 
+            type: String,
             enum: ['Point'],
             default: undefined
         },

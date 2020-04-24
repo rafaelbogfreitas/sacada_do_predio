@@ -100,7 +100,7 @@ passport.use(new LocalStrategy({
             return next(err);
         }
 
-        // if(!user.verified){
+        // if(!user.verified){  // TODO VERIFY EMAIL
         //     return next(null, false, {
         //         message: "Please confirm your email"
         //     });
@@ -130,8 +130,6 @@ passport.use(new GoogleStrategy({
     clientSecret: process.env.GOOGLE_AUTH_SECRET,
     callbackURL: "/auth/google/callback"
 }, (accessToken, refreshToken, profile, done) => {
-    // to see the structure of the data in received response:
-    // console.log("Google account details:", profile);
 
     User.findOne({
             googleID: profile.id

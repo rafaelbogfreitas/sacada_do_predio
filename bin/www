@@ -3,7 +3,7 @@
 let app = require('../app');
 const http = require('http');
 
-console.log('hello')
+console.log('Running')
 
 app.use((req, res, next) => {
     res.status(404);
@@ -48,7 +48,3 @@ server.on('error', error => {
 server.listen(process.env.PORT, () => {
     console.log(`Sacada do Prédio is listening on port ${process.env.PORT}`)
 });
-
-
-
-
