@@ -13,21 +13,21 @@ Our goal is to provide a platform where users can register and post new cases. W
 
 ### Built With:
 
-* [NodeJS](https://nodejs.org/en/)
-* [Express](https://expressjs.com/pt-br/)
-* [Handlebars](https://handlebarsjs.com/)
-* [MongoDB](https://www.mongodb.com/)
-* [Mongoose](https://mongoosejs.com/)
-* [Axios](https://github.com/axios/axios)
-* [Bcrypt](https://www.npmjs.com/package/bcrypt)
-* [Passport](http://www.passportjs.org/)
-* [Claudinary](https://cloudinary.com/)
-* [Nodemailer](https://nodemailer.com/about/)
-* [Sparkpost](https://www.sparkpost.com/)
-* [Google Maps Api](https://developers.google.com/?hl=pt-br)
-* [Hotjar](https://www.hotjar.com/)
-* [Tawk.to](https://www.tawk.to/)
-* [Heroku](https://www.heroku.com/)
+* [NodeJS](https://nodejs.org/en/) - Backend Server.
+* [Express](https://expressjs.com/pt-br/) - Web framework.
+* [Handlebars](https://handlebarsjs.com/) - View Engine.
+* [MongoDB](https://www.mongodb.com/) - Database.
+* [Mongoose](https://mongoosejs.com/) - MongoDB object modeling for Node.js.
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
+* [Bcrypt](https://www.npmjs.com/package/bcrypt) - A library to help you hash passwords.
+* [Passport](http://www.passportjs.org/) - Simple, unobtrusive authentication for Node.js.
+* [Claudinary](https://cloudinary.com/) - Platform for storing images.
+* [Nodemailer](https://nodemailer.com/about/) - Automatic email sending via Node.js.
+* [Google OAuth](https://developers.google.com/identity/protocols/oauth2) - User authentication via Google account.
+* [Google Maps Api](https://developers.google.com/?hl=pt-br) - Google Maps and address autocomplete.
+* [Hotjar](https://www.hotjar.com/) - Website behavior analytics.
+* [Tawk.to](https://www.tawk.to/) - Live chat solution for support on your website.
+* [Heroku](https://www.heroku.com/) - Cloud platform where the project is deployed.
 
 
 <!-- GETTING STARTED -->
@@ -51,6 +51,8 @@ In order to run this project locally you will need to:
 
 * Setup Google API keys for Google Maps and OAuth.
 * Setup Cloudinary API keys.
+* Setup MongoDB locally or on the cloud.
+* Install Node.js.
 
 
 ### Installation
@@ -81,12 +83,21 @@ The project is deployd and can be accessed at http://www.sacadadopredio.com/
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch
+```sh
+git checkout -b feature/AmazingFeature
+```
+3. Commit your Changes
+```sh
+git commit -m 'Add some AmazingFeature
+```
+4. Push to the Branch
+```sh
+git push origin feature/AmazingFeature
+```
 5. Open a Pull Request
 
 
@@ -103,7 +114,7 @@ Rafael Freitas - ......
 ## Special thanks
 
 * [Ironhack São Paulo](https://www.ironhack.com/br)
-* [Joc](https://github.com/jocnjr/library-project-7/commits?author=jocnjr)
-* [Vini](https://github.com/vinivibe)
-* [Mônica](https://github.com/mdccbranco)
-* [Grazi](https://github.com/grazidiandra)
+* [Joc](https://github.com/jocnjr/library-project-7/commits?author=jocnjr) - Lead Teacher at Ironhack São Paulo.
+* [Vini](https://github.com/vinivibe) - Teaching assistant at Ironhack São Paulo.
+* [Mônica](https://github.com/mdccbranco) - Teaching assistant at Ironhack São Paulo.
+* [Grazi](https://github.com/grazidiandra) - Teaching assistant at Ironhack São Paulo.
