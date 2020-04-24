@@ -13,10 +13,10 @@ Our goal is to provide a platform where users can register and post new cases. W
 
 ### Built With:
 
-* [NodeJS](https://nodejs.org/en/) - Backend Server.
+* [NodeJS](https://nodejs.org/en/) - JavaScript runtime Server.
 * [Express](https://expressjs.com/pt-br/) - Web framework.
 * [Handlebars](https://handlebarsjs.com/) - View Engine.
-* [MongoDB](https://www.mongodb.com/) - Database.
+* [MongoDB](https://www.mongodb.com/) - NoSQL Database.
 * [Mongoose](https://mongoosejs.com/) - MongoDB object modeling for Node.js.
 * [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
 * [Bcrypt](https://www.npmjs.com/package/bcrypt) - A library to help you hash passwords.
