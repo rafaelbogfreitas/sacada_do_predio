@@ -89,6 +89,7 @@ let caseControllers = {
             .catch(error => console.log(error));
     
     },
+    // GET CASE/:ID
     getCaseById: (req, res, next) => {
         const caseId = req.params.id;
         let owner = false;
@@ -103,6 +104,7 @@ let caseControllers = {
                 data = {data:[{ owner: owner, case: cases, user: user }]};
                 if (user == cases.user._id) {
                     owner = true;
+                    data = {data:[{ owner: owner, case: cases, user: user }]};
                 }
             }
             res.render('dashboard/single-case', data)

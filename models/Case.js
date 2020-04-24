@@ -31,7 +31,7 @@ const caseSchema = new Schema({
     },
     location: {
         type: {
-            type: String, 
+            type: String,
             enum: ['Point'],
         },
         coordinates: {

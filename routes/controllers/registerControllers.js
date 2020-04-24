@@ -44,14 +44,13 @@ let registerControllers = {
                 location: location
             }
         }
-            User
-                .findByIdAndUpdate(user, userToRegister)
-                .then(() => {
+        User
+            .findByIdAndUpdate(user, userToRegister)
+            .then(() => {
+                res.redirect('/dashboard');
+            })
+            .catch(error => console.log(error));
 
-                    res.redirect('/dashboard');
-                })
-                .catch(error => console.log(error));
-        
     },
 
     getRegister: (req, res, next) => {

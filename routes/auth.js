@@ -23,12 +23,10 @@ router.get("/auth/google", passport.authenticate("google", {
         "https://www.googleapis.com/auth/userinfo.email"
     ]
 }));
-router.get(
-    "/auth/google/callback",
-    passport.authenticate("google", {
-        successRedirect: "/dashboard",
-        failureRedirect: "/" // here you would redirect to the login page using traditional login approach
-    })
-);
+
+router.get("/auth/google/callback", passport.authenticate("google", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/" // here you would redirect to the login page using traditional login approach
+}));
 
 module.exports = router;
