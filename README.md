@@ -107,7 +107,7 @@ git push origin feature/AmazingFeature
 
 Daniel Paiva - [twitter](https://twitter.com/danielcspaiva) - [email](mailto:danielcspaiva@gmail.com) - [linkedin](https://www.linkedin.com/in/danielcspaiva/)
 
-Rafael Freitas - ......
+Rafael Freitas - [website](https://www.rafaelfreitas.com.br) - [email](mailto:rafaelbogfreitas@gmail.com) - [linkedin](https://www.linkedin.com/in/rafaelborgesfreitas/)
 
 
 <!-- ACKNOWLEDGEMENTS -->
