@@ -551,7 +551,7 @@ section {
     }
 
     .social_media {
-        width: 20%;
+        width: 30%;
         @include flexbox(display, flex);
         @include flexbox(justify-content, space-around);
 
