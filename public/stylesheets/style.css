@@ -782,7 +782,7 @@ section {
     width: 30px;
     height: 30px; }
   .team_presentation .social_media, .red_section .social_media {
-    width: 20%;
+    width: 30%;
     display: flex;
     -moz-display: flex;
     -o-display: flex;
