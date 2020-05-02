@@ -171,7 +171,7 @@ function startMap() {
     //markers initialization
 
     // axios.get('http://localhost:3000/api/cases')
-    axios.get('http://www.sacadadopredio.com/api/cases')
+    axios.get('https://www.sacadadopredio.com/api/cases')
 
         .then(data => {
 
