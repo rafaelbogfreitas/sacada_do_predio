@@ -4,17 +4,16 @@
 <head>
     {{!-- twitter meta tags --}}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Descubra as necessidades da sua região" />
-    <meta name="twitter:title" content="Ajude pessoas da sua comunidade" />
+    <meta name="twitter:description" content="{{metaTags.twitter:description}}" />
+    <meta name="twitter:title" content="{{metaTags.twitter:title}}" />
     {{!-- <meta name="twitter:site" content="@therealdanvega" /> --}}
-    <meta name="twitter:image" content="https://res.cloudinary.com/dxaul4b4j/image/upload/v1587519926/Sacada%20do%20Pr%C3%A9dio/metatag2_aepuja.png" />
+    <meta name="twitter:image" content="{{metaTags.twitter:image}}" />
     {{!-- <meta name="twitter:creator" content="@therealdanvega" /> --}}
     {{!-- whatsapp meta tags --}}
-    <meta property="og:title" content="Ajude pessoas da sua comunidade" />
-    <meta property="og:description" content="Descubra as necessidades da sua região" />
-    <meta property="og:url" content="http://sacadadopredio.com" />
-    <meta property="og:image"
-        content="https://res.cloudinary.com/dxaul4b4j/image/upload/v1587519926/Sacada%20do%20Pr%C3%A9dio/metatag2_aepuja.png" />
+    <meta property="og:title" content="{{metaTags.og:title}}" />
+    <meta property="og:description" content="{{metaTags.og:description}}" />
+    <meta property="og:url" content="{{metaTags.og:url}}" />
+    <meta property="og:image" content="{{metaTags.og:image}}" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">

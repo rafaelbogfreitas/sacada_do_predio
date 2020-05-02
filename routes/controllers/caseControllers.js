@@ -98,6 +98,17 @@ let caseControllers = {
         .findById(caseId)
         .populate('user')
         .then(cases => {
+            //Dynamic metatags info
+            res.locals.metaTags = {
+                    "twitter:description": cases.description,   
+                    "twitter:title": cases.title,   
+                    "twitter:image": cases.imageUrl,
+                    "og:title":cases.title,
+                    "og:description": cases.description,
+                    "og:url":"http://sacadadopredio.com/case/" + cases._id,
+                    "og:image":cases.imageUrl,   
+            }
+
             let data = {data:[{ owner: owner, case: cases}]}
             if (req.session.passport) {
                 let { user } = req.session.passport;
