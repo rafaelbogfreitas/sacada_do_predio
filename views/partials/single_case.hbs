@@ -37,6 +37,16 @@
             <p class="description">{{case.description}}</p>
             <h2>Endereço:</h2>
             <p>{{case.address}}</p>
+            <div class="share">
+                <h2>Compatilhe:</h2>
+                <a href="#" data-social="twitter" data-url="http://sacadadopredio.com/case/{{case._id}}" data-title="Google">Twitter</a>
+
+                <a href="#" data-social="whatsapp">WhatsApp</a>
+
+                <a href="#" data-social="facebook" data-url="http://sacadadopredio.com/case/{{case._id}}" data-title="Sacada do Prédio">Facebook</a>
+
+                <a href="#" data-social="linkedin">LinkedIn</a>
+            </div>
         </aside>
     
         {{#if owner}}
@@ -47,12 +57,8 @@
             </div>
         {{/if}}
     </div>
-    <a 
-        href="https://twitter.com/intent/tweet?button_hashtag=button&ref_src=twsrc%5Etfw" 
-        class="twitter-share-button" data-text="Essa pessoa precisa de sua ajuda:" 
-        data-url="http://www.sacadadopredio.com/case/{{case._id}}" 
-        data-lang="pt" 
-        data-show-count="false">Tweet</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    
+
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/goodshare.js@6/goodshare.min.js"></script>
