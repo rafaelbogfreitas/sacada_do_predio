@@ -1,7 +1,7 @@
 # Sacada do Prédio
 #### TLDR: http://www.sacadadopredio.com/
 
-![Sacada do prédio](/public/images/readme/banner.png)
+![Sacada do prédio](/public/images/readme/sacada_quadrada.png)
 
 ## About The Project
 
